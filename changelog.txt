@@ -1,0 +1,11 @@
+Web Viewer 2 Changelog 
+
+TODO:
+	Everything
+
+Current Version : 0.0.1
+
+
+*** 0.0.1 ***
+
+Initial public beta release
