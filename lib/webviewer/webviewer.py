@@ -654,6 +654,7 @@ class WebPageRenderer:
 		self.spaceLeadCount = 0
 		self.lastImageBottom = 0
 		self.lastImageRight = 0
+		self.lastImageLeft = 0
 		self.leftIsEmpty = True
 		self.forms = []
 		self.formIDX = -1
@@ -710,6 +711,7 @@ class WebPageRenderer:
 			if self.spaceLeadCount > 0: return
 		else:
 			self.lastImageRight = 0
+			self.lastImageLeft = 0
 		self.spaceLeadCount = 0
 		
 	def writeWindow(self):
@@ -819,7 +821,7 @@ class WebPageRenderer:
 		if text != base: text = ' ' + text
 		return text
 
-	'''
+	''' ----- Frequency ------
 31.2818  #text      
  9.5278  br         
  9.1822  a          
@@ -915,19 +917,19 @@ class WebPageRenderer:
 			elif tag.name == 'br':			self.newLine()
 			elif tag.name == 'a':			self.processA(tag)
 			elif tag.name == 'img':			self.processIMG(tag)
+			elif tag.name == 'p':			self.processP(tag)
+			elif tag.name == 'span':		self.processSPAN(tag)
 			elif tag.name == 'li': 			self.processLI(tag)
 			elif tag.name == 'ul':			self.processUL(tag)
-			elif tag.name == 'span':		self.processSPAN(tag)
-			elif tag.name == 'p':			self.processP(tag)
 			elif tag.name == 'div':			self.processDIV(tag)
 			elif tag.name == 'table':		self.processTABLE(tag)
-			elif tag.name in ('tr','caption'): self.processTR(tag)
 			elif tag.name in ('td','dd'):	self.processTD(tag)
+			elif tag.name in ('tr','caption'): self.processTR(tag)
 			elif tag.name == 'input':		self.processINPUT(tag)
 			elif tag.name == 'textarea':	self.processTEXTAREA(tag)
 			elif tag.name == 'select':		self.processSELECT(tag)
 			elif tag.name == 'form':		self.processFORM(tag)
-			elif tag.name == 'strong':		self.processSTRONG(tag)
+			elif tag.name == ('strong','b'):		self.processSTRONG(tag)
 			elif tag.name == 'center':		self.processCENTER(tag)
 			elif tag.name == 'iframe':		self.processIFRAME(tag)
 			elif tag.name in ('blockquote','code'): self.processP(tag)
@@ -967,7 +969,7 @@ class WebPageRenderer:
 				options.append((t.get('value'),t.string))
 		val = options[0][1]
 		width = int(self.fontWidth * (len(val)+2))
-		self.addImage(tag, width, self.fontHeight,ratio='stretch', button={'type':'FORM:SUBMIT','form':self.formIDX,'tag':tag},texture='web-viewer-form-submit.png',textureborder=5,text=val,textcolor='black',alignx='center',aligny='center')
+		self.addImage(tag, width, self.fontHeight,ratio='stretch', button={'type':'FORM:SELECT','form':self.formIDX,'tag':tag},texture='web-viewer-form-submit.png',textureborder=5,text=val,textcolor='black',alignx='center',aligny='center')
 
 	def processINPUT(self,tag):
 		ttype= tag.get('type','text')
@@ -1157,6 +1159,7 @@ class WebPageRenderer:
 		if self.lastImageBottom and self.lastImageBottom > self.yindex:
 			self.yindex = self.lastImageBottom
 			lines -=1
+		self.lastImageBottom = 0
 		self.yindex += self.fontHeight * lines
 		self.xindex = self.margin
 		self.leftIsEmpty = True
@@ -1170,44 +1173,54 @@ class WebPageRenderer:
 		if link: self.link = None
 		return hasText
 		
+	def firstWordTooLong(self,text,wrapwidth,lead):
+		firstLen = len(textwrap.TextWrapper.wordsep_re.split(text.lstrip(),1)[0])  # @UndefinedVariable
+		#print '%s %s %s %s' % (firstLen,wrapwidth,lead,repr(text[:8]))
+		return firstLen > (wrapwidth - lead)
+	
 	def wrap(self,text):
-		se = ''
+		si = ''
 		sllen = int(math.ceil((self.xindex - self.margin) / self.fontWidth))
-		if sllen > 120:
-			self.newLine()
+		wrapwidth = int(round(self.width/self.fontWidth))
+		
+		if self.lastImageRight:
+			silen = int(math.ceil(self.lastImageRight / self.fontWidth))
+			si = ' ' * silen
+			
+		if self.firstWordTooLong(text, wrapwidth, sllen):
+			if self.lastImageBottom:
+				self.yindex = self.lastImageBottom
+				self.lastImageBottom = 0
+				self.xindex = self.margin
+				self.resetSpaceLead()
+			else:
+				self.newLine(self.spaceLeadCount or 1)
 			sllen = int(math.ceil((self.xindex - self.margin) / self.fontWidth))
+		
 		spaceLead = ' ' * sllen
 		
-		if self.spaceLeadCount > 1 and self.lastImageRight:
-			sllen = int(math.ceil(self.lastImageRight / self.fontWidth))
-			spaceLead = ' ' * sllen
-			se = ' ' * sllen
-		wrapwidth = int(round(self.width/self.fontWidth))
-		if not spaceLead: text = text.lstrip()
-		lines = textwrap.wrap(spaceLead + text, wrapwidth,drop_whitespace=False,subsequent_indent=se)
-		if self.spaceLeadCount:
-			if len(lines) < self.spaceLeadCount + 1:
-				self.spaceLeadCount -= len(lines)
-			else:
-				pre = lines[:self.spaceLeadCount]
-				rest = lines[self.spaceLeadCount:]
-				selen = len(se)
-				for i in range(0,len(rest)):
-					rest[i] = rest[i][selen:]
-				lines = pre + textwrap.wrap(''.join(rest),wrapwidth)
-				self.spaceLeadCount = 0
-		if len(lines) > 1:
-			for i in range(1,len(lines)):
+		lines = textwrap.wrap(spaceLead + text, wrapwidth,drop_whitespace=False,subsequent_indent=si)
+		if text.strip(): print repr(lines)
+		end = []
+		start = lines
+		if not self.lastImageRight and self.spaceLeadCount > 1 and len(lines) > 1:
+			lines = lines[:1] + ([''] * (self.spaceLeadCount - 1)) + lines[1:]
+			self.resetSpaceLead()
+		else:
+			if sllen and self.spaceLeadCount and self.spaceLeadCount < len(lines):
+				start = lines[0:self.spaceLeadCount]
+				end = textwrap.wrap(''.join(lines[self.spaceLeadCount:]),wrapwidth)
+				self.resetSpaceLead()
+				lines = start + end
+		if len(start) > 1:
+			for i in range(1,len(start)):
 				self.spaceLeadCount -= 1
 				if self.spaceLeadCount < 0:
-					self.spaceLeadCount = 0
-					self.lastImageRight = 0
-				if self.lastImageRight:
-					lines[i] = se + lines[i].lstrip()
-				else:
-					lines[i] = lines[i].lstrip()
+					self.resetSpaceLead()
+				start[i] = si + start[i].lstrip()
+
 		#if sllen and len(lines) > 1 and not lines[0].strip(): lines.pop(0)
-		return lines
+		return start + end
 		
 	def addText(self,text,color=None,button=None,bold=False):
 		text = ''.join(unicode.splitlines(self.decode(text)))
@@ -1344,7 +1357,10 @@ class WebPageRenderer:
 		self.spaceLeadCount = int(math.ceil(height / float(self.fontHeight)))
 		imageBottom = self.yindex + height
 		if imageBottom > self.lastImageBottom: self.lastImageBottom = imageBottom
-		self.lastImageRight = self.xindex + width
+		if self.xindex > self.margin:
+			self.lastImageLeft = self.xindex
+		else:
+			self.lastImageRight = self.xindex + width
 		self.xindex += width + 5
 # 		if self.contentStarted:
 # 			self.yindex += height + margin + margin
@@ -1449,6 +1465,7 @@ class WebViewer:
 		self.webPage = None
 		#startURL = 'http://www.google.com'
 		startURL = 'http://forum.xbmc.org/showthread.php?tid=85018&pid=1427113#pid1427113'
+		#startURL = 'http://xbmc.org'
 		self.nextPage(startURL)
 		self.history = URLHistory(HistoryLocation(startURL))
 		while not self.done:
