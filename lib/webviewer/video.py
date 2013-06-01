@@ -48,6 +48,7 @@ class WebVideo():
 		self.modules = {}
 		
 	def getVideoObject(self,url,just_test=False,just_ID=False):
+		if not url: return None
 		if 'youtu.be' in url or 'youtube.com' in url:
 			if just_test: return True
 			ID = self.extractYoutubeIDFromURL(url)

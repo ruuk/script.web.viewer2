@@ -77,7 +77,17 @@ class WebReader:
 		if self.cookieJar is not None:
 			self.cookieJar.save()
 			
+	def handleFile(self,url):
+		try:
+			with open(url[7:],'r') as f:
+				data = f.read()
+		except:
+			ERROR('Failed To Open File',hide_tb=True)
+			return None
+		return ResponseData(url,'text/html',data)
+			
 	def getWebPage(self, url, callback=None):
+		if url.startswith('file://'): return self.handleFile(url)
 		LOG('Getting Page at URL: ' + url)
 		if not callback: callback = self.fakeCallback
 		resData = ResponseData(url)
@@ -241,9 +251,17 @@ class WebReader:
 						else:
 							val = t.get('value','')
 						self.browser[name] = val
+				elif control.type == 'select':
+					idx = 0
+					for opt in t.contents:
+						if hasattr(opt,'name') and opt.name == 'option':
+							if opt.get('disabled') == None:
+								control.items[idx].selected = opt.get('selected') != None and True or False
+							idx+=1
 		try:
 			res = self.browser.submit(nr=submit_idx)
 		except:
+			ERROR('Submit Failed',hide_tb=True)
 			self.browser.back()
 			return None
 		html = res.read()
@@ -449,12 +467,14 @@ class WebWindow(xbmcgui.WindowXML):
 		self.movePage(0, 25)
 	
 	def moveDown(self):
+		if self.pageHeight < 710: return
 		self.movePage(0, -25)
 	
 	def pageUp(self):
 		self.movePage(0, 700)
 		
 	def pageDown(self):
+		if self.pageHeight < 710: return
 		self.movePage(0, -700)
 		
 	def onAction(self, action):
@@ -482,7 +502,7 @@ class WebWindow(xbmcgui.WindowXML):
 	def onClick(self,controlID):
 		if controlID in self.buttons:
 			data = self.buttons[controlID]
-			LOG('Button Data: %s' % data)
+			#LOG('Button Data: %s' % data)
 			dtype = data.get('type')
 			if not dtype or dtype == 'LINK':
 				if data['url'].lower().startswith('javascript:'):
@@ -498,6 +518,10 @@ class WebWindow(xbmcgui.WindowXML):
 				self.handleInput_TEXT(controlID, data, password=True)
 			elif dtype == 'FORM:CHECKBOX':
 				self.handleInput_CHECKBOX(controlID, data)
+			elif dtype == 'FORM:RADIO':
+				self.handleInput_RADIO(controlID, data)
+			elif dtype == 'FORM:SELECT':
+				self.handleInput_SELECT(controlID, data)
 			elif dtype == 'FORM:SUBMIT':
 				self.handleInput_SUBMIT(controlID, data)
 			elif dtype == 'EMBED:VIDEO':
@@ -530,7 +554,63 @@ class WebWindow(xbmcgui.WindowXML):
 		tag['value'] = checked and '0' or '1'
 		tex = checked and 'web-viewer-form-checkbox-unchecked.png' or 'web-viewer-form-checkbox-checked.png'
 		self.getControl(controlID).setLabel(tex)
+		
+	def handleInput_RADIO(self,controlID,data):
+		tag = data['tag']
+		name = tag.get('name')
+		form = self.forms[data.get('form')]
+		for c in form:
+			if hasattr(c,'name') and c.name == 'input' and c.get('name') == name:
+				c['value'] = '0'
+				ID = c.get('WV_ControlID')
+				if ID: self.getControl(ID).setLabel('web-viewer-form-checkbox-unchecked.png')
+		tag['value'] = '1'
+		self.getControl(controlID).setLabel('web-viewer-form-checkbox-checked.png')
 
+	def handleInput_SELECT(self,controlID,data):
+		tag = data['tag']
+		if tag.get('multiple') != None:
+			while self.showSelectMenu(tag, controlID): pass
+		else:
+			self.showSelectMenu(tag, controlID)
+		
+	def showSelectMenu(self, tag, controlID):
+		options = []
+		display = []
+		for opt in tag.contents:
+			if hasattr(opt,'name') and opt.name == 'option':
+				options.append(opt)
+				if opt.get('disabled') != None:
+					display.append('[COLOR FF808080]%s[/COLOR]' % opt.string)
+				else:
+					#display.append((opt.get('selected') != None and unichr(0x2611) or unichr(0x2610)) + ' ' + opt.string)
+					display.append((opt.get('selected') != None and '[COLOR red]%s[/COLOR]' or '%s') % opt.string)
+		dialog = xbmcgui.Dialog()
+		idx = dialog.select('Options', display)
+		if idx < 0: return False
+		if tag.get('multiple') == None:
+			for opt in options:
+				if opt.get('selected') != None:
+					del opt['selected']
+		opt = options[idx]
+		if opt.get('disabled') == None:
+			if opt.get('selected') != None:
+				del opt['selected']
+			else:
+				opt['selected'] = 'x'
+		if tag.get('multiple') != None:
+			ct = 0
+			for opt in options:
+				if  opt.get('selected') != None: ct += 1
+			if ct:
+				label = '%s Selected'.format(ct)
+			else:
+				label = None
+		else:
+			label = options[idx].string
+		if label: self.getControl(controlID).setLabel(label)
+		return True
+	
 	def handleInput_SUBMIT(self,controlID,data):
 		form = self.forms[data.get('form')]
 		WV.submitForm(data,form)
@@ -608,7 +688,16 @@ class WebPageRenderer:
 				<label>{label}</label>
 			</control>
 '''
-	VIDEOWINDOW = u'''		<control type="group">
+	VIDEOWINDOW = u'''			<control type="image">
+				<posx>{x}</posx>
+				<posy>{y}</posy>
+				<width>{width}</width>
+				<height>{height}</height>
+				<texture>web-viewer-play-overlay.png</texture>
+				<aspectratio>scale</aspectratio>
+				<visible>true</visible>
+			</control>
+			<control type="group">
 				<posx>{x}</posx>
 				<posy>{y}</posy>
 				<control type="image">
@@ -963,13 +1052,14 @@ class WebPageRenderer:
 		self.formAddControl(tag)
 			
 	def processSELECT(self,tag):
-		options = []
+		val = 'Choose...'
 		for t in tag.contents:
 			if hasattr(t,'name') and t.name == 'option':
-				options.append((t.get('value'),t.string))
-		val = options[0][1]
+				val = t.string
+				break
 		width = int(self.fontWidth * (len(val)+2))
 		self.addImage(tag, width, self.fontHeight,ratio='stretch', button={'type':'FORM:SELECT','form':self.formIDX,'tag':tag},texture='web-viewer-form-submit.png',textureborder=5,text=val,textcolor='black',alignx='center',aligny='center')
+		self.formAddControl(tag)
 
 	def processINPUT(self,tag):
 		ttype= tag.get('type','text')
@@ -984,10 +1074,11 @@ class WebPageRenderer:
 			height = self.fontHeight
 			val = tag.get('value') or ''
 			self.addImage(tag, width, height,ratio='stretch', button={'type':'FORM:%s' % ttype.upper(),'form':self.formIDX,'tag':tag},texture='web-viewer-form-text.png',textureborder=5,text=val,textcolor='black',alignx='left',aligny='center')
-		elif ttype == 'checkbox':
+		elif ttype == 'checkbox' or ttype == 'radio':
 			checked = tag.get('value') == '1'
 			tex = checked and 'web-viewer-form-checkbox-checked.png' or 'web-viewer-form-checkbox-unchecked.png'
-			self.addImage(tag, self.fontWidth, self.fontHeight,ratio='keep', button={'type':'FORM:CHECKBOX','form':self.formIDX,'tag':tag},text=tex,texture='$INFO[Control.GetLabel({id})]')
+			ID = self.addImage(tag, self.fontWidth, self.fontHeight,ratio='keep', button={'type':'FORM:%s' % ttype.upper(),'form':self.formIDX,'tag':tag},text=tex,texture='$INFO[Control.GetLabel({id})]')
+			tag['WV_ControlID'] = ID
 		elif ttype == 'submit' or ttype == 'image':
 			if ttype == 'image':
 				src = urlparse.urljoin(self.url,tag.get('src',''))
@@ -1060,9 +1151,10 @@ class WebPageRenderer:
 				self.newLine()			
 		else:
 			self.newLine()
+			lastCenter = self.center
 			if 'text-align: center' in tag.get('style',''): self.center = True
 			self.processContents(tag)
-			self.center = False
+			self.center = lastCenter
 			self.newLine()
 		
 	def processIMG(self,tag):
@@ -1103,9 +1195,10 @@ class WebPageRenderer:
 			self.delTextMod('bold')
 			
 	def processCENTER(self,tag):
+		lastCenter = self.center
 		self.center = True
 		self.processContents(tag)
-		self.center = False
+		self.center = lastCenter
 			
 	def processIFRAME(self,tag):
 		src = tag.get('src')
@@ -1198,9 +1291,8 @@ class WebPageRenderer:
 			sllen = int(math.ceil((self.xindex - self.margin) / self.fontWidth))
 		
 		spaceLead = ' ' * sllen
-		
+		if not sllen: text = text.lstrip()
 		lines = textwrap.wrap(spaceLead + text, wrapwidth,drop_whitespace=False,subsequent_indent=si)
-		if text.strip(): print repr(lines)
 		end = []
 		start = lines
 		if not self.lastImageRight and self.spaceLeadCount > 1 and len(lines) > 1:
@@ -1270,7 +1362,7 @@ class WebPageRenderer:
 													height=height+5,
 													font=bold + self.font,
 													color=color or self.fgColor,
-													label=text
+													label=escapeXML(text)
 												)
 		if self.contentStarted:
 			self.yindex += height - self.fontHeight
@@ -1350,7 +1442,7 @@ class WebPageRenderer:
 												texturefocusborder='2',
 												texturenofocus='-',
 												color=textcolor,
-												label=text
+												label=escapeXML(text)
 											)
 			
 		height = height + margin + margin
@@ -1464,8 +1556,10 @@ class WebViewer:
 		self.url = None
 		self.webPage = None
 		#startURL = 'http://www.google.com'
-		startURL = 'http://forum.xbmc.org/showthread.php?tid=85018&pid=1427113#pid1427113'
+		#startURL = 'http://forum.xbmc.org/showthread.php?tid=85018&pid=1427113#pid1427113'
 		#startURL = 'http://xbmc.org'
+		#startURL = 'http://playerones.geekandsundry.com'
+		startURL = 'file://' + os.path.join(xbmc.translatePath(ADDON.getAddonInfo('path')),'resources','default.html')
 		self.nextPage(startURL)
 		self.history = URLHistory(HistoryLocation(startURL))
 		while not self.done:
