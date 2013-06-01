@@ -1,7 +1,7 @@
 Web Viewer 2 Changelog 
 
 TODO:
-	Everything
+	Fix line wrapping after images
 
 Current Version : 0.0.1
 

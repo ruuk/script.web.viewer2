@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addon id="script.web.viewer2"
-       name="Web Viewer"
+       name="Web Viewer 2 (alpha)"
        version="0.0.1"
        provider-name="Rick Phillips (ruuk)">
   <requires>
@@ -11,8 +11,8 @@
              library="lib/webviewer/webviewer.py">
     <provides>executable</provides>
   </extension>
-  <extension point="xbmc.python.module"
-             library="lib" />
+<!--   <extension point="xbmc.python.module" -->
+<!--              library="lib" /> -->
   <extension point="xbmc.addon.metadata">
     <platform>all</platform>
     <summary lang="en">Simple web browser</summary>

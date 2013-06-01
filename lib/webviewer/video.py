@@ -138,7 +138,8 @@ class WebVideo():
 		return 'plugin://plugin.video.dailymotion_com/?mode=playVideo&url=' + ID
 	
 	def getYoutubeThumbURL(self,ID):
-		return 'http://i1.ytimg.com/vi/%s/default.jpg' % ID
+		return 'http://i1.ytimg.com/vi/%s/hqdefault.jpg' % ID
+		#http://gdata.youtube.com/feeds/api/videos/B7_B3x2mJHI?v=2&prettyprint=true
 	
 	def getYoutubeSWFUrl(self,ID):
 		return 'http://www.youtube.com/v/' + ID
@@ -154,7 +155,10 @@ class WebVideo():
 		if m: return m.group(1)
 		
 	def extractYoutubeIDFromURL(self,url):
-		if '//youtu.be' in url:
+		if '/embed/' in url:
+			ID = url.split('/embed/',1)[-1].split('?')[0]
+			return ID
+		elif '//youtu.be' in url:
 			#http://youtu.be/sSMbOuNBV0s
 			sp = url.split('.be/',1)
 			if len(sp) == 2: return sp[1]
@@ -162,6 +166,7 @@ class WebVideo():
 		elif 'youtube.com' in url:
 			#http://www.youtube.com/watch?v=MuLDUws0Zh8&feature=autoshare
 			ID = url.split('v=',1)[-1].split('&',1)[0]
+			ID = ID.split('/v/',1)[-1].split('?',1)[0]
 			if 'youtube.com' in ID:
 				ID = url.split('/v/',1)[-1].split('&',1)[0].split('?',1)[0]
 			if 'youtube.com' in ID: return ''
@@ -321,6 +326,9 @@ def play(path,preview=False):
 	
 def pause():
 	if isPlaying(): control('play')
+	
+def stop():
+	if isPlaying(): control('stop')
 	
 def resume():
 	if not isPlaying(): control('play')

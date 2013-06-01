@@ -1,0 +1,16 @@
+<window>
+	<defaultcontrol>100</defaultcontrol>
+	<backgroundcolor>0x<!-- BGCOLOR --></backgroundcolor>
+	<coordinates>
+		<system>1</system>
+		<posx>0</posx>
+		<posy>0</posy>
+	</coordinates>
+	<controls>
+		<control type="group" id="100">
+			<posx>0</posx>
+			<posy>10</posy>
+			<!-- REPLACE -->
+		</control>
+	</controls>
+</window>
