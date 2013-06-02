@@ -1,7 +1,7 @@
 import xbmc, xbmcgui, xbmcaddon
 import os, sys, textwrap, codecs, urlparse, re, time, math
 from xml.sax.saxutils import escape as escapeXML
-import htmldecode, mechanize, fontmanager, video, bs4
+import htmldecode, mechanize, fontmanager, video, bs4, xbmcutil
 from webimage import imageinfo
 from xbmcconstants import * # @UnusedWildImport
 
@@ -825,6 +825,7 @@ class WebPageRenderer:
 	def getImageInfos(self,soup):
 		self.imageInfos = {}
 		urls = []
+		cached = 0
 		body = soup.body
 		if not body: body = soup
 		for img in body.findAll('img'):
@@ -834,12 +835,26 @@ class WebPageRenderer:
 					img['width'] = styles.get('width','')
 					img['height'] = styles.get('height','')
 			if not img.get('width') or not img.get('height'):
-				urls.append(urlparse.urljoin(self.url,img['src']))
+				url = urlparse.urljoin(self.url,img['src'])
+				path = xbmcutil.getCachedImagePath(url)
+				if path:
+					cached+=1
+					with open(path,'r') as f:
+						info = {'url':url}
+						try:
+							info['type'],info['w'],info['h'] = imageinfo.getImageInfo(f)
+							self.imageInfos[url] = info
+						except:
+							continue	
+				else:
+					urls.append(url)
+				
+		LOG('Using %s images cached by XBMC' % cached)
 		LOG('Getting info for %s images' % len(urls))
 		if not urls: return
 		inc = 40.0/len(urls)
 		WV.setProgressIncrement(inc)
-		self.imageInfos = imageinfo.getImageURLInfos(urls,threaded=True,progress=WV.updateProgressIncremental)
+		self.imageInfos.update(imageinfo.getImageURLInfos(urls,threaded=True,progress=WV.updateProgressIncremental))
 		
 	def getWidthAndHeight(self,tag):
 		width = tag.get('width')

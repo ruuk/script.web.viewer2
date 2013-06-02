@@ -5,6 +5,9 @@ TODO:
 
 Current Version : 0.0.1
 
+*** 0.0.2 ***
+
+Get image info from XBMC cached images if available
 
 *** 0.0.1 ***
 
