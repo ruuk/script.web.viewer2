@@ -8,4 +8,4 @@ Current Version : 0.0.1
 
 *** 0.0.1 ***
 
-Initial public beta release
+Initial alpha demo release
