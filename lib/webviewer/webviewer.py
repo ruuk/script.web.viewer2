@@ -1,8 +1,8 @@
 import xbmc, xbmcgui, xbmcaddon
-import os, sys, textwrap, codecs, urlparse, re, time, math
+import os, sys, textwrap, codecs, urlparse, re, time, math, urllib2
 from xml.sax.saxutils import escape as escapeXML
-import htmldecode, mechanize, fontmanager, video, bs4, xbmcutil
-from webimage import imageinfo
+import htmldecode, mechanize, fontmanager, video, bs4, xbmcutil, style
+from webimage import imageinfo, threadpool
 from xbmcconstants import * # @UnusedWildImport
 
 ADDON = xbmcaddon.Addon('script.web.viewer2')
@@ -244,7 +244,7 @@ class WebReader:
 				if t.get('type') == 'submit': continue
 				control = self.browser.form.find_control(name)
 				#print '%s: %s' % (control.type, control.name)
-				if control.type in ('text','textarea','password'):
+				if control.type in ('text','textarea','password','email'):
 					if not control.readonly:
 						if t.name == 'textarea':
 							val = t.string
@@ -510,7 +510,7 @@ class WebWindow(xbmcgui.WindowXML):
 					return
 				url = urlparse.urljoin(self.url,data['url'])
 				self.gotoNextPage(url)
-			elif dtype == 'FORM:TEXT':
+			elif dtype == 'FORM:TEXT' or dtype == 'FORM:EMAIL':
 				self.handleInput_TEXT(controlID, data)
 			elif dtype == 'FORM:TEXTAREA':
 				self.handleInput_TEXTAREA(controlID, data)
@@ -760,6 +760,7 @@ class WebPageRenderer:
 		self.encodingConfidence = 0
 		self.buttons = {}
 		self.setFont('WebViewer-font12')
+		self.parser = 'None'
 
 	def updateEncoding(self,detected):
 		if not detected: return
@@ -822,18 +823,64 @@ class WebPageRenderer:
 		self.buttons[ID].update(data)
 		return ID,left,right
 	
+	def cssWorker(self,url,soup):
+		try:
+			css = urllib2.urlopen(url).read()
+		except:
+			ERROR('Worker failed to fetch css',hide_tb=True)
+			return None
+		try:
+			view = style.getSoupView(soup.body or soup, css)
+		except:
+			ERROR('Worker failed to process css')
+			return None
+		return view
+	
+	def processCSS(self,soup):
+		urls = []
+		styles = []
+		if soup.head:
+			for link in soup.head.findAll('link'):
+				if 'stylesheet' in link.get('rel'):
+					url = urlparse.urljoin(self.url,link.get('href'))
+					urls.append(([url,soup],None))
+		for s in soup.findAll('style'):
+			if s.string:
+				styles.append(s.string)
+				
+		if not urls and not styles: return
+		
+		if urls:
+			inc = 20.0/len(urls)
+			WV.setProgressIncrement(inc)
+			
+			pool = threadpool.ThreadPool(4)
+			requests = threadpool.makeRequests(self.cssWorker, urls)
+			[pool.putRequest(req) for req in requests]
+			results = pool.wait(return_results=True,progress=WV.updateProgressIncremental)
+			pool.dismissWorkers()
+			
+			for view in results:
+				if view: style.render2SoupStyle(view)
+				
+		for s in styles:
+			view = style.getSoupView(soup.body or soup, s)
+			style.render2SoupStyle(view)
+			
 	def getImageInfos(self,soup):
 		self.imageInfos = {}
 		urls = []
 		cached = 0
+		ct = 0
 		body = soup.body
 		if not body: body = soup
 		for img in body.findAll('img'):
+			ct+=1
 			if not img.get('width') or not img.get('height'):
 				styles = self.parseInlineStyle(img.get('style'))
 				if styles:
-					img['width'] = styles.get('width','')
-					img['height'] = styles.get('height','')
+					img['width'] = styles.get('width','').split(' ',1)[0]
+					img['height'] = styles.get('height','').split(' ',1)[0]
 			if not img.get('width') or not img.get('height'):
 				url = urlparse.urljoin(self.url,img['src'])
 				path = xbmcutil.getCachedImagePath(url)
@@ -849,8 +896,7 @@ class WebPageRenderer:
 				else:
 					urls.append(url)
 				
-		LOG('Using %s images cached by XBMC' % cached)
-		LOG('Getting info for %s images' % len(urls))
+		LOG('%s images: Using %s images cached by XBMC; fetching info for %s images' % (ct,cached,len(urls)))
 		if not urls: return
 		inc = 40.0/len(urls)
 		WV.setProgressIncrement(inc)
@@ -862,13 +908,28 @@ class WebPageRenderer:
 		if not width or not height:
 			styles = self.parseInlineStyle(tag.get('style'))
 			if styles:
-				width = styles.get('width')
-				height = styles.get('height')
-		if not width or not height: return None,None
-		return width.replace('px',''), height.replace('px','')
+				width = styles.get('width','').split(' ',1)[0].replace('px','')
+				height = styles.get('height','').split(' ',1)[0].replace('px','')
 				
-	def parseInlineStyle(self,styles):
-		if not styles: return None
+		if not width and not height: return None,None
+		if width.endswith('%'): width = self.calculatePercentage(width[:-1], self.width)
+		if height.endswith('%'): height = self.calculatePercentage(height[:-1], self.height)
+		
+		return width, height
+		
+	def calculatePercentage(self,pct,val):
+		try:
+			pct = int(pct)
+		except:
+			return pct
+		if pct > 100: return val
+		return int((pct/100.0) * val)
+		
+	def parseInlineStyle(self,styles=None,tag=None):
+		if not styles:
+			if tag: styles = tag.get('style')
+			if not styles: return None
+			
 		styles = styles.split(';')
 		ret = {}
 		for style in styles:
@@ -885,11 +946,20 @@ class WebPageRenderer:
 		self.ignore = ('script','style')
 		try:
 			soup = bs4.BeautifulSoup(html, "lxml")
+			self.parser = 'LXML'
+			LOG('Using: lxml')
 		except:
 			try:
 				soup = bs4.BeautifulSoup(html, "html5lib")
+				self.parser = 'HTML5LIB'
+				LOG('Using: html5lib')
 			except:
 				soup = bs4.BeautifulSoup(html)
+				self.parser = 'DEFAULT'
+				LOG('Using: default')
+		WV.updateProgress(20, 'Fetching/Processing Stylesheets')
+		self.processCSS(soup)
+		#codecs.open('/home/ruuk/test.html','w','UTF-8').write(soup.prettify())
 		WV.updateProgress(40, 'Getting Image Info')	
 		self.getImageInfos(soup)
 		body = soup.body
@@ -1017,6 +1087,7 @@ class WebPageRenderer:
 
 	def processTag(self,tag):
 		if isinstance(tag,bs4.Tag):
+			if not self.tagIsVisible(tag): return
 			if tag.name in self.ignore:	return
 			elif tag.name == 'br':			self.newLine()
 			elif tag.name == 'a':			self.processA(tag)
@@ -1025,6 +1096,7 @@ class WebPageRenderer:
 			elif tag.name == 'span':		self.processSPAN(tag)
 			elif tag.name == 'li': 			self.processLI(tag)
 			elif tag.name == 'ul':			self.processUL(tag)
+			elif tag.name == 'ol':			self.processUL(tag)
 			elif tag.name == 'div':			self.processDIV(tag)
 			elif tag.name == 'table':		self.processTABLE(tag)
 			elif tag.name in ('td','dd'):	self.processTD(tag)
@@ -1059,10 +1131,18 @@ class WebPageRenderer:
 		except:
 			cols = 40
 			rows = 10
-			
+		if cols < 2:
+			width,height = self.getWidthAndHeight(tag) # @UnusedVariable
+			try:
+				width = int(width)
+				cols = int(width/self.fontWidth)
+				if cols < 2: cols = 40
+			except:
+				cols = 40
 		width = int(cols * self.fontWidth)
 		height = int(rows * self.fontHeight)
-		val = '[CR]'.join(textwrap.wrap(tag.string or '', cols - 2)[:rows])
+		wrapwidth = cols - 2
+		val = '[CR]'.join(textwrap.wrap(tag.string or '', wrapwidth)[:rows])
 		self.addImage(tag, width, height,ratio='stretch', button={'type':'FORM:TEXTAREA','form':self.formIDX,'tag':tag,'cols':cols,'rows':rows},texture='web-viewer-form-text.png',textureborder=5,text=val,textcolor='black',alignx='left',aligny='top')
 		self.formAddControl(tag)
 			
@@ -1080,7 +1160,7 @@ class WebPageRenderer:
 		ttype= tag.get('type','text')
 		height = self.fontHeight
 		
-		if ttype == 'text' or ttype == 'password':
+		if ttype == 'text' or ttype == 'password' or ttype == 'email':
 			size = tag.get('size')
 			try:
 				width = int(self.fontWidth * int(size))
@@ -1165,7 +1245,6 @@ class WebPageRenderer:
 				self.processContents(tag)
 				self.newLine()			
 		else:
-			self.newLine()
 			lastCenter = self.center
 			if 'text-align: center' in tag.get('style',''): self.center = True
 			self.processContents(tag)
@@ -1177,7 +1256,7 @@ class WebPageRenderer:
 		
 	def processTABLE(self,tag):
 		self.newLine(2)
-		if 'border' in repr(tag).lower(): self.border = True
+		self.border = self.tagHasBorder(tag)
 		self.processContents(tag)
 		self.border = False
 		self.newLine()
@@ -1191,8 +1270,10 @@ class WebPageRenderer:
 		self.newLine()
 		end = self.yindex + self.fontHeight
 		if self.border:
+			border = 'FFC0C0C0'
+			if not self.border == True: border = self.border
 			if tag.name == 'caption': self.drawImage('web-viewer-white.png',5,start,1270,end - start,ratio='stretch',diffuse='10000000')
-			self.drawImage('web-viewer-white-border.png',5,start,1270,end - start,ratio='stretch',textureborder=3,diffuse='FFC0C0C0')
+			self.drawImage('web-viewer-white-border.png',5,start,1270,end - start,ratio='stretch',textureborder=3,diffuse=border)
 		
 	def processTD(self,tag):
 		if tag.string:
@@ -1243,16 +1324,16 @@ class WebPageRenderer:
 		self.newLine()
 		
 	def processUL(self,tag):
-		self.newLine()
+		#self.newLine()
 		self.processContents(tag)
-		self.newLine()
+		#self.newLine()
 		
 	def processLI(self,tag):
+		if not self.tagIsInline(tag): self.newLine()
 		if tag.string:
 			self.addText('* ' + tag.string)
 		else:
 			self.processContents(tag)
-		self.newLine()
 		
 	def processHX(self,tag):
 		self.newLine()
@@ -1261,6 +1342,23 @@ class WebPageRenderer:
 		self.delTextMod('bold')
 		self.newLine()
 	
+	def tagIsVisible(self,tag):
+		styles = tag.get('style','')
+		if not 'visibility' in styles: return True
+		styles = self.parseInlineStyle(styles)
+		if 'hidden' in styles.get('visibility',''): return False
+		return True
+		
+	def tagHasBorder(self,tag):
+		if tag.get('border','0') != '0': return True
+		styles = self.parseInlineStyle(tag=tag)
+		if not styles or not 'border' in styles: return False
+		if '#' in styles['border']: return 'FF' + styles['border'].split('#',1)[-1][:6].upper()
+		return True
+		
+	def tagIsInline(self,tag):
+		return 'inline' in tag.get('style','')
+		
 	def newLine(self,lines=1):
 		if not self.contentStarted: return
 		self.leftIsEmpty = True
@@ -1401,7 +1499,7 @@ class WebPageRenderer:
 				if not width or not height: raise Exception('Zero Width/Height')
 				ratio = 'stretch'
 			except:
-				LOG('Bad Image Width/Height')
+				LOG('Bad Image Width/Height: w(%s) h(%s)' % (tag.get('width'),tag.get('height')))
 		elif url in self.imageInfos:
 			info = self.imageInfos[url]
 			if info['type']:
@@ -1546,8 +1644,8 @@ class WebViewer:
 	def setProgressIncrement(self,inc):
 		self.progressIncrement = inc
 		
-	def updateProgressIncremental(self):
-		self.updateProgress(self.progressLastPct + self.progressIncrement)
+	def updateProgressIncremental(self,line1=None,line2=None,line3=None):
+		self.updateProgress(self.progressLastPct + self.progressIncrement,line1=line1,line2=line2,line3=line3)
 		
 	def endProgress(self):
 		if self.progress: self.progress.close()
@@ -1572,7 +1670,7 @@ class WebViewer:
 		self.webPage = None
 		#startURL = 'http://www.google.com'
 		#startURL = 'http://forum.xbmc.org/showthread.php?tid=85018&pid=1427113#pid1427113'
-		#startURL = 'http://xbmc.org'
+		#startURL = 'http://forum.xbmc.org'
 		#startURL = 'http://playerones.geekandsundry.com'
 		startURL = 'file://' + os.path.join(xbmc.translatePath(ADDON.getAddonInfo('path')),'resources','default.html')
 		self.nextPage(startURL)
@@ -1592,6 +1690,7 @@ class WebViewer:
 		self.nextPage(webPage)
 				
 	def goBack(self,y_pos):
+		if not self.history.canGoBack(): return
 		h = self.history.goBack(y_pos)
 		self.historyOffset = h.line
 		self.nextPage(h.url)
@@ -1608,8 +1707,6 @@ class WebViewer:
 				if y_pos is not None:
 					self.history.updateCurrent(line=y_pos)
 					self.history.addURL(HistoryLocation(self.webPage.url))
-				LOG(self.history.history)
-				LOG(self.history.index)
 			if not self.webPage.hasText():
 				if self.webPage.content.startswith('image'):
 					self.updateProgress(30, 'Getting Image Info')
@@ -1640,6 +1737,7 @@ class WebViewer:
 		try:
 			self.renderer.reset(self.webPage.url)
 			self.renderer.renderPage(self.webPage.data)
+			#open('/home/ruuk/test.html','w').write(self.webPage.data)
 			self.windowXMLFile = self.renderer.writeWindow()
 			self.updateProgress(100, 'Done')
 		finally:

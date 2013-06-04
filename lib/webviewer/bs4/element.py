@@ -1239,6 +1239,7 @@ class Tag(PageElement):
                 # Pseudo-class
                 tag_name, pseudo = token.split(':', 1)
                 if tag_name == '':
+                    continue
                     raise ValueError(
                         "A pseudo-class must be prefixed with a tag name.")
                 pseudo_attributes = re.match('([a-zA-Z\d-]+)\(([a-zA-Z\d]+)\)', pseudo)
@@ -1249,9 +1250,11 @@ class Tag(PageElement):
                         try:
                             pseudo_value = int(pseudo_value)
                         except:
+                            continue
                             raise NotImplementedError(
                                 'Only numeric values are currently supported for the nth-of-type pseudo-class.')
                         if pseudo_value < 1:
+                            continue
                             raise ValueError(
                                 'nth-of-type pseudo-class value must be at least 1.')
                         class Counter(object):
@@ -1270,6 +1273,7 @@ class Tag(PageElement):
                                 return False
                         checker = Counter(pseudo_value).nth_child_of_type
                     else:
+                        continue
                         raise NotImplementedError(
                             'Only the following pseudo-classes are implemented: nth-of-type.')
 
@@ -1296,6 +1300,7 @@ class Tag(PageElement):
                 # Just a tag name.
                 tag_name = token
             else:
+                continue
                 raise ValueError(
                     'Unsupported or invalid CSS selector: "%s"' % token)
 

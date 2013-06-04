@@ -10,915 +10,413 @@
 		<control type="group" id="100">
 			<posx>0</posx>
 			<posy>10</posy>
-					<control type="image">
+					<control type="button" id="101">
 				<posx>10</posx>
-				<posy>5</posy>
-				<width>350</width>
-				<height>68</height>
-				<texture fallback="web-viewer-broken-image.png">http://ils.indiana.edu/faculty/hrosenba/www/Images/slis_logo_06.gif</texture>
-				
-				
-				<aspectratio>stretch</aspectratio>
-			</control>
-		<control type="image">
-				<posx>5</posx>
 				<posy>0</posy>
-				<width>1270</width>
-				<height>97</height>
-				<texture fallback="web-viewer-broken-image.png" border="3">web-viewer-white-border.png</texture>
-				
-				<colordiffuse>FFC0C0C0</colordiffuse>
-				<aspectratio>stretch</aspectratio>
-			</control>
-		<control type="image">
-				<posx>5</posx>
-				<posy>97</posy>
-				<width>1270</width>
-				<height>57</height>
-				<texture fallback="web-viewer-broken-image.png" border="3">web-viewer-white-border.png</texture>
-				
-				<colordiffuse>FFC0C0C0</colordiffuse>
-				<aspectratio>stretch</aspectratio>
-			</control>
-		<control type="image">
-				<posx>10</posx>
-				<posy>159</posy>
-				<width>700</width>
-				<height>110</height>
-				<texture fallback="web-viewer-broken-image.png">http://ils.indiana.edu/faculty/hrosenba/www/Images/demologo.gif</texture>
-				
-				
-				<aspectratio>stretch</aspectratio>
-			</control>
-		<control type="image">
-				<posx>5</posx>
-				<posy>154</posy>
-				<width>1270</width>
-				<height>139</height>
-				<texture fallback="web-viewer-broken-image.png" border="3">web-viewer-white-border.png</texture>
-				
-				<colordiffuse>FFC0C0C0</colordiffuse>
-				<aspectratio>stretch</aspectratio>
-			</control>
-		<control type="textbox">
-				<posx>10</posx>
-				<posy>312</posy>
 				<width>1260</width>
 				<height>24</height>
-				<font>Bold-WebViewer-font12</font>
-				<textcolor>black</textcolor>
-				<label>Here is an example of a page that makes use of the various </label>
-			</control>
-		<control type="textbox">
-				<posx>10</posx>
-				<posy>312</posy>
-				<width>1260</width>
-				<height>24</height>
-				<font>Bold-WebViewer-font12</font>
-				<textcolor>black</textcolor>
-				<label>                                                           forms</label>
-			</control>
-		<control type="textbox">
-				<posx>10</posx>
-				<posy>312</posy>
-				<width>1260</width>
-				<height>24</height>
-				<font>Bold-WebViewer-font12</font>
-				<textcolor>black</textcolor>
-				<label>                                                                 options</label>
-			</control>
-		<control type="textbox">
-				<posx>10</posx>
-				<posy>331</posy>
-				<width>1260</width>
-				<height>24</height>
-				<font>WebViewer-font12</font>
-				<textcolor>black</textcolor>
-				<label>Please enter a false name and make up a password: </label>
-			</control>
-		<control type="textbox">
-				<posx>10</posx>
-				<posy>388</posy>
-				<width>1260</width>
-				<height>24</height>
-				<font>WebViewer-font12</font>
-				<textcolor>black</textcolor>
-				<label>Name:</label>
-			</control>
-		<control type="image">
-				<posx>60</posx>
-				<posy>393</posy>
-				<width>300</width>
-				<height>19</height>
-				<texture fallback="web-viewer-broken-image.png" border="5">web-viewer-form-text.png</texture>
-				
-				
-				<aspectratio>stretch</aspectratio>
-			</control>
-		<control type="button" id="101">
-				<posx>60</posx>
-				<posy>393</posy>
-				<width>300</width>
-				<height>19</height>
 				<onleft>101</onleft>
 				<onright>102</onright>
-				<texturefocus border="2">web-viewer-red-border.png</texturefocus>
-				<texturenofocus>-</texturenofocus>
+				<texturefocus border="0"></texturefocus>
+				<texturenofocus></texturenofocus>
 				<align>left</align>
-				<aligny>center</aligny>
-				
-				<textcolor>black</textcolor>
+				<aligny>top</aligny>
+				<textoffsetx>0</textoffsetx>
+				<textoffsety>2</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
 				<focusedcolor>FFFF0000</focusedcolor>
 				<font>WebViewer-font12</font>
-				<label></label>
-			</control>
-		<control type="textbox">
-				<posx>10</posx>
-				<posy>455</posy>
-				<width>1260</width>
-				<height>24</height>
-				<font>WebViewer-font12</font>
-				<textcolor>black</textcolor>
-				<label>Password:</label>
-			</control>
-		<control type="image">
-				<posx>100</posx>
-				<posy>460</posy>
-				<width>100</width>
-				<height>19</height>
-				<texture fallback="web-viewer-broken-image.png" border="5">web-viewer-form-text.png</texture>
-				
-				
-				<aspectratio>stretch</aspectratio>
+				<label>Search</label>
 			</control>
 		<control type="button" id="102">
-				<posx>100</posx>
-				<posy>460</posy>
-				<width>100</width>
-				<height>19</height>
-				<onleft>101</onleft>
-				<onright>103</onright>
-				<texturefocus border="2">web-viewer-red-border.png</texturefocus>
-				<texturenofocus>-</texturenofocus>
-				<align>left</align>
-				<aligny>center</aligny>
-				
-				<textcolor>black</textcolor>
-				<focusedcolor>FFFF0000</focusedcolor>
-				<font>WebViewer-font12</font>
-				<label></label>
-			</control>
-		<control type="textbox">
 				<posx>10</posx>
-				<posy>541</posy>
+				<posy>0</posy>
 				<width>1260</width>
 				<height>24</height>
+				<onleft>101</onleft>
+				<onright>103</onright>
+				<texturefocus border="0"></texturefocus>
+				<texturenofocus></texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				<textoffsetx>0</textoffsetx>
+				<textoffsety>2</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
 				<font>WebViewer-font12</font>
-				<textcolor>black</textcolor>
-				<label>Please indicate below how much you like this class. You may only select one option: </label>
-			</control>
-		<control type="image">
-				<posx>10</posx>
-				<posy>660</posy>
-				<width>10.0</width>
-				<height>19</height>
-				<texture fallback="web-viewer-broken-image.png">$INFO[Control.GetLabel(103)]</texture>
-				
-				
-				<aspectratio>keep</aspectratio>
+				<label>        Images</label>
 			</control>
 		<control type="button" id="103">
 				<posx>10</posx>
-				<posy>660</posy>
-				<width>10.0</width>
-				<height>19</height>
-				<onleft>102</onleft>
-				<onright>104</onright>
-				<texturefocus border="2">web-viewer-red-border.png</texturefocus>
-				<texturenofocus>-</texturenofocus>
-				<align>left</align>
-				<aligny>top</aligny>
-				
-				<textcolor>00000000</textcolor>
-				<focusedcolor>FFFF0000</focusedcolor>
-				<font>WebViewer-font12</font>
-				<label>web-viewer-form-checkbox-unchecked.png</label>
-			</control>
-		<control type="textbox">
-				<posx>10</posx>
-				<posy>655</posy>
+				<posy>0</posy>
 				<width>1260</width>
 				<height>24</height>
+				<onleft>102</onleft>
+				<onright>104</onright>
+				<texturefocus border="0"></texturefocus>
+				<texturenofocus></texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				<textoffsetx>0</textoffsetx>
+				<textoffsety>2</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
 				<font>WebViewer-font12</font>
-				<textcolor>black</textcolor>
-				<label>  Sort of a lot</label>
-			</control>
-		<control type="image">
-				<posx>10</posx>
-				<posy>689</posy>
-				<width>10.0</width>
-				<height>19</height>
-				<texture fallback="web-viewer-broken-image.png">$INFO[Control.GetLabel(104)]</texture>
-				
-				
-				<aspectratio>keep</aspectratio>
+				<label>                Maps</label>
 			</control>
 		<control type="button" id="104">
 				<posx>10</posx>
-				<posy>689</posy>
-				<width>10.0</width>
-				<height>19</height>
-				<onleft>103</onleft>
-				<onright>105</onright>
-				<texturefocus border="2">web-viewer-red-border.png</texturefocus>
-				<texturenofocus>-</texturenofocus>
-				<align>left</align>
-				<aligny>top</aligny>
-				
-				<textcolor>00000000</textcolor>
-				<focusedcolor>FFFF0000</focusedcolor>
-				<font>WebViewer-font12</font>
-				<label>web-viewer-form-checkbox-unchecked.png</label>
-			</control>
-		<control type="textbox">
-				<posx>10</posx>
-				<posy>684</posy>
+				<posy>0</posy>
 				<width>1260</width>
 				<height>24</height>
+				<onleft>103</onleft>
+				<onright>105</onright>
+				<texturefocus border="0"></texturefocus>
+				<texturenofocus></texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				<textoffsetx>0</textoffsetx>
+				<textoffsety>2</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
 				<font>WebViewer-font12</font>
-				<textcolor>black</textcolor>
-				<label>  A real lot</label>
-			</control>
-		<control type="image">
-				<posx>5</posx>
-				<posy>655</posy>
-				<width>1270</width>
-				<height>77</height>
-				<texture fallback="web-viewer-broken-image.png" border="3">web-viewer-white-border.png</texture>
-				
-				<colordiffuse>FFC0C0C0</colordiffuse>
-				<aspectratio>stretch</aspectratio>
-			</control>
-		<control type="image">
-				<posx>10</posx>
-				<posy>737</posy>
-				<width>10.0</width>
-				<height>19</height>
-				<texture fallback="web-viewer-broken-image.png">$INFO[Control.GetLabel(105)]</texture>
-				
-				
-				<aspectratio>keep</aspectratio>
+				<label>                      Play</label>
 			</control>
 		<control type="button" id="105">
 				<posx>10</posx>
-				<posy>737</posy>
-				<width>10.0</width>
-				<height>19</height>
-				<onleft>104</onleft>
-				<onright>106</onright>
-				<texturefocus border="2">web-viewer-red-border.png</texturefocus>
-				<texturenofocus>-</texturenofocus>
-				<align>left</align>
-				<aligny>top</aligny>
-				
-				<textcolor>00000000</textcolor>
-				<focusedcolor>FFFF0000</focusedcolor>
-				<font>WebViewer-font12</font>
-				<label>web-viewer-form-checkbox-unchecked.png</label>
-			</control>
-		<control type="textbox">
-				<posx>10</posx>
-				<posy>732</posy>
+				<posy>0</posy>
 				<width>1260</width>
 				<height>24</height>
+				<onleft>104</onleft>
+				<onright>106</onright>
+				<texturefocus border="0"></texturefocus>
+				<texturenofocus></texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				<textoffsetx>0</textoffsetx>
+				<textoffsety>2</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
 				<font>WebViewer-font12</font>
-				<textcolor>black</textcolor>
-				<label>  A way real lot</label>
-			</control>
-		<control type="image">
-				<posx>10</posx>
-				<posy>766</posy>
-				<width>10.0</width>
-				<height>19</height>
-				<texture fallback="web-viewer-broken-image.png">$INFO[Control.GetLabel(106)]</texture>
-				
-				
-				<aspectratio>keep</aspectratio>
+				<label>                            YouTube</label>
 			</control>
 		<control type="button" id="106">
 				<posx>10</posx>
-				<posy>766</posy>
-				<width>10.0</width>
-				<height>19</height>
-				<onleft>105</onleft>
-				<onright>107</onright>
-				<texturefocus border="2">web-viewer-red-border.png</texturefocus>
-				<texturenofocus>-</texturenofocus>
-				<align>left</align>
-				<aligny>top</aligny>
-				
-				<textcolor>00000000</textcolor>
-				<focusedcolor>FFFF0000</focusedcolor>
-				<font>WebViewer-font12</font>
-				<label>web-viewer-form-checkbox-unchecked.png</label>
-			</control>
-		<control type="textbox">
-				<posx>10</posx>
-				<posy>761</posy>
+				<posy>0</posy>
 				<width>1260</width>
 				<height>24</height>
+				<onleft>105</onleft>
+				<onright>107</onright>
+				<texturefocus border="0"></texturefocus>
+				<texturenofocus></texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				<textoffsetx>0</textoffsetx>
+				<textoffsety>2</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
 				<font>WebViewer-font12</font>
-				<textcolor>black</textcolor>
-				<label>  Totally a lot</label>
-			</control>
-		<control type="image">
-				<posx>5</posx>
-				<posy>732</posy>
-				<width>1270</width>
-				<height>77</height>
-				<texture fallback="web-viewer-broken-image.png" border="3">web-viewer-white-border.png</texture>
-				
-				<colordiffuse>FFC0C0C0</colordiffuse>
-				<aspectratio>stretch</aspectratio>
-			</control>
-		<control type="image">
-				<posx>10</posx>
-				<posy>814</posy>
-				<width>10.0</width>
-				<height>19</height>
-				<texture fallback="web-viewer-broken-image.png">$INFO[Control.GetLabel(107)]</texture>
-				
-				
-				<aspectratio>keep</aspectratio>
+				<label>                                     News</label>
 			</control>
 		<control type="button" id="107">
 				<posx>10</posx>
-				<posy>814</posy>
-				<width>10.0</width>
-				<height>19</height>
-				<onleft>106</onleft>
-				<onright>108</onright>
-				<texturefocus border="2">web-viewer-red-border.png</texturefocus>
-				<texturenofocus>-</texturenofocus>
-				<align>left</align>
-				<aligny>top</aligny>
-				
-				<textcolor>00000000</textcolor>
-				<focusedcolor>FFFF0000</focusedcolor>
-				<font>WebViewer-font12</font>
-				<label>web-viewer-form-checkbox-unchecked.png</label>
-			</control>
-		<control type="textbox">
-				<posx>10</posx>
-				<posy>809</posy>
+				<posy>0</posy>
 				<width>1260</width>
 				<height>24</height>
+				<onleft>106</onleft>
+				<onright>108</onright>
+				<texturefocus border="0"></texturefocus>
+				<texturenofocus></texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				<textoffsetx>0</textoffsetx>
+				<textoffsety>2</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
 				<font>WebViewer-font12</font>
-				<textcolor>black</textcolor>
-				<label>  More than words can express</label>
-			</control>
-		<control type="image">
-				<posx>10</posx>
-				<posy>843</posy>
-				<width>10.0</width>
-				<height>19</height>
-				<texture fallback="web-viewer-broken-image.png">$INFO[Control.GetLabel(108)]</texture>
-				
-				
-				<aspectratio>keep</aspectratio>
+				<label>                                           Gmail</label>
 			</control>
 		<control type="button" id="108">
 				<posx>10</posx>
-				<posy>843</posy>
-				<width>10.0</width>
-				<height>19</height>
+				<posy>0</posy>
+				<width>1260</width>
+				<height>24</height>
 				<onleft>107</onleft>
 				<onright>109</onright>
-				<texturefocus border="2">web-viewer-red-border.png</texturefocus>
-				<texturenofocus>-</texturenofocus>
+				<texturefocus border="0"></texturefocus>
+				<texturenofocus></texturenofocus>
 				<align>left</align>
 				<aligny>top</aligny>
-				
-				<textcolor>00000000</textcolor>
+				<textoffsetx>0</textoffsetx>
+				<textoffsety>2</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
 				<focusedcolor>FFFF0000</focusedcolor>
 				<font>WebViewer-font12</font>
-				<label>web-viewer-form-checkbox-unchecked.png</label>
-			</control>
-		<control type="textbox">
-				<posx>10</posx>
-				<posy>838</posy>
-				<width>1260</width>
-				<height>24</height>
-				<font>WebViewer-font12</font>
-				<textcolor>black</textcolor>
-				<label>  More than even that last      item</label>
-			</control>
-		<control type="image">
-				<posx>5</posx>
-				<posy>809</posy>
-				<width>1270</width>
-				<height>77</height>
-				<texture fallback="web-viewer-broken-image.png" border="3">web-viewer-white-border.png</texture>
-				
-				<colordiffuse>FFC0C0C0</colordiffuse>
-				<aspectratio>stretch</aspectratio>
-			</control>
-		<control type="textbox">
-				<posx>10</posx>
-				<posy>962</posy>
-				<width>1260</width>
-				<height>24</height>
-				<font>WebViewer-font12</font>
-				<textcolor>black</textcolor>
-				<label>Please indicate below how much you like the labs. You may check as many boxes as seem appropriate: </label>
-			</control>
-		<control type="image">
-				<posx>10</posx>
-				<posy>1081</posy>
-				<width>10.0</width>
-				<height>19</height>
-				<texture fallback="web-viewer-broken-image.png">$INFO[Control.GetLabel(109)]</texture>
-				
-				
-				<aspectratio>keep</aspectratio>
+				<label>                                                  Drive</label>
 			</control>
 		<control type="button" id="109">
 				<posx>10</posx>
-				<posy>1081</posy>
-				<width>10.0</width>
-				<height>19</height>
+				<posy>0</posy>
+				<width>1260</width>
+				<height>24</height>
 				<onleft>108</onleft>
 				<onright>110</onright>
-				<texturefocus border="2">web-viewer-red-border.png</texturefocus>
-				<texturenofocus>-</texturenofocus>
+				<texturefocus border="0"></texturefocus>
+				<texturenofocus></texturenofocus>
 				<align>left</align>
 				<aligny>top</aligny>
-				
-				<textcolor>00000000</textcolor>
+				<textoffsetx>0</textoffsetx>
+				<textoffsety>2</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
 				<focusedcolor>FFFF0000</focusedcolor>
 				<font>WebViewer-font12</font>
-				<label>web-viewer-form-checkbox-unchecked.png</label>
+				<label>                                                         More</label>
 			</control>
 		<control type="textbox">
 				<posx>10</posx>
-				<posy>1076</posy>
+				<posy>38</posy>
 				<width>1260</width>
 				<height>24</height>
-				<font>WebViewer-font12</font>
+				<font>Bold-WebViewer-font12</font>
 				<textcolor>black</textcolor>
-				<label>  Sort of a lot</label>
-			</control>
-		<control type="image">
-				<posx>10</posx>
-				<posy>1110</posy>
-				<width>10.0</width>
-				<height>19</height>
-				<texture fallback="web-viewer-broken-image.png">$INFO[Control.GetLabel(110)]</texture>
-				
-				
-				<aspectratio>keep</aspectratio>
+				<label>Account Options</label>
 			</control>
 		<control type="button" id="110">
 				<posx>10</posx>
-				<posy>1110</posy>
-				<width>10.0</width>
-				<height>19</height>
-				<onleft>109</onleft>
-				<onright>111</onright>
-				<texturefocus border="2">web-viewer-red-border.png</texturefocus>
-				<texturenofocus>-</texturenofocus>
-				<align>left</align>
-				<aligny>top</aligny>
-				
-				<textcolor>00000000</textcolor>
-				<focusedcolor>FFFF0000</focusedcolor>
-				<font>WebViewer-font12</font>
-				<label>web-viewer-form-checkbox-unchecked.png</label>
-			</control>
-		<control type="textbox">
-				<posx>10</posx>
-				<posy>1105</posy>
+				<posy>57</posy>
 				<width>1260</width>
 				<height>24</height>
+				<onleft>109</onleft>
+				<onright>111</onright>
+				<texturefocus border="0"></texturefocus>
+				<texturenofocus></texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				<textoffsetx>0</textoffsetx>
+				<textoffsety>2</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
 				<font>WebViewer-font12</font>
-				<textcolor>black</textcolor>
-				<label>  A real lot</label>
-			</control>
-		<control type="image">
-				<posx>5</posx>
-				<posy>1076</posy>
-				<width>1270</width>
-				<height>77</height>
-				<texture fallback="web-viewer-broken-image.png" border="3">web-viewer-white-border.png</texture>
-				
-				<colordiffuse>FFC0C0C0</colordiffuse>
-				<aspectratio>stretch</aspectratio>
-			</control>
-		<control type="image">
-				<posx>10</posx>
-				<posy>1158</posy>
-				<width>10.0</width>
-				<height>19</height>
-				<texture fallback="web-viewer-broken-image.png">$INFO[Control.GetLabel(111)]</texture>
-				
-				
-				<aspectratio>keep</aspectratio>
+				<label>Rick Phillips</label>
 			</control>
 		<control type="button" id="111">
 				<posx>10</posx>
-				<posy>1158</posy>
-				<width>10.0</width>
-				<height>19</height>
-				<onleft>110</onleft>
-				<onright>112</onright>
-				<texturefocus border="2">web-viewer-red-border.png</texturefocus>
-				<texturenofocus>-</texturenofocus>
-				<align>left</align>
-				<aligny>top</aligny>
-				
-				<textcolor>00000000</textcolor>
-				<focusedcolor>FFFF0000</focusedcolor>
-				<font>WebViewer-font12</font>
-				<label>web-viewer-form-checkbox-unchecked.png</label>
-			</control>
-		<control type="textbox">
-				<posx>10</posx>
-				<posy>1153</posy>
+				<posy>57</posy>
 				<width>1260</width>
 				<height>24</height>
+				<onleft>110</onleft>
+				<onright>112</onright>
+				<texturefocus border="0"></texturefocus>
+				<texturenofocus></texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				<textoffsetx>0</textoffsetx>
+				<textoffsety>2</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
 				<font>WebViewer-font12</font>
-				<textcolor>black</textcolor>
-				<label>  A way real lot</label>
+				<label>                   Sign out</label>
 			</control>
 		<control type="image">
-				<posx>10</posx>
-				<posy>1187</posy>
-				<width>10.0</width>
+				<posx>502</posx>
+				<posy>195</posy>
+				<width>275</width>
+				<height>95</height>
+				<texture fallback="web-viewer-broken-image.png">http://www.google.com/intl/en_ALL/images/srpr/logo1w.png</texture>
+				
+				
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>365</posx>
+				<posy>395</posy>
+				<width>550</width>
 				<height>19</height>
-				<texture fallback="web-viewer-broken-image.png">$INFO[Control.GetLabel(112)]</texture>
+				<texture fallback="web-viewer-broken-image.png" border="5">web-viewer-form-text.png</texture>
 				
 				
-				<aspectratio>keep</aspectratio>
+				<aspectratio>stretch</aspectratio>
 			</control>
 		<control type="button" id="112">
-				<posx>10</posx>
-				<posy>1187</posy>
-				<width>10.0</width>
+				<posx>365</posx>
+				<posy>395</posy>
+				<width>550</width>
 				<height>19</height>
 				<onleft>111</onleft>
 				<onright>113</onright>
 				<texturefocus border="2">web-viewer-red-border.png</texturefocus>
 				<texturenofocus>-</texturenofocus>
 				<align>left</align>
-				<aligny>top</aligny>
-				
-				<textcolor>00000000</textcolor>
-				<focusedcolor>FFFF0000</focusedcolor>
-				<font>WebViewer-font12</font>
-				<label>web-viewer-form-checkbox-unchecked.png</label>
-			</control>
-		<control type="textbox">
-				<posx>10</posx>
-				<posy>1182</posy>
-				<width>1260</width>
-				<height>24</height>
-				<font>WebViewer-font12</font>
-				<textcolor>black</textcolor>
-				<label>  Totally a lot</label>
-			</control>
-		<control type="image">
-				<posx>5</posx>
-				<posy>1153</posy>
-				<width>1270</width>
-				<height>77</height>
-				<texture fallback="web-viewer-broken-image.png" border="3">web-viewer-white-border.png</texture>
-				
-				<colordiffuse>FFC0C0C0</colordiffuse>
-				<aspectratio>stretch</aspectratio>
-			</control>
-		<control type="image">
-				<posx>10</posx>
-				<posy>1235</posy>
-				<width>10.0</width>
-				<height>19</height>
-				<texture fallback="web-viewer-broken-image.png">$INFO[Control.GetLabel(113)]</texture>
-				
-				
-				<aspectratio>keep</aspectratio>
-			</control>
-		<control type="button" id="113">
-				<posx>10</posx>
-				<posy>1235</posy>
-				<width>10.0</width>
-				<height>19</height>
-				<onleft>112</onleft>
-				<onright>114</onright>
-				<texturefocus border="2">web-viewer-red-border.png</texturefocus>
-				<texturenofocus>-</texturenofocus>
-				<align>left</align>
-				<aligny>top</aligny>
-				
-				<textcolor>00000000</textcolor>
-				<focusedcolor>FFFF0000</focusedcolor>
-				<font>WebViewer-font12</font>
-				<label>web-viewer-form-checkbox-unchecked.png</label>
-			</control>
-		<control type="textbox">
-				<posx>10</posx>
-				<posy>1230</posy>
-				<width>1260</width>
-				<height>24</height>
-				<font>WebViewer-font12</font>
-				<textcolor>black</textcolor>
-				<label>  More than words can express</label>
-			</control>
-		<control type="image">
-				<posx>10</posx>
-				<posy>1264</posy>
-				<width>10.0</width>
-				<height>19</height>
-				<texture fallback="web-viewer-broken-image.png">$INFO[Control.GetLabel(114)]</texture>
-				
-				
-				<aspectratio>keep</aspectratio>
-			</control>
-		<control type="button" id="114">
-				<posx>10</posx>
-				<posy>1264</posy>
-				<width>10.0</width>
-				<height>19</height>
-				<onleft>113</onleft>
-				<onright>115</onright>
-				<texturefocus border="2">web-viewer-red-border.png</texturefocus>
-				<texturenofocus>-</texturenofocus>
-				<align>left</align>
-				<aligny>top</aligny>
-				
-				<textcolor>00000000</textcolor>
-				<focusedcolor>FFFF0000</focusedcolor>
-				<font>WebViewer-font12</font>
-				<label>web-viewer-form-checkbox-unchecked.png</label>
-			</control>
-		<control type="textbox">
-				<posx>10</posx>
-				<posy>1259</posy>
-				<width>1260</width>
-				<height>24</height>
-				<font>WebViewer-font12</font>
-				<textcolor>black</textcolor>
-				<label>  More than even that last      button</label>
-			</control>
-		<control type="image">
-				<posx>5</posx>
-				<posy>1230</posy>
-				<width>1270</width>
-				<height>77</height>
-				<texture fallback="web-viewer-broken-image.png" border="3">web-viewer-white-border.png</texture>
-				
-				<colordiffuse>FFC0C0C0</colordiffuse>
-				<aspectratio>stretch</aspectratio>
-			</control>
-		<control type="textbox">
-				<posx>10</posx>
-				<posy>1383</posy>
-				<width>1260</width>
-				<height>24</height>
-				<font>WebViewer-font12</font>
-				<textcolor>black</textcolor>
-				<label>Please indicate below how much you like the class lectures. You may select one option: </label>
-			</control>
-		<control type="image">
-				<posx>10</posx>
-				<posy>1445</posy>
-				<width>160</width>
-				<height>19</height>
-				<texture fallback="web-viewer-broken-image.png" border="5">web-viewer-form-submit.png</texture>
-				
-				
-				<aspectratio>stretch</aspectratio>
-			</control>
-		<control type="button" id="115">
-				<posx>10</posx>
-				<posy>1445</posy>
-				<width>160</width>
-				<height>19</height>
-				<onleft>114</onleft>
-				<onright>116</onright>
-				<texturefocus border="2">web-viewer-red-border.png</texturefocus>
-				<texturenofocus>-</texturenofocus>
-				<align>center</align>
 				<aligny>center</aligny>
-				
-				<textcolor>black</textcolor>
-				<focusedcolor>FFFF0000</focusedcolor>
-				<font>WebViewer-font12</font>
-				<label>Sort of a lot
-</label>
-			</control>
-		<control type="textbox">
-				<posx>10</posx>
-				<posy>1526</posy>
-				<width>1260</width>
-				<height>24</height>
-				<font>WebViewer-font12</font>
-				<textcolor>black</textcolor>
-				<label>Please select the item that best describes how useful this class is. </label>
-			</control>
-		<control type="image">
-				<posx>10</posx>
-				<posy>1588</posy>
-				<width>220</width>
-				<height>19</height>
-				<texture fallback="web-viewer-broken-image.png" border="5">web-viewer-form-submit.png</texture>
-				
-				
-				<aspectratio>stretch</aspectratio>
-			</control>
-		<control type="button" id="116">
-				<posx>10</posx>
-				<posy>1588</posy>
-				<width>220</width>
-				<height>19</height>
-				<onleft>115</onleft>
-				<onright>117</onright>
-				<texturefocus border="2">web-viewer-red-border.png</texturefocus>
-				<texturenofocus>-</texturenofocus>
-				<align>center</align>
-				<aligny>center</aligny>
-				
-				<textcolor>black</textcolor>
-				<focusedcolor>FFFF0000</focusedcolor>
-				<font>WebViewer-font12</font>
-				<label>Really quite useful
-</label>
-			</control>
-		<control type="textbox">
-				<posx>10</posx>
-				<posy>1669</posy>
-				<width>1260</width>
-				<height>24</height>
-				<font>WebViewer-font12</font>
-				<textcolor>black</textcolor>
-				<label>Please indicate in the box below how much you like this class in excruciating detail. You may write as much as you want to: </label>
-			</control>
-		<control type="image">
-				<posx>10</posx>
-				<posy>1693</posy>
-				<width>500</width>
-				<height>285</height>
-				<texture fallback="web-viewer-broken-image.png" border="5">web-viewer-form-text.png</texture>
-				
-				
-				<aspectratio>stretch</aspectratio>
-			</control>
-		<control type="button" id="117">
-				<posx>10</posx>
-				<posy>1693</posy>
-				<width>500</width>
-				<height>285</height>
-				<onleft>116</onleft>
-				<onright>118</onright>
-				<texturefocus border="2">web-viewer-red-border.png</texturefocus>
-				<texturenofocus>-</texturenofocus>
-				<align>left</align>
-				<aligny>top</aligny>
 				
 				<textcolor>black</textcolor>
 				<focusedcolor>FFFF0000</focusedcolor>
 				<font>WebViewer-font12</font>
 				<label></label>
 			</control>
-		<control type="textbox">
-				<posx>10</posx>
-				<posy>2040</posy>
-				<width>1260</width>
-				<height>24</height>
-				<font>WebViewer-font12</font>
-				<textcolor>black</textcolor>
-				<label>From the menu below, select one option that indicates how much you like thisclass. </label>
-			</control>
 		<control type="image">
-				<posx>10</posx>
-				<posy>2064</posy>
-				<width>230</width>
+				<posx>565</posx>
+				<posy>443</posy>
+				<width>150</width>
 				<height>19</height>
 				<texture fallback="web-viewer-broken-image.png" border="5">web-viewer-form-submit.png</texture>
 				
 				
 				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="button" id="113">
+				<posx>565</posx>
+				<posy>443</posy>
+				<width>150</width>
+				<height>19</height>
+				<onleft>112</onleft>
+				<onright>114</onright>
+				<texturefocus border="2">web-viewer-red-border.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>center</align>
+				<aligny>center</aligny>
+				
+				<textcolor>black</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<font>WebViewer-font12</font>
+				<label>Google Search</label>
+			</control>
+		<control type="image">
+				<posx>720</posx>
+				<posy>443</posy>
+				<width>190</width>
+				<height>19</height>
+				<texture fallback="web-viewer-broken-image.png" border="5">web-viewer-form-submit.png</texture>
+				
+				
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="button" id="114">
+				<posx>720</posx>
+				<posy>443</posy>
+				<width>190</width>
+				<height>19</height>
+				<onleft>113</onleft>
+				<onright>115</onright>
+				<texturefocus border="2">web-viewer-red-border.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>center</align>
+				<aligny>center</aligny>
+				
+				<textcolor>black</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<font>WebViewer-font12</font>
+				<label>I'm Feeling Lucky</label>
+			</control>
+		<control type="button" id="115">
+				<posx>10</posx>
+				<posy>438</posy>
+				<width>1260</width>
+				<height>24</height>
+				<onleft>114</onleft>
+				<onright>116</onright>
+				<texturefocus border="0"></texturefocus>
+				<texturenofocus></texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				<textoffsetx>0</textoffsetx>
+				<textoffsety>2</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<font>WebViewer-font12</font>
+				<label>                                                                                            Advanced search</label>
+			</control>
+		<control type="button" id="116">
+				<posx>10</posx>
+				<posy>467</posy>
+				<width>1260</width>
+				<height>24</height>
+				<onleft>115</onleft>
+				<onright>117</onright>
+				<texturefocus border="0"></texturefocus>
+				<texturenofocus></texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				<textoffsetx>0</textoffsetx>
+				<textoffsety>2</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<font>WebViewer-font12</font>
+				<label>Language tools</label>
+			</control>
+		<control type="button" id="117">
+				<posx>10</posx>
+				<posy>562</posy>
+				<width>1260</width>
+				<height>24</height>
+				<onleft>116</onleft>
+				<onright>118</onright>
+				<texturefocus border="0"></texturefocus>
+				<texturenofocus></texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				<textoffsetx>0</textoffsetx>
+				<textoffsety>2</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<font>WebViewer-font12</font>
+				<label>Advertising Programs</label>
 			</control>
 		<control type="button" id="118">
 				<posx>10</posx>
-				<posy>2064</posy>
-				<width>230</width>
-				<height>19</height>
+				<posy>562</posy>
+				<width>1260</width>
+				<height>24</height>
 				<onleft>117</onleft>
 				<onright>119</onright>
-				<texturefocus border="2">web-viewer-red-border.png</texturefocus>
-				<texturenofocus>-</texturenofocus>
-				<align>center</align>
-				<aligny>center</aligny>
-				
-				<textcolor>black</textcolor>
+				<texturefocus border="0"></texturefocus>
+				<texturenofocus></texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				<textoffsetx>0</textoffsetx>
+				<textoffsety>2</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
 				<focusedcolor>FFFF0000</focusedcolor>
 				<font>WebViewer-font12</font>
-				<label>I like it a real lot
-</label>
-			</control>
-		<control type="textbox">
-				<posx>10</posx>
-				<posy>2145</posy>
-				<width>1260</width>
-				<height>24</height>
-				<font>WebViewer-font12</font>
-				<textcolor>black</textcolor>
-				<label>OK, you're done. Thanks. Now: </label>
-			</control>
-		<control type="image">
-				<posx>550</posx>
-				<posy>2245</posy>
-				<width>180</width>
-				<height>19</height>
-				<texture fallback="web-viewer-broken-image.png" border="5">web-viewer-form-submit.png</texture>
-				
-				
-				<aspectratio>stretch</aspectratio>
+				<label>                    Business Solutions</label>
 			</control>
 		<control type="button" id="119">
-				<posx>550</posx>
-				<posy>2245</posy>
-				<width>180</width>
-				<height>19</height>
+				<posx>10</posx>
+				<posy>562</posy>
+				<width>1260</width>
+				<height>24</height>
 				<onleft>118</onleft>
 				<onright>120</onright>
-				<texturefocus border="2">web-viewer-red-border.png</texturefocus>
-				<texturenofocus>-</texturenofocus>
-				<align>center</align>
-				<aligny>center</aligny>
-				
-				<textcolor>black</textcolor>
+				<texturefocus border="0"></texturefocus>
+				<texturenofocus></texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				<textoffsetx>0</textoffsetx>
+				<textoffsety>2</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
 				<focusedcolor>FFFF0000</focusedcolor>
 				<font>WebViewer-font12</font>
-				<label>Send it already!</label>
-			</control>
-		<control type="image">
-				<posx>5</posx>
-				<posy>2240</posy>
-				<width>1270</width>
-				<height>67</height>
-				<texture fallback="web-viewer-broken-image.png" border="3">web-viewer-white-border.png</texture>
-				
-				<colordiffuse>FFC0C0C0</colordiffuse>
-				<aspectratio>stretch</aspectratio>
-			</control>
-		<control type="textbox">
-				<posx>10</posx>
-				<posy>2326</posy>
-				<width>1260</width>
-				<height>24</height>
-				<font>WebViewer-font12</font>
-				<textcolor>black</textcolor>
-				<label>Here's what is sent to you when someone fills out and submits the </label>
-			</control>
-		<control type="textbox">
-				<posx>10</posx>
-				<posy>2326</posy>
-				<width>1260</width>
-				<height>24</height>
-				<font>WebViewer-font12</font>
-				<textcolor>black</textcolor>
-				<label>                                                                  form</label>
-			</control>
-		<control type="textbox">
-				<posx>10</posx>
-				<posy>2326</posy>
-				<width>1260</width>
-				<height>24</height>
-				<font>WebViewer-font12</font>
-				<textcolor>black</textcolor>
-				<label>                                                                      : </label>
-			</control>
-		<control type="textbox">
-				<posx>10</posx>
-				<posy>2364</posy>
-				<width>1260</width>
-				<height>24</height>
-				<font>WebViewer-font12</font>
-				<textcolor>black</textcolor>
-				<label>Likeclass=Bozo&amp;Likelab=Super&amp;Likelec=More&amp;Likeclass=More&amp;Likeitall=Cool. </label>
-			</control>
-		<control type="textbox">
-				<posx>10</posx>
-				<posy>2402</posy>
-				<width>1260</width>
-				<height>24</height>
-				<font>WebViewer-font12</font>
-				<textcolor>black</textcolor>
-				<label>Return to the </label>
+				<label>                                      +Google</label>
 			</control>
 		<control type="button" id="120">
 				<posx>10</posx>
-				<posy>2402</posy>
+				<posy>562</posy>
 				<width>1260</width>
 				<height>24</height>
 				<onleft>119</onleft>
@@ -933,48 +431,20 @@
 				<textcolor>FF00AAAA</textcolor>
 				<focusedcolor>FFFF0000</focusedcolor>
 				<font>WebViewer-font12</font>
-				<label>              forms</label>
+				<label>                                             About Google</label>
 			</control>
 		<control type="textbox">
 				<posx>10</posx>
-				<posy>2402</posy>
+				<posy>600</posy>
 				<width>1260</width>
 				<height>24</height>
 				<font>WebViewer-font12</font>
 				<textcolor>black</textcolor>
-				<label>                    page. </label>
-			</control>
-		<control type="textbox">
-				<posx>10</posx>
-				<posy>2554</posy>
-				<width>1260</width>
-				<height>24</height>
-				<font>WebViewer-font12</font>
-				<textcolor>black</textcolor>
-				<label>Page by Howard Rosenbaum </label>
-			</control>
-		<control type="image">
-				<posx>5</posx>
-				<posy>2554</posy>
-				<width>1270</width>
-				<height>38</height>
-				<texture fallback="web-viewer-broken-image.png" border="3">web-viewer-white-border.png</texture>
-				
-				<colordiffuse>FFC0C0C0</colordiffuse>
-				<aspectratio>stretch</aspectratio>
-			</control>
-		<control type="textbox">
-				<posx>10</posx>
-				<posy>2592</posy>
-				<width>1260</width>
-				<height>24</height>
-				<font>WebViewer-font12</font>
-				<textcolor>black</textcolor>
-				<label>Find me at </label>
+				<label>© 2013 - </label>
 			</control>
 		<control type="button" id="121">
 				<posx>10</posx>
-				<posy>2592</posy>
+				<posy>600</posy>
 				<width>1260</width>
 				<height>24</height>
 				<onleft>120</onleft>
@@ -989,26 +459,7 @@
 				<textcolor>FF00AAAA</textcolor>
 				<focusedcolor>FFFF0000</focusedcolor>
 				<font>WebViewer-font12</font>
-				<label>           hrosenba@indiana.edu</label>
-			</control>
-		<control type="textbox">
-				<posx>10</posx>
-				<posy>2592</posy>
-				<width>1260</width>
-				<height>24</height>
-				<font>WebViewer-font12</font>
-				<textcolor>black</textcolor>
-				<label>                                        http://www.slis.indiana.edu/hrosenba/www/Demo/Demo10.html </label>
-			</control>
-		<control type="image">
-				<posx>5</posx>
-				<posy>2592</posy>
-				<width>1270</width>
-				<height>38</height>
-				<texture fallback="web-viewer-broken-image.png" border="3">web-viewer-white-border.png</texture>
-				
-				<colordiffuse>FFC0C0C0</colordiffuse>
-				<aspectratio>stretch</aspectratio>
+				<label>         Privacy &amp; Terms</label>
 			</control>
 
 		</control>
