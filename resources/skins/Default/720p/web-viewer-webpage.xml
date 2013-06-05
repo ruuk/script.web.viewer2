@@ -18,9 +18,9 @@
 				<onleft>101</onleft>
 				<onright>102</onright>
 				<texturefocus border="0"></texturefocus>
-				<texturenofocus></texturenofocus>
+				<texturenofocus>-</texturenofocus>
 				<align>left</align>
-				<aligny>top</aligny>
+				<aligny>center</aligny>
 				<textoffsetx>0</textoffsetx>
 				<textoffsety>2</textoffsety>
 
@@ -37,9 +37,9 @@
 				<onleft>101</onleft>
 				<onright>103</onright>
 				<texturefocus border="0"></texturefocus>
-				<texturenofocus></texturenofocus>
+				<texturenofocus>-</texturenofocus>
 				<align>left</align>
-				<aligny>top</aligny>
+				<aligny>center</aligny>
 				<textoffsetx>0</textoffsetx>
 				<textoffsety>2</textoffsety>
 
@@ -56,9 +56,9 @@
 				<onleft>102</onleft>
 				<onright>104</onright>
 				<texturefocus border="0"></texturefocus>
-				<texturenofocus></texturenofocus>
+				<texturenofocus>-</texturenofocus>
 				<align>left</align>
-				<aligny>top</aligny>
+				<aligny>center</aligny>
 				<textoffsetx>0</textoffsetx>
 				<textoffsety>2</textoffsety>
 
@@ -75,9 +75,9 @@
 				<onleft>103</onleft>
 				<onright>105</onright>
 				<texturefocus border="0"></texturefocus>
-				<texturenofocus></texturenofocus>
+				<texturenofocus>-</texturenofocus>
 				<align>left</align>
-				<aligny>top</aligny>
+				<aligny>center</aligny>
 				<textoffsetx>0</textoffsetx>
 				<textoffsety>2</textoffsety>
 
@@ -94,9 +94,9 @@
 				<onleft>104</onleft>
 				<onright>106</onright>
 				<texturefocus border="0"></texturefocus>
-				<texturenofocus></texturenofocus>
+				<texturenofocus>-</texturenofocus>
 				<align>left</align>
-				<aligny>top</aligny>
+				<aligny>center</aligny>
 				<textoffsetx>0</textoffsetx>
 				<textoffsety>2</textoffsety>
 
@@ -113,9 +113,9 @@
 				<onleft>105</onleft>
 				<onright>107</onright>
 				<texturefocus border="0"></texturefocus>
-				<texturenofocus></texturenofocus>
+				<texturenofocus>-</texturenofocus>
 				<align>left</align>
-				<aligny>top</aligny>
+				<aligny>center</aligny>
 				<textoffsetx>0</textoffsetx>
 				<textoffsety>2</textoffsety>
 
@@ -132,9 +132,9 @@
 				<onleft>106</onleft>
 				<onright>108</onright>
 				<texturefocus border="0"></texturefocus>
-				<texturenofocus></texturenofocus>
+				<texturenofocus>-</texturenofocus>
 				<align>left</align>
-				<aligny>top</aligny>
+				<aligny>center</aligny>
 				<textoffsetx>0</textoffsetx>
 				<textoffsety>2</textoffsety>
 
@@ -151,9 +151,9 @@
 				<onleft>107</onleft>
 				<onright>109</onright>
 				<texturefocus border="0"></texturefocus>
-				<texturenofocus></texturenofocus>
+				<texturenofocus>-</texturenofocus>
 				<align>left</align>
-				<aligny>top</aligny>
+				<aligny>center</aligny>
 				<textoffsetx>0</textoffsetx>
 				<textoffsety>2</textoffsety>
 
@@ -170,9 +170,9 @@
 				<onleft>108</onleft>
 				<onright>110</onright>
 				<texturefocus border="0"></texturefocus>
-				<texturenofocus></texturenofocus>
+				<texturenofocus>-</texturenofocus>
 				<align>left</align>
-				<aligny>top</aligny>
+				<aligny>center</aligny>
 				<textoffsetx>0</textoffsetx>
 				<textoffsety>2</textoffsety>
 
@@ -183,7 +183,7 @@
 			</control>
 		<control type="textbox">
 				<posx>10</posx>
-				<posy>38</posy>
+				<posy>57</posy>
 				<width>1260</width>
 				<height>24</height>
 				<font>Bold-WebViewer-font12</font>
@@ -192,15 +192,15 @@
 			</control>
 		<control type="button" id="110">
 				<posx>10</posx>
-				<posy>57</posy>
+				<posy>76</posy>
 				<width>1260</width>
 				<height>24</height>
 				<onleft>109</onleft>
 				<onright>111</onright>
 				<texturefocus border="0"></texturefocus>
-				<texturenofocus></texturenofocus>
+				<texturenofocus>-</texturenofocus>
 				<align>left</align>
-				<aligny>top</aligny>
+				<aligny>center</aligny>
 				<textoffsetx>0</textoffsetx>
 				<textoffsety>2</textoffsety>
 
@@ -211,15 +211,15 @@
 			</control>
 		<control type="button" id="111">
 				<posx>10</posx>
-				<posy>57</posy>
+				<posy>76</posy>
 				<width>1260</width>
 				<height>24</height>
 				<onleft>110</onleft>
 				<onright>112</onright>
 				<texturefocus border="0"></texturefocus>
-				<texturenofocus></texturenofocus>
+				<texturenofocus>-</texturenofocus>
 				<align>left</align>
-				<aligny>top</aligny>
+				<aligny>center</aligny>
 				<textoffsetx>0</textoffsetx>
 				<textoffsety>2</textoffsety>
 
@@ -230,7 +230,7 @@
 			</control>
 		<control type="image">
 				<posx>502</posx>
-				<posy>195</posy>
+				<posy>233</posy>
 				<width>275</width>
 				<height>95</height>
 				<texture fallback="web-viewer-broken-image.png">http://www.google.com/intl/en_ALL/images/srpr/logo1w.png</texture>
@@ -240,7 +240,7 @@
 			</control>
 		<control type="image">
 				<posx>365</posx>
-				<posy>395</posy>
+				<posy>433</posy>
 				<width>550</width>
 				<height>19</height>
 				<texture fallback="web-viewer-broken-image.png" border="5">web-viewer-form-text.png</texture>
@@ -250,7 +250,7 @@
 			</control>
 		<control type="button" id="112">
 				<posx>365</posx>
-				<posy>395</posy>
+				<posy>433</posy>
 				<width>550</width>
 				<height>19</height>
 				<onleft>111</onleft>
@@ -267,7 +267,7 @@
 			</control>
 		<control type="image">
 				<posx>565</posx>
-				<posy>443</posy>
+				<posy>481</posy>
 				<width>150</width>
 				<height>19</height>
 				<texture fallback="web-viewer-broken-image.png" border="5">web-viewer-form-submit.png</texture>
@@ -277,7 +277,7 @@
 			</control>
 		<control type="button" id="113">
 				<posx>565</posx>
-				<posy>443</posy>
+				<posy>481</posy>
 				<width>150</width>
 				<height>19</height>
 				<onleft>112</onleft>
@@ -294,7 +294,7 @@
 			</control>
 		<control type="image">
 				<posx>720</posx>
-				<posy>443</posy>
+				<posy>481</posy>
 				<width>190</width>
 				<height>19</height>
 				<texture fallback="web-viewer-broken-image.png" border="5">web-viewer-form-submit.png</texture>
@@ -304,7 +304,7 @@
 			</control>
 		<control type="button" id="114">
 				<posx>720</posx>
-				<posy>443</posy>
+				<posy>481</posy>
 				<width>190</width>
 				<height>19</height>
 				<onleft>113</onleft>
@@ -321,15 +321,15 @@
 			</control>
 		<control type="button" id="115">
 				<posx>10</posx>
-				<posy>438</posy>
+				<posy>476</posy>
 				<width>1260</width>
 				<height>24</height>
 				<onleft>114</onleft>
 				<onright>116</onright>
 				<texturefocus border="0"></texturefocus>
-				<texturenofocus></texturenofocus>
+				<texturenofocus>-</texturenofocus>
 				<align>left</align>
-				<aligny>top</aligny>
+				<aligny>center</aligny>
 				<textoffsetx>0</textoffsetx>
 				<textoffsety>2</textoffsety>
 
@@ -340,15 +340,15 @@
 			</control>
 		<control type="button" id="116">
 				<posx>10</posx>
-				<posy>467</posy>
+				<posy>505</posy>
 				<width>1260</width>
 				<height>24</height>
 				<onleft>115</onleft>
 				<onright>117</onright>
 				<texturefocus border="0"></texturefocus>
-				<texturenofocus></texturenofocus>
+				<texturenofocus>-</texturenofocus>
 				<align>left</align>
-				<aligny>top</aligny>
+				<aligny>center</aligny>
 				<textoffsetx>0</textoffsetx>
 				<textoffsety>2</textoffsety>
 
@@ -359,15 +359,15 @@
 			</control>
 		<control type="button" id="117">
 				<posx>10</posx>
-				<posy>562</posy>
+				<posy>600</posy>
 				<width>1260</width>
 				<height>24</height>
 				<onleft>116</onleft>
 				<onright>118</onright>
 				<texturefocus border="0"></texturefocus>
-				<texturenofocus></texturenofocus>
+				<texturenofocus>-</texturenofocus>
 				<align>left</align>
-				<aligny>top</aligny>
+				<aligny>center</aligny>
 				<textoffsetx>0</textoffsetx>
 				<textoffsety>2</textoffsety>
 
@@ -378,15 +378,15 @@
 			</control>
 		<control type="button" id="118">
 				<posx>10</posx>
-				<posy>562</posy>
+				<posy>600</posy>
 				<width>1260</width>
 				<height>24</height>
 				<onleft>117</onleft>
 				<onright>119</onright>
 				<texturefocus border="0"></texturefocus>
-				<texturenofocus></texturenofocus>
+				<texturenofocus>-</texturenofocus>
 				<align>left</align>
-				<aligny>top</aligny>
+				<aligny>center</aligny>
 				<textoffsetx>0</textoffsetx>
 				<textoffsety>2</textoffsety>
 
@@ -397,15 +397,15 @@
 			</control>
 		<control type="button" id="119">
 				<posx>10</posx>
-				<posy>562</posy>
+				<posy>600</posy>
 				<width>1260</width>
 				<height>24</height>
 				<onleft>118</onleft>
 				<onright>120</onright>
 				<texturefocus border="0"></texturefocus>
-				<texturenofocus></texturenofocus>
+				<texturenofocus>-</texturenofocus>
 				<align>left</align>
-				<aligny>top</aligny>
+				<aligny>center</aligny>
 				<textoffsetx>0</textoffsetx>
 				<textoffsety>2</textoffsety>
 
@@ -416,15 +416,15 @@
 			</control>
 		<control type="button" id="120">
 				<posx>10</posx>
-				<posy>562</posy>
+				<posy>600</posy>
 				<width>1260</width>
 				<height>24</height>
 				<onleft>119</onleft>
 				<onright>121</onright>
 				<texturefocus border="0"></texturefocus>
-				<texturenofocus></texturenofocus>
+				<texturenofocus>-</texturenofocus>
 				<align>left</align>
-				<aligny>top</aligny>
+				<aligny>center</aligny>
 				<textoffsetx>0</textoffsetx>
 				<textoffsety>2</textoffsety>
 
@@ -435,7 +435,7 @@
 			</control>
 		<control type="textbox">
 				<posx>10</posx>
-				<posy>600</posy>
+				<posy>638</posy>
 				<width>1260</width>
 				<height>24</height>
 				<font>WebViewer-font12</font>
@@ -444,15 +444,15 @@
 			</control>
 		<control type="button" id="121">
 				<posx>10</posx>
-				<posy>600</posy>
+				<posy>638</posy>
 				<width>1260</width>
 				<height>24</height>
 				<onleft>120</onleft>
 				<onright>122</onright>
 				<texturefocus border="0"></texturefocus>
-				<texturenofocus></texturenofocus>
+				<texturenofocus>-</texturenofocus>
 				<align>left</align>
-				<aligny>top</aligny>
+				<aligny>center</aligny>
 				<textoffsetx>0</textoffsetx>
 				<textoffsety>2</textoffsety>
 

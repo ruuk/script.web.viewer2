@@ -648,8 +648,30 @@ class WebWindow(xbmcgui.WindowXML):
 		x_pos,y_pos = self.pageGroup.getPosition() # @UnusedVariable
 		WV.nextPage(url,y_pos)
 			
-class WebPageRenderer:
-	TEXTBOX = u'''		<control type="textbox">
+class RenderElement:
+	_font = ''
+	_textColorDefault = ''
+	def __init__(self,x,y,w,h):
+		self.x = x
+		self.y = y
+		self.width = w
+		self.height = h
+		
+class RenderContainer(RenderElement):
+	def __init__(self):
+		self.xindex = 0
+		self.yindex = 0
+		self.children = []
+		RenderElement.__init__(self)
+		
+	def xml(self):
+		xml = ''
+		for c in self.children:
+			self.xml += c.xml()
+		return xml
+			
+class RenderTextbox(RenderElement):
+	_xml = u'''		<control type="textbox">
 				<posx>{x}</posx>
 				<posy>{y}</posy>
 				<width>{width}</width>
@@ -659,7 +681,31 @@ class WebPageRenderer:
 				<label>{label}</label>
 			</control>
 '''
-	IMAGE = u'''		<control type="image">
+	
+	def __init__(self,x=0,y=0,w=0,h=0):
+		RenderElement.__init__(self,x,y,w,h)
+		self.text = ''
+		self.bold = ''
+		self.textColor = ''
+		
+	def font(self):
+		if self.bold: return 'Bold-' + self._font
+		return self._font
+	
+	def color(self):
+		return self.textColor or self._textColorDefault
+	
+	def xml(self):
+		return self._xml.format(	x=self.x,
+									y=self.y,
+									width=self.width,
+									height=self.height,
+									font=self.font(),
+									color=self.color(),
+									label=self.text	)
+
+class RenderImage(RenderElement):
+	_xml = u'''		<control type="image">
 				<posx>{x}</posx>
 				<posy>{y}</posy>
 				<width>{width}</width>
@@ -670,7 +716,34 @@ class WebPageRenderer:
 				<aspectratio>{ratio}</aspectratio>
 			</control>
 '''
-	BUTTON = u'''		<control type="button" id="{id}">
+	_linkBorder = u'''<bordertexture border="2">web-viewer-link-border.png</bordertexture>
+				<bordersize>1</bordersize>
+'''
+	def __init__(self,x=0,y=0,w=0,h=0):
+		RenderElement.__init__(self,x,y,w,h)
+		self.texture = ''
+		self.border = 0
+		self.link = False
+		self.diffuse = ''
+		self.ratio = 'scaled'
+		
+	def borderAttribute(self):
+		if not self.border: return ''
+		return ' border="%s"' % self.border
+	
+	def xml(self):
+		return self._xml.format(	x=self.x,
+									y=self.y,
+									width=self.width,
+									height=self.height,
+									texture=self.texture,
+									textureborder=self.borderAttribute(),
+									border=self.link and self._linkBorder or '',
+									diffuse=self.diffuse,
+									ratio=self.ratio	)
+		
+class RenderButton(RenderTextbox):
+	_xml = u'''		<control type="button" id="{id}">
 				<posx>{x}</posx>
 				<posy>{y}</posy>
 				<width>{width}</width>
@@ -688,7 +761,49 @@ class WebPageRenderer:
 				<label>{label}</label>
 			</control>
 '''
-	VIDEOWINDOW = u'''			<control type="image">
+	_textOffset = u'''<textoffsetx>{textoffsetx}</textoffsetx>
+				<textoffsety>{textoffsety}</textoffsety>
+'''
+
+	def __init__(self,x=0,y=0,w=0,h=0):
+		RenderTextbox.__init__(self,x,y,w,h)
+		self.id = 0
+		self.onLeft = 0
+		self.onRight = 0
+		self.textureFocus = ''
+		self.textureFocusBorder = 0
+		self.textureNoFocus = '-'
+		self.alignX = 'left'
+		self.alignY = 'center'
+		self.textOffsetX = 0
+		self.textOffsetY = 0
+		self.focusedColor = ''
+		
+	def textOffset(self):
+		if self.textOffsetX or self.textOffsetY:
+			return self._textOffset.format(textoffsetx=self.textOffsetX,textoffsety=self.textOffsetY)
+		return ''
+	
+	def xml(self):
+		return self._xml.format(	id=self.id,
+									x=self.x,
+									y=self.y,
+									width=self.width,
+									height=self.height,
+									onleft=self.onLeft,
+									onright = self.onRight,
+									texturefocusborder=self.textureFocusBorder,
+									texturefocus=self.textureFocus,
+									texturenofocus=self.textureNoFocus,
+									alignx=self.alignX,
+									aligny=self.alignY,
+									textoffset=self.textOffset(),
+									font=self.font(),
+									color=self.color(),
+									label=self.text	)
+
+class RenderVideoWindow(RenderElement):
+	_xml = u'''			<control type="image">
 				<posx>{x}</posx>
 				<posy>{y}</posy>
 				<width>{width}</width>
@@ -713,19 +828,24 @@ class WebPageRenderer:
 					<posy>0</posy>
 					<width>{width}</width>
 					<height>{height}</height>
-					<visible></visible>
 				</control>
 				<visible>{visible}</visible>
 			</control>
 '''
-	TEXT_OFFSET = u'''<textoffsetx>{textoffsetx}</textoffsetx>
-				<textoffsety>{textoffsety}</textoffsety>
-'''
-
-	IMAGE_BORDER = u'''<bordertexture border="2">web-viewer-link-border.png</bordertexture>
-				<bordersize>1</bordersize>
-'''
+	_visible = 'Player.Playing + Player.HasVideo + StringCompare(Window.Property(current_video),%s)'
 	
+	def __init__(self,x,y,w,h):
+		RenderElement.__init__(self,x,y,w,h)
+		self.linkedButton = 0
+		
+	def xml(self):
+		return self._xml.format(	x=self.x,
+									y=self.y,
+									width=self.width,
+									height=self.height,
+									visible = self._visible % self.linkedButton	)
+
+class WebPageRenderer(RenderContainer):
 	fonts = {	'WebViewer-font12':{'w':10.0,'h':19}
 			}
 	
@@ -734,7 +854,7 @@ class WebPageRenderer:
 		
 	def reset(self,url):
 		self.url = url
-		self.xml = ''
+		self._xml = ''
 		self.width = 1260
 		self.height = 700
 		self.margin = 10
@@ -761,6 +881,9 @@ class WebPageRenderer:
 		self.buttons = {}
 		self.setFont('WebViewer-font12')
 		self.parser = 'None'
+		RenderElement._font = self.font
+		RenderElement._textColorDefault = self.fgColor
+		self.currentContainer = self
 
 	def updateEncoding(self,detected):
 		if not detected: return
@@ -1326,7 +1449,7 @@ class WebPageRenderer:
 	def processUL(self,tag):
 		#self.newLine()
 		self.processContents(tag)
-		#self.newLine()
+		self.newLine()
 		
 	def processLI(self,tag):
 		if not self.tagIsInline(tag): self.newLine()
@@ -1447,36 +1570,25 @@ class WebPageRenderer:
 			self.leftIsEmpty = False
 			if text.strip().isdigit(): text = '[B][/B]' + text
 			if self.textHasMod('bold'): bold = True
-			bold = bold and 'Bold-' or ''
 			self.contentStarted = True
 			if button:
 				ID, onleft, onright = self.getNextButtonIDs(button,height+5)
-				self.xml += self.BUTTON.format(		id=ID,
-													x=self.margin,
-													y=self.yindex,
-													width=self.width,
-													height=height+5,
-													onleft=onleft,
-													onright=onright,
-													font=bold + self.font,
-													texturefocus='',
-													texturefocusborder=0,
-													texturenofocus='',
-													aligny='top',
-													alignx='left',
-													textoffset=self.TEXT_OFFSET.format(textoffsetx=0,textoffsety=2),
-													color=color or self.fgColor,
-													label=escapeXML(text)
-												)
+				but = RenderButton(x=self.margin, y=self.yindex, w=self.width, h=height+5)
+				but.id=ID					
+				but.onLeft=onleft
+				but.onRight=onright
+				but.bold=bold
+				but.textOffsetY=2
+				but.textColor=color
+				but.text=escapeXML(text)
+				self.xml += but.xml()
 			else:
-				self.xml += self.TEXTBOX.format(	x=self.margin,
-													y=self.yindex,
-													width=self.width,
-													height=height+5,
-													font=bold + self.font,
-													color=color or self.fgColor,
-													label=escapeXML(text)
-												)
+				tb = RenderTextbox(x=self.margin,y=self.yindex,w=self.width,h=height+5)
+				tb.bold=bold
+				tb.textcolor=color
+				tb.text=escapeXML(text)
+				self.xml += tb.xml()
+
 		if self.contentStarted:
 			self.yindex += height - self.fontHeight
 			self.xindex = int(self.margin + (lastLineLen * self.fontWidth))
@@ -1491,7 +1603,7 @@ class WebPageRenderer:
 			url = urlparse.urljoin(self.url, src)
 			
 		if texture:
-			textureborder = textureborder and (' border="%s"' % textureborder) or ''
+			pass
 		elif tag.get('width') and tag.get('height'):
 			try:
 				width = int(tag['width'].replace('px',''))
@@ -1510,8 +1622,6 @@ class WebPageRenderer:
 		if width > self.width:
 			height = int((self.width/float(width)) * height)
 			width = self.width
-		border = ''
-		if self.link: border = self.IMAGE_BORDER
 		
 		self.contentStarted = True
 		if self.xindex + width > self.width: self.newLine()
@@ -1522,41 +1632,31 @@ class WebPageRenderer:
 		if button:
 			ID, onleft, onright = self.getNextButtonIDs(button,height + margin + margin)
 			url = url.format(id=ID)
-		self.xml += self.IMAGE.format(	x=self.xindex,
-										y=self.yindex + margin,
-										width=width,
-										height=height,
-										texture=url,
-										textureborder=textureborder,
-										border=border,
-										diffuse='',
-										ratio=ratio
-								)
+			
+		img = RenderImage(x=self.xindex, y=self.yindex + margin, w=width, h=height)
+		img.texture=url
+		img.border=textureborder
+		img.link=self.link
+		img.ratio=ratio
+		self.xml += img.xml()
+		
 		if button:
 			if button.get('type') == 'EMBED:VIDEO':
-				self.xml += self.VIDEOWINDOW.format(	x=self.xindex,
-														y=self.yindex + margin,
-														width=width,
-														height=height,
-														visible='Player.Playing + Player.HasVideo + StringCompare(Window.Property(current_video),%s)' % ID
-													)
-			self.xml += self.BUTTON.format(		id=ID,
-												x=self.xindex,
-												y=self.yindex + margin,
-												width=width,
-												height=height,
-												onleft=onleft,
-												onright=onright,
-												font=self.font,
-												texturefocus='web-viewer-red-border.png',
-												alignx=alignx,
-												aligny=aligny,
-												textoffset='',
-												texturefocusborder='2',
-												texturenofocus='-',
-												color=textcolor,
-												label=escapeXML(text)
-											)
+				vw = RenderVideoWindow(x=self.xindex, y=self.yindex + margin, w=width, h=height)
+				vw.linkedButton = ID
+				self.xml += vw.xml()
+
+			but = RenderButton(x=self.xindex, y=self.yindex + margin, w=width, h=height)
+			but.id=ID
+			but.onLeft=onleft
+			but.onRight=onright
+			but.textureFocus='web-viewer-red-border.png'
+			but.alignX=alignx
+			but.alignY=aligny
+			but.textureFocusBorder=2
+			but.textColor=textcolor
+			but.text=escapeXML(text)
+			self.xml += but.xml()
 			
 		height = height + margin + margin
 		self.spaceLeadCount = int(math.ceil(height / float(self.fontHeight)))
