@@ -11,6 +11,7 @@ import cssutils
 import os
 import sys
 import logging
+import urlparse
 
 cssutils.log.setLevel(logging.FATAL)
 cssutils.log.raiseExceptions = False
@@ -97,7 +98,7 @@ def getView(document, css):
 
 	return view
 
-def getSoupView(soup, css):
+def getSoupView(soup, css, url=''):
 	"""
 	soup
 		a BeautifulSoup 4 object
@@ -107,13 +108,25 @@ def getSoupView(soup, css):
 	returns style view
 		a dict of tuples
 	"""
-	sheet = cssutils.parseString(css)
-	
+	sheet = cssutils.parseString(css,href=url)
+		
+	cssutils.replaceUrls(sheet,lambda u: urlparse.urljoin(url, u), ignoreImportRules=True)
 	view = {}
 	specificities = {} # needed temporarily 
 
 	# TODO: filter rules simpler?, add @media
-	rules = (rule for rule in sheet if rule.type == rule.STYLE_RULE)	
+	gens = []
+	for i_rule in sheet:
+		if i_rule.type == i_rule.IMPORT_RULE:
+			cssutils.replaceUrls(i_rule.styleSheet,lambda u: urlparse.urljoin(i_rule.href, u), ignoreImportRules=True)
+			rules = (rule for rule in i_rule.styleSheet if rule.type == rule.STYLE_RULE)
+			gens.append(rules)
+			
+	rules = (rule for rule in sheet if rule.type == rule.STYLE_RULE)
+	if gens:
+		import itertools
+		gens.append(rules)
+		rules = itertools.chain(*gens)
 	for rule in rules:
 		for selector in rule.selectorList:
 			#log(0, 'SELECTOR', selector.selectorText)
@@ -130,7 +143,7 @@ def getSoupView(soup, css):
 # 				print '-------'
 			for element in matching:
 				ID = id(element)
-				if ID not in view:	
+				if ID not in view:
 					# add initial empty style declatation
 					view[ID] = (element,cssutils.css.CSSStyleDeclaration())
 					specificities[ID] = {}
