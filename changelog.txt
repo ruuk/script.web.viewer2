@@ -1,7 +1,9 @@
 Web Viewer 2 Changelog 
 
 TODO:
-	Fix line wrapping after images
+	Handle bottom borders and the like
+	Finish checkboxes
+	Finish float: right
 
 Current Version : 0.0.1
 

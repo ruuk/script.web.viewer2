@@ -193,6 +193,7 @@ def render2SoupStyle(view):
 	"""
 	for element, style in view.values():
 		v = style.getCssText(separator=u'')
+		#if element.name.startswith('b'): print v
 		#if element.name == 'img' and 'player' in element.get('src','').lower(): print u'{0} {1} {2}'.format(id(element), element.get('src'), v)
 		curr = element.get('style')
 		if curr:
