@@ -440,7 +440,8 @@ class WebWindow(xbmcgui.WindowXML):
 			new_y = 10
 		elif new_y + self.pageHeight < 710:
 			new_y = 710 - self.pageHeight
-		
+		new_x = int(new_x)
+		new_y = int(new_y)
 		self.pageGroup.setPosition(new_x,new_y)
 		self.reFocusLink(new_x,new_y)
 		
@@ -619,8 +620,8 @@ class WebWindow(xbmcgui.WindowXML):
 		if not self.pageGroup: return
 	
 		if controlID in self.buttons:
-			button_y = self.buttons[controlID]['y']
-			button_h = self.buttons[controlID]['h']
+			button_y = int(self.buttons[controlID]['y'])
+			button_h = int(self.buttons[controlID]['h'])
 			x_pos,y_pos = self.pageGroup.getPosition()  # @UnusedVariable
 			if button_y < abs(y_pos):
 				self.pageGroup.setPosition(x_pos,10 - button_y)
@@ -665,7 +666,7 @@ class RenderContainer(RenderElement):
 				<height>{height}</height>
 				<texture>{texture}</texture>
 				<colordiffuse>{diffuse}</colordiffuse>
-				<aspectratio aligny="top">{aspect}</aspectratio>
+				<aspectratio aligny="{aligny}">{aspect}</aspectratio>
 			</control>
 '''
 	_border = u'''		<control type="image">
@@ -673,11 +674,16 @@ class RenderContainer(RenderElement):
 				<posy>{y}</posy>
 				<width>{width}</width>
 				<height>{height}</height>
-				<texture border="5">web-viewer-white-border.png</texture>
+				<texture border="5">{texture}</texture>
 				<colordiffuse>{diffuse}</colordiffuse>
 				<aspectratio>stretch</aspectratio>
 			</control>
 '''
+	_borderTextures = (	'web-viewer-white-border-top.png',
+						'web-viewer-white-border-right.png',
+						'web-viewer-white-border-bottom.png',
+						'web-viewer-white-border-left.png'	)
+	
 	def __init__(self,x=0,y=0,w=0,h=0,max_w=0,p=(0,0,0,0)):
 		RenderElement.__init__(self,x,y,w,h)
 		self.padding = p
@@ -728,7 +734,7 @@ class RenderContainer(RenderElement):
 		self.background = bg
 		
 	def setBorder(self,color):
-		if color == True: color = 'FF000000'
+		if color == True: color = WV.renderer.fgColor
 		self.border = color
 		
 	def addChild(self,child):
@@ -740,6 +746,9 @@ class RenderContainer(RenderElement):
 		
 	def right(self):
 		return self.x + self.usedWidth()
+	
+	def contentRight(self):
+		return (self.x + self.maxWidth) - self.padding[1]
 	
 	def paddedRight(self):
 		return self.right() - self.padding[1]
@@ -771,13 +780,13 @@ class RenderContainer(RenderElement):
 												height=(self.bottom() - self.y) + 1,
 												texture='web-viewer-white.png',
 												aspect='stretch',
+												aligny='top',
 												diffuse=color	)
 			if url:
 				aspect = 'stretch'
+				aligny = 'top'
 				tex = url[0]
 				parts = url[1].split(' ')
-				if 'center' in parts:
-					aspect = 'center'
 				height = (self.bottom() - self.y) + 1
 				if 'repeat-x' in parts:
 					try:
@@ -789,6 +798,11 @@ class RenderContainer(RenderElement):
 							ctype, w, height = imageinfo.getImageURLInfo(tex)  # @UnusedVariable
 					except:
 						pass
+				if 'bottom' in parts:
+					aligny = 'bottom'
+					aspect = 'keep'
+				if 'center' in parts:
+					aspect = 'center'
 					
 				xml += self._background.format(	x=self.x,
 												y=self.y,
@@ -796,21 +810,33 @@ class RenderContainer(RenderElement):
 												height=height,
 												texture=tex,
 												aspect=aspect,
+												aligny=aligny,
 												diffuse='FFFFFFFF'	)
 				
 		for c in self.children:
 			xml += c.xml()
 			
 		if self.border:
-			xml += self._border.format(		x=self.x,
-											y=self.y,
-											width=self.usedWidth() + 1,
-											height=(self.bottom() - self.y) + 1,
-											diffuse=self.border	)
+			if isinstance(self.border,tuple):
+				for b in range(0,4):
+					if self.border[b]:
+						xml += self._border.format(		x=self.x,
+														y=self.y,
+														width=self.usedWidth() + 1,
+														height=(self.bottom() - self.y) + 1,
+														texture=self._borderTextures[b],
+														diffuse=self.border[b]	)
+			else:
+				xml += self._border.format(		x=self.x,
+												y=self.y,
+												width=self.usedWidth() + 1,
+												height=(self.bottom() - self.y) + 1,
+												texture='web-viewer-white-border.png',
+												diffuse=self.border	)
 		return xml
 			
 class RenderTextbox(RenderElement):
-	_xml = u'''		<control type="textbox">
+	_xml = u'''		<control type="label">
 				<posx>{x}</posx>
 				<posy>{y}</posy>
 				<width>{width}</width>
@@ -844,7 +870,7 @@ class RenderTextbox(RenderElement):
 									height=self.height,
 									font=self.font(),
 									color=self.color(),
-									label=self.text	)
+									label=escapeXML(self.text)	)
 
 class RenderImage(RenderElement):
 	_xml = u'''		<control type="image">
@@ -943,7 +969,7 @@ class RenderButton(RenderTextbox):
 									textoffset=self.textOffset(),
 									font=self.font(),
 									color=self.color(),
-									label=self.text	)
+									label=escapeXML(self.text)	)
 
 class RenderVideoWindow(RenderElement):
 	_xml = u'''			<control type="image">
@@ -989,7 +1015,7 @@ class RenderVideoWindow(RenderElement):
 									visible = self._visible % self.linkedButton	)
 
 class WebPageRenderer(RenderContainer):
-	fonts = {	'WebViewer-font12':{'w':10.0,'h':19,'xoff':0,'yoff':-5}
+	fonts = {	'WebViewer-font12':{'w':9.5,'h':18.5,'xoff':0,'yoff':-2}
 			}
 	
 	def __init__(self,url):
@@ -1120,6 +1146,7 @@ class WebPageRenderer(RenderContainer):
 		return view
 	
 	def processCSS(self,soup):
+		start = time.time()
 		urls = []
 		styles = []
 		if soup.head:
@@ -1149,6 +1176,8 @@ class WebPageRenderer(RenderContainer):
 		for s in styles:
 			view = style.getSoupView(soup, s, self.url)
 			style.render2SoupStyle(view)
+		duration = time.time() - start
+		LOG('CSS Processed in %.2f seconds' % duration)
 			
 	def getImageInfos(self,soup):
 		self.imageInfos = {}
@@ -1185,21 +1214,33 @@ class WebPageRenderer(RenderContainer):
 		WV.setProgressIncrement(inc)
 		self.imageInfos.update(imageinfo.getImageURLInfos(urls,threaded=True,progress=WV.updateProgressIncremental))
 		
-	def getWidthAndHeight(self,tag,ignore_pct=False):
+	def getWidthAndHeight(self,tag,ignore_pct=False,default=(None,None)):
 		width = tag.get('width')
 		height = tag.get('height')
 		if not width or not height:
 			styles = self.parseInlineStyle(tag.get('style'))
 			if styles:
-				width = styles.get('width','').split(' ',1)[0].replace('px','')
-				height = styles.get('height','').split(' ',1)[0].replace('px','')
+				if not width: width = styles.get('width','').split(' ',1)[0].replace('px','')
+				if not height: height = styles.get('height','').split(' ',1)[0].replace('px','')
 				
-		if not width and not height: return None,None
+		if not width and not height: return default
 		if ignore_pct: return width, height
 		if width.endswith('%'): width = self.calculatePercentage(width[:-1], self.currentContainer.contentWidth)
 		if height.endswith('%'): height = self.calculatePercentage(height[:-1], self.currentContainer.height)
 		
-		return width, height
+		if default[0] == None:
+			return width, height
+		
+		try:
+			width = int(width)
+		except:
+			width = default[0]
+		try:
+			height = int(height)
+		except:
+			height = default[1]
+		return width,height
+		
 		
 	def calculatePercentage(self,pct,val):
 		try:
@@ -1249,6 +1290,7 @@ class WebPageRenderer(RenderContainer):
 		body = soup.body
 		if not body: body = soup
 		WV.updateProgress(80, 'Rendering Page')
+		start = time.time()
 		pct = 80
 		blen = len(body.contents)
 		if not blen: return
@@ -1260,7 +1302,8 @@ class WebPageRenderer(RenderContainer):
 			self.processTag(t)
 			pct+=bit
 			WV.updateProgress(pct, 'Rendering Page')
-			
+		duration = time.time() - start
+		LOG('Page Rendered in %.2f seconds' % duration)
 		if self.lastImageBottom > self.currentContainer.yindex: self.currentContainer.yindex = self.lastImageBottom
 			
 	def addTextMod(self,mod):
@@ -1415,20 +1458,17 @@ class WebPageRenderer(RenderContainer):
 		cols = tag.get('cols')
 		try:
 			cols = int(cols)
-			rows = int(rows)
 		except:
 			cols = 40
+			
+		try:
+			rows = int(rows)
+		except:
 			rows = 10
-		if cols < 2:
-			width,height = self.getWidthAndHeight(tag) # @UnusedVariable
-			try:
-				width = int(width)
-				cols = int(width/self.fontWidth)
-				if cols < 2: cols = 40
-			except:
-				cols = 40
-		width = int(cols * self.fontWidth)
-		height = int(rows * self.fontHeight)
+			
+		width,height = self.getWidthAndHeight(tag,default=(int(cols * self.fontWidth),int(rows * self.fontHeight))) # @UnusedVariable
+		
+		cols = int(width/self.fontWidth)
 		wrapwidth = cols - 2
 		val = '[CR]'.join(textwrap.wrap(tag.string or '', wrapwidth)[:rows])
 		self.addImage(tag, width, height,ratio='stretch', button={'type':'FORM:TEXTAREA','form':self.formIDX,'tag':tag,'cols':cols,'rows':rows},texture='web-viewer-form-text.png',textureborder=5,text=val,textcolor='black',alignx='left',aligny='top')
@@ -1508,7 +1548,23 @@ class WebPageRenderer(RenderContainer):
 			
 	def processA(self,tag):
 		if tag.string:
-			self.addText(tag.string,color=self.linkColor,button={'url':tag.get('href')})
+			pad = self.getTagPadding(tag)
+			padl = ''
+			padr = ''
+			if pad[3]: padl = ' ' * (int(pad[3] / self.fontWidth) or 1)
+			if pad[1]: padr = ' ' * (int(pad[1] / self.fontWidth) or 1)
+			self.addText(tag.string + padr,color=self.linkColor,button={'url':tag.get('href')},pre=padl)
+# 			x = self.currentContainer.xindex
+# 			y = self.currentContainer.yindex
+# 			tb = self.addText(tag.string,color=self.linkColor,button={'url':tag.get('href')})
+# 			if not '[CR]' in tb.text:
+# 				w = len(tb.text.strip()) * self.fontWidth
+# 				h = self.fontHeight
+# 				a = RenderContainer(x,y,w,h,w,p=self.getTagPadding(tag))
+# 				a.updateMaxY(y + self.fontHeight)
+# 				a.setBackground(self.tagHasBackground(tag))
+# 				a.setBorder(self.getTagBorder(tag))
+# 				self.currentContainer.children.insert(-1,a)
 		else:
 			self.processContents(tag,link=tag.get('href'))
 			
@@ -1551,14 +1607,15 @@ class WebPageRenderer(RenderContainer):
 				self.processContents(tag)
 				self.newLine()			
 		else:
-			return self.processBlockElement(tag)
+			return self.processContainerElement(tag)
 			
-	def processBlockElement(self,tag):
+	def processContainerElement(self,tag,inline=False):
 		if not tag.contents: return
-		self.currentContainer.CR()
-		inline = self.tagIsInline(tag)
-		if self.currentContainer.float: inline = True
+		inline = self.tagIsInline(tag,inline)
+		float_ = self.getTagFloat(tag)
+		if not float_ and self.currentContainer.float and self.currentContainer.float != 'parent': float_ = 'parent' #TODO: Handle clearing of the float properly as this likely isn't it
 		if not inline and self.currentContainer.children:
+			self.currentContainer.CR()
 			if not isinstance(self.currentContainer.children[-1],RenderContainer): self.newLine()
 				
 		w,h = self.getWidthAndHeight(tag)  # @UnusedVariable
@@ -1569,26 +1626,22 @@ class WebPageRenderer(RenderContainer):
 		try:
 			w = int(w)
 		except:
-			if inline:
+			if inline or float_:
 				w = 0
 			else:
 				w = self.currentContainer.contentWidth
 			
 		x = self.currentContainer.xindex
 		y = self.currentContainer.yindex
-		float_ = False
 		style = tag.get('style','')
 		if w and 'margin: 0 auto' in style: #TODO: Obviously, this is a dumb way to parse out a centering margin :)
 			x = self.currentContainer.x + int((self.currentContainer.contentWidth - w) / 2)
 			if x < self.currentContainer.x: x = self.currentContainer.x
-		elif 'float: right' in style:
-			float_ = 'right'
+		elif float_ == 'right':
 			if w:
 				x = self.currentContainer.paddedRight() - w
 				if x >= self.currentContainer.contentMaxXindex:
 					y = self.currentContainer.y
-		elif 'float: left' in style:
-			float_ = 'left'
 		self.currentContainer.updateMaxY()
 		div = RenderContainer(x,y,w,h,self.currentContainer.contentWidth,self.getTagPadding(tag))
 		div.tagName = 'div'
@@ -1597,15 +1650,15 @@ class WebPageRenderer(RenderContainer):
 		self.currentContainer.addChild(div)
 		state = self.setCurrentContainer(div)
 		div.setBackground(self.tagHasBackground(tag))
-		div.setBorder(self.tagHasBorder(tag))
+		div.setBorder(self.getTagBorder(tag))
 		lastCenter = self.center
 		if 'center;' in tag.get('style',''): self.center = True
 		self.processContents(tag)
 		self.center = lastCenter
-		if not inline: self.newLine()
+		if not inline and div.children and isinstance(div.children[-1],RenderTextbox): self.newLine()
 		self.restoreCurrentContainer(state)
 		self.currentContainer.updateContentMaxX(div.right())
-		self.currentContainer.CR()
+		if not inline: self.currentContainer.CR()
 		
 	def processIMG(self,tag):
 		margin = self.getTagMargin(tag)
@@ -1621,7 +1674,7 @@ class WebPageRenderer(RenderContainer):
 		table = RenderContainer(self.currentContainer.xindex,self.currentContainer.yindex,self.currentContainer.contentWidth,self.currentContainer.height,self.currentContainer.contentWidth)
 		self.currentContainer.addChild(table)
 		state = self.setCurrentContainer(table)
-		self.border = self.tagHasBorder(tag)
+		self.border = self.getTagBorder(tag)
 		table.setBorder(self.border)
 		self.processContents(tag)
 		self.restoreCurrentContainer(state)
@@ -1681,7 +1734,7 @@ class WebPageRenderer(RenderContainer):
 		self.restoreFontColor(fgstate)
 		self.delTextMod('bold')
 		row.setBackground(self.tagHasBackground(tag))
-		row.setBorder(self.tagHasBorder(tag))
+		row.setBorder(self.getTagBorder(tag))
 		
 		self.restoreCurrentContainer(state)
 		self.currentContainer.CR()
@@ -1692,16 +1745,17 @@ class WebPageRenderer(RenderContainer):
 		self.currentContainer.addChild(td)
 		state = self.setCurrentContainer(td)
 		td.setBackground(self.tagHasBackground(tag))
-		td.setBorder(self.tagHasBorder(tag) or self.border)
+		td.setBorder(self.getTagBorder(tag) or self.border)
 		if tag.string:
-			self.addText(tag.string + ' ')
+			self.addText(tag.string)
 		else:
 			lastCenter = self.center
 			if 'center;' in tag.get('style',''): self.center = True
 			self.processContents(tag)
-			self.addText(' ')
+			#self.addText(' ')
 			self.center = lastCenter
-		state.updateMaxY(self.currentContainer.bottom())
+		#if td.children and isinstance(td.children[-1],RenderTextbox): self.newLine()
+		state.updateMaxY(td.bottom())
 		self.restoreCurrentContainer(state)
 		
 	def processDD(self,tag):
@@ -1758,18 +1812,19 @@ class WebPageRenderer(RenderContainer):
 		self.newLine()
 		
 	def processLI(self,tag):
-		if not self.tagIsInline(tag): self.newLine()
-		if tag.string:
-			self.addText('* ' + tag.string)
-		else:
-			self.processContents(tag)
+		inline = self.tagIsInline(tag)
+		if not inline: self.newLine()
+		styles = tag.get('style','')
+		if not 'list-style' in styles or not 'none' in self.parseInlineStyle(tag=tag).get('list-style',''):	
+			self.addText(u'%s ' % unichr(8226))
+		self.processContainerElement(tag, True)
+		#self.processContents(tag)
 		
 	def processHX(self,tag):
 		#self.newLine()
 		self.addTextMod('bold')
-		self.processContents(tag)
+		self.processContainerElement(tag)
 		self.delTextMod('bold')
-		self.newLine()
 	
 	def setFontColor(self,tag):
 		styles = self.parseInlineStyle(tag=tag)
@@ -1783,9 +1838,10 @@ class WebPageRenderer(RenderContainer):
 		
 	def tagIsVisible(self,tag):
 		styles = tag.get('style','')
-		if not 'visibility' in styles: return True
+		if not 'visibility' in styles and not 'display' in styles: return True
 		styles = self.parseInlineStyle(styles)
 		if 'hidden' in styles.get('visibility',''): return False
+		if 'none' in styles.get('display',''): return False
 		return True
 		
 	def processColor(self,color):
@@ -1809,9 +1865,9 @@ class WebPageRenderer(RenderContainer):
 			if plen == 1:
 				spacing = p * 4
 			elif plen == 2:
-				spacing = (p[0],p[1],p[0],p[1])
+				spacing = [p[0],p[1],p[0],p[1]]
 			elif plen == 3:
-				spacing =  (p[0],p[1],p[2],p[1])
+				spacing =  [p[0],p[1],p[2],p[1]]
 			else:
 				spacing = p[:4]
 		if prefix + '-top' in styles: spacing[0] =  self.getDirectionalSpacing(styles[prefix + '-top'], spacing[0])
@@ -1820,6 +1876,15 @@ class WebPageRenderer(RenderContainer):
 		if prefix + '-left' in styles: spacing[3] =  self.getDirectionalSpacing(styles[prefix + '-left'], spacing[3])
 		return tuple(spacing)
 	
+	def getTagFloat(self,tag): #TODO: Do this properly
+		style = tag.get('style')
+		if not style: return False
+		if 'float: right' in style:
+			return 'right'
+		elif 'float: left' in style:
+			return 'left'
+		return False
+			
 	def getDirectionalSpacing(self,val,default):
 		try:
 			return int(re.search('\d+',val).group(0))
@@ -1836,19 +1901,41 @@ class WebPageRenderer(RenderContainer):
 	
 	def tagHasBackground(self,tag):
 		styles = self.parseInlineStyle(tag=tag)
-		if not styles or not 'background' in styles: return None
-		return styles['background']
+		if not styles: return None
+		bg = (' '.join((styles.get('background',''),styles.get('background-color',''),styles.get('background-image',''))).strip())
+		if not bg: return None
+		return bg
 	
-	def tagHasBorder(self,tag):
+	def getTagBorder(self,tag):
 		if tag.get('border','0') != '0': return True
-		styles = self.parseInlineStyle(tag=tag)
-		if not styles or not 'border' in styles: return False
-		if '#' in styles['border']: return 'FF' + self.processColor(styles['border'].split('#',1)[-1][:6].upper())
-		return True
+		styles = tag.get('style','')
+		if not 'border' in styles: return False
+		styles = self.parseInlineStyle(styles,tag=tag)
+		if not styles: return False
+		if 'border' in styles:
+			return self.extractBorderColor(styles)
+		top = right = bottom = left = False
+		if 'border-top' in styles:
+			top = self.extractBorderColor(styles, '-top')
+		elif 'border-right' in styles:
+			right = self.extractBorderColor(styles, '-right')
+		elif 'border-bottom' in styles:
+			bottom = self.extractBorderColor(styles, '-bottom')
+		elif 'border-left' in styles:
+			left = self.extractBorderColor(styles, '-left')
+		if top or right or bottom or left:
+			return (top,right,bottom,left)
+		return False
 		
-	def tagIsInline(self,tag):
+	def extractBorderColor(self,styles,prefix=''):
+		val = styles['border' + prefix]
+		if '#' in val: return 'FF' + self.processColor(val.split('#',1)[-1][:6].upper())
+	
+	def tagIsInline(self,tag,default=False): #TODO: Handle this properly
 		style = tag.get('style','')
-		return 'inline' in style or 'float: left;' in style or 'float: right;' in style
+		if 'inline' in style: return True
+		if 'block' in style: return False
+		return default
 		
 	def newLine(self,lines=1):
 		if not self.contentStarted: return
@@ -1875,11 +1962,11 @@ class WebPageRenderer(RenderContainer):
 		#print '%s %s %s %s' % (firstLen,wrapwidth,lead,repr(text[:8]))
 		return firstLen > (wrapwidth - lead)
 	
-	def wrap(self,text):
+	def wrap(self,text,pre=''):
 		si = ''
 		sllen = int(math.ceil((self.currentContainer.xindex - self.currentContainer.margin) / self.fontWidth))
 		wrapwidth = int(self.currentContainer.contentWidth/self.fontWidth)
-		
+		if wrapwidth < 1: wrapwidth = 1
 		if self.lastImageRight:
 			silen = int(math.ceil((self.lastImageRight - self.currentContainer.margin) / self.fontWidth))
 			si = ' ' * silen
@@ -1895,7 +1982,7 @@ class WebPageRenderer(RenderContainer):
 			sllen = int(math.ceil((self.currentContainer.xindex - self.currentContainer.margin) / self.fontWidth))
 		
 		spaceLead = ' ' * sllen
-		if not sllen: text = text.lstrip()
+		if not sllen: text = pre + text.lstrip()
 		lines = textwrap.wrap(spaceLead + text, wrapwidth,drop_whitespace=False,subsequent_indent=si)
 		end = []
 		start = lines
@@ -1918,15 +2005,16 @@ class WebPageRenderer(RenderContainer):
 		#if sllen and len(lines) > 1 and not lines[0].strip(): lines.pop(0)
 		return start + end
 		
-	def addText(self,text,color=None,button=None,bold=False):
+	def addText(self,text,color=None,button=None,bold=False,pre=''):
 		text = ''.join(unicode.splitlines(self.decode(text)))
-		lines = self.wrap(text)
+		lines = self.wrap(text,pre)
 		rows = len(lines)
 		height = (self.fontHeight * rows) or self.fontHeight
 		lastLineLen = 0
 		if lines: lastLineLen = len(lines[-1])
 			
 		text = '[CR]'.join(lines)
+		print repr(text)
 		if self.link:
 			color = self.linkColor
 			button = self.link
@@ -1935,6 +2023,7 @@ class WebPageRenderer(RenderContainer):
 				button = None
 				color = None
 		ID = None
+		child = None
 		if text.strip():
 			self.leftIsEmpty = False
 			if text.strip().isdigit(): text = '[B][/B]' + text
@@ -1947,23 +2036,26 @@ class WebPageRenderer(RenderContainer):
 				but.onLeft=onleft
 				but.onRight=onright
 				but.bold=bold
-				but.textOffsetY=2
+				but.textOffsetX=-1
 				but.setTextColor(color)
-				but.text=escapeXML(text)
+				but.text=text
 				self.currentContainer.addChild(but)
+				child = but
 			else:
 				tb = RenderTextbox(x=self.currentContainer.margin+self.fontXOff,y=self.currentContainer.yindex+self.fontYOff,w=self.currentContainer.contentWidth,h=height+5)
 				tb.bold=bold
 				tb.setTextColor(color)
-				tb.text=escapeXML(text)
+				tb.text=text
 				self.currentContainer.addChild(tb)
+				child = tb
 
 		if self.contentStarted:
 			self.currentContainer.yindex += height - self.fontHeight
 			self.currentContainer.setXIndex(int(self.currentContainer.margin + (lastLineLen * self.fontWidth)))
 			if rows > 1:
 				self.currentContainer.updateContentMaxX(self.currentContainer.right())
-		return ID
+			self.currentContainer.updateMaxY(self.yindex + self.fontHeight)
+		return child
 	
 	def addImage(self,tag,width=20,height=20,ratio='keep',button=None,texture=None,textureborder='',text='',textcolor='00000000',alignx='left',aligny='top',margin=(0,0,0,0)):
 		if texture:
@@ -1995,15 +2087,17 @@ class WebPageRenderer(RenderContainer):
 			width = self.currentContainer.contentWidth
 		
 		self.contentStarted = True
-		if self.currentContainer.xindex + width > self.currentContainer.contentWidth: self.newLine()
+		if self.currentContainer.xindex + width > self.currentContainer.contentRight():
+			self.newLine()
 		if self.center and self.leftIsEmpty:
 			self.currentContainer.setXIndex(self.currentContainer.margin + ((self.currentContainer.contentWidth - width) / 2))
 		self.leftIsEmpty = False
 		x=self.currentContainer.xindex + margin[3]
-		y=self.currentContainer.yindex + margin[2]
+		y=self.currentContainer.yindex + margin[0]
 		ID = None
+		heightWithMargin = height + margin[0] + margin[2]
 		if button:
-			ID, onleft, onright = self.getNextButtonIDs(button,height + margin[0] + margin[2])
+			ID, onleft, onright = self.getNextButtonIDs(button,heightWithMargin)
 			url = url.format(id=ID)
 		img = RenderImage(x=x, y=y, w=width, h=height)
 		img.texture=url
@@ -2027,19 +2121,19 @@ class WebPageRenderer(RenderContainer):
 			but.alignY=aligny
 			but.textureFocusBorder=2
 			but.setTextColor(textcolor)
-			but.text=escapeXML(text)
+			but.text=text
 			self.currentContainer.addChild(but)
 			
 		height = height + margin[0] + margin[1]
 		self.spaceLeadCount = int(math.ceil(height / float(self.fontHeight)))
-		imageBottom = self.currentContainer.yindex + height
+		imageBottom = self.currentContainer.yindex + heightWithMargin
 		if imageBottom > self.lastImageBottom: self.lastImageBottom = imageBottom
 		if self.currentContainer.xindex > self.currentContainer.margin:
 			self.lastImageLeft = self.currentContainer.xindex
 		else:
 			self.lastImageRight = self.currentContainer.xindex + width + margin[3] + margin[1]
 		self.currentContainer.setXIndex(width  + margin[3] + margin[1], add=True)
-
+		self.currentContainer.updateMaxY(imageBottom)
 		return ID
 	
 	def drawImage(self,texture,x,y,w,h,ratio='keep',textureborder='',diffuse=''):
@@ -2134,10 +2228,10 @@ class WebViewer:
 		self.url = None
 		self.webPage = None
 		#startURL = 'http://www.google.com'
-		#startURL = 'http://forum.xbmc.org/showthread.php?tid=85018&pid=1427113#pid1427113'
+		startURL = 'http://forum.xbmc.org/showthread.php?tid=85018&action=lastpost'
 		#startURL = 'http://forum.xbmc.org'
 		#startURL = 'http://playerones.geekandsundry.com'
-		startURL = 'file://' + os.path.join(xbmc.translatePath(ADDON.getAddonInfo('path')),'resources','default.html')
+		#startURL = 'file://' + os.path.join(xbmc.translatePath(ADDON.getAddonInfo('path')),'resources','default.html')
 		self.nextPage(startURL)
 		self.history = URLHistory(HistoryLocation(startURL))
 		while not self.done:
