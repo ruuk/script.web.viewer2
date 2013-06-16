@@ -4,7 +4,7 @@ TODO:
 	Handle bottom borders and the like
 	Finish checkboxes
 	Finish float: right
-	Move li bullets within li content
+	Handle font-weight: bold
 
 Current Version : 0.0.1
 

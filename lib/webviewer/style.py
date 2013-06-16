@@ -11,7 +11,7 @@ import cssutils
 import os
 import sys
 import logging
-import urlparse
+import urlparse, re
 
 cssutils.log.setLevel(logging.FATAL)
 cssutils.log.raiseExceptions = False
@@ -201,3 +201,142 @@ def render2SoupStyle(view):
 		else:
 			element['style'] = v
 
+urlRE = re.compile('url\((?P<url>[^\)]*)\)')
+numPosRE = re.compile('\d+%?')
+colorRE = re.compile('#\w+')
+colorNameRE = re.compile('\w+')
+attachmentRE = re.compile('scroll|fixed|inherit')
+repeatRE = re.compile('repeat|repeat-x|repeat-y|no-repeat|inherit')
+
+class CSSBackground:
+	def __init__(self,style_dict):
+		self.background = style_dict.get('background','')
+		self.color = style_dict.get('background-color')
+		image = style_dict.get('background-image')
+		if image:
+			test = urlRE.search(image)
+			if test: image = test.group('url')
+		self.image = image
+		self.attachment = style_dict.get('background-attachment')
+		self.repeat = style_dict.get('background-repeat')
+		self.inheritPosition = False
+		self.posX = None
+		self.posY = None
+		pos = style_dict.get('background-position')
+		if pos:
+			if pos == 'inherit':
+				self.inheritPosition = True
+			else:
+				test = pos.split(' ')
+				if len(test) > 1:
+					self.posX , self.posY = test
+				else:
+					self.posX = pos
+					self.posY = 'center'
+		self._initialized = False
+		
+	def absPosX(self,width):
+		if self.posX.endswith('%'):
+			try:
+				pct = int(self.posX[:-1])
+			except:
+				return None
+			return int((pct/100.0) * width)
+		
+		if not self.posX.isdigit(): return None
+		return int(self.posX)
+		
+	def absPosY(self,height):
+		if self.posY.endswith('%'):
+			try:
+				pct = int(self.posY[:-1])
+			except:
+				return None
+			return int((pct/100.0) * height)
+		
+		if not self.posY.isdigit(): return None
+		return int(self.posY)
+		
+	def __nonzero__(self):
+		return bool(self.image or self.color or self.background)
+	
+	def noInit(self):
+		self.posX = 'center'
+		self.posY = 'center'
+		
+	def init(self):
+		if self._initialized: return
+		self._initialized = True
+		if not self.background: return self.noInit()
+		if self.background == 'none': return self.noInit()
+		if self.background == 'transparent': return self.noInit()
+		bg = processCSSBackground(self.background)
+		self.background = ''
+		self.color = self.color or bg.get('color')
+		self.image = self.image or bg.get('image')
+		self.attachment = self.attachment or bg.get('attachment')
+		self.repeat = self.repeat or bg.get('repeat')
+		self.posX = self.posX or bg.get('posx','center')
+		self.posY = self.posY or bg.get('posy','center')
+		self.inheritPosition = self.inheritPosition or bg.get('pos_inherit')
+		
+	def xbmcColor(self):
+		if not self.color: return
+		if self.color.startswith('#'): return 'FF' + processColor(self.color[1:])
+		return self.color.lower()
+		
+def processCSSBackground(bg):
+	ret = {}
+	for part in bg.split(' '):
+		
+		if colorRE.match(part):
+			ret['color'] = part
+			continue
+		
+		test = urlRE.match(part)
+		if test:
+			ret['image'] = test.group('url')
+			continue
+		
+		if attachmentRE.match(part) and not 'attachment' in ret:
+			ret['attachment'] = part
+			continue
+		
+		if repeatRE.match(part) and not 'repeat' in ret:
+			ret['repeat'] = part
+			continue
+		
+		if numPosRE.match(part):
+			if 'posx' in ret:
+				ret['posy'] = part
+			else:
+				ret['posx'] = part
+			continue
+				
+		if part in ('left','right'):
+			ret['posx'] = part
+			continue
+		
+		elif part in ('top','bottom'):
+			ret['posy'] = part
+			continue
+		
+		if part == 'center':
+			if 'posx' in ret:
+				ret['posy'] = part
+			else:
+				ret['posx'] = part
+			continue
+		
+		if part == 'inherit':
+			part['pos_inherit'] = True
+		
+		if colorNameRE.match(part) and not 'color' in ret:
+			ret['color'] = part
+	return ret
+
+def processColor(color):
+		color = color.strip()
+		if len(color) == 3:
+			color = color[0] + color[0] + color[1] + color[1] + color[2] + color[2]
+		return color

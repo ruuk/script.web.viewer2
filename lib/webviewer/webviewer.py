@@ -349,10 +349,11 @@ class WebReader:
 			x += 1
 
 class HistoryLocation:
-	def __init__(self, url='', line=0, title=''):
+	def __init__(self, url='', line=0, title='',render_file=None):
 		self.url = url
 		self.line = line
 		self.title = title
+		self.renderFile = render_file
 		
 	def __str__(self):
 		return '<HistoryLocation (url: {0} title: {1} line: {2})>'.format(self.url,self.title,self.line)
@@ -362,6 +363,9 @@ class HistoryLocation:
 	
 	def getTitle(self):
 		return self.title or self.url
+	
+	def setRenderFile(self,render_file):
+		pass
 	
 	def copy(self, other):
 		if other.url: self.url = other.url
@@ -406,6 +410,9 @@ class URLHistory:
 		if url: self.history[self.index].url = url
 		if title: self.history[self.index].title = title
 		if line: self.history[self.index].line = line
+		
+	def current(self):
+		return self.history[self.index]
 		
 	def size(self):
 		return len(self.history)
@@ -666,7 +673,7 @@ class RenderContainer(RenderElement):
 				<height>{height}</height>
 				<texture>{texture}</texture>
 				<colordiffuse>{diffuse}</colordiffuse>
-				<aspectratio aligny="{aligny}">{aspect}</aspectratio>
+				<aspectratio align="{align}" aligny="{aligny}">{aspect}</aspectratio>
 			</control>
 '''
 	_border = u'''		<control type="image">
@@ -701,15 +708,6 @@ class RenderContainer(RenderElement):
 		self.border = None
 		self.maxYindex = 0
 		self.children = []
-		
-	def getBackgrounds(self):
-		url = None
-		color = None
-		if 'url(' in self.background:
-			url = (self.background.split('url(',1)[-1].split(')')[0].strip('"\''),self.background)
-		if '#' in self.background:
-			color = 'FF' + WV.renderer.processColor(self.background.split('#',1)[-1].split(' ')[0][:6].upper())
-		return (url,color)
 	
 	def updateMaxY(self,yindex=0):
 		self.maxYindex = max(self.maxYindex, self.yindex, yindex)
@@ -726,6 +724,9 @@ class RenderContainer(RenderElement):
 		
 	def CR(self):
 		self.setXIndex(self.margin)
+		
+	def LF(self):
+		self.yindex = self.bottom()
 		
 	def isCR(self):
 		return self.xindex == self.margin
@@ -757,80 +758,126 @@ class RenderContainer(RenderElement):
 		if self.width: return self.width
 		return (self.contentMaxXindex - self.x) + self.padding[1]
 	
+	def backgroundBottom(self):
+		if self.height: return self.y + self.height
+		return self.bottom()
+	
 	def bottom(self):
 		bottom = self.yindex + self.padding[2]
 		bottom = max(self.maxYindex,bottom)
 		if self.hasBGImage():
 			bottom2 = self.y + self.height
-			return max(bottom,bottom2)
-		else:
-			return bottom
+			bottom =  max(bottom,bottom2)
+		for c in self.children:
+			if isinstance(c,RenderContainer):
+				bottom = max(bottom,c.bottom())
+			else:
+				bottom = max(bottom,c.y + c.height)
+		return bottom
 	
 	def hasBGImage(self):
-		return self.background and 'url(' in self.background 
+		if not self.background: return False
+		self.background.init()
+		return self.background.image
 	
 	def xml(self):
 		xml = ''
 		if self.background:
-			url, color = self.getBackgrounds()
-			if color:
+			self.background.init()
+			if self.background.color:
 				xml += self._background.format(	x=self.x,
 												y=self.y,
 												width=self.usedWidth() + 1,
-												height=(self.bottom() - self.y) + 1,
+												height=(self.backgroundBottom() - self.y) + 1,
 												texture='web-viewer-white.png',
 												aspect='stretch',
-												aligny='top',
-												diffuse=color	)
-			if url:
-				aspect = 'stretch'
-				aligny = 'top'
-				tex = url[0]
-				parts = url[1].split(' ')
-				height = (self.bottom() - self.y) + 1
-				if 'repeat-x' in parts:
+												aligny='center',
+												align='center',
+												diffuse=self.background.xbmcColor()	)
+			if self.background.image and not self.background.image == 'none':
+				aspect = 'center'
+				aligny = 'center'
+				alignx = 'center'
+				x = self.x
+				y = self.y
+				width = self.usedWidth() + 1
+				height = (self.backgroundBottom() - self.y) + 1
+				w = h = 0
+				if self.background.repeat == 'repeat':
+					aspect = 'stretch'
+				else:
 					try:
-						path = xbmcutil.getCachedImagePath(tex)
+						path = xbmcutil.getCachedImagePath(self.background.image)
 						if path:
 							with open(path,'r') as f:
-								ctype, w, height = imageinfo.getImageInfo(f)  # @UnusedVariable
+								ctype, w, h = imageinfo.getImageInfo(f)  # @UnusedVariable
 						else:
-							ctype, w, height = imageinfo.getImageURLInfo(tex)  # @UnusedVariable
+							ctype, w, h = imageinfo.getImageURLInfo(self.background.image)  # @UnusedVariable
 					except:
 						pass
-				if 'bottom' in parts:
-					aligny = 'bottom'
-					aspect = 'keep'
-				if 'center' in parts:
-					aspect = 'center'
+				repeat = 1
+				last = 0
+				if self.background.repeat == 'repeat-x' or self.background.repeat == 'repeat-y':
+					aspect = 'stretch'
+					if self.background.repeat == 'repeat-x':
+						if w > 1:
+							aspect = 'center'
+							alignx = 'left'
+							height = min(h or height,height)
+							repeat = int(width / w)
+							last = width % w
+							width = w
+							if last: repeat += 1
+						else:
+							height = min(h or height,height)
+					else:
+						width = min(w or width,width)
+				
+				absX = self.background.absPosX(width)
+				if absX is not None:
+					x += absX
+					alignx = 'left'
+				else:
+					alignx = self.background.posX
 					
-				xml += self._background.format(	x=self.x,
-												y=self.y,
-												width=self.usedWidth() + 1,
-												height=height,
-												texture=tex,
-												aspect=aspect,
-												aligny=aligny,
-												diffuse='FFFFFFFF'	)
+				absY = self.background.absPosY(height)
+				if absY is not None:
+					x += absY
+					aligny = 'top'
+				else:
+					aligny = self.background.posY
+					
+				for r in range(1,repeat + 1):
+					if last and r == repeat: width = last
+					xml += self._background.format(	x=x,
+													y=y,
+													width=width,
+													height=height,
+													texture=self.background.image,
+													aspect=aspect,
+													aligny=aligny,
+													align=alignx,
+													diffuse='FFFFFFFF'	)
+					x += w
 				
 		for c in self.children:
 			xml += c.xml()
-			
+		#self.border = 'FF000000'
 		if self.border:
 			if isinstance(self.border,tuple):
 				for b in range(0,4):
 					if self.border[b]:
 						xml += self._border.format(		x=self.x,
 														y=self.y,
-														width=self.usedWidth() + 1,
-														height=(self.bottom() - self.y) + 1,
+														width=self.usedWidth() + int(not(b % 1)),
+														height=(self.backgroundBottom() - self.y) + (b % 1),
 														texture=self._borderTextures[b],
 														diffuse=self.border[b]	)
 			else:
 				xml += self._border.format(		x=self.x,
 												y=self.y,
 												width=self.usedWidth() + 1,
-												height=(self.bottom() - self.y) + 1,
+												height=(self.backgroundBottom() - self.y) + 1,
 												texture='web-viewer-white-border.png',
 												diffuse=self.border	)
 		return xml
@@ -1043,6 +1090,8 @@ class WebPageRenderer(RenderContainer):
 		self.link = None
 		self.center = False
 		self.border = False
+		self.textIndent = 0
+		self.listStyle = None
 		self.textMods = []
 		self.fgColor = 'black'
 		self.bgColor = 'ffffffff'
@@ -1063,9 +1112,9 @@ class WebPageRenderer(RenderContainer):
 		self.currentContainer = container
 		return state
 		
-	def restoreCurrentContainer(self,state):
+	def restoreCurrentContainer(self,state,inline=False):
 		state.setXIndex(self.currentContainer.xindex)
-		state.yindex = self.currentContainer.bottom()
+		if not inline: state.yindex = self.currentContainer.bottom()
 		self.currentContainer = state
 		
 	
@@ -1295,9 +1344,13 @@ class WebPageRenderer(RenderContainer):
 		blen = len(body.contents)
 		if not blen: return
 		bit = 20.0/blen
-		bg = self.tagHasBackground(body)
-		if bg and '#' in bg: self.bgColor = ('FF' + self.processColor(bg.split('#',1)[-1].split(' ')[0][:6])).lower()
+		bg = self.getTagBackground(body)
+		if bg:
+			bg.init()
+			if bg.color: self.bgColor = bg.xbmcColor().lower()
 		self.setBackground(bg)
+		color = self.getFontColor(body)
+		if color: self.fgColor = color
 		for t in body.contents:
 			self.processTag(t)
 			pct+=bit
@@ -1325,6 +1378,13 @@ class WebPageRenderer(RenderContainer):
 		if text != base: text = ' ' + text
 		return text
 
+	def getFontColor(self,tag):
+		styles = self.parseInlineStyle(tag=tag)
+		if not styles or not 'color' in styles: return None
+		color = styles.get('color')
+		if '#' in color: return 'FF' + style.processColor(color.split('#',1)[-1][:6].upper())
+		return None
+	
 	''' ----- Frequency ------
 31.2818  #text      
  9.5278  br         
@@ -1436,7 +1496,7 @@ class WebPageRenderer(RenderContainer):
 			elif tag.name == 'textarea':	self.processTEXTAREA(tag)
 			elif tag.name == 'select':		self.processSELECT(tag)
 			elif tag.name == 'form':		self.processFORM(tag)
-			elif tag.name == ('strong','b'):		self.processSTRONG(tag)
+			elif tag.name in ('strong','b','em'):		self.processSTRONG(tag)
 			elif tag.name == 'center':		self.processCENTER(tag)
 			elif tag.name == 'iframe':		self.processIFRAME(tag)
 			elif tag.name in ('blockquote','code'): self.processDIV(tag)
@@ -1503,8 +1563,8 @@ class WebPageRenderer(RenderContainer):
 			height = self.fontHeight
 			val = tag.get('value') or ''
 			src = 'web-viewer-form-text.png'
-			back = self.tagHasBackground(tag)
-			if back and ('none' in back or 'transparent' in back): src = '-'
+			bg = self.getTagBackground(tag)
+			if bg and ('none' in bg.background or 'transparent' in bg.background): src = '-'
 			self.addImage(tag, width, height,ratio='stretch', button={'type':'FORM:%s' % ttype.upper(),'form':self.formIDX,'tag':tag},texture=src,textureborder=5,text=val,textcolor='black',alignx='left',aligny='center')
 		elif ttype == 'checkbox' or ttype == 'radio':
 			checked = tag.get('checked') == '1'
@@ -1539,8 +1599,8 @@ class WebPageRenderer(RenderContainer):
 				except:
 					height = self.fontHeight
 				src = 'web-viewer-form-submit.png'
-				back = self.tagHasBackground(tag)
-				if back and ('none' in back or 'transparent' in back): src = '-'
+				bg = self.getTagBackground(tag)
+				if bg and ('none' in bg.background or 'transparent' in bg.background): src = '-'
 			self.addImage(tag, width, height,ratio='stretch', button={'type':'FORM:SUBMIT','form':self.formIDX,'tag':tag},texture=src,textureborder=5,text=val,textcolor='black',alignx='center',aligny='center')
 		else:
 			self.processContents(tag)
@@ -1562,7 +1622,7 @@ class WebPageRenderer(RenderContainer):
 # 				h = self.fontHeight
 # 				a = RenderContainer(x,y,w,h,w,p=self.getTagPadding(tag))
 # 				a.updateMaxY(y + self.fontHeight)
-# 				a.setBackground(self.tagHasBackground(tag))
+# 				a.setBackground(self.getTagBackground(tag))
 # 				a.setBorder(self.getTagBorder(tag))
 # 				self.currentContainer.children.insert(-1,a)
 		else:
@@ -1609,14 +1669,15 @@ class WebPageRenderer(RenderContainer):
 		else:
 			return self.processContainerElement(tag)
 			
-	def processContainerElement(self,tag,inline=False):
+	def processContainerElement(self,tag,inline=False,pre=None):
 		if not tag.contents: return
 		inline = self.tagIsInline(tag,inline)
 		float_ = self.getTagFloat(tag)
 		if not float_ and self.currentContainer.float and self.currentContainer.float != 'parent': float_ = 'parent' #TODO: Handle clearing of the float properly as this likely isn't it
 		if not inline and self.currentContainer.children:
 			self.currentContainer.CR()
-			if not isinstance(self.currentContainer.children[-1],RenderContainer): self.newLine()
+			self.currentContainer.LF()
+			#if not isinstance(self.currentContainer.children[-1],RenderContainer): self.currentContainer.LF()
 				
 		w,h = self.getWidthAndHeight(tag)  # @UnusedVariable
 		try:
@@ -1626,7 +1687,7 @@ class WebPageRenderer(RenderContainer):
 		try:
 			w = int(w)
 		except:
-			if inline or float_:
+			if (inline and inline != 'inline-block') or float_:
 				w = 0
 			else:
 				w = self.currentContainer.contentWidth
@@ -1649,16 +1710,21 @@ class WebPageRenderer(RenderContainer):
 		div.float = float_
 		self.currentContainer.addChild(div)
 		state = self.setCurrentContainer(div)
-		div.setBackground(self.tagHasBackground(tag))
+		div.setBackground(self.getTagBackground(tag))
 		div.setBorder(self.getTagBorder(tag))
 		lastCenter = self.center
 		if 'center;' in tag.get('style',''): self.center = True
+		if pre: self.addText(pre)
 		self.processContents(tag)
 		self.center = lastCenter
-		if not inline and div.children and isinstance(div.children[-1],RenderTextbox): self.newLine()
-		self.restoreCurrentContainer(state)
+		if not inline:
+			if div.children and not isinstance(div.children[-1],RenderContainer): self.currentContainer.LF()
+		self.restoreCurrentContainer(state,inline)
 		self.currentContainer.updateContentMaxX(div.right())
-		if not inline: self.currentContainer.CR()
+		if not inline:
+			self.currentContainer.CR()
+		else:
+			self.currentContainer.xindex = div.right()
 		
 	def processIMG(self,tag):
 		margin = self.getTagMargin(tag)
@@ -1690,7 +1756,7 @@ class WebPageRenderer(RenderContainer):
 		self.currentContainer.addChild(row)
 		state = self.setCurrentContainer(row)
 		if tag.name == 'caption': self.addTextMod('bold')
-		fgstate = self.setFontColor(tag)
+		
 		tds = []
 		left_tds = []
 		twidth = self.currentContainer.contentWidth
@@ -1726,14 +1792,13 @@ class WebPageRenderer(RenderContainer):
 			x+=w		
 				
 		self.processContents(tag)
-		self.newLine()
+		self.currentContainer.LF()
 		self.currentContainer.updateMaxY()
 		for tdc in row.children:
 			if isinstance(tdc,RenderContainer):
 				tdc.updateMaxY(row.bottom())
-		self.restoreFontColor(fgstate)
 		self.delTextMod('bold')
-		row.setBackground(self.tagHasBackground(tag))
+		row.setBackground(self.getTagBackground(tag))
 		row.setBorder(self.getTagBorder(tag))
 		
 		self.restoreCurrentContainer(state)
@@ -1744,7 +1809,7 @@ class WebPageRenderer(RenderContainer):
 		td = RenderContainer(x,y,w,self.currentContainer.height,w,self.getTagPadding(tag,2))
 		self.currentContainer.addChild(td)
 		state = self.setCurrentContainer(td)
-		td.setBackground(self.tagHasBackground(tag))
+		td.setBackground(self.getTagBackground(tag))
 		td.setBorder(self.getTagBorder(tag) or self.border)
 		if tag.string:
 			self.addText(tag.string)
@@ -1766,12 +1831,9 @@ class WebPageRenderer(RenderContainer):
 			self.addText(' ')
 			
 	def processSTRONG(self,tag):
-		if tag.string:
-			self.addText(tag.string,bold=True)
-		else:
-			self.addTextMod('bold')
-			self.processContents(tag)
-			self.delTextMod('bold')
+		self.addTextMod('bold')
+		self.processContents(tag)
+		self.delTextMod('bold')
 			
 	def processCENTER(self,tag):
 		lastCenter = self.center
@@ -1808,20 +1870,26 @@ class WebPageRenderer(RenderContainer):
 		
 	def processUL(self,tag):
 		#self.newLine()
-		self.processContents(tag)
+		lsState = self.listStyle
+		ls = (self.parseInlineStyle(tag=tag) or {}).get('list-style','')
+		if ls: self.listStyle = ls
+		self.processContainerElement(tag)
+		self.listStyle = lsState
+		#self.processContents(tag)
 		self.newLine()
 		
 	def processLI(self,tag):
 		inline = self.tagIsInline(tag)
-		if not inline: self.newLine()
+		#if not inline: self.newLine()
 		styles = tag.get('style','')
-		if not 'list-style' in styles or not 'none' in self.parseInlineStyle(tag=tag).get('list-style',''):	
-			self.addText(u'%s ' % unichr(8226))
-		self.processContainerElement(tag, True)
+		pre = None
+		if self.listStyle != 'none' and (not 'list-style' in styles or not 'none' in self.parseInlineStyle(tag=tag).get('list-style','')):
+			pre = u'%s ' % unichr(8226)
+		self.processContainerElement(tag, inline,pre=pre)
 		#self.processContents(tag)
 		
 	def processHX(self,tag):
-		#self.newLine()
+		self.newLine()
 		self.addTextMod('bold')
 		self.processContainerElement(tag)
 		self.delTextMod('bold')
@@ -1830,7 +1898,7 @@ class WebPageRenderer(RenderContainer):
 		styles = self.parseInlineStyle(tag=tag)
 		if not styles or not 'color' in styles: return self.fgColor
 		state = RenderElement._textColorDefault
-		if '#' in styles['color']: RenderElement._textColorDefault = 'FF' + self.processColor(styles['color'].split('#',1)[-1][:6].upper())
+		if '#' in styles['color']: RenderElement._textColorDefault = 'FF' + style.processColor(styles['color'].split('#',1)[-1][:6].upper())
 		return state
 		
 	def restoreFontColor(self,state):
@@ -1843,12 +1911,6 @@ class WebPageRenderer(RenderContainer):
 		if 'hidden' in styles.get('visibility',''): return False
 		if 'none' in styles.get('display',''): return False
 		return True
-		
-	def processColor(self,color):
-		color = color.strip()
-		if len(color) == 3:
-			color = color[0] + color[0] + color[1] + color[1] + color[2] + color[2]
-		return color
 	
 	def getTagPadding(self,tag,default=0):return self.getTagSpacing('padding', tag, default)
 	
@@ -1899,12 +1961,12 @@ class WebPageRenderer(RenderContainer):
 			ret.append(i)
 		return ret
 	
-	def tagHasBackground(self,tag):
-		styles = self.parseInlineStyle(tag=tag)
+	def getTagBackground(self,tag):
+		styles = tag.get('style','')
+		if not 'background' in styles: return None
+		styles = self.parseInlineStyle(styles,tag=tag)
 		if not styles: return None
-		bg = (' '.join((styles.get('background',''),styles.get('background-color',''),styles.get('background-image',''))).strip())
-		if not bg: return None
-		return bg
+		return style.CSSBackground(styles)
 	
 	def getTagBorder(self,tag):
 		if tag.get('border','0') != '0': return True
@@ -1929,12 +1991,16 @@ class WebPageRenderer(RenderContainer):
 		
 	def extractBorderColor(self,styles,prefix=''):
 		val = styles['border' + prefix]
-		if '#' in val: return 'FF' + self.processColor(val.split('#',1)[-1][:6].upper())
+		if '#' in val: return 'FF' + style.processColor(val.split('#',1)[-1][:6].upper())
 	
 	def tagIsInline(self,tag,default=False): #TODO: Handle this properly
-		style = tag.get('style','')
-		if 'inline' in style: return True
-		if 'block' in style: return False
+		styles = self.parseInlineStyle(tag=tag)
+		if not styles: return default
+		if not 'display' in styles: return default
+		if 'inline' in styles['display']:
+			return styles['display']
+		elif 'block' in styles['display']:
+			return False
 		return default
 		
 	def newLine(self,lines=1):
@@ -1952,9 +2018,21 @@ class WebPageRenderer(RenderContainer):
 	def processContents(self,tag,link=None):
 		if link: self.link = {'url':link}
 		hasText = False
+		indent = 0
+		fgstate = self.setFontColor(tag)
+		if 'text-indent' in tag.get('style',''):
+			try:
+				indent = int(self.parseInlineStyle(tag=tag).get('text-indent').replace('px','').replace('em',''))
+			except:
+				ERROR('Bad text-indent',hide_tb=True)
+		if indent:
+			current = self.textIndent
+			self.textIndent = indent
 		for t in tag.contents:
 			if self.processTag(t): hasText = True
 		if link: self.link = None
+		if indent: self.textIndent = current
+		self.restoreFontColor(fgstate)
 		return hasText
 		
 	def firstWordTooLong(self,text,wrapwidth,lead):
@@ -1965,7 +2043,7 @@ class WebPageRenderer(RenderContainer):
 	def wrap(self,text,pre=''):
 		si = ''
 		sllen = int(math.ceil((self.currentContainer.xindex - self.currentContainer.margin) / self.fontWidth))
-		wrapwidth = int(self.currentContainer.contentWidth/self.fontWidth)
+		wrapwidth = int((self.currentContainer.contentWidth - self.textIndent)/self.fontWidth)
 		if wrapwidth < 1: wrapwidth = 1
 		if self.lastImageRight:
 			silen = int(math.ceil((self.lastImageRight - self.currentContainer.margin) / self.fontWidth))
@@ -2014,7 +2092,6 @@ class WebPageRenderer(RenderContainer):
 		if lines: lastLineLen = len(lines[-1])
 			
 		text = '[CR]'.join(lines)
-		print repr(text)
 		if self.link:
 			color = self.linkColor
 			button = self.link
@@ -2029,9 +2106,10 @@ class WebPageRenderer(RenderContainer):
 			if text.strip().isdigit(): text = '[B][/B]' + text
 			if self.textHasMod('bold'): bold = True
 			self.contentStarted = True
+			x = self.currentContainer.margin+self.fontXOff + self.textIndent
 			if button:
 				ID, onleft, onright = self.getNextButtonIDs(button,height+5)
-				but = RenderButton(x=self.currentContainer.margin+self.fontXOff, y=self.currentContainer.yindex+self.fontYOff, w=self.currentContainer.contentWidth, h=height+5)
+				but = RenderButton(x=x, y=self.currentContainer.yindex+self.fontYOff, w=self.currentContainer.contentWidth, h=height+5)
 				but.id=ID					
 				but.onLeft=onleft
 				but.onRight=onright
@@ -2042,7 +2120,7 @@ class WebPageRenderer(RenderContainer):
 				self.currentContainer.addChild(but)
 				child = but
 			else:
-				tb = RenderTextbox(x=self.currentContainer.margin+self.fontXOff,y=self.currentContainer.yindex+self.fontYOff,w=self.currentContainer.contentWidth,h=height+5)
+				tb = RenderTextbox(x=x,y=self.currentContainer.yindex+self.fontYOff,w=self.currentContainer.contentWidth,h=height+5)
 				tb.bold=bold
 				tb.setTextColor(color)
 				tb.text=text
@@ -2228,10 +2306,10 @@ class WebViewer:
 		self.url = None
 		self.webPage = None
 		#startURL = 'http://www.google.com'
-		startURL = 'http://forum.xbmc.org/showthread.php?tid=85018&action=lastpost'
+		#startURL = 'http://forum.xbmc.org/showthread.php?tid=85018&action=lastpost'
 		#startURL = 'http://forum.xbmc.org'
 		#startURL = 'http://playerones.geekandsundry.com'
-		#startURL = 'file://' + os.path.join(xbmc.translatePath(ADDON.getAddonInfo('path')),'resources','default.html')
+		startURL = 'file://' + os.path.join(xbmc.translatePath(ADDON.getAddonInfo('path')),'resources','default.html')
 		self.nextPage(startURL)
 		self.history = URLHistory(HistoryLocation(startURL))
 		while not self.done:
@@ -2250,41 +2328,49 @@ class WebViewer:
 				
 	def goBack(self,y_pos):
 		if not self.history.canGoBack(): return
+		self.history.current().line = y_pos
 		h = self.history.goBack(y_pos)
 		self.historyOffset = h.line
 		self.nextPage(h.url)
 		
-	def nextPage(self,url,y_pos=None):
+	def nextPage(self,url,y_pos=0,history=None):
 		self.startProgress()
-		try:
-			self.updateProgress(5, 'Fetching Web Page')
-			if isinstance(url,ResponseData):
-				self.webPage = url
-			else:
-				self.webPage = self.webreader.getWebPage(url)
-			if self.history:
-				if y_pos is not None:
-					self.history.updateCurrent(line=y_pos)
-					self.history.addURL(HistoryLocation(self.webPage.url))
-			if not self.webPage.hasText():
-				if self.webPage.content.startswith('image'):
-					self.updateProgress(30, 'Getting Image Info')
-					width = height = ''
-					try:
-						itype,w,h = imageinfo.getImageInfo(self.webPage.response)
-						if itype:
-							width = ' width="%s"' % w
-							height = ' height="%s"' % h
-					except:
-						pass
-					self.webPage.data = '<html><head></head><body><img src="%s"%s%s></body></html>' % (self.webPage.url,width,height)
+		if history and history.renderFile:
+			self.updateProgress(95, 'Using Cached Page')
+			self.windowXMLFile = history.renderFile
+			#update renderer with forms and button data
+		else:
+			if history: url = history.url
+			try:
+				self.updateProgress(5, 'Fetching Web Page')
+				if isinstance(url,ResponseData):
+					self.webPage = url
 				else:
-					self.endProgress()
-					return
-		except:
-			self.endProgress()
-			raise
-		self.renderPage()
+					self.webPage = self.webreader.getWebPage(url)
+				if self.history:
+					current = self.history.current()
+					current.setRenderFile(self.windowXMLFile)
+					self.history.addURL(HistoryLocation(self.webPage.url))
+				if not self.webPage.hasText():
+					if self.webPage.content.startswith('image'):
+						self.updateProgress(30, 'Getting Image Info')
+						width = height = ''
+						try:
+							itype,w,h = imageinfo.getImageInfo(self.webPage.response)
+							if itype:
+								width = ' width="%s"' % w
+								height = ' height="%s"' % h
+						except:
+							pass
+						self.webPage.data = '<html><head></head><body><img src="%s"%s%s></body></html>' % (self.webPage.url,width,height)
+					else:
+						self.endProgress()
+						return
+			except:
+				self.endProgress()
+				raise
+			self.renderPage()
+			
 		if self.window:
 			self.window.close()
 			del self.window
