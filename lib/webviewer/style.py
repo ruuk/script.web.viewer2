@@ -201,13 +201,6 @@ def render2SoupStyle(view):
 		else:
 			element['style'] = v
 
-urlRE = re.compile('url\((?P<url>[^\)]*)\)')
-numPosRE = re.compile('\d+%?')
-colorRE = re.compile('#\w+')
-colorNameRE = re.compile('\w+')
-attachmentRE = re.compile('scroll|fixed|inherit')
-repeatRE = re.compile('repeat|repeat-x|repeat-y|no-repeat|inherit')
-
 class CSSBackground:
 	def __init__(self,style_dict):
 		self.background = style_dict.get('background','')
@@ -236,33 +229,41 @@ class CSSBackground:
 		self._initialized = False
 		
 	def absPosX(self,width):
-		if self.posX.endswith('%'):
+		if not self.posX: return 0
+		posX = self.posX.replace('px','')
+		if posX.endswith('%'):
 			try:
-				pct = int(self.posX[:-1])
+				pct = int(posX[:-1])
 			except:
 				return None
 			return int((pct/100.0) * width)
 		
-		if not self.posX.isdigit(): return None
-		return int(self.posX)
+		try:
+			return int(posX)
+		except:
+			return None
 		
 	def absPosY(self,height):
-		if self.posY.endswith('%'):
+		if not self.posY: return 0
+		posY = self.posY.replace('px','')
+		if posY.endswith('%'):
 			try:
-				pct = int(self.posY[:-1])
+				pct = int(posY[:-1])
 			except:
 				return None
 			return int((pct/100.0) * height)
 		
-		if not self.posY.isdigit(): return None
-		return int(self.posY)
+		try:
+			return int(posY)
+		except:
+			return None
 		
 	def __nonzero__(self):
 		return bool(self.image or self.color or self.background)
 	
 	def noInit(self):
-		self.posX = 'center'
-		self.posY = 'center'
+		self.posX = self.posX or 0
+		self.posY = self.posY or 0
 		
 	def init(self):
 		if self._initialized: return
@@ -276,19 +277,25 @@ class CSSBackground:
 		self.image = self.image or bg.get('image')
 		self.attachment = self.attachment or bg.get('attachment')
 		self.repeat = self.repeat or bg.get('repeat')
-		self.posX = self.posX or bg.get('posx','center')
-		self.posY = self.posY or bg.get('posy','center')
+		self.posX = self.posX or bg.get('posx',0)
+		self.posY = self.posY or bg.get('posy',0)
 		self.inheritPosition = self.inheritPosition or bg.get('pos_inherit')
 		
 	def xbmcColor(self):
 		if not self.color: return
 		if self.color.startswith('#'): return 'FF' + processColor(self.color[1:])
 		return self.color.lower()
-		
+
+urlRE = re.compile('url\((?P<url>[^\)]*)\)')
+numPosRE = re.compile('(-[\d]+%?)(?:px)?')
+colorRE = re.compile('#\w+')
+colorNameRE = re.compile('\w+')
+attachmentRE = re.compile('scroll|fixed|inherit')
+repeatRE = re.compile('repeat|repeat-x|repeat-y|no-repeat|inherit')
+	
 def processCSSBackground(bg):
 	ret = {}
 	for part in bg.split(' '):
-		
 		if colorRE.match(part):
 			ret['color'] = part
 			continue
@@ -306,11 +313,12 @@ def processCSSBackground(bg):
 			ret['repeat'] = part
 			continue
 		
-		if numPosRE.match(part):
+		test = numPosRE.search(part)
+		if test:
 			if 'posx' in ret:
-				ret['posy'] = part
+				ret['posy'] = test.group(1)
 			else:
-				ret['posx'] = part
+				ret['posx'] = test.group(1)
 			continue
 				
 		if part in ('left','right'):
