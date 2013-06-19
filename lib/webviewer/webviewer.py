@@ -874,13 +874,18 @@ class RenderContainer(RenderElement):
 					else:
 						aligny = self.background.posY
 
+				tex = self.background.image
+				if tex.endswith('.gif'):
+					cached = xbmcutil.getAndCacheImage(tex, CACHE_PATH)
+					tex = xbmcutil.localCachePath(cached, CACHE_PATH)[:-4] + '.png'
+					if not os.path.exists(tex): tex = imageops.gifToPng(cached,tex)
 				for r in range(1,repeat + 1):
 					if last and r == repeat: width = last
 					xml += self._background.format(	x=x,
 													y=y,
 													width=width,
 													height=height,
-													texture=self.background.image,
+													texture=tex,
 													aspect=aspect,
 													aligny=aligny,
 													align=alignx,
@@ -1728,7 +1733,6 @@ class WebPageRenderer(RenderContainer):
 			else:
 				w = self.currentContainer.contentWidth - (padding[3] + padding[1])
 		margin = self.getTagMargin(tag)
-		print (tag.get('title'),margin)
 		x = margin[3] + self.currentContainer.xindex
 		y = margin[0] + self.currentContainer.yindex
 		style = tag.get('style','')

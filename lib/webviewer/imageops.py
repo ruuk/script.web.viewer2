@@ -15,3 +15,10 @@ def createOffsetMask(w,h,xoff,yoff,outfile):
 	img.paste(corner,(xoff,yoff))
 	img.save(outfile)
 	return size
+
+def gifToPng(src,dst):
+	if not Image: return src
+	img = Image.open(src)
+	img = img.convert('RGBA')
+	img.save(dst,'PNG')
+	return dst

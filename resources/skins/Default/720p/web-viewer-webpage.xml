@@ -348,7 +348,7 @@
 				<posy>0</posy>
 				<width>1260</width>
 				<height>7931</height>
-				<texture>http://xbmc.org/wp-content/themes/inove/img/light.gif</texture>
+				<texture>/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/5abc56c5.png</texture>
 				<colordiffuse>FFFFFFFF</colordiffuse>
 				<aspectratio scalediffuse="false" align="center" aligny="top">center</aspectratio>
 			</control>
@@ -369,6 +369,24 @@
 				<texture>http://xbmc.org/wp-content/themes/inove/img/header.jpg</texture>
 				<colordiffuse>FFFFFFFF</colordiffuse>
 				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
+			</control>
+		<control type="image">
+				<posx>172</posx>
+				<posy>5</posy>
+				<width>936</width>
+				<height>0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>172</posx>
+				<posy>5</posy>
+				<width>936</width>
+				<height>100</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
 			</control>
 		<control type="image">
 				<posx>172</posx>
@@ -393,9 +411,27 @@
 				<posy>-50</posy>
 				<width>45</width>
 				<height>186</height>
-				<texture diffuse="/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/45-31-0--155.png">http://xbmc.org/wp-content/themes/inove/img/menu.gif</texture>
+				<texture diffuse="/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/45-31-0--155.png">/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/15ca881b.png</texture>
 				<colordiffuse>FFFFFFFF</colordiffuse>
 				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
+			</control>
+		<control type="image">
+				<posx>172</posx>
+				<posy>105</posy>
+				<width>45</width>
+				<height>31</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>172</posx>
+				<posy>105</posy>
+				<width>45</width>
+				<height>31</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
 			</control>
 		<control type="image">
 				<posx>207</posx>
@@ -411,7 +447,7 @@
 				<posy>74</posy>
 				<width>87</width>
 				<height>62</height>
-				<texture diffuse="/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/87-31-0--31.png">http://xbmc.org/wp-content/themes/inove/img/menu.gif</texture>
+				<texture diffuse="/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/87-31-0--31.png">/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/15ca881b.png</texture>
 				<colordiffuse>FFFFFFFF</colordiffuse>
 				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
 			</control>
@@ -435,6 +471,24 @@
 				<label>About</label>
 			</control>
 		<control type="image">
+				<posx>207</posx>
+				<posy>105</posy>
+				<width>87</width>
+				<height>31</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>217</posx>
+				<posy>105</posy>
+				<width>77</width>
+				<height>31.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
 				<posx>285</posx>
 				<posy>105.0</posy>
 				<width>106</width>
@@ -448,7 +502,7 @@
 				<posy>74.0</posy>
 				<width>106</width>
 				<height>62</height>
-				<texture diffuse="/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/106-31-0--31.png">http://xbmc.org/wp-content/themes/inove/img/menu.gif</texture>
+				<texture diffuse="/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/106-31-0--31.png">/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/15ca881b.png</texture>
 				<colordiffuse>FFFFFFFF</colordiffuse>
 				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
 			</control>
@@ -472,6 +526,24 @@
 				<label>Gallery</label>
 			</control>
 		<control type="image">
+				<posx>285</posx>
+				<posy>105.0</posy>
+				<width>106</width>
+				<height>31.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>295</posx>
+				<posy>105.0</posy>
+				<width>96</width>
+				<height>31.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
 				<posx>390</posx>
 				<posy>105.0</posy>
 				<width>125</width>
@@ -485,7 +557,7 @@
 				<posy>74.0</posy>
 				<width>125</width>
 				<height>62</height>
-				<texture diffuse="/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/125-31-0--31.png">http://xbmc.org/wp-content/themes/inove/img/menu.gif</texture>
+				<texture diffuse="/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/125-31-0--31.png">/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/15ca881b.png</texture>
 				<colordiffuse>FFFFFFFF</colordiffuse>
 				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
 			</control>
@@ -509,6 +581,24 @@
 				<label>Downloads</label>
 			</control>
 		<control type="image">
+				<posx>390</posx>
+				<posy>105.0</posy>
+				<width>125</width>
+				<height>31.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>400</posx>
+				<posy>105.0</posy>
+				<width>115</width>
+				<height>31.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
 				<posx>513</posx>
 				<posy>105.0</posy>
 				<width>135</width>
@@ -522,7 +612,7 @@
 				<posy>74.0</posy>
 				<width>135</width>
 				<height>62</height>
-				<texture diffuse="/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/135-31-0--31.png">http://xbmc.org/wp-content/themes/inove/img/menu.gif</texture>
+				<texture diffuse="/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/135-31-0--31.png">/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/15ca881b.png</texture>
 				<colordiffuse>FFFFFFFF</colordiffuse>
 				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
 			</control>
@@ -546,6 +636,24 @@
 				<label>Contribute</label>
 			</control>
 		<control type="image">
+				<posx>513</posx>
+				<posy>105.0</posy>
+				<width>135</width>
+				<height>31.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>523</posx>
+				<posy>105.0</posy>
+				<width>125</width>
+				<height>31.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
 				<posx>646</posx>
 				<posy>105.0</posy>
 				<width>106</width>
@@ -559,7 +667,7 @@
 				<posy>74.0</posy>
 				<width>106</width>
 				<height>62</height>
-				<texture diffuse="/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/106-31-0--31.png">http://xbmc.org/wp-content/themes/inove/img/menu.gif</texture>
+				<texture diffuse="/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/106-31-0--31.png">/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/15ca881b.png</texture>
 				<colordiffuse>FFFFFFFF</colordiffuse>
 				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
 			</control>
@@ -583,6 +691,24 @@
 				<label>Support</label>
 			</control>
 		<control type="image">
+				<posx>646</posx>
+				<posy>105.0</posy>
+				<width>106</width>
+				<height>31.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>656</posx>
+				<posy>105.0</posy>
+				<width>96</width>
+				<height>31.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
 				<posx>751</posx>
 				<posy>105.0</posy>
 				<width>144</width>
@@ -596,7 +722,7 @@
 				<posy>74.0</posy>
 				<width>144</width>
 				<height>62</height>
-				<texture diffuse="/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/144-31-0--31.png">http://xbmc.org/wp-content/themes/inove/img/menu.gif</texture>
+				<texture diffuse="/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/144-31-0--31.png">/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/15ca881b.png</texture>
 				<colordiffuse>FFFFFFFF</colordiffuse>
 				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
 			</control>
@@ -620,6 +746,24 @@
 				<label>Merchandise</label>
 			</control>
 		<control type="image">
+				<posx>751</posx>
+				<posy>105.0</posy>
+				<width>144</width>
+				<height>31.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>761</posx>
+				<posy>105.0</posy>
+				<width>134</width>
+				<height>31.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
 				<posx>893</posx>
 				<posy>105.0</posy>
 				<width>85</width>
@@ -633,7 +777,7 @@
 				<posy>74.0</posy>
 				<width>85</width>
 				<height>62</height>
-				<texture diffuse="/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/85-31-0--31.png">http://xbmc.org/wp-content/themes/inove/img/donatemenu.gif</texture>
+				<texture diffuse="/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/85-31-0--31.png">/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/fbb53135.png</texture>
 				<colordiffuse>FFFFFFFF</colordiffuse>
 				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
 			</control>
@@ -657,6 +801,24 @@
 				<label>Dona[CR]te</label>
 			</control>
 		<control type="image">
+				<posx>893</posx>
+				<posy>105.0</posy>
+				<width>85</width>
+				<height>31.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>903</posx>
+				<posy>105.0</posy>
+				<width>75</width>
+				<height>58.5</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
 				<posx>969</posx>
 				<posy>105.0</posy>
 				<width>40</width>
@@ -670,16 +832,43 @@
 				<posy>74.0</posy>
 				<width>40</width>
 				<height>62</height>
-				<texture diffuse="/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/40-31-0--31.png">http://xbmc.org/wp-content/themes/inove/img/menu.gif</texture>
+				<texture diffuse="/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/40-31-0--31.png">/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/15ca881b.png</texture>
 				<colordiffuse>FFFFFFFF</colordiffuse>
 				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
+			</control>
+		<control type="image">
+				<posx>969</posx>
+				<posy>105.0</posy>
+				<width>40</width>
+				<height>31.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>979</posx>
+				<posy>105.0</posy>
+				<width>30</width>
+				<height>31.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>172</posx>
+				<posy>105</posy>
+				<width>936</width>
+				<height>58.5</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
 			</control>
 		<control type="image">
 				<posx>172</posx>
 				<posy>186.0</posy>
 				<width>184</width>
 				<height>21</height>
-				<texture>http://xbmc.org/wp-content/themes/inove/img/searchboxsmall.gif</texture>
+				<texture>/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/ef5bf05a.png</texture>
 				<colordiffuse>FFFFFFFF</colordiffuse>
 				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
 			</control>
@@ -738,12 +927,39 @@
 				<label>Submit</label>
 			</control>
 		<control type="image">
+				<posx>174</posx>
+				<posy>189.0</posy>
+				<width>180</width>
+				<height>18.5</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>172</posx>
+				<posy>186.0</posy>
+				<width>184</width>
+				<height>21.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>172</posx>
+				<posy>210.5</posy>
+				<width>936</width>
+				<height>0.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
 				<posx>172</posx>
 				<posy>105</posy>
-				<width>937</width>
+				<width>936</width>
 				<height>105.5</height>
-				<texture border="5">web-viewer-white-border-bottom.png</texture>
-				<colordiffuse>FFA6A6A6</colordiffuse>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
 				<aspectratio>stretch</aspectratio>
 			</control>
 		<control type="image">
@@ -760,7 +976,7 @@
 				<posy>210.5</posy>
 				<width>211</width>
 				<height>7503</height>
-				<texture>http://xbmc.org/wp-content/themes/inove/img/sidesep.gif</texture>
+				<texture>/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/31a76ef8.png</texture>
 				<colordiffuse>FFFFFFFF</colordiffuse>
 				<aspectratio scalediffuse="false" align="right" aligny="top">stretch</aspectratio>
 			</control>
@@ -778,7 +994,7 @@
 				<posy>210.5</posy>
 				<width>725</width>
 				<height>9</height>
-				<texture>http://xbmc.org/wp-content/themes/inove/img/main_shadow.gif</texture>
+				<texture>/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/0c918aeb.png</texture>
 				<colordiffuse>FFFFFFFF</colordiffuse>
 				<aspectratio scalediffuse="false" align="left" aligny="top">stretch</aspectratio>
 			</control>
@@ -804,10 +1020,10 @@
 		<control type="image">
 				<posx>182</posx>
 				<posy>259.0</posy>
-				<width>696</width>
+				<width>695</width>
 				<height>30.5</height>
-				<texture border="5">web-viewer-white-border-bottom.png</texture>
-				<colordiffuse>FFCCCCCC</colordiffuse>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
 				<aspectratio>stretch</aspectratio>
 			</control>
 		<control type="image">
@@ -815,7 +1031,7 @@
 				<posy>251.5</posy>
 				<width>155</width>
 				<height>64</height>
-				<texture diffuse="/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/155-16-0--48.png">http://xbmc.org/wp-content/themes/inove/img/icons.gif</texture>
+				<texture diffuse="/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/155-16-0--48.png">/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/dc1868aa.png</texture>
 				<colordiffuse>FFFFFFFF</colordiffuse>
 				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
 			</control>
@@ -829,11 +1045,20 @@
 				<label>June 3rd, 2013</label>
 			</control>
 		<control type="image">
+				<posx>192</posx>
+				<posy>299.5</posy>
+				<width>155</width>
+				<height>16.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
 				<posx>353</posx>
 				<posy>321.0</posy>
 				<width>117</width>
 				<height>16</height>
-				<texture>http://xbmc.org/wp-content/themes/inove/img/icons.gif</texture>
+				<texture>/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/dc1868aa.png</texture>
 				<colordiffuse>FFFFFFFF</colordiffuse>
 				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
 			</control>
@@ -857,11 +1082,20 @@
 				<label>natethomas</label>
 			</control>
 		<control type="image">
+				<posx>353</posx>
+				<posy>321.0</posy>
+				<width>117</width>
+				<height>16.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
 				<posx>477</posx>
 				<posy>203.5</posy>
 				<width>126</width>
 				<height>112</height>
-				<texture diffuse="/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/126-16-0--96.png">http://xbmc.org/wp-content/themes/inove/img/icons.gif</texture>
+				<texture diffuse="/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/126-16-0--96.png">/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/dc1868aa.png</texture>
 				<colordiffuse>FFFFFFFF</colordiffuse>
 				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
 			</control>
@@ -883,6 +1117,33 @@
 				<focusedcolor>FFFF0000</focusedcolor>
 				<font>WebViewer-font12</font>
 				<label>49 comments</label>
+			</control>
+		<control type="image">
+				<posx>477</posx>
+				<posy>299.5</posy>
+				<width>126</width>
+				<height>16.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>192</posx>
+				<posy>342.5</posy>
+				<width>695</width>
+				<height>0.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>192</posx>
+				<posy>299.5</posy>
+				<width>695</width>
+				<height>43.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
 			</control>
 		<control type="label">
 				<posx>192</posx>
@@ -970,10 +1231,10 @@
 		<control type="image">
 				<posx>187</posx>
 				<posy>653.5</posy>
-				<width>691</width>
+				<width>690</width>
 				<height>30.5</height>
-				<texture border="5">web-viewer-white-border-bottom.png</texture>
-				<colordiffuse>FFCCCCCC</colordiffuse>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
 				<aspectratio>stretch</aspectratio>
 			</control>
 		<control type="label">
@@ -1084,7 +1345,7 @@
 				<width>310</width>
 				<height>214.0</height>
 				<texture border="5">web-viewer-white-border.png</texture>
-				<colordiffuse>FFCCCCCC</colordiffuse>
+				<colordiffuse>FF000000</colordiffuse>
 				<aspectratio>stretch</aspectratio>
 			</control>
 		<control type="label">
@@ -1163,10 +1424,10 @@
 		<control type="image">
 				<posx>187</posx>
 				<posy>1743.5</posy>
-				<width>691</width>
+				<width>690</width>
 				<height>30.5</height>
-				<texture border="5">web-viewer-white-border-bottom.png</texture>
-				<colordiffuse>FFCCCCCC</colordiffuse>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
 				<aspectratio>stretch</aspectratio>
 			</control>
 		<control type="label">
@@ -1254,10 +1515,10 @@
 		<control type="image">
 				<posx>187</posx>
 				<posy>2135.5</posy>
-				<width>691</width>
+				<width>690</width>
 				<height>30.5</height>
-				<texture border="5">web-viewer-white-border-bottom.png</texture>
-				<colordiffuse>FFCCCCCC</colordiffuse>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
 				<aspectratio>stretch</aspectratio>
 			</control>
 		<control type="label">
@@ -1399,6 +1660,15 @@
 				<font>WebViewer-font12</font>
 				<label>  Windows</label>
 			</control>
+		<control type="image">
+				<posx>192</posx>
+				<posy>2493.5</posy>
+				<width>690</width>
+				<height>21.5</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
 		<control type="label">
 				<posx>212</posx>
 				<posy>2513.0</posy>
@@ -1455,6 +1725,15 @@
 				<font>WebViewer-font12</font>
 				<label>          OSX-x86-64</label>
 			</control>
+		<control type="image">
+				<posx>192</posx>
+				<posy>2515.0</posy>
+				<width>690</width>
+				<height>21.5</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
 		<control type="label">
 				<posx>212</posx>
 				<posy>2534.5</posy>
@@ -1482,6 +1761,15 @@
 				<focusedcolor>FFFF0000</focusedcolor>
 				<font>WebViewer-font12</font>
 				<label>  Android</label>
+			</control>
+		<control type="image">
+				<posx>192</posx>
+				<posy>2536.5</posy>
+				<width>690</width>
+				<height>21.5</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
 			</control>
 		<control type="label">
 				<posx>212</posx>
@@ -1548,6 +1836,15 @@
 				<textcolor>FF555555</textcolor>
 				<label>                   installation instructions</label>
 			</control>
+		<control type="image">
+				<posx>192</posx>
+				<posy>2558.0</posy>
+				<width>690</width>
+				<height>21.5</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
 		<control type="label">
 				<posx>212</posx>
 				<posy>2577.5</posy>
@@ -1585,6 +1882,24 @@
 				<font>WebViewer-font12</font>
 				<label>Linux instructions</label>
 			</control>
+		<control type="image">
+				<posx>192</posx>
+				<posy>2579.5</posy>
+				<width>690</width>
+				<height>40.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>192</posx>
+				<posy>2483.5</posy>
+				<width>690</width>
+				<height>146.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
 		<control type="label">
 				<posx>187</posx>
 				<posy>2674.5</posy>
@@ -1593,6 +1908,15 @@
 				<font>Bold-WebViewer-font12</font>
 				<textcolor>FF555555</textcolor>
 				<label>How to Contribute</label>
+			</control>
+		<control type="image">
+				<posx>187</posx>
+				<posy>2676.5</posy>
+				<width>690</width>
+				<height>21.5</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
 			</control>
 		<control type="label">
 				<posx>192</posx>
@@ -1659,6 +1983,42 @@
 				<textcolor>FF555555</textcolor>
 				<label>                                                       to the Foundation[CR]if you like.</label>
 			</control>
+		<control type="image">
+				<posx>192</posx>
+				<posy>2775.0</posy>
+				<width>690</width>
+				<height>0.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>187</posx>
+				<posy>347.5</posy>
+				<width>695</width>
+				<height>2427.5</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>187</posx>
+				<posy>2780.0</posy>
+				<width>695</width>
+				<height>16.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>187</posx>
+				<posy>225.5</posy>
+				<width>700</width>
+				<height>2559.5</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
 		<control type="button" id="131">
 				<posx>187</posx>
 				<posy>2834.5</posy>
@@ -1681,10 +2041,10 @@
 		<control type="image">
 				<posx>182</posx>
 				<posy>2833.5</posy>
-				<width>696</width>
+				<width>695</width>
 				<height>30.5</height>
-				<texture border="5">web-viewer-white-border-bottom.png</texture>
-				<colordiffuse>FFCCCCCC</colordiffuse>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
 				<aspectratio>stretch</aspectratio>
 			</control>
 		<control type="image">
@@ -1692,7 +2052,7 @@
 				<posy>2826.0</posy>
 				<width>155</width>
 				<height>64</height>
-				<texture diffuse="/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/155-16-0--48.png">http://xbmc.org/wp-content/themes/inove/img/icons.gif</texture>
+				<texture diffuse="/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/155-16-0--48.png">/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/dc1868aa.png</texture>
 				<colordiffuse>FFFFFFFF</colordiffuse>
 				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
 			</control>
@@ -1706,11 +2066,20 @@
 				<label>May 28th, 2013</label>
 			</control>
 		<control type="image">
+				<posx>192</posx>
+				<posy>2874.0</posy>
+				<width>155</width>
+				<height>16.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
 				<posx>353</posx>
 				<posy>2895.5</posy>
 				<width>117</width>
 				<height>16</height>
-				<texture>http://xbmc.org/wp-content/themes/inove/img/icons.gif</texture>
+				<texture>/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/dc1868aa.png</texture>
 				<colordiffuse>FFFFFFFF</colordiffuse>
 				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
 			</control>
@@ -1734,11 +2103,20 @@
 				<label>natethomas</label>
 			</control>
 		<control type="image">
+				<posx>353</posx>
+				<posy>2895.5</posy>
+				<width>117</width>
+				<height>16.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
 				<posx>477</posx>
 				<posy>2778.0</posy>
 				<width>126</width>
 				<height>112</height>
-				<texture diffuse="/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/126-16-0--96.png">http://xbmc.org/wp-content/themes/inove/img/icons.gif</texture>
+				<texture diffuse="/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/126-16-0--96.png">/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/dc1868aa.png</texture>
 				<colordiffuse>FFFFFFFF</colordiffuse>
 				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
 			</control>
@@ -1760,6 +2138,33 @@
 				<focusedcolor>FFFF0000</focusedcolor>
 				<font>WebViewer-font12</font>
 				<label>12 comments</label>
+			</control>
+		<control type="image">
+				<posx>477</posx>
+				<posy>2874.0</posy>
+				<width>126</width>
+				<height>16.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>192</posx>
+				<posy>2917.0</posy>
+				<width>695</width>
+				<height>0.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>192</posx>
+				<posy>2874.0</posy>
+				<width>695</width>
+				<height>43.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
 			</control>
 		<control type="label">
 				<posx>192</posx>
@@ -1909,6 +2314,42 @@
 				<textcolor>FF555555</textcolor>
 				<label>Good luck students and mentors!</label>
 			</control>
+		<control type="image">
+				<posx>192</posx>
+				<posy>3406.0</posy>
+				<width>690</width>
+				<height>0.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>187</posx>
+				<posy>2922.0</posy>
+				<width>695</width>
+				<height>484.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>187</posx>
+				<posy>3411.0</posy>
+				<width>695</width>
+				<height>16.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>187</posx>
+				<posy>2800.0</posy>
+				<width>700</width>
+				<height>616.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
 		<control type="button" id="138">
 				<posx>187</posx>
 				<posy>3465.5</posy>
@@ -1931,10 +2372,10 @@
 		<control type="image">
 				<posx>182</posx>
 				<posy>3464.5</posy>
-				<width>696</width>
+				<width>695</width>
 				<height>30.5</height>
-				<texture border="5">web-viewer-white-border-bottom.png</texture>
-				<colordiffuse>FFCCCCCC</colordiffuse>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
 				<aspectratio>stretch</aspectratio>
 			</control>
 		<control type="image">
@@ -1942,7 +2383,7 @@
 				<posy>3457.0</posy>
 				<width>145</width>
 				<height>64</height>
-				<texture diffuse="/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/145-16-0--48.png">http://xbmc.org/wp-content/themes/inove/img/icons.gif</texture>
+				<texture diffuse="/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/145-16-0--48.png">/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/dc1868aa.png</texture>
 				<colordiffuse>FFFFFFFF</colordiffuse>
 				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
 			</control>
@@ -1956,11 +2397,20 @@
 				<label>May 6th, 2013</label>
 			</control>
 		<control type="image">
+				<posx>192</posx>
+				<posy>3505.0</posy>
+				<width>145</width>
+				<height>16.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
 				<posx>344</posx>
 				<posy>3526.5</posy>
 				<width>117</width>
 				<height>16</height>
-				<texture>http://xbmc.org/wp-content/themes/inove/img/icons.gif</texture>
+				<texture>/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/dc1868aa.png</texture>
 				<colordiffuse>FFFFFFFF</colordiffuse>
 				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
 			</control>
@@ -1984,11 +2434,20 @@
 				<label>natethomas</label>
 			</control>
 		<control type="image">
+				<posx>344</posx>
+				<posy>3526.5</posy>
+				<width>117</width>
+				<height>16.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
 				<posx>467</posx>
 				<posy>3409.0</posy>
 				<width>126</width>
 				<height>112</height>
-				<texture diffuse="/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/126-16-0--96.png">http://xbmc.org/wp-content/themes/inove/img/icons.gif</texture>
+				<texture diffuse="/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/126-16-0--96.png">/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/dc1868aa.png</texture>
 				<colordiffuse>FFFFFFFF</colordiffuse>
 				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
 			</control>
@@ -2010,6 +2469,33 @@
 				<focusedcolor>FFFF0000</focusedcolor>
 				<font>WebViewer-font12</font>
 				<label>33 comments</label>
+			</control>
+		<control type="image">
+				<posx>467</posx>
+				<posy>3505.0</posy>
+				<width>126</width>
+				<height>16.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>192</posx>
+				<posy>3548.0</posy>
+				<width>695</width>
+				<height>0.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>192</posx>
+				<posy>3505.0</posy>
+				<width>695</width>
+				<height>43.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
 			</control>
 		<control type="label">
 				<posx>192</posx>
@@ -2075,6 +2561,42 @@
 				<textcolor>FF555555</textcolor>
 				<label>Update: It appears the lack of correction may simply been a case of bad [CR]timing. The author has replied and posted a quick clarification. Thanks [CR]to the staff of Engadget for the fix!</label>
 			</control>
+		<control type="image">
+				<posx>192</posx>
+				<posy>4018.5</posy>
+				<width>690</width>
+				<height>0.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>187</posx>
+				<posy>3553.0</posy>
+				<width>695</width>
+				<height>465.5</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>187</posx>
+				<posy>4023.5</posy>
+				<width>695</width>
+				<height>16.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>187</posx>
+				<posy>3431.0</posy>
+				<width>700</width>
+				<height>597.5</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
 		<control type="button" id="142">
 				<posx>187</posx>
 				<posy>4078.0</posy>
@@ -2097,10 +2619,10 @@
 		<control type="image">
 				<posx>182</posx>
 				<posy>4077.0</posy>
-				<width>696</width>
+				<width>695</width>
 				<height>30.5</height>
-				<texture border="5">web-viewer-white-border-bottom.png</texture>
-				<colordiffuse>FFCCCCCC</colordiffuse>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
 				<aspectratio>stretch</aspectratio>
 			</control>
 		<control type="image">
@@ -2108,7 +2630,7 @@
 				<posy>4069.5</posy>
 				<width>145</width>
 				<height>64</height>
-				<texture diffuse="/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/145-16-0--48.png">http://xbmc.org/wp-content/themes/inove/img/icons.gif</texture>
+				<texture diffuse="/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/145-16-0--48.png">/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/dc1868aa.png</texture>
 				<colordiffuse>FFFFFFFF</colordiffuse>
 				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
 			</control>
@@ -2122,11 +2644,20 @@
 				<label>May 3rd, 2013</label>
 			</control>
 		<control type="image">
+				<posx>192</posx>
+				<posy>4117.5</posy>
+				<width>145</width>
+				<height>16.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
 				<posx>344</posx>
 				<posy>4139.0</posy>
 				<width>117</width>
 				<height>16</height>
-				<texture>http://xbmc.org/wp-content/themes/inove/img/icons.gif</texture>
+				<texture>/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/dc1868aa.png</texture>
 				<colordiffuse>FFFFFFFF</colordiffuse>
 				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
 			</control>
@@ -2150,11 +2681,20 @@
 				<label>natethomas</label>
 			</control>
 		<control type="image">
+				<posx>344</posx>
+				<posy>4139.0</posy>
+				<width>117</width>
+				<height>16.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
 				<posx>467</posx>
 				<posy>4021.5</posy>
 				<width>126</width>
 				<height>112</height>
-				<texture diffuse="/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/126-16-0--96.png">http://xbmc.org/wp-content/themes/inove/img/icons.gif</texture>
+				<texture diffuse="/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/126-16-0--96.png">/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/dc1868aa.png</texture>
 				<colordiffuse>FFFFFFFF</colordiffuse>
 				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
 			</control>
@@ -2176,6 +2716,33 @@
 				<focusedcolor>FFFF0000</focusedcolor>
 				<font>WebViewer-font12</font>
 				<label>74 comments</label>
+			</control>
+		<control type="image">
+				<posx>467</posx>
+				<posy>4117.5</posy>
+				<width>126</width>
+				<height>16.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>192</posx>
+				<posy>4160.5</posy>
+				<width>695</width>
+				<height>0.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>192</posx>
+				<posy>4117.5</posy>
+				<width>695</width>
+				<height>43.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
 			</control>
 		<control type="image">
 				<posx>192</posx>
@@ -2233,6 +2800,15 @@
 				<textcolor>FF555555</textcolor>
 				<label>  Fixed infinite loop on addon dependencies, resolves crashing problem[CR]that arrose immediately post 12.1 launch</label>
 			</control>
+		<control type="image">
+				<posx>192</posx>
+				<posy>4688.0</posy>
+				<width>690</width>
+				<height>40.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
 		<control type="label">
 				<posx>212</posx>
 				<posy>4726.0</posy>
@@ -2250,6 +2826,15 @@
 				<font>WebViewer-font12</font>
 				<textcolor>FF555555</textcolor>
 				<label>  Numerous UPnP fixes</label>
+			</control>
+		<control type="image">
+				<posx>192</posx>
+				<posy>4728.0</posy>
+				<width>690</width>
+				<height>21.5</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
 			</control>
 		<control type="label">
 				<posx>212</posx>
@@ -2269,6 +2854,15 @@
 				<textcolor>FF555555</textcolor>
 				<label>  Memory leak fixed when XBMC is minimized</label>
 			</control>
+		<control type="image">
+				<posx>192</posx>
+				<posy>4749.5</posy>
+				<width>690</width>
+				<height>21.5</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
 		<control type="label">
 				<posx>212</posx>
 				<posy>4769.0</posy>
@@ -2286,6 +2880,15 @@
 				<font>WebViewer-font12</font>
 				<textcolor>FF555555</textcolor>
 				<label>  Various Raspberry Pi playback fixes and software codec support</label>
+			</control>
+		<control type="image">
+				<posx>192</posx>
+				<posy>4771.0</posy>
+				<width>690</width>
+				<height>21.5</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
 			</control>
 		<control type="label">
 				<posx>212</posx>
@@ -2305,6 +2908,15 @@
 				<textcolor>FF555555</textcolor>
 				<label>  Fixed OSX audio mixing</label>
 			</control>
+		<control type="image">
+				<posx>192</posx>
+				<posy>4792.5</posy>
+				<width>690</width>
+				<height>21.5</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
 		<control type="label">
 				<posx>212</posx>
 				<posy>4812.0</posy>
@@ -2322,6 +2934,15 @@
 				<font>WebViewer-font12</font>
 				<textcolor>FF555555</textcolor>
 				<label>  Fixed some audio-related crashes in Linux builds</label>
+			</control>
+		<control type="image">
+				<posx>192</posx>
+				<posy>4814.0</posy>
+				<width>690</width>
+				<height>21.5</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
 			</control>
 		<control type="label">
 				<posx>212</posx>
@@ -2341,6 +2962,15 @@
 				<textcolor>FF555555</textcolor>
 				<label>  AirPlay fixes</label>
 			</control>
+		<control type="image">
+				<posx>192</posx>
+				<posy>4835.5</posy>
+				<width>690</width>
+				<height>21.5</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
 		<control type="label">
 				<posx>212</posx>
 				<posy>4855.0</posy>
@@ -2358,6 +2988,15 @@
 				<font>WebViewer-font12</font>
 				<textcolor>FF555555</textcolor>
 				<label>  Bluray folder resume-bookmarks now work</label>
+			</control>
+		<control type="image">
+				<posx>192</posx>
+				<posy>4857.0</posy>
+				<width>690</width>
+				<height>21.5</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
 			</control>
 		<control type="label">
 				<posx>212</posx>
@@ -2377,6 +3016,15 @@
 				<textcolor>FF555555</textcolor>
 				<label>  Ability to scan for new content on file folders has been [CR]reimplemented</label>
 			</control>
+		<control type="image">
+				<posx>192</posx>
+				<posy>4878.5</posy>
+				<width>690</width>
+				<height>40.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
 		<control type="label">
 				<posx>212</posx>
 				<posy>4916.5</posy>
@@ -2394,6 +3042,24 @@
 				<font>WebViewer-font12</font>
 				<textcolor>FF555555</textcolor>
 				<label>  Language updates from Transifex</label>
+			</control>
+		<control type="image">
+				<posx>192</posx>
+				<posy>4918.5</posy>
+				<width>690</width>
+				<height>21.5</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>192</posx>
+				<posy>4678.0</posy>
+				<width>690</width>
+				<height>272.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
 			</control>
 		<control type="label">
 				<posx>192</posx>
@@ -2422,6 +3088,15 @@
 				<textcolor>FF555555</textcolor>
 				<label>  XBMC now supports using OSX’s default output device for audio as [CR]well as hardware decoding with Intel GPUs in OSX</label>
 			</control>
+		<control type="image">
+				<posx>192</posx>
+				<posy>5018.5</posy>
+				<width>690</width>
+				<height>40.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
 		<control type="label">
 				<posx>212</posx>
 				<posy>5056.5</posy>
@@ -2439,6 +3114,15 @@
 				<font>WebViewer-font12</font>
 				<textcolor>FF555555</textcolor>
 				<label>  XBMC no longer hogs audio for Linux and on resume audio will [CR]continue to work in Linux</label>
+			</control>
+		<control type="image">
+				<posx>192</posx>
+				<posy>5058.5</posy>
+				<width>690</width>
+				<height>40.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
 			</control>
 		<control type="label">
 				<posx>212</posx>
@@ -2458,6 +3142,15 @@
 				<textcolor>FF555555</textcolor>
 				<label>  Full iPhone 5 resolution is now enabled</label>
 			</control>
+		<control type="image">
+				<posx>192</posx>
+				<posy>5098.5</posy>
+				<width>690</width>
+				<height>21.5</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
 		<control type="label">
 				<posx>212</posx>
 				<posy>5118.0</posy>
@@ -2475,6 +3168,15 @@
 				<font>WebViewer-font12</font>
 				<textcolor>FF555555</textcolor>
 				<label>  Volume buttons on Android devices now control Android volume, rather[CR]than XBMC volume</label>
+			</control>
+		<control type="image">
+				<posx>192</posx>
+				<posy>5120.0</posy>
+				<width>690</width>
+				<height>40.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
 			</control>
 		<control type="label">
 				<posx>212</posx>
@@ -2494,6 +3196,15 @@
 				<textcolor>FF555555</textcolor>
 				<label>  Volume buttons on OSX devices once again control OSX volume, rather [CR]than XBMC volume</label>
 			</control>
+		<control type="image">
+				<posx>192</posx>
+				<posy>5160.0</posy>
+				<width>690</width>
+				<height>40.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
 		<control type="label">
 				<posx>212</posx>
 				<posy>5198.0</posy>
@@ -2511,6 +3222,15 @@
 				<font>WebViewer-font12</font>
 				<textcolor>FF555555</textcolor>
 				<label>  Player optimization on the Raspberry Pi, including more efficient [CR]playback, better subtitle support, and many crash fixes</label>
+			</control>
+		<control type="image">
+				<posx>192</posx>
+				<posy>5200.0</posy>
+				<width>690</width>
+				<height>40.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
 			</control>
 		<control type="label">
 				<posx>212</posx>
@@ -2530,6 +3250,15 @@
 				<textcolor>FF555555</textcolor>
 				<label>  iOS 6 support on the AppleTV 2.</label>
 			</control>
+		<control type="image">
+				<posx>192</posx>
+				<posy>5240.0</posy>
+				<width>690</width>
+				<height>21.5</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
 		<control type="label">
 				<posx>212</posx>
 				<posy>5259.5</posy>
@@ -2547,6 +3276,15 @@
 				<font>WebViewer-font12</font>
 				<textcolor>FF555555</textcolor>
 				<label>  XBMC does not crash when listed on the AppleTV top shelf</label>
+			</control>
+		<control type="image">
+				<posx>192</posx>
+				<posy>5261.5</posy>
+				<width>690</width>
+				<height>21.5</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
 			</control>
 		<control type="label">
 				<posx>212</posx>
@@ -2566,6 +3304,15 @@
 				<textcolor>FF555555</textcolor>
 				<label>  Added support for additional Xbox 360 controller types</label>
 			</control>
+		<control type="image">
+				<posx>192</posx>
+				<posy>5283.0</posy>
+				<width>690</width>
+				<height>21.5</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
 		<control type="label">
 				<posx>212</posx>
 				<posy>5302.5</posy>
@@ -2583,6 +3330,15 @@
 				<font>WebViewer-font12</font>
 				<textcolor>FF555555</textcolor>
 				<label>  Broader and more intelligent support for CEC devices</label>
+			</control>
+		<control type="image">
+				<posx>192</posx>
+				<posy>5304.5</posy>
+				<width>690</width>
+				<height>21.5</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
 			</control>
 		<control type="label">
 				<posx>212</posx>
@@ -2602,6 +3358,15 @@
 				<textcolor>FF555555</textcolor>
 				<label>  Fixed problems with several addons due to broken binary read/write [CR]in our python interface</label>
 			</control>
+		<control type="image">
+				<posx>192</posx>
+				<posy>5326.0</posy>
+				<width>690</width>
+				<height>40.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
 		<control type="label">
 				<posx>212</posx>
 				<posy>5364.0</posy>
@@ -2619,6 +3384,15 @@
 				<font>WebViewer-font12</font>
 				<textcolor>FF555555</textcolor>
 				<label>  Language fixes, including 7 new languages: Albanian, Burmese, Malay,[CR]Persian (Iran), Tamil (India), Uzbek, Vietnamese</label>
+			</control>
+		<control type="image">
+				<posx>192</posx>
+				<posy>5366.0</posy>
+				<width>690</width>
+				<height>40.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
 			</control>
 		<control type="label">
 				<posx>212</posx>
@@ -2638,6 +3412,15 @@
 				<textcolor>FF555555</textcolor>
 				<label>  AirPlay fixes, including making discovery of XBMC more reliable on [CR]OSX</label>
 			</control>
+		<control type="image">
+				<posx>192</posx>
+				<posy>5406.0</posy>
+				<width>690</width>
+				<height>40.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
 		<control type="label">
 				<posx>212</posx>
 				<posy>5444.0</posy>
@@ -2656,6 +3439,24 @@
 				<textcolor>FF555555</textcolor>
 				<label>  Numerous crashing and stability fixes across all platforms</label>
 			</control>
+		<control type="image">
+				<posx>192</posx>
+				<posy>5446.0</posy>
+				<width>690</width>
+				<height>21.5</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>192</posx>
+				<posy>5008.5</posy>
+				<width>690</width>
+				<height>469.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
 		<control type="label">
 				<posx>192</posx>
 				<posy>5512.5</posy>
@@ -2673,6 +3474,15 @@
 				<font>Bold-WebViewer-font12</font>
 				<textcolor>FF555555</textcolor>
 				<label>Updating</label>
+			</control>
+		<control type="image">
+				<posx>187</posx>
+				<posy>5580.0</posy>
+				<width>690</width>
+				<height>21.5</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
 			</control>
 		<control type="label">
 				<posx>192</posx>
@@ -2859,6 +3669,15 @@
 				<textcolor>FF555555</textcolor>
 				<label>How To Help</label>
 			</control>
+		<control type="image">
+				<posx>187</posx>
+				<posy>5778.0</posy>
+				<width>690</width>
+				<height>21.5</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
 		<control type="label">
 				<posx>192</posx>
 				<posy>5816.0</posy>
@@ -2933,6 +3752,42 @@
 				<textcolor>FF555555</textcolor>
 				<label>For those of you who are tracking and submitting bugs: You may notice [CR]that Github has an “Issues” section. The Team would very much appreciate[CR]it if you did not submit bug reports through that section, but rather [CR]continued to use the forums and Trac. At the moment, the Team is using [CR]Issues as a concise means of grouping and identifying particular bugs [CR]that they gather from the forum and Trac sources. Thanks for your help!</label>
 			</control>
+		<control type="image">
+				<posx>192</posx>
+				<posy>6006.0</posy>
+				<width>690</width>
+				<height>0.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>187</posx>
+				<posy>4165.5</posy>
+				<width>695</width>
+				<height>1840.5</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>187</posx>
+				<posy>6011.0</posy>
+				<width>695</width>
+				<height>16.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>187</posx>
+				<posy>4043.5</posy>
+				<width>700</width>
+				<height>1972.5</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
 		<control type="button" id="153">
 				<posx>187</posx>
 				<posy>6065.5</posy>
@@ -2955,10 +3810,10 @@
 		<control type="image">
 				<posx>182</posx>
 				<posy>6064.5</posy>
-				<width>696</width>
+				<width>695</width>
 				<height>30.5</height>
-				<texture border="5">web-viewer-white-border-bottom.png</texture>
-				<colordiffuse>FFCCCCCC</colordiffuse>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
 				<aspectratio>stretch</aspectratio>
 			</control>
 		<control type="image">
@@ -2966,7 +3821,7 @@
 				<posy>6057.0</posy>
 				<width>174</width>
 				<height>64</height>
-				<texture diffuse="/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/174-16-0--48.png">http://xbmc.org/wp-content/themes/inove/img/icons.gif</texture>
+				<texture diffuse="/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/174-16-0--48.png">/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/dc1868aa.png</texture>
 				<colordiffuse>FFFFFFFF</colordiffuse>
 				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
 			</control>
@@ -2980,11 +3835,20 @@
 				<label>April 22nd, 2013</label>
 			</control>
 		<control type="image">
+				<posx>192</posx>
+				<posy>6105.0</posy>
+				<width>174</width>
+				<height>16.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
 				<posx>372</posx>
 				<posy>6126.5</posy>
 				<width>117</width>
 				<height>16</height>
-				<texture>http://xbmc.org/wp-content/themes/inove/img/icons.gif</texture>
+				<texture>/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/dc1868aa.png</texture>
 				<colordiffuse>FFFFFFFF</colordiffuse>
 				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
 			</control>
@@ -3008,11 +3872,20 @@
 				<label>natethomas</label>
 			</control>
 		<control type="image">
+				<posx>372</posx>
+				<posy>6126.5</posy>
+				<width>117</width>
+				<height>16.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
 				<posx>496</posx>
 				<posy>6009.0</posy>
 				<width>117</width>
 				<height>112</height>
-				<texture diffuse="/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/117-16-0--96.png">http://xbmc.org/wp-content/themes/inove/img/icons.gif</texture>
+				<texture diffuse="/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/117-16-0--96.png">/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/dc1868aa.png</texture>
 				<colordiffuse>FFFFFFFF</colordiffuse>
 				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
 			</control>
@@ -3034,6 +3907,33 @@
 				<focusedcolor>FFFF0000</focusedcolor>
 				<font>WebViewer-font12</font>
 				<label>6 comments</label>
+			</control>
+		<control type="image">
+				<posx>496</posx>
+				<posy>6105.0</posy>
+				<width>117</width>
+				<height>16.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>192</posx>
+				<posy>6148.0</posy>
+				<width>695</width>
+				<height>0.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>192</posx>
+				<posy>6105.0</posy>
+				<width>695</width>
+				<height>43.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
 			</control>
 		<control type="label">
 				<posx>192</posx>
@@ -3081,6 +3981,15 @@
 				<font>WebViewer-font12</font>
 				<label>                     XBMC Ideas page</label>
 			</control>
+		<control type="image">
+				<posx>192</posx>
+				<posy>6240.0</posy>
+				<width>690</width>
+				<height>21.5</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
 		<control type="label">
 				<posx>212</posx>
 				<posy>6259.5</posy>
@@ -3117,6 +4026,15 @@
 				<focusedcolor>FFFF0000</focusedcolor>
 				<font>WebViewer-font12</font>
 				<label>                                                      outline guide</label>
+			</control>
+		<control type="image">
+				<posx>192</posx>
+				<posy>6261.5</posy>
+				<width>690</width>
+				<height>21.5</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
 			</control>
 		<control type="label">
 				<posx>212</posx>
@@ -3164,6 +4082,15 @@
 				<textcolor>FF555555</textcolor>
 				<label>                                                and click Apply for [CR]Students.</label>
 			</control>
+		<control type="image">
+				<posx>192</posx>
+				<posy>6283.0</posy>
+				<width>690</width>
+				<height>40.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
 		<control type="label">
 				<posx>212</posx>
 				<posy>6321.0</posy>
@@ -3210,6 +4137,24 @@
 				<textcolor>FF555555</textcolor>
 				<label>                                                            and tell [CR]us about your proposal. Potential mentors will be browsing that sub-[CR]forum looking for interesting projects, so speaking up there will be [CR]the best way to get noticed and selected.</label>
 			</control>
+		<control type="image">
+				<posx>192</posx>
+				<posy>6323.0</posy>
+				<width>690</width>
+				<height>77.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>192</posx>
+				<posy>6230.0</posy>
+				<width>690</width>
+				<height>180.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
 		<control type="label">
 				<posx>192</posx>
 				<posy>6445.0</posy>
@@ -3218,6 +4163,42 @@
 				<font>WebViewer-font12</font>
 				<textcolor>FF555555</textcolor>
 				<label>We are excited to read the great proposals, so get on it!</label>
+			</control>
+		<control type="image">
+				<posx>192</posx>
+				<posy>6468.5</posy>
+				<width>690</width>
+				<height>0.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>187</posx>
+				<posy>6153.0</posy>
+				<width>695</width>
+				<height>315.5</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>187</posx>
+				<posy>6473.5</posy>
+				<width>695</width>
+				<height>16.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>187</posx>
+				<posy>6031.0</posy>
+				<width>700</width>
+				<height>447.5</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
 			</control>
 		<control type="button" id="160">
 				<posx>187</posx>
@@ -3241,10 +4222,10 @@
 		<control type="image">
 				<posx>182</posx>
 				<posy>6527.0</posy>
-				<width>696</width>
+				<width>695</width>
 				<height>30.5</height>
-				<texture border="5">web-viewer-white-border-bottom.png</texture>
-				<colordiffuse>FFCCCCCC</colordiffuse>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
 				<aspectratio>stretch</aspectratio>
 			</control>
 		<control type="image">
@@ -3252,7 +4233,7 @@
 				<posy>6519.5</posy>
 				<width>164</width>
 				<height>64</height>
-				<texture diffuse="/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/164-16-0--48.png">http://xbmc.org/wp-content/themes/inove/img/icons.gif</texture>
+				<texture diffuse="/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/164-16-0--48.png">/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/dc1868aa.png</texture>
 				<colordiffuse>FFFFFFFF</colordiffuse>
 				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
 			</control>
@@ -3266,11 +4247,20 @@
 				<label>April 9th, 2013</label>
 			</control>
 		<control type="image">
+				<posx>192</posx>
+				<posy>6567.5</posy>
+				<width>164</width>
+				<height>16.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
 				<posx>363</posx>
 				<posy>6589.0</posy>
 				<width>117</width>
 				<height>16</height>
-				<texture>http://xbmc.org/wp-content/themes/inove/img/icons.gif</texture>
+				<texture>/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/dc1868aa.png</texture>
 				<colordiffuse>FFFFFFFF</colordiffuse>
 				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
 			</control>
@@ -3294,11 +4284,20 @@
 				<label>natethomas</label>
 			</control>
 		<control type="image">
+				<posx>363</posx>
+				<posy>6589.0</posy>
+				<width>117</width>
+				<height>16.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
 				<posx>486</posx>
 				<posy>6471.5</posy>
 				<width>126</width>
 				<height>112</height>
-				<texture diffuse="/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/126-16-0--96.png">http://xbmc.org/wp-content/themes/inove/img/icons.gif</texture>
+				<texture diffuse="/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/126-16-0--96.png">/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/dc1868aa.png</texture>
 				<colordiffuse>FFFFFFFF</colordiffuse>
 				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
 			</control>
@@ -3320,6 +4319,33 @@
 				<focusedcolor>FFFF0000</focusedcolor>
 				<font>WebViewer-font12</font>
 				<label>42 comments</label>
+			</control>
+		<control type="image">
+				<posx>486</posx>
+				<posy>6567.5</posy>
+				<width>126</width>
+				<height>16.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>192</posx>
+				<posy>6610.5</posy>
+				<width>695</width>
+				<height>0.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>192</posx>
+				<posy>6567.5</posy>
+				<width>695</width>
+				<height>43.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
 			</control>
 		<control type="label">
 				<posx>192</posx>
@@ -3469,6 +4495,42 @@
 				<textcolor>FF555555</textcolor>
 				<label>                                                                       .</label>
 			</control>
+		<control type="image">
+				<posx>192</posx>
+				<posy>6951.5</posy>
+				<width>690</width>
+				<height>0.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>187</posx>
+				<posy>6615.5</posy>
+				<width>695</width>
+				<height>336.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>187</posx>
+				<posy>6956.5</posy>
+				<width>695</width>
+				<height>16.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>187</posx>
+				<posy>6493.5</posy>
+				<width>700</width>
+				<height>468.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
 		<control type="button" id="167">
 				<posx>187</posx>
 				<posy>7011.0</posy>
@@ -3491,10 +4553,10 @@
 		<control type="image">
 				<posx>182</posx>
 				<posy>7010.0</posy>
-				<width>696</width>
+				<width>695</width>
 				<height>30.5</height>
-				<texture border="5">web-viewer-white-border-bottom.png</texture>
-				<colordiffuse>FFCCCCCC</colordiffuse>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
 				<aspectratio>stretch</aspectratio>
 			</control>
 		<control type="image">
@@ -3502,7 +4564,7 @@
 				<posy>7002.5</posy>
 				<width>164</width>
 				<height>64</height>
-				<texture diffuse="/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/164-16-0--48.png">http://xbmc.org/wp-content/themes/inove/img/icons.gif</texture>
+				<texture diffuse="/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/164-16-0--48.png">/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/dc1868aa.png</texture>
 				<colordiffuse>FFFFFFFF</colordiffuse>
 				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
 			</control>
@@ -3516,11 +4578,20 @@
 				<label>April 9th, 2013</label>
 			</control>
 		<control type="image">
+				<posx>192</posx>
+				<posy>7050.5</posy>
+				<width>164</width>
+				<height>16.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
 				<posx>363</posx>
 				<posy>7072.0</posy>
 				<width>117</width>
 				<height>16</height>
-				<texture>http://xbmc.org/wp-content/themes/inove/img/icons.gif</texture>
+				<texture>/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/dc1868aa.png</texture>
 				<colordiffuse>FFFFFFFF</colordiffuse>
 				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
 			</control>
@@ -3544,11 +4615,20 @@
 				<label>natethomas</label>
 			</control>
 		<control type="image">
+				<posx>363</posx>
+				<posy>7072.0</posy>
+				<width>117</width>
+				<height>16.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
 				<posx>486</posx>
 				<posy>6954.5</posy>
 				<width>117</width>
 				<height>112</height>
-				<texture diffuse="/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/117-16-0--96.png">http://xbmc.org/wp-content/themes/inove/img/icons.gif</texture>
+				<texture diffuse="/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/117-16-0--96.png">/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/dc1868aa.png</texture>
 				<colordiffuse>FFFFFFFF</colordiffuse>
 				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
 			</control>
@@ -3570,6 +4650,33 @@
 				<focusedcolor>FFFF0000</focusedcolor>
 				<font>WebViewer-font12</font>
 				<label>2 comments</label>
+			</control>
+		<control type="image">
+				<posx>486</posx>
+				<posy>7050.5</posy>
+				<width>117</width>
+				<height>16.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>192</posx>
+				<posy>7093.5</posy>
+				<width>695</width>
+				<height>0.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>192</posx>
+				<posy>7050.5</posy>
+				<width>695</width>
+				<height>43.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
 			</control>
 		<control type="label">
 				<posx>192</posx>
@@ -3813,6 +4920,42 @@
 				<textcolor>FF555555</textcolor>
 				<label>All of us at Team XBMC are looking forward to getting some good work [CR]done this summer, and we’d love for you all to work with us!</label>
 			</control>
+		<control type="image">
+				<posx>192</posx>
+				<posy>7642.0</posy>
+				<width>690</width>
+				<height>0.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>187</posx>
+				<posy>7098.5</posy>
+				<width>695</width>
+				<height>543.5</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>187</posx>
+				<posy>7647.0</posy>
+				<width>695</width>
+				<height>16.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>187</posx>
+				<posy>6976.5</posy>
+				<width>700</width>
+				<height>675.5</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
 		<control type="button" id="177">
 				<posx>187</posx>
 				<posy>7675.0</posy>
@@ -3833,19 +4976,37 @@
 				<label>Older Entries  </label>
 			</control>
 		<control type="image">
+				<posx>187</posx>
+				<posy>7698.5</posy>
+				<width>695</width>
+				<height>0.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
 				<posx>182</posx>
 				<posy>7677.0</posy>
-				<width>706</width>
+				<width>705</width>
 				<height>21.5</height>
-				<texture border="5">web-viewer-white-border-top.png</texture>
-				<colordiffuse>FFCCCCCC</colordiffuse>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>172</posx>
+				<posy>210.5</posy>
+				<width>725</width>
+				<height>7503.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
 				<aspectratio>stretch</aspectratio>
 			</control>
 		<control type="image">
 				<posx>898</posx>
 				<posy>210.5</posy>
 				<width>210</width>
-				<height>2035.0</height>
+				<height>1924.0</height>
 				<texture>web-viewer-white.png</texture>
 				<colordiffuse>FFF7F7F7</colordiffuse>
 				<aspectratio scalediffuse="false" align="center" aligny="center">stretch</aspectratio>
@@ -3855,9 +5016,18 @@
 				<posy>210.5</posy>
 				<width>210</width>
 				<height>9</height>
-				<texture>http://xbmc.org/wp-content/themes/inove/img/sidebar_shadow.gif</texture>
+				<texture>/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/e60b4357.png</texture>
 				<colordiffuse>FFFFFFFF</colordiffuse>
 				<aspectratio scalediffuse="false" align="left" aligny="top">stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>898</posx>
+				<posy>210.5</posy>
+				<width>210</width>
+				<height>0.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
 			</control>
 		<control type="image">
 				<posx>898</posx>
@@ -3876,6 +5046,15 @@
 				<font>Bold-WebViewer-font12</font>
 				<textcolor>FF555555</textcolor>
 				<label>Sponsors</label>
+			</control>
+		<control type="image">
+				<posx>903</posx>
+				<posy>245.0</posy>
+				<width>190</width>
+				<height>21.5</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
 			</control>
 		<control type="image">
 				<posx>908</posx>
@@ -3917,6 +5096,24 @@
 			</control>
 		<control type="image">
 				<posx>908</posx>
+				<posy>282.5</posy>
+				<width>185</width>
+				<height>45.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>908</posx>
+				<posy>282.5</posy>
+				<width>185</width>
+				<height>45.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>908</posx>
 				<posy>327.5</posy>
 				<width>150</width>
 				<height>45</height>
@@ -3943,6 +5140,24 @@
 				<focusedcolor>FFFF0000</focusedcolor>
 				<font>WebViewer-font12</font>
 				<label></label>
+			</control>
+		<control type="image">
+				<posx>908</posx>
+				<posy>327.5</posy>
+				<width>185</width>
+				<height>45.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>908</posx>
+				<posy>327.5</posy>
+				<width>185</width>
+				<height>45.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
 			</control>
 		<control type="image">
 				<posx>908</posx>
@@ -3975,6 +5190,24 @@
 			</control>
 		<control type="image">
 				<posx>908</posx>
+				<posy>372.5</posy>
+				<width>185</width>
+				<height>45.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>908</posx>
+				<posy>372.5</posy>
+				<width>185</width>
+				<height>45.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>908</posx>
 				<posy>417.5</posy>
 				<width>150</width>
 				<height>45</height>
@@ -4001,6 +5234,24 @@
 				<focusedcolor>FFFF0000</focusedcolor>
 				<font>WebViewer-font12</font>
 				<label></label>
+			</control>
+		<control type="image">
+				<posx>908</posx>
+				<posy>417.5</posy>
+				<width>185</width>
+				<height>45.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>908</posx>
+				<posy>417.5</posy>
+				<width>185</width>
+				<height>45.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
 			</control>
 		<control type="image">
 				<posx>908</posx>
@@ -4033,6 +5284,24 @@
 			</control>
 		<control type="image">
 				<posx>908</posx>
+				<posy>462.5</posy>
+				<width>185</width>
+				<height>43.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>908</posx>
+				<posy>462.5</posy>
+				<width>185</width>
+				<height>45.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>908</posx>
 				<posy>505.5</posy>
 				<width>150</width>
 				<height>43</height>
@@ -4061,6 +5330,42 @@
 				<label></label>
 			</control>
 		<control type="image">
+				<posx>908</posx>
+				<posy>505.5</posy>
+				<width>185</width>
+				<height>43.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>908</posx>
+				<posy>505.5</posy>
+				<width>185</width>
+				<height>45.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>908</posx>
+				<posy>282.5</posy>
+				<width>190</width>
+				<height>266.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>898</posx>
+				<posy>210.5</posy>
+				<width>210</width>
+				<height>354.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
 				<posx>898</posx>
 				<posy>564.5</posy>
 				<width>210</width>
@@ -4079,11 +5384,20 @@
 				<label>Random Screenshots</label>
 			</control>
 		<control type="image">
+				<posx>903</posx>
+				<posy>599.0</posy>
+				<width>190</width>
+				<height>21.5</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
 				<posx>908</posx>
 				<posy>636.5</posy>
 				<width>179</width>
 				<height>101</height>
-				<texture fallback="web-viewer-broken-image.png">http://xbmc.org/wp-content/gallery/pm3-hd/thumbs/thumbs_screenshot010.jpg</texture>
+				<texture fallback="web-viewer-broken-image.png">http://xbmc.org/wp-content/gallery/project-mayhem-iii/thumbs/thumbs_screenshot000.jpg</texture>
 				<bordertexture border="2">web-viewer-link-border.png</bordertexture>
 				<bordersize>1</bordersize>
 
@@ -4112,7 +5426,7 @@
 				<posy>739.5</posy>
 				<width>179</width>
 				<height>101</height>
-				<texture fallback="web-viewer-broken-image.png">http://xbmc.org/wp-content/gallery/pm3-hd/thumbs/thumbs_screenshot006.jpg</texture>
+				<texture fallback="web-viewer-broken-image.png">http://xbmc.org/wp-content/gallery/xbmc-pvr-october-2012/thumbs/thumbs_screenshot008.png</texture>
 				<bordertexture border="2">web-viewer-link-border.png</bordertexture>
 				<bordersize>1</bordersize>
 
@@ -4137,6 +5451,24 @@
 				<label></label>
 			</control>
 		<control type="image">
+				<posx>908</posx>
+				<posy>636.5</posy>
+				<width>190</width>
+				<height>206.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>898</posx>
+				<posy>564.5</posy>
+				<width>210</width>
+				<height>294.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
 				<posx>898</posx>
 				<posy>858.5</posy>
 				<width>210</width>
@@ -4153,6 +5485,15 @@
 				<font>Bold-WebViewer-font12</font>
 				<textcolor>FF555555</textcolor>
 				<label>Facebook</label>
+			</control>
+		<control type="image">
+				<posx>903</posx>
+				<posy>893.0</posy>
+				<width>190</width>
+				<height>21.5</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
 			</control>
 		<control type="button" id="186">
 				<posx>908</posx>
@@ -4174,6 +5515,24 @@
 				<label>IFRAME</label>
 			</control>
 		<control type="image">
+				<posx>908</posx>
+				<posy>930.5</posy>
+				<width>190</width>
+				<height>21.5</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>898</posx>
+				<posy>858.5</posy>
+				<width>210</width>
+				<height>109.5</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
 				<posx>898</posx>
 				<posy>968.0</posy>
 				<width>210</width>
@@ -4190,6 +5549,15 @@
 				<font>Bold-WebViewer-font12</font>
 				<textcolor>FF555555</textcolor>
 				<label>Twitter</label>
+			</control>
+		<control type="image">
+				<posx>903</posx>
+				<posy>1002.5</posy>
+				<width>190</width>
+				<height>21.5</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
 			</control>
 		<control type="button" id="187">
 				<posx>908</posx>
@@ -4211,6 +5579,24 @@
 				<label>Follow @xbmc</label>
 			</control>
 		<control type="image">
+				<posx>908</posx>
+				<posy>1040.0</posy>
+				<width>190</width>
+				<height>21.5</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>898</posx>
+				<posy>968.0</posy>
+				<width>210</width>
+				<height>109.5</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
 				<posx>898</posx>
 				<posy>1077.5</posy>
 				<width>210</width>
@@ -4229,10 +5615,46 @@
 				<label>Google+</label>
 			</control>
 		<control type="image">
+				<posx>903</posx>
+				<posy>1112.0</posy>
+				<width>190</width>
+				<height>21.5</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>908</posx>
+				<posy>1149.5</posy>
+				<width>190</width>
+				<height>0.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>908</posx>
+				<posy>1149.5</posy>
+				<width>190</width>
+				<height>0.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>898</posx>
+				<posy>1077.5</posy>
+				<width>210</width>
+				<height>88.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
 				<posx>898</posx>
 				<posy>1165.5</posy>
 				<width>210</width>
-				<height>1080</height>
+				<height>969</height>
 				<texture>http://xbmc.org/wp-content/themes/inove/img/widgetsep.png</texture>
 				<colordiffuse>FFFFFFFF</colordiffuse>
 				<aspectratio scalediffuse="false" align="left" aligny="bottom">center</aspectratio>
@@ -4246,13 +5668,68 @@
 				<textcolor>FF555555</textcolor>
 				<label>Recent Commits</label>
 			</control>
+		<control type="image">
+				<posx>903</posx>
+				<posy>1200.0</posy>
+				<width>190</width>
+				<height>21.5</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
 		<control type="button" id="188">
 				<posx>910</posx>
 				<posy>1235.5</posy>
 				<width>188</width>
-				<height>227.0</height>
+				<height>42.0</height>
 				<onleft>187</onleft>
 				<onright>189</onright>
+				<texturefocus border="0"></texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				<textoffsetx>-1</textoffsetx>
+				<textoffsety>0</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<font>WebViewer-font12</font>
+				<label>[osx] fix app start[CR]on 10.9</label>
+			</control>
+		<control type="label">
+				<posx>910</posx>
+				<posy>1275.5</posy>
+				<width>188</width>
+				<height>23.5</height>
+				<font>WebViewer-font12</font>
+				<textcolor>FF555555</textcolor>
+				<label>June 18th by amet </label>
+			</control>
+		<control type="image">
+				<posx>910</posx>
+				<posy>1277.5</posy>
+				<width>188</width>
+				<height>21.5</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>908</posx>
+				<posy>1237.5</posy>
+				<width>190</width>
+				<height>80.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="button" id="189">
+				<posx>910</posx>
+				<posy>1315.5</posy>
+				<width>188</width>
+				<height>227.0</height>
+				<onleft>188</onleft>
+				<onright>190</onright>
 				<texturefocus border="0"></texturefocus>
 				<texturenofocus>-</texturenofocus>
 				<align>left</align>
@@ -4267,20 +5744,38 @@
 			</control>
 		<control type="label">
 				<posx>910</posx>
-				<posy>1460.5</posy>
+				<posy>1540.5</posy>
 				<width>188</width>
 				<height>42.0</height>
 				<font>WebViewer-font12</font>
 				<textcolor>FF555555</textcolor>
 				<label>June 18th by [CR]popcornmix </label>
 			</control>
-		<control type="button" id="189">
+		<control type="image">
 				<posx>910</posx>
-				<posy>1519.0</posy>
+				<posy>1542.5</posy>
+				<width>188</width>
+				<height>40.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>908</posx>
+				<posy>1317.5</posy>
+				<width>190</width>
+				<height>283.5</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="button" id="190">
+				<posx>910</posx>
+				<posy>1599.0</posy>
 				<width>188</width>
 				<height>79.0</height>
-				<onleft>188</onleft>
-				<onright>190</onright>
+				<onleft>189</onleft>
+				<onright>191</onright>
 				<texturefocus border="0"></texturefocus>
 				<texturenofocus>-</texturenofocus>
 				<align>left</align>
@@ -4295,20 +5790,38 @@
 			</control>
 		<control type="label">
 				<posx>910</posx>
-				<posy>1596.0</posy>
+				<posy>1676.0</posy>
 				<width>188</width>
 				<height>42.0</height>
 				<font>WebViewer-font12</font>
 				<textcolor>FF555555</textcolor>
 				<label>June 17th by Joakim[CR]Plate </label>
 			</control>
-		<control type="button" id="190">
+		<control type="image">
 				<posx>910</posx>
-				<posy>1654.5</posy>
+				<posy>1678.0</posy>
+				<width>188</width>
+				<height>40.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>908</posx>
+				<posy>1601.0</posy>
+				<width>190</width>
+				<height>135.5</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="button" id="191">
+				<posx>910</posx>
+				<posy>1734.5</posy>
 				<width>188</width>
 				<height>134.5</height>
-				<onleft>189</onleft>
-				<onright>191</onright>
+				<onleft>190</onleft>
+				<onright>192</onright>
 				<texturefocus border="0"></texturefocus>
 				<texturenofocus>-</texturenofocus>
 				<align>left</align>
@@ -4323,20 +5836,38 @@
 			</control>
 		<control type="label">
 				<posx>910</posx>
-				<posy>1787.0</posy>
+				<posy>1867.0</posy>
 				<width>188</width>
 				<height>42.0</height>
 				<font>WebViewer-font12</font>
 				<textcolor>FF555555</textcolor>
 				<label>June 17th by [CR]Memphiz </label>
 			</control>
-		<control type="button" id="191">
+		<control type="image">
 				<posx>910</posx>
-				<posy>1845.5</posy>
+				<posy>1869.0</posy>
+				<width>188</width>
+				<height>40.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>908</posx>
+				<posy>1736.5</posy>
+				<width>190</width>
+				<height>191.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="button" id="192">
+				<posx>910</posx>
+				<posy>1925.5</posy>
 				<width>188</width>
 				<height>116.0</height>
-				<onleft>190</onleft>
-				<onright>192</onright>
+				<onleft>191</onleft>
+				<onright>193</onright>
 				<texturefocus border="0"></texturefocus>
 				<texturenofocus>-</texturenofocus>
 				<align>left</align>
@@ -4351,40 +5882,84 @@
 			</control>
 		<control type="label">
 				<posx>910</posx>
-				<posy>1959.5</posy>
+				<posy>2039.5</posy>
 				<width>188</width>
 				<height>42.0</height>
 				<font>WebViewer-font12</font>
 				<textcolor>FF555555</textcolor>
 				<label>June 17th by [CR]Memphiz </label>
 			</control>
-		<control type="button" id="192">
+		<control type="image">
 				<posx>910</posx>
-				<posy>2018.0</posy>
+				<posy>2041.5</posy>
 				<width>188</width>
-				<height>134.5</height>
-				<onleft>191</onleft>
-				<onright>193</onright>
-				<texturefocus border="0"></texturefocus>
-				<texturenofocus>-</texturenofocus>
-				<align>left</align>
-				<aligny>top</aligny>
-				<textoffsetx>-1</textoffsetx>
-				<textoffsety>0</textoffsety>
-
-				<textcolor>FF00AAAA</textcolor>
-				<focusedcolor>FFFF0000</focusedcolor>
-				<font>WebViewer-font12</font>
-				<label>Revert "vaapi: [CR]don't unmap non-[CR]existing buffer" [CR]This reverts commit[CR]c1597430e6d2dfd6b6[CR]44be0345e0df9e0fe44[CR]336.</label>
+				<height>40.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
 			</control>
-		<control type="label">
-				<posx>910</posx>
-				<posy>2150.5</posy>
-				<width>188</width>
-				<height>42.0</height>
-				<font>WebViewer-font12</font>
-				<textcolor>FF555555</textcolor>
-				<label>June 17th by [CR]Memphiz </label>
+		<control type="image">
+				<posx>908</posx>
+				<posy>1927.5</posy>
+				<width>190</width>
+				<height>172.5</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>908</posx>
+				<posy>1237.5</posy>
+				<width>190</width>
+				<height>862.5</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>898</posx>
+				<posy>1165.5</posy>
+				<width>210</width>
+				<height>969.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>898</posx>
+				<posy>210.5</posy>
+				<width>210</width>
+				<height>1924.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>898</posx>
+				<posy>210.5</posy>
+				<width>210</width>
+				<height>1924.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>172</posx>
+				<posy>7713.5</posy>
+				<width>936</width>
+				<height>0.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>172</posx>
+				<posy>210.5</posy>
+				<width>936</width>
+				<height>7503.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
 			</control>
 		<control type="image">
 				<posx>172</posx>
@@ -4418,7 +5993,7 @@
 				<posy>7713.5</posy>
 				<width>348</width>
 				<height>16</height>
-				<texture diffuse="/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/44-16--304-0.png">http://xbmc.org/wp-content/themes/inove/img/icons.gif</texture>
+				<texture diffuse="/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/44-16--304-0.png">/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/dc1868aa.png</texture>
 				<colordiffuse>FFFFFFFF</colordiffuse>
 				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
 			</control>
@@ -4441,6 +6016,15 @@
 				<font>WebViewer-font12</font>
 				<label>Top</label>
 			</control>
+		<control type="image">
+				<posx>172</posx>
+				<posy>7713.5</posy>
+				<width>44</width>
+				<height>16.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
 		<control type="label">
 				<posx>192</posx>
 				<posy>7799.5</posy>
@@ -4449,6 +6033,15 @@
 				<font>WebViewer-font12</font>
 				<textcolor>FF555555</textcolor>
 				<label>Copyright © 2003-2013 XBMC </label>
+			</control>
+		<control type="image">
+				<posx>192</posx>
+				<posy>7801.5</posy>
+				<width>936</width>
+				<height>21.5</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
 			</control>
 		<control type="label">
 				<posx>192</posx>
@@ -4516,6 +6109,15 @@
 				<label>                         .</label>
 			</control>
 		<control type="image">
+				<posx>192</posx>
+				<posy>7823.0</posy>
+				<width>936</width>
+				<height>21.5</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
 				<posx>422</posx>
 				<posy>7844.5</posy>
 				<width>231</width>
@@ -4564,6 +6166,24 @@
 				<label>Web hosting by WebHostingBuzz</label>
 			</control>
 		<control type="image">
+				<posx>956</posx>
+				<posy>7874.5</posy>
+				<width>275</width>
+				<height>21.5</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>172</posx>
+				<posy>7844.5</posy>
+				<width>1059</width>
+				<height>51.5</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
 				<posx>172</posx>
 				<posy>7896.0</posy>
 				<width>111</width>
@@ -4591,6 +6211,15 @@
 				<focusedcolor>FFFF0000</focusedcolor>
 				<font>WebViewer-font12</font>
 				<label></label>
+			</control>
+		<control type="image">
+				<posx>172</posx>
+				<posy>7896.0</posy>
+				<width>114</width>
+				<height>15.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
 			</control>
 		<control type="image">
 				<posx>286</posx>
@@ -4622,12 +6251,48 @@
 				<label></label>
 			</control>
 		<control type="image">
+				<posx>286</posx>
+				<posy>7911.0</posy>
+				<width>85</width>
+				<height>15.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
 				<posx>172</posx>
 				<posy>7713.5</posy>
-				<width>937</width>
+				<width>936</width>
 				<height>88.0</height>
-				<texture border="5">web-viewer-white-border-top.png</texture>
-				<colordiffuse>FFCCCCCC</colordiffuse>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>172</posx>
+				<posy>5</posy>
+				<width>936</width>
+				<height>7921.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>10</posx>
+				<posy>0</posy>
+				<width>1260</width>
+				<height>7931.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>700</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
 				<aspectratio>stretch</aspectratio>
 			</control>
 
