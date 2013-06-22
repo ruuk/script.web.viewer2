@@ -64,6 +64,7 @@ def getView(document, css):
 			except:
 				continue
 			matching = cssselector.evaluate(document)
+			
 			for element in matching:
 				#if element.tag in ('div',):
 					# add styles for all matching DOM elements
@@ -71,7 +72,7 @@ def getView(document, css):
 					
 					if element not in view:	
 						# add initial empty style declatation
-						view[element] = cssutils.css.CSSStyleDeclaration()
+						view[element] = cssutils.css.CSSStyleDeclaration() # @UndefinedVariable
 						specificities[element] = {}					
 															
 					for p in rule.style:
@@ -131,23 +132,14 @@ def getSoupView(soup, css, url=''):
 		for selector in rule.selectorList:
 			#log(0, 'SELECTOR', selector.selectorText)
 			# TODO: make this a callback to be able to use other stuff than lxml
+			if ':' in selector.selectorText: continue #Ignore pseudo:classes because we can't use them, plus the match when we don't want them to on bs4
 			matching = soup.select(selector.selectorText)
-# 			if 'border' in selector.selectorText and matching:
-# 				print selector.selectorText,rule.style.getCssText(separator=u'')
-# 				for m in matching:
-# 					print '%s %s' % (id(m),m.get('class'))
-# 			elif 'border' in selector.selectorText:
-# 				print '-------'
-# 				print selector.selectorText
-# 				print rule.style.getCssText(separator=u'')
-# 				print '-------'
 			for element in matching:
 				ID = id(element)
 				if ID not in view:
 					# add initial empty style declatation
-					view[ID] = (element,cssutils.css.CSSStyleDeclaration())
+					view[ID] = (element,cssutils.css.CSSStyleDeclaration()) # @UndefinedVariable
 					specificities[ID] = {}
-					#if 'img' in selector.selectorText: print '%s %s' % (id(element),element)		
 														
 				for p in rule.style:
 					# update style declaration
@@ -193,8 +185,6 @@ def render2SoupStyle(view):
 	"""
 	for element, style in view.values():
 		v = style.getCssText(separator=u'')
-		#if element.name.startswith('b'): print v
-		#if element.name == 'img' and 'player' in element.get('src','').lower(): print u'{0} {1} {2}'.format(id(element), element.get('src'), v)
 		curr = element.get('style')
 		if curr:
 			element['style'] = ';'.join((curr,v))

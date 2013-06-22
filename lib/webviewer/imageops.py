@@ -1,3 +1,4 @@
+import os
 try:
 	from PIL import Image  # @UnresolvedImport
 except:
@@ -8,7 +9,6 @@ def createOffsetMask(w,h,xoff,yoff,outfile):
 	xoff = abs(xoff)
 	yoff = abs(yoff)
 	size = (w + xoff,h + yoff)
-	print (w + xoff,h + yoff,xoff,yoff,w,h)
 	img = Image.new("RGBA", size, (0,0,0,0))
 	corner = Image.new("RGB", (w,h), (255,255,255,255))
 	
@@ -18,6 +18,7 @@ def createOffsetMask(w,h,xoff,yoff,outfile):
 
 def gifToPng(src,dst):
 	if not Image: return src
+	if os.path.exists(dst): return dst
 	img = Image.open(src)
 	img = img.convert('RGBA')
 	img.save(dst,'PNG')

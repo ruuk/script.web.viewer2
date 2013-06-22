@@ -24,25 +24,27 @@ def getAndCacheImage(source,cache_path):
 	return cacheImage(source,cache_path)
 	
 def getCachedImagePath(source,cache_path=None):
+	if os.path.exists(source): return source
 	f, ext = os.path.splitext(source)  # @UnusedVariable
 	base = xbmc.getCacheThumbName(source)[:-4]
 	fname = base + ext
 	d = fname[0]
 	path = os.path.join(XBMC_THUMB_PATH,d,fname)
 	if os.path.exists(path): return path
-	path = os.path.join(XBMC_THUMB_PATH,d,base + '.jpg')
-	if os.path.exists(path): return path
+	if ext != '.gif':
+		path = os.path.join(XBMC_THUMB_PATH,d,base + '.jpg')
+		if os.path.exists(path): return path
 	if cache_path:
 		path = os.path.join(cache_path,fname)
 		if os.path.exists(path): return path
 	return None
 
 def cacheImage(source,dest_path):
-	fname = xbmc.getCacheThumbName(source)
-	data = urllib2.urlopen(source).read()
-	dest = os.path.join(dest_path,fname)
+	f, ext = os.path.splitext(source)  # @UnusedVariable
+	base = xbmc.getCacheThumbName(source)[:-4]
+	dest = os.path.join(dest_path,base + ext)
 	with open(dest,'wb') as f:
-		f.write(data)
+		f.write(urllib2.urlopen(source).read())
 	return dest
 
 def localCachePath(fname,cache_path):
