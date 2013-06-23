@@ -11,7 +11,6 @@ def createOffsetMask(w,h,xoff,yoff,outfile):
 	size = (w + xoff,h + yoff)
 	img = Image.new("RGBA", size, (0,0,0,0))
 	corner = Image.new("RGB", (w,h), (255,255,255,255))
-	
 	img.paste(corner,(xoff,yoff))
 	img.save(outfile)
 	return size

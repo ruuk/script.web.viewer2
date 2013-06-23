@@ -1,6 +1,6 @@
 <window>
 	<defaultcontrol>100</defaultcontrol>
-	<backgroundcolor>0xffffffff</backgroundcolor>
+	<backgroundcolor>0xffbec3c6</backgroundcolor>
 	<coordinates>
 		<system>1</system>
 		<posx>0</posx>
@@ -10,56 +10,416 @@
 		<control type="group" id="100">
 			<posx>0</posx>
 			<posy>10</posy>
-					<control type="label">
-				<posx>10</posx>
-				<posy>-2</posy>
-				<width>38</width>
-				<height>23.5</height>
-				<font>Bold-WebViewer-font12</font>
-				<textcolor>black</textcolor>
-				<label>Demo</label>
+					<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>700</height>
+				<texture>web-viewer-white.png</texture>
+				<colordiffuse>FFBEC3C6</colordiffuse>
+				<aspectratio scalediffuse="false" align="center" aligny="center">stretch</aspectratio>
 			</control>
-		<control type="label">
-				<posx>10</posx>
-				<posy>56.5</posy>
-				<width>465</width>
-				<height>23.5</height>
-				<font>WebViewer-font12</font>
-				<textcolor>black</textcolor>
-				<label>Just some links to show of what it can do so far.</label>
+		<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>36</width>
+				<height>648</height>
+				<texture>http://xbmc.org/wp-content/themes/inove/img/bg.jpg</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
 			</control>
-		<control type="label">
-				<posx>10</posx>
-				<posy>75.0</posy>
-				<width>1026</width>
-				<height>23.5</height>
-				<font>WebViewer-font12</font>
-				<textcolor>black</textcolor>
-				<label>Use left and right to navigate links, up and down will scroll the page (You can page up/down on a keyboard).</label>
+		<control type="image">
+				<posx>36</posx>
+				<posy>0</posy>
+				<width>36</width>
+				<height>648</height>
+				<texture>http://xbmc.org/wp-content/themes/inove/img/bg.jpg</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
 			</control>
-		<control type="label">
-				<posx>10</posx>
-				<posy>93.5</posy>
-				<width>693</width>
-				<height>23.5</height>
-				<font>WebViewer-font12</font>
-				<textcolor>black</textcolor>
-				<label>Use select to follow a link, the 'previous dir' button to go back a page.</label>
+		<control type="image">
+				<posx>72</posx>
+				<posy>0</posy>
+				<width>36</width>
+				<height>648</height>
+				<texture>http://xbmc.org/wp-content/themes/inove/img/bg.jpg</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
 			</control>
-		<control type="label">
+		<control type="image">
+				<posx>108</posx>
+				<posy>0</posy>
+				<width>36</width>
+				<height>648</height>
+				<texture>http://xbmc.org/wp-content/themes/inove/img/bg.jpg</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
+			</control>
+		<control type="image">
+				<posx>144</posx>
+				<posy>0</posy>
+				<width>36</width>
+				<height>648</height>
+				<texture>http://xbmc.org/wp-content/themes/inove/img/bg.jpg</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
+			</control>
+		<control type="image">
+				<posx>180</posx>
+				<posy>0</posy>
+				<width>36</width>
+				<height>648</height>
+				<texture>http://xbmc.org/wp-content/themes/inove/img/bg.jpg</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
+			</control>
+		<control type="image">
+				<posx>216</posx>
+				<posy>0</posy>
+				<width>36</width>
+				<height>648</height>
+				<texture>http://xbmc.org/wp-content/themes/inove/img/bg.jpg</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
+			</control>
+		<control type="image">
+				<posx>252</posx>
+				<posy>0</posy>
+				<width>36</width>
+				<height>648</height>
+				<texture>http://xbmc.org/wp-content/themes/inove/img/bg.jpg</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
+			</control>
+		<control type="image">
+				<posx>288</posx>
+				<posy>0</posy>
+				<width>36</width>
+				<height>648</height>
+				<texture>http://xbmc.org/wp-content/themes/inove/img/bg.jpg</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
+			</control>
+		<control type="image">
+				<posx>324</posx>
+				<posy>0</posy>
+				<width>36</width>
+				<height>648</height>
+				<texture>http://xbmc.org/wp-content/themes/inove/img/bg.jpg</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
+			</control>
+		<control type="image">
+				<posx>360</posx>
+				<posy>0</posy>
+				<width>36</width>
+				<height>648</height>
+				<texture>http://xbmc.org/wp-content/themes/inove/img/bg.jpg</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
+			</control>
+		<control type="image">
+				<posx>396</posx>
+				<posy>0</posy>
+				<width>36</width>
+				<height>648</height>
+				<texture>http://xbmc.org/wp-content/themes/inove/img/bg.jpg</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
+			</control>
+		<control type="image">
+				<posx>432</posx>
+				<posy>0</posy>
+				<width>36</width>
+				<height>648</height>
+				<texture>http://xbmc.org/wp-content/themes/inove/img/bg.jpg</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
+			</control>
+		<control type="image">
+				<posx>468</posx>
+				<posy>0</posy>
+				<width>36</width>
+				<height>648</height>
+				<texture>http://xbmc.org/wp-content/themes/inove/img/bg.jpg</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
+			</control>
+		<control type="image">
+				<posx>504</posx>
+				<posy>0</posy>
+				<width>36</width>
+				<height>648</height>
+				<texture>http://xbmc.org/wp-content/themes/inove/img/bg.jpg</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
+			</control>
+		<control type="image">
+				<posx>540</posx>
+				<posy>0</posy>
+				<width>36</width>
+				<height>648</height>
+				<texture>http://xbmc.org/wp-content/themes/inove/img/bg.jpg</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
+			</control>
+		<control type="image">
+				<posx>576</posx>
+				<posy>0</posy>
+				<width>36</width>
+				<height>648</height>
+				<texture>http://xbmc.org/wp-content/themes/inove/img/bg.jpg</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
+			</control>
+		<control type="image">
+				<posx>612</posx>
+				<posy>0</posy>
+				<width>36</width>
+				<height>648</height>
+				<texture>http://xbmc.org/wp-content/themes/inove/img/bg.jpg</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
+			</control>
+		<control type="image">
+				<posx>648</posx>
+				<posy>0</posy>
+				<width>36</width>
+				<height>648</height>
+				<texture>http://xbmc.org/wp-content/themes/inove/img/bg.jpg</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
+			</control>
+		<control type="image">
+				<posx>684</posx>
+				<posy>0</posy>
+				<width>36</width>
+				<height>648</height>
+				<texture>http://xbmc.org/wp-content/themes/inove/img/bg.jpg</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
+			</control>
+		<control type="image">
+				<posx>720</posx>
+				<posy>0</posy>
+				<width>36</width>
+				<height>648</height>
+				<texture>http://xbmc.org/wp-content/themes/inove/img/bg.jpg</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
+			</control>
+		<control type="image">
+				<posx>756</posx>
+				<posy>0</posy>
+				<width>36</width>
+				<height>648</height>
+				<texture>http://xbmc.org/wp-content/themes/inove/img/bg.jpg</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
+			</control>
+		<control type="image">
+				<posx>792</posx>
+				<posy>0</posy>
+				<width>36</width>
+				<height>648</height>
+				<texture>http://xbmc.org/wp-content/themes/inove/img/bg.jpg</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
+			</control>
+		<control type="image">
+				<posx>828</posx>
+				<posy>0</posy>
+				<width>36</width>
+				<height>648</height>
+				<texture>http://xbmc.org/wp-content/themes/inove/img/bg.jpg</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
+			</control>
+		<control type="image">
+				<posx>864</posx>
+				<posy>0</posy>
+				<width>36</width>
+				<height>648</height>
+				<texture>http://xbmc.org/wp-content/themes/inove/img/bg.jpg</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
+			</control>
+		<control type="image">
+				<posx>900</posx>
+				<posy>0</posy>
+				<width>36</width>
+				<height>648</height>
+				<texture>http://xbmc.org/wp-content/themes/inove/img/bg.jpg</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
+			</control>
+		<control type="image">
+				<posx>936</posx>
+				<posy>0</posy>
+				<width>36</width>
+				<height>648</height>
+				<texture>http://xbmc.org/wp-content/themes/inove/img/bg.jpg</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
+			</control>
+		<control type="image">
+				<posx>972</posx>
+				<posy>0</posy>
+				<width>36</width>
+				<height>648</height>
+				<texture>http://xbmc.org/wp-content/themes/inove/img/bg.jpg</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
+			</control>
+		<control type="image">
+				<posx>1008</posx>
+				<posy>0</posy>
+				<width>36</width>
+				<height>648</height>
+				<texture>http://xbmc.org/wp-content/themes/inove/img/bg.jpg</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
+			</control>
+		<control type="image">
+				<posx>1044</posx>
+				<posy>0</posy>
+				<width>36</width>
+				<height>648</height>
+				<texture>http://xbmc.org/wp-content/themes/inove/img/bg.jpg</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
+			</control>
+		<control type="image">
+				<posx>1080</posx>
+				<posy>0</posy>
+				<width>36</width>
+				<height>648</height>
+				<texture>http://xbmc.org/wp-content/themes/inove/img/bg.jpg</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
+			</control>
+		<control type="image">
+				<posx>1116</posx>
+				<posy>0</posy>
+				<width>36</width>
+				<height>648</height>
+				<texture>http://xbmc.org/wp-content/themes/inove/img/bg.jpg</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
+			</control>
+		<control type="image">
+				<posx>1152</posx>
+				<posy>0</posy>
+				<width>36</width>
+				<height>648</height>
+				<texture>http://xbmc.org/wp-content/themes/inove/img/bg.jpg</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
+			</control>
+		<control type="image">
+				<posx>1188</posx>
+				<posy>0</posy>
+				<width>36</width>
+				<height>648</height>
+				<texture>http://xbmc.org/wp-content/themes/inove/img/bg.jpg</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
+			</control>
+		<control type="image">
+				<posx>1224</posx>
+				<posy>0</posy>
+				<width>36</width>
+				<height>648</height>
+				<texture>http://xbmc.org/wp-content/themes/inove/img/bg.jpg</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
+			</control>
+		<control type="image">
+				<posx>1260</posx>
+				<posy>0</posy>
+				<width>20</width>
+				<height>648</height>
+				<texture>http://xbmc.org/wp-content/themes/inove/img/bg.jpg</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
+			</control>
+		<control type="image">
 				<posx>10</posx>
-				<posy>112.0</posy>
-				<width>712</width>
-				<height>23.5</height>
-				<font>WebViewer-font12</font>
-				<textcolor>black</textcolor>
-				<label>The context menu button (for now) brings up the keyboard to enter in a URL.</label>
+				<posy>0</posy>
+				<width>1260</width>
+				<height>5993</height>
+				<texture>/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/5abc56c5.png</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio scalediffuse="false" align="center" aligny="top">center</aspectratio>
+			</control>
+		<control type="image">
+				<posx>172</posx>
+				<posy>5</posy>
+				<width>936</width>
+				<height>100</height>
+				<texture>web-viewer-white.png</texture>
+				<colordiffuse>0</colordiffuse>
+				<aspectratio scalediffuse="false" align="center" aligny="center">stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>172</posx>
+				<posy>5</posy>
+				<width>936</width>
+				<height>100</height>
+				<texture>http://xbmc.org/wp-content/themes/inove/img/header.jpg</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
+			</control>
+		<control type="image">
+				<posx>172</posx>
+				<posy>105</posy>
+				<width>936</width>
+				<height>31.0</height>
+				<texture>web-viewer-white.png</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio scalediffuse="false" align="center" aligny="center">stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>172</posx>
+				<posy>105</posy>
+				<width>45</width>
+				<height>31</height>
+				<texture>web-viewer-white.png</texture>
+				<colordiffuse>transparent</colordiffuse>
+				<aspectratio scalediffuse="false" align="center" aligny="center">stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>172</posx>
+				<posy>-50</posy>
+				<width>45</width>
+				<height>186</height>
+				<texture diffuse="/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/45-31-0--155.png">/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/15ca881b.png</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
+			</control>
+		<control type="image">
+				<posx>207</posx>
+				<posy>105</posy>
+				<width>67</width>
+				<height>31</height>
+				<texture>web-viewer-white.png</texture>
+				<colordiffuse>transparent</colordiffuse>
+				<aspectratio scalediffuse="false" align="center" aligny="center">stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>207</posx>
+				<posy>105</posy>
+				<width>67</width>
+				<height>31</height>
+				<texture>/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/15ca881b.png</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
 			</control>
 		<control type="button" id="101">
-				<posx>10</posx>
-				<posy>167.5</posy>
-				<width>133</width>
-				<height>23.5</height>
+				<posx>227</posx>
+				<posy>112</posy>
+				<width>37</width>
+				<height>19.0</height>
 				<onleft>101</onleft>
 				<onright>102</onright>
 				<texturefocus border="0"></texturefocus>
@@ -71,23 +431,32 @@
 
 				<textcolor>FF00AAAA</textcolor>
 				<focusedcolor>FFFF0000</focusedcolor>
-				<font>Bold-WebViewer-font12</font>
-				<label>forum.xbmc.org</label>
+				<font>WebViewer-font10</font>
+				<label>About</label>
 			</control>
-		<control type="label">
-				<posx>10</posx>
-				<posy>189.0</posy>
-				<width>636</width>
-				<height>23.5</height>
-				<font>WebViewer-font12</font>
-				<textcolor>black</textcolor>
-				<label>Some new &lt;div&gt; and &lt;table&gt; rendering is making things look nice :) </label>
+		<control type="image">
+				<posx>265</posx>
+				<posy>105.0</posy>
+				<width>81</width>
+				<height>31.0</height>
+				<texture>web-viewer-white.png</texture>
+				<colordiffuse>transparent</colordiffuse>
+				<aspectratio scalediffuse="false" align="center" aligny="center">stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>265</posx>
+				<posy>105.0</posy>
+				<width>81</width>
+				<height>31</height>
+				<texture>/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/15ca881b.png</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
 			</control>
 		<control type="button" id="102">
-				<posx>10</posx>
-				<posy>244.5</posy>
-				<width>76</width>
-				<height>23.5</height>
+				<posx>285</posx>
+				<posy>112.0</posy>
+				<width>51</width>
+				<height>19.0</height>
 				<onleft>101</onleft>
 				<onright>103</onright>
 				<texturefocus border="0"></texturefocus>
@@ -99,23 +468,32 @@
 
 				<textcolor>FF00AAAA</textcolor>
 				<focusedcolor>FFFF0000</focusedcolor>
-				<font>Bold-WebViewer-font12</font>
-				<label>xbmc.org</label>
+				<font>WebViewer-font10</font>
+				<label>Gallery</label>
 			</control>
-		<control type="label">
-				<posx>10</posx>
-				<posy>266.0</posy>
-				<width>475</width>
-				<height>23.5</height>
-				<font>WebViewer-font12</font>
-				<textcolor>black</textcolor>
-				<label>This just shows how images and text are rendered. </label>
+		<control type="image">
+				<posx>339</posx>
+				<posy>105.0</posy>
+				<width>96</width>
+				<height>31.0</height>
+				<texture>web-viewer-white.png</texture>
+				<colordiffuse>transparent</colordiffuse>
+				<aspectratio scalediffuse="false" align="center" aligny="center">stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>339</posx>
+				<posy>105.0</posy>
+				<width>96</width>
+				<height>31</height>
+				<texture>/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/15ca881b.png</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
 			</control>
 		<control type="button" id="103">
-				<posx>10</posx>
-				<posy>321.5</posy>
-				<width>95</width>
-				<height>23.5</height>
+				<posx>359</posx>
+				<posy>112.0</posy>
+				<width>66</width>
+				<height>19.0</height>
 				<onleft>102</onleft>
 				<onright>104</onright>
 				<texturefocus border="0"></texturefocus>
@@ -127,23 +505,32 @@
 
 				<textcolor>FF00AAAA</textcolor>
 				<focusedcolor>FFFF0000</focusedcolor>
-				<font>Bold-WebViewer-font12</font>
-				<label>google.com</label>
+				<font>WebViewer-font10</font>
+				<label>Downloads</label>
 			</control>
-		<control type="label">
-				<posx>10</posx>
-				<posy>343.0</posy>
-				<width>161</width>
-				<height>23.5</height>
-				<font>WebViewer-font12</font>
-				<textcolor>black</textcolor>
-				<label>Almost normal :) </label>
+		<control type="image">
+				<posx>428</posx>
+				<posy>105.0</posy>
+				<width>104</width>
+				<height>31.0</height>
+				<texture>web-viewer-white.png</texture>
+				<colordiffuse>transparent</colordiffuse>
+				<aspectratio scalediffuse="false" align="center" aligny="center">stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>428</posx>
+				<posy>105.0</posy>
+				<width>104</width>
+				<height>31</height>
+				<texture>/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/15ca881b.png</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
 			</control>
 		<control type="button" id="104">
-				<posx>10</posx>
-				<posy>398.5</posy>
-				<width>95</width>
-				<height>23.5</height>
+				<posx>448</posx>
+				<posy>112.0</posy>
+				<width>74</width>
+				<height>19.0</height>
 				<onleft>103</onleft>
 				<onright>105</onright>
 				<texturefocus border="0"></texturefocus>
@@ -155,23 +542,32 @@
 
 				<textcolor>FF00AAAA</textcolor>
 				<focusedcolor>FFFF0000</focusedcolor>
-				<font>Bold-WebViewer-font12</font>
-				<label>Some forms</label>
+				<font>WebViewer-font10</font>
+				<label>Contribute</label>
 			</control>
-		<control type="label">
-				<posx>10</posx>
-				<posy>420.0</posy>
-				<width>133</width>
-				<height>23.5</height>
-				<font>WebViewer-font12</font>
-				<textcolor>black</textcolor>
-				<label>Some forms... </label>
+		<control type="image">
+				<posx>524</posx>
+				<posy>105.0</posy>
+				<width>81</width>
+				<height>31.0</height>
+				<texture>web-viewer-white.png</texture>
+				<colordiffuse>transparent</colordiffuse>
+				<aspectratio scalediffuse="false" align="center" aligny="center">stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>524</posx>
+				<posy>105.0</posy>
+				<width>81</width>
+				<height>31</height>
+				<texture>/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/15ca881b.png</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
 			</control>
 		<control type="button" id="105">
-				<posx>10</posx>
-				<posy>475.5</posy>
-				<width>104</width>
-				<height>23.5</height>
+				<posx>544</posx>
+				<posy>112.0</posy>
+				<width>51</width>
+				<height>19.0</height>
 				<onleft>104</onleft>
 				<onright>106</onright>
 				<texturefocus border="0"></texturefocus>
@@ -183,26 +579,4056 @@
 
 				<textcolor>FF00AAAA</textcolor>
 				<focusedcolor>FFFF0000</focusedcolor>
+				<font>WebViewer-font10</font>
+				<label>Support</label>
+			</control>
+		<control type="image">
+				<posx>598</posx>
+				<posy>105.0</posy>
+				<width>111</width>
+				<height>31.0</height>
+				<texture>web-viewer-white.png</texture>
+				<colordiffuse>transparent</colordiffuse>
+				<aspectratio scalediffuse="false" align="center" aligny="center">stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>598</posx>
+				<posy>105.0</posy>
+				<width>111</width>
+				<height>31</height>
+				<texture>/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/15ca881b.png</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
+			</control>
+		<control type="button" id="106">
+				<posx>618</posx>
+				<posy>112.0</posy>
+				<width>81</width>
+				<height>19.0</height>
+				<onleft>105</onleft>
+				<onright>107</onright>
+				<texturefocus border="0"></texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				<textoffsetx>-1</textoffsetx>
+				<textoffsety>0</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<font>WebViewer-font10</font>
+				<label>Merchandise</label>
+			</control>
+		<control type="image">
+				<posx>702</posx>
+				<posy>105.0</posy>
+				<width>85</width>
+				<height>31.0</height>
+				<texture>web-viewer-white.png</texture>
+				<colordiffuse>transparent</colordiffuse>
+				<aspectratio scalediffuse="false" align="center" aligny="center">stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>702</posx>
+				<posy>105.0</posy>
+				<width>85</width>
+				<height>31</height>
+				<texture>/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/fbb53135.png</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
+			</control>
+		<control type="button" id="107">
+				<posx>722</posx>
+				<posy>112.0</posy>
+				<width>44</width>
+				<height>19.0</height>
+				<onleft>106</onleft>
+				<onright>108</onright>
+				<texturefocus border="0"></texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				<textoffsetx>-1</textoffsetx>
+				<textoffsety>0</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<font>WebViewer-font10</font>
+				<label>Donate</label>
+			</control>
+		<control type="image">
+				<posx>783</posx>
+				<posy>105.0</posy>
+				<width>30</width>
+				<height>31.0</height>
+				<texture>web-viewer-white.png</texture>
+				<colordiffuse>transparent</colordiffuse>
+				<aspectratio scalediffuse="false" align="center" aligny="center">stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>783</posx>
+				<posy>105.0</posy>
+				<width>30</width>
+				<height>31</height>
+				<texture>/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/15ca881b.png</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
+			</control>
+		<control type="image">
+				<posx>919</posx>
+				<posy>109</posy>
+				<width>189</width>
+				<height>21</height>
+				<texture>/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/ef5bf05a.png</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
+			</control>
+		<control type="image">
+				<posx>921</posx>
+				<posy>112.0</posy>
+				<width>156</width>
+				<height>14.0</height>
+				<texture fallback="web-viewer-broken-image.png" border="5">-</texture>
+				
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="button" id="108">
+				<posx>921</posx>
+				<posy>112.0</posy>
+				<width>156</width>
+				<height>14.0</height>
+				<onleft>107</onleft>
+				<onright>109</onright>
+				<texturefocus border="2">web-viewer-red-border.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>left</align>
+				<aligny>center</aligny>
+				
+				<textcolor>black</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<font>WebViewer-font10</font>
+				<label></label>
+			</control>
+		<control type="image">
+				<posx>1083</posx>
+				<posy>112.0</posy>
+				<width>18</width>
+				<height>18</height>
+				<texture fallback="web-viewer-broken-image.png" border="5">-</texture>
+				
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="button" id="109">
+				<posx>1083</posx>
+				<posy>112.0</posy>
+				<width>18</width>
+				<height>18</height>
+				<onleft>108</onleft>
+				<onright>110</onright>
+				<texturefocus border="2">web-viewer-red-border.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>center</align>
+				<aligny>center</aligny>
+				
+				<textcolor>black</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<font>WebViewer-font10</font>
+				<label></label>
+			</control>
+		<control type="image">
+				<posx>172</posx>
+				<posy>105</posy>
+				<width>937</width>
+				<height>31.0</height>
+				<texture border="5">web-viewer-white-border-bottom.png</texture>
+				<colordiffuse>FFA6A6A6</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>172</posx>
+				<posy>136.0</posy>
+				<width>936</width>
+				<height>5641.5</height>
+				<texture>web-viewer-white.png</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio scalediffuse="false" align="center" aligny="center">stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>897</posx>
+				<posy>136.0</posy>
+				<width>211</width>
+				<height>5641</height>
+				<texture border="0,0,0,1">/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/31a76ef8.png</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio scalediffuse="false" align="center" aligny="center">stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>172</posx>
+				<posy>136.0</posy>
+				<width>725</width>
+				<height>5641.5</height>
+				<texture>web-viewer-white.png</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio scalediffuse="false" align="center" aligny="center">stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>172</posx>
+				<posy>136.0</posy>
+				<width>725</width>
+				<height>9</height>
+				<texture border="0,0,1,0">/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/0c918aeb.png</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio scalediffuse="false" align="center" aligny="center">stretch</aspectratio>
+			</control>
+		<control type="button" id="110">
+				<posx>187</posx>
+				<posy>171.0</posy>
+				<width>370</width>
+				<height>23.5</height>
+				<onleft>109</onleft>
+				<onright>111</onright>
+				<texturefocus border="0"></texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				<textoffsetx>-1</textoffsetx>
+				<textoffsety>0</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
 				<font>Bold-WebViewer-font12</font>
-				<label>Player Ones</label>
+				<label>XBMC 13 - Gotham - April and May cycles</label>
+			</control>
+		<control type="image">
+				<posx>187</posx>
+				<posy>163.0</posy>
+				<width>696</width>
+				<height>37.5</height>
+				<texture border="5">web-viewer-white-border-bottom.png</texture>
+				<colordiffuse>FFCCCCCC</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>192</posx>
+				<posy>162.5</posy>
+				<width>125</width>
+				<height>64</height>
+				<texture diffuse="/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/125-16-0--48.png">/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/dc1868aa.png</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
 			</control>
 		<control type="label">
-				<posx>10</posx>
-				<posy>497.0</posy>
-				<width>218</width>
+				<posx>214</posx>
+				<posy>210.5</posy>
+				<width>303</width>
+				<height>19.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>June 3rd, 2013</label>
+			</control>
+		<control type="image">
+				<posx>317</posx>
+				<posy>229.5</posy>
+				<width>96</width>
+				<height>16</height>
+				<texture>/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/dc1868aa.png</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
+			</control>
+		<control type="button" id="111">
+				<posx>339</posx>
+				<posy>229.5</posy>
+				<width>74</width>
+				<height>19.0</height>
+				<onleft>110</onleft>
+				<onright>112</onright>
+				<texturefocus border="0"></texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				<textoffsetx>-1</textoffsetx>
+				<textoffsety>0</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<font>WebViewer-font10</font>
+				<label>natethomas</label>
+			</control>
+		<control type="image">
+				<posx>784</posx>
+				<posy>109.5</posy>
+				<width>103</width>
+				<height>112</height>
+				<texture diffuse="/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/103-16-0--96.png">/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/dc1868aa.png</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
+			</control>
+		<control type="button" id="112">
+				<posx>806</posx>
+				<posy>205.5</posy>
+				<width>81</width>
+				<height>19.0</height>
+				<onleft>111</onleft>
+				<onright>113</onright>
+				<texturefocus border="0"></texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				<textoffsetx>-1</textoffsetx>
+				<textoffsety>0</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<font>WebViewer-font10</font>
+				<label>49 comments</label>
+			</control>
+		<control type="label">
+				<posx>192</posx>
+				<posy>274.5</posy>
+				<width>890</width>
+				<height>61.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>With the release of XBMC 12.2 and GSoC, not to mention some behind the scenes work going on, [CR]an April cycle announcement was not published; however, thanks to a new process, both the [CR]April cycle and May cycle builds were built rapidly and efficiently (and on time). We have [CR]now switched from our old Billy the Buildbot to </label>
+			</control>
+		<control type="button" id="113">
+				<posx>192</posx>
+				<posy>316.5</posy>
+				<width>407</width>
+				<height>19.0</height>
+				<onleft>112</onleft>
+				<onright>114</onright>
+				<texturefocus border="0"></texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				<textoffsetx>-1</textoffsetx>
+				<textoffsety>0</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<font>WebViewer-font10</font>
+				<label>                                                Jenkins</label>
+			</control>
+		<control type="label">
+				<posx>192</posx>
+				<posy>316.5</posy>
+				<width>890</width>
+				<height>75.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>                                                        for building our automated monthly [CR]alphas and nightly builds. Jenkins is quite a bit more intelligent and faster than our old [CR]buildbot, and we’re excited about the switch. In the future, for those who just can’t wait [CR]for a write-up about the newest alpha but tend to steer clear of the bleeding edge of [CR]nightlies, the new build should always be available on the 1st of the month at </label>
+			</control>
+		<control type="button" id="114">
+				<posx>192</posx>
+				<posy>386.5</posy>
+				<width>192</width>
+				<height>19.0</height>
+				<onleft>113</onleft>
+				<onright>115</onright>
+				<texturefocus border="0"></texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				<textoffsetx>-1</textoffsetx>
+				<textoffsety>0</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<font>WebViewer-font10</font>
+				<label>mirrors.xbmc.org/snapshots</label>
+			</control>
+		<control type="label">
+				<posx>192</posx>
+				<posy>386.5</posy>
+				<width>399</width>
+				<height>19.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>                          .</label>
+			</control>
+		<control type="label">
+				<posx>192</posx>
+				<posy>414.5</posy>
+				<width>890</width>
+				<height>33.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>With that said, we’ve now completed months #3 and #4 of our monthly development cycle, and [CR]there’s a lot to talk about.</label>
+			</control>
+		<control type="label">
+				<posx>192</posx>
+				<posy>465.5</posy>
+				<width>646</width>
 				<height>23.5</height>
-				<font>WebViewer-font12</font>
-				<textcolor>black</textcolor>
-				<label>This is the cool one :)</label>
+				<font>Bold-WebViewer-font12</font>
+				<textcolor>FF555555</textcolor>
+				<label>System-Wide – FFMPEG v1.2 and Settings Refactor</label>
+			</control>
+		<control type="image">
+				<posx>192</posx>
+				<posy>454.5</posy>
+				<width>691</width>
+				<height>40.5</height>
+				<texture border="5">web-viewer-white-border-bottom.png</texture>
+				<colordiffuse>FFCCCCCC</colordiffuse>
+				<aspectratio>stretch</aspectratio>
 			</control>
 		<control type="label">
-				<posx>10</posx>
+				<posx>192</posx>
+				<posy>511.0</posy>
+				<width>890</width>
+				<height>33.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>Without a doubt, the two biggest developments over these past two months have been the bump [CR]to v1.2 of FFMPEG and the Settings Refactor performed by Montellese. The </label>
+			</control>
+		<control type="button" id="115">
+				<posx>192</posx>
+				<posy>525.0</posy>
+				<width>690</width>
+				<height>33.0</height>
+				<onleft>114</onleft>
+				<onright>116</onright>
+				<texturefocus border="0"></texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				<textoffsetx>-1</textoffsetx>
+				<textoffsety>0</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<font>WebViewer-font10</font>
+				<label>                                                                         list of changes for [CR]v1.2 of FFMPEG</label>
+			</control>
+		<control type="label">
+				<posx>192</posx>
+				<posy>539.0</posy>
+				<width>890</width>
+				<height>33.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>               is frankly enormous, so if you’d like to see the list, check it out at the [CR]link.</label>
+			</control>
+		<control type="label">
+				<posx>192</posx>
+				<posy>581.0</posy>
+				<width>890</width>
+				<height>103.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>The Settings Refactor is like-wise quite huge, but worth discussing in a bit more detail. [CR]Previously, settings were entirely dependent upon XBMC’s graphical user interface (GUI). If [CR]you didn’t manually change a setting in that interface, the setting could not be changed. [CR]Skinners had no access to the settings. Outside applications (like the official Android and [CR]iOS remotes) couldn’t interact with them. Any attempt by users to run XBMC as a server were [CR]hamstrung by the fact that you couldn’t actually control most of the server features without [CR]physically launching the XBMC GUI.</label>
+			</control>
+		<control type="label">
+				<posx>192</posx>
+				<posy>693.0</posy>
+				<width>890</width>
+				<height>47.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>This refactor separated settings from the GUI, so now all of those obstacles can easily be [CR]overcome. In addition, because settings are no longer dependent on the GUI, we can do a lot [CR]of interesting things that were not previously possible.</label>
+			</control>
+		<control type="image">
+				<posx>577</posx>
+				<posy>740.0</posy>
+				<width>310</width>
+				<height>195.0</height>
+				<texture>web-viewer-white.png</texture>
+				<colordiffuse>FFF7F7F7</colordiffuse>
+				<aspectratio scalediffuse="false" align="center" aligny="center">stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>582</posx>
+				<posy>745.0</posy>
+				<width>300</width>
+				<height>159</height>
+				<texture fallback="web-viewer-broken-image.png">http://xbmc.org/wp-content/uploads/2013/06/xbmc_settings_basic-300x159.jpg</texture>
+				<bordertexture border="2">web-viewer-link-border.png</bordertexture>
+				<bordersize>1</bordersize>
+
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="button" id="116">
+				<posx>582</posx>
+				<posy>745.0</posy>
+				<width>300</width>
+				<height>159</height>
+				<onleft>115</onleft>
+				<onright>117</onright>
+				<texturefocus border="2">web-viewer-red-border.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				
+				<textcolor>00000000</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<font>WebViewer-font10</font>
+				<label></label>
+			</control>
+		<control type="label">
+				<posx>577</posx>
+				<posy>906.0</posy>
+				<width>481</width>
+				<height>19.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>The Basic settings are, indeed, basic.</label>
+			</control>
+		<control type="image">
+				<posx>572</posx>
+				<posy>740.0</posy>
+				<width>310</width>
+				<height>195.0</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FFCCCCCC</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="label">
+				<posx>192</posx>
+				<posy>951.0</posy>
+				<width>890</width>
+				<height>75.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>For the first time, settings can now be reset to default, so everyone who discovers they’ve [CR]completely screwed up their audio settings finally have a fallback. The reset feature is [CR]fortunately quite narrow. It only applies to the window you are currently looking at. So, for[CR]example, if you reset your audio settings, you won’t accidentally reset your video settings [CR]too.</label>
+			</control>
+		<control type="label">
+				<posx>192</posx>
+				<posy>1035.0</posy>
+				<width>890</width>
+				<height>61.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>The settings GUI also has now has “settings levels” including Basic, Standard (default), [CR]Advanced, and Expert. The default Standard shows fewer settings than the previous default, [CR]and Expert is still a work in progress, but is likely to house a number of the settings that [CR]used to exist solely as part of the advancedsettings.xml.</label>
+			</control>
+		<control type="label">
+				<posx>192</posx>
+				<posy>1105.0</posy>
+				<width>890</width>
+				<height>61.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>Finally, with this separation, skins now have the power to show actual explanations of what [CR]each setting does, so users are no longer forced to puzzle over “Preferred Audio Language” or[CR]“Vertical blank sync.” Skinners can present a simple description that may easily explain the[CR]setting in non-developer speak.</label>
+			</control>
+		<control type="label">
+				<posx>192</posx>
+				<posy>1175.0</posy>
+				<width>481</width>
+				<height>19.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>For more info, feel free to visit the </label>
+			</control>
+		<control type="button" id="117">
+				<posx>192</posx>
+				<posy>1175.0</posy>
+				<width>466</width>
+				<height>19.0</height>
+				<onleft>116</onleft>
+				<onright>118</onright>
+				<texturefocus border="0"></texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				<textoffsetx>-1</textoffsetx>
+				<textoffsety>0</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<font>WebViewer-font10</font>
+				<label>                                      Settings System wiki page</label>
+			</control>
+		<control type="label">
+				<posx>192</posx>
+				<posy>1175.0</posy>
+				<width>890</width>
+				<height>33.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>                                                               , which is still fairly new [CR]and incomplete, but which will ultimately be the main source of Settings info.</label>
+			</control>
+		<control type="label">
+				<posx>192</posx>
+				<posy>1226.0</posy>
+				<width>380</width>
+				<height>23.5</height>
+				<font>Bold-WebViewer-font12</font>
+				<textcolor>FF555555</textcolor>
+				<label>System-Wide – Other</label>
+			</control>
+		<control type="image">
+				<posx>192</posx>
+				<posy>1215.0</posy>
+				<width>691</width>
+				<height>40.5</height>
+				<texture border="5">web-viewer-white-border-bottom.png</texture>
+				<colordiffuse>FFCCCCCC</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="label">
+				<posx>192</posx>
+				<posy>1271.5</posy>
+				<width>890</width>
+				<height>47.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>Multi-touch support is now available generically on touchscreens. Multi-touch gestures [CR]currently are limited to swipe backwards, two finger context menu, image rotation, and pinch [CR]to zoom. For a list of our touchscreen interactions, see our </label>
+			</control>
+		<control type="button" id="118">
+				<posx>192</posx>
+				<posy>1299.5</posy>
+				<width>584</width>
+				<height>19.0</height>
+				<onleft>117</onleft>
+				<onright>119</onright>
+				<texturefocus border="0"></texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				<textoffsetx>-1</textoffsetx>
+				<textoffsety>0</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<font>WebViewer-font10</font>
+				<label>                                                             touchscreen keymap</label>
+			</control>
+		<control type="label">
+				<posx>192</posx>
+				<posy>1299.5</posy>
+				<width>792</width>
+				<height>19.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>                                                                               .</label>
+			</control>
+		<control type="label">
+				<posx>192</posx>
+				<posy>1327.5</posy>
+				<width>466</width>
+				<height>19.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>Airplay now includes volume control.</label>
+			</control>
+		<control type="label">
+				<posx>192</posx>
+				<posy>1355.5</posy>
+				<width>890</width>
+				<height>33.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>Movie sets management has been made moderately easier, as users can now clear sets and add [CR]movies to sets from the context menu.</label>
+			</control>
+		<control type="label">
+				<posx>192</posx>
+				<posy>1397.5</posy>
+				<width>890</width>
+				<height>47.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>The web interface remote can now send keystrokes from your physical keyboard to XBMC. So if [CR]you have the web inteface remote open on your laptop and you press up, the XBMC GUI selector [CR]on your HTPC will move up. If you press down, it will move down.</label>
+			</control>
+		<control type="label">
+				<posx>192</posx>
+				<posy>1453.5</posy>
+				<width>890</width>
+				<height>33.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>UPnP now supports the tracking of file state, so watched status and resume from last watched [CR]points are updated instantly across machines.</label>
+			</control>
+		<control type="label">
+				<posx>192</posx>
+				<posy>1504.5</posy>
+				<width>295</width>
+				<height>23.5</height>
+				<font>Bold-WebViewer-font12</font>
+				<textcolor>FF555555</textcolor>
+				<label>Conclusion</label>
+			</control>
+		<control type="image">
+				<posx>192</posx>
+				<posy>1493.5</posy>
+				<width>691</width>
+				<height>40.5</height>
+				<texture border="5">web-viewer-white-border-bottom.png</texture>
+				<colordiffuse>FFCCCCCC</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="label">
+				<posx>192</posx>
+				<posy>1550.0</posy>
+				<width>890</width>
+				<height>61.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>With the exception of a few fixes (keyboard presses in Android should work quite a bit better[CR]now, for example), most of the major changes for the past two months have not been platform [CR]specific. This means pretty much everyone should be able to play around with all these new [CR]features.</label>
+			</control>
+		<control type="label">
+				<posx>192</posx>
+				<posy>1620.0</posy>
+				<width>890</width>
+				<height>33.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>And of course, as always, this is merely a very small sample of the many changes this cycle. [CR]For a full list of changes, visit our </label>
+			</control>
+		<control type="button" id="119">
+				<posx>192</posx>
+				<posy>1634.0</posy>
+				<width>414</width>
+				<height>19.0</height>
+				<onleft>118</onleft>
+				<onright>120</onright>
+				<texturefocus border="0"></texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				<textoffsetx>-1</textoffsetx>
+				<textoffsety>0</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<font>WebViewer-font10</font>
+				<label>                                      April Merge Window</label>
+			</control>
+		<control type="label">
+				<posx>192</posx>
+				<posy>1634.0</posy>
+				<width>718</width>
+				<height>19.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>                                                         page and our </label>
+			</control>
+		<control type="button" id="120">
+				<posx>192</posx>
+				<posy>1634.0</posy>
+				<width>636</width>
+				<height>19.0</height>
+				<onleft>119</onleft>
+				<onright>121</onright>
+				<texturefocus border="0"></texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				<textoffsetx>-1</textoffsetx>
+				<textoffsety>0</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<font>WebViewer-font10</font>
+				<label>                                                                      May Merge Window</label>
+			</control>
+		<control type="label">
+				<posx>192</posx>
+				<posy>1634.0</posy>
+				<width>890</width>
+				<height>33.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>                                                                                       page. [CR]You may notice that we’ve begun tracking the merging of new features into our public </label>
+			</control>
+		<control type="button" id="121">
+				<posx>192</posx>
+				<posy>1648.0</posy>
+				<width>690</width>
+				<height>33.0</height>
+				<onleft>120</onleft>
+				<onright>122</onright>
+				<texturefocus border="0"></texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				<textoffsetx>-1</textoffsetx>
+				<textoffsety>0</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<font>WebViewer-font10</font>
+				<label>                                                                                     Team [CR]Member forum discussion</label>
+			</control>
+		<control type="label">
+				<posx>192</posx>
+				<posy>1662.0</posy>
+				<width>890</width>
+				<height>33.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>                        area, rather than on Github. With luck, this should make it quite a [CR]bit easier for users to follow along with development.</label>
+			</control>
+		<control type="label">
+				<posx>192</posx>
+				<posy>1704.0</posy>
+				<width>890</width>
+				<height>47.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>Now, if you are feeling a bit brave and a bit lucky, it’s time to start downloading. Be aware[CR]though, that this is very alpha software with potentially numerous bugs. There is a very [CR]good chance that this alpha will break on you.</label>
+			</control>
+		<control type="label">
+				<posx>212</posx>
+				<posy>1753.0</posy>
+				<width>214</width>
+				<height>19.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>• </label>
+			</control>
+		<control type="button" id="122">
+				<posx>212</posx>
+				<posy>1753.0</posy>
+				<width>66</width>
+				<height>19.0</height>
+				<onleft>121</onleft>
+				<onright>123</onright>
+				<texturefocus border="0"></texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				<textoffsetx>-1</textoffsetx>
+				<textoffsety>0</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<font>WebViewer-font10</font>
+				<label>  Windows</label>
+			</control>
+		<control type="label">
+				<posx>212</posx>
+				<posy>1774.0</posy>
+				<width>214</width>
+				<height>19.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>• </label>
+			</control>
+		<control type="button" id="123">
+				<posx>212</posx>
+				<posy>1774.0</posy>
+				<width>37</width>
+				<height>19.0</height>
+				<onleft>122</onleft>
+				<onright>124</onright>
+				<texturefocus border="0"></texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				<textoffsetx>-1</textoffsetx>
+				<textoffsety>0</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<font>WebViewer-font10</font>
+				<label>  OSX</label>
+			</control>
+		<control type="label">
+				<posx>212</posx>
+				<posy>1774.0</posy>
+				<width>274</width>
+				<height>19.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>      and </label>
+			</control>
+		<control type="button" id="124">
+				<posx>212</posx>
+				<posy>1774.0</posy>
+				<width>148</width>
+				<height>19.0</height>
+				<onleft>123</onleft>
+				<onright>125</onright>
+				<texturefocus border="0"></texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				<textoffsetx>-1</textoffsetx>
+				<textoffsety>0</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<font>WebViewer-font10</font>
+				<label>          OSX-x86-64</label>
+			</control>
+		<control type="label">
+				<posx>212</posx>
+				<posy>1795.0</posy>
+				<width>214</width>
+				<height>19.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>• </label>
+			</control>
+		<control type="button" id="125">
+				<posx>212</posx>
+				<posy>1795.0</posy>
+				<width>66</width>
+				<height>19.0</height>
+				<onleft>124</onleft>
+				<onright>126</onright>
+				<texturefocus border="0"></texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				<textoffsetx>-1</textoffsetx>
+				<textoffsety>0</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<font>WebViewer-font10</font>
+				<label>  Android</label>
+			</control>
+		<control type="label">
+				<posx>212</posx>
+				<posy>1816.0</posy>
+				<width>214</width>
+				<height>19.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>• </label>
+			</control>
+		<control type="button" id="126">
+				<posx>212</posx>
+				<posy>1816.0</posy>
+				<width>74</width>
+				<height>19.0</height>
+				<onleft>125</onleft>
+				<onright>127</onright>
+				<texturefocus border="0"></texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				<textoffsetx>-1</textoffsetx>
+				<textoffsety>0</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<font>WebViewer-font10</font>
+				<label>  Apple TV</label>
+			</control>
+		<control type="label">
+				<posx>212</posx>
+				<posy>1816.0</posy>
+				<width>311</width>
+				<height>19.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>           and </label>
+			</control>
+		<control type="button" id="127">
+				<posx>212</posx>
+				<posy>1816.0</posy>
+				<width>133</width>
+				<height>19.0</height>
+				<onleft>126</onleft>
+				<onright>128</onright>
+				<texturefocus border="0"></texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				<textoffsetx>-1</textoffsetx>
+				<textoffsety>0</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<font>WebViewer-font10</font>
+				<label>               iOS</label>
+			</control>
+		<control type="label">
+				<posx>212</posx>
+				<posy>1816.0</posy>
+				<width>525</width>
+				<height>19.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>                   installation instructions</label>
+			</control>
+		<control type="label">
+				<posx>212</posx>
+				<posy>1837.0</posy>
+				<width>214</width>
+				<height>19.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>• </label>
+			</control>
+		<control type="label">
+				<posx>212</posx>
+				<posy>1837.0</posy>
+				<width>710</width>
+				<height>19.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>  Ubuntu users, please point to the unstable ppa as described in the </label>
+			</control>
+		<control type="button" id="128">
+				<posx>212</posx>
+				<posy>1837.0</posy>
+				<width>643</width>
+				<height>19.0</height>
+				<onleft>127</onleft>
+				<onright>129</onright>
+				<texturefocus border="0"></texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				<textoffsetx>-1</textoffsetx>
+				<textoffsety>0</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<font>WebViewer-font10</font>
+				<label>                                                                     Linux instructions</label>
+			</control>
+		<control type="label">
+				<posx>187</posx>
+				<posy>1891.0</posy>
+				<width>361</width>
+				<height>23.5</height>
+				<font>Bold-WebViewer-font12</font>
+				<textcolor>FF555555</textcolor>
+				<label>How to Contribute</label>
+			</control>
+		<control type="label">
+				<posx>192</posx>
+				<posy>1930.5</posy>
+				<width>890</width>
+				<height>33.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>If you use this cycle’s build, we encourage you to submit bugs in Trac, provide support in [CR]our </label>
+			</control>
+		<control type="button" id="129">
+				<posx>192</posx>
+				<posy>1944.5</posy>
+				<width>74</width>
+				<height>19.0</height>
+				<onleft>128</onleft>
+				<onright>130</onright>
+				<texturefocus border="0"></texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				<textoffsetx>-1</textoffsetx>
+				<textoffsety>0</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<font>WebViewer-font10</font>
+				<label>    Forums</label>
+			</control>
+		<control type="label">
+				<posx>192</posx>
+				<posy>1944.5</posy>
+				<width>414</width>
+				<height>19.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>           where you can, or </label>
+			</control>
+		<control type="button" id="130">
+				<posx>192</posx>
+				<posy>1944.5</posy>
+				<width>259</width>
+				<height>19.0</height>
+				<onleft>129</onleft>
+				<onright>131</onright>
+				<texturefocus border="0"></texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				<textoffsetx>-1</textoffsetx>
+				<textoffsety>0</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<font>WebViewer-font10</font>
+				<label>                             donate</label>
+			</control>
+		<control type="label">
+				<posx>192</posx>
+				<posy>1944.5</posy>
+				<width>688</width>
+				<height>19.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>                                    to the Foundation if you like.</label>
+			</control>
+		<control type="button" id="131">
+				<posx>187</posx>
+				<posy>2010.5</posy>
+				<width>285</width>
+				<height>23.5</height>
+				<onleft>130</onleft>
+				<onright>132</onright>
+				<texturefocus border="0"></texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				<textoffsetx>-1</textoffsetx>
+				<textoffsety>0</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<font>Bold-WebViewer-font12</font>
+				<label>Google Summer of Code Students</label>
+			</control>
+		<control type="image">
+				<posx>187</posx>
+				<posy>2002.5</posy>
+				<width>696</width>
+				<height>37.5</height>
+				<texture border="5">web-viewer-white-border-bottom.png</texture>
+				<colordiffuse>FFCCCCCC</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>192</posx>
+				<posy>2002.0</posy>
+				<width>125</width>
+				<height>64</height>
+				<texture diffuse="/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/125-16-0--48.png">/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/dc1868aa.png</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
+			</control>
+		<control type="label">
+				<posx>214</posx>
+				<posy>2050.0</posy>
+				<width>303</width>
+				<height>19.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>May 28th, 2013</label>
+			</control>
+		<control type="image">
+				<posx>317</posx>
+				<posy>2069.0</posy>
+				<width>96</width>
+				<height>16</height>
+				<texture>/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/dc1868aa.png</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
+			</control>
+		<control type="button" id="132">
+				<posx>339</posx>
+				<posy>2069.0</posy>
+				<width>74</width>
+				<height>19.0</height>
+				<onleft>131</onleft>
+				<onright>133</onright>
+				<texturefocus border="0"></texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				<textoffsetx>-1</textoffsetx>
+				<textoffsety>0</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<font>WebViewer-font10</font>
+				<label>natethomas</label>
+			</control>
+		<control type="image">
+				<posx>784</posx>
+				<posy>1949.0</posy>
+				<width>103</width>
+				<height>112</height>
+				<texture diffuse="/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/103-16-0--96.png">/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/dc1868aa.png</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
+			</control>
+		<control type="button" id="133">
+				<posx>806</posx>
+				<posy>2045.0</posy>
+				<width>81</width>
+				<height>19.0</height>
+				<onleft>132</onleft>
+				<onright>134</onright>
+				<texturefocus border="0"></texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				<textoffsetx>-1</textoffsetx>
+				<textoffsety>0</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<font>WebViewer-font10</font>
+				<label>12 comments</label>
+			</control>
+		<control type="label">
+				<posx>192</posx>
+				<posy>2114.0</posy>
+				<width>890</width>
+				<height>61.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>As of yesterday, all of those who applied for Google Summer of Code should have gotten their [CR]replies from the Google Open Source group. We are very excited to be working with the four [CR]students who were selected and are only sorry that we couldn’t select more, as there were [CR]quite a lot of excellent submissions this year.</label>
+			</control>
+		<control type="label">
+				<posx>192</posx>
+				<posy>2184.0</posy>
+				<width>614</width>
+				<height>19.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>For those curious, the select entries and students were:</label>
+			</control>
+		<control type="button" id="134">
+				<posx>192</posx>
+				<posy>2212.0</posy>
+				<width>325</width>
+				<height>19.0</height>
+				<onleft>133</onleft>
+				<onright>135</onright>
+				<texturefocus border="0"></texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				<textoffsetx>-1</textoffsetx>
+				<textoffsety>0</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<font>WebViewer-font10</font>
+				<label>Improved Support for Linux Windowing Systems</label>
+			</control>
+		<control type="label">
+				<posx>192</posx>
+				<posy>2212.0</posy>
+				<width>890</width>
+				<height>33.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>                                             – SmSpillaz (previously the window manager for [CR]Ubuntu)</label>
+			</control>
+		<control type="button" id="135">
+				<posx>192</posx>
+				<posy>2254.0</posy>
+				<width>177</width>
+				<height>19.0</height>
+				<onleft>134</onleft>
+				<onright>136</onright>
+				<texturefocus border="0"></texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				<textoffsetx>-1</textoffsetx>
+				<textoffsety>0</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<font>WebViewer-font10</font>
+				<label>Improved Database Layout</label>
+			</control>
+		<control type="label">
+				<posx>192</posx>
+				<posy>2254.0</posy>
+				<width>451</width>
+				<height>19.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>                         – adamsey</label>
+			</control>
+		<control type="button" id="136">
+				<posx>192</posx>
+				<posy>2282.0</posy>
+				<width>244</width>
+				<height>19.0</height>
+				<onleft>135</onleft>
+				<onright>137</onright>
+				<texturefocus border="0"></texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				<textoffsetx>-1</textoffsetx>
+				<textoffsety>0</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<font>WebViewer-font10</font>
+				<label>Profile-base DLNA and Transcoding</label>
+			</control>
+		<control type="label">
+				<posx>192</posx>
+				<posy>2282.0</posy>
+				<width>890</width>
+				<height>33.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>                                  – alcoheca (continuing his fantastic UPnP work from last [CR]year)</label>
+			</control>
+		<control type="button" id="137">
+				<posx>192</posx>
+				<posy>2324.0</posy>
+				<width>577</width>
+				<height>19.0</height>
+				<onleft>136</onleft>
+				<onright>138</onright>
+				<texturefocus border="0"></texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				<textoffsetx>-1</textoffsetx>
+				<textoffsety>0</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<font>WebViewer-font10</font>
+				<label>Aggregate media from multiple sources and present them in unified library view</label>
+			</control>
+		<control type="label">
+				<posx>192</posx>
+				<posy>2324.0</posy>
+				<width>829</width>
+				<height>19.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>                                                                               – pieh</label>
+			</control>
+		<control type="label">
+				<posx>192</posx>
+				<posy>2352.0</posy>
+				<width>890</width>
+				<height>47.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>We are incredibly excited to see what benefits come from all these projects and invite you to[CR]follow along in the forum threads. To keep those threads clean, we ask that you refrain from[CR]posting in them if at all possible.</label>
+			</control>
+		<control type="label">
+				<posx>192</posx>
+				<posy>2408.0</posy>
+				<width>429</width>
+				<height>19.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>Good luck students and mentors!</label>
+			</control>
+		<control type="button" id="138">
+				<posx>187</posx>
+				<posy>2474.0</posy>
+				<width>513</width>
+				<height>23.5</height>
+				<onleft>137</onleft>
+				<onright>139</onright>
+				<texturefocus border="0"></texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				<textoffsetx>-1</textoffsetx>
+				<textoffsety>0</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<font>Bold-WebViewer-font12</font>
+				<label>This Site is the Only Official Source of XBMC Software</label>
+			</control>
+		<control type="image">
+				<posx>187</posx>
+				<posy>2466.0</posy>
+				<width>696</width>
+				<height>37.5</height>
+				<texture border="5">web-viewer-white-border-bottom.png</texture>
+				<colordiffuse>FFCCCCCC</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>192</posx>
+				<posy>2465.5</posy>
+				<width>118</width>
+				<height>64</height>
+				<texture diffuse="/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/118-16-0--48.png">/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/dc1868aa.png</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
+			</control>
+		<control type="label">
+				<posx>214</posx>
+				<posy>2513.5</posy>
+				<width>296</width>
+				<height>19.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>May 6th, 2013</label>
+			</control>
+		<control type="image">
+				<posx>310</posx>
+				<posy>2532.5</posy>
+				<width>96</width>
+				<height>16</height>
+				<texture>/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/dc1868aa.png</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
+			</control>
+		<control type="button" id="139">
+				<posx>332</posx>
+				<posy>2532.5</posy>
+				<width>74</width>
+				<height>19.0</height>
+				<onleft>138</onleft>
+				<onright>140</onright>
+				<texturefocus border="0"></texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				<textoffsetx>-1</textoffsetx>
+				<textoffsety>0</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<font>WebViewer-font10</font>
+				<label>natethomas</label>
+			</control>
+		<control type="image">
+				<posx>784</posx>
+				<posy>2412.5</posy>
+				<width>103</width>
+				<height>112</height>
+				<texture diffuse="/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/103-16-0--96.png">/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/dc1868aa.png</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
+			</control>
+		<control type="button" id="140">
+				<posx>806</posx>
+				<posy>2508.5</posy>
+				<width>81</width>
+				<height>19.0</height>
+				<onleft>139</onleft>
+				<onright>141</onright>
+				<texturefocus border="0"></texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				<textoffsetx>-1</textoffsetx>
+				<textoffsety>0</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<font>WebViewer-font10</font>
+				<label>33 comments</label>
+			</control>
+		<control type="label">
+				<posx>192</posx>
+				<posy>2577.5</posy>
+				<width>890</width>
+				<height>75.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>A few months ago, some of you may remember that a number of news sites wrote articles under [CR]the apparent mistaken impression that a site making a modified version of XBMC was an [CR]official XBMC source. For the most part, most of those sites (with the exception of Engadget)[CR]updated their original stories with a clarification after a quick email was sent by Team [CR]XBMC.</label>
+			</control>
+		<control type="label">
+				<posx>192</posx>
+				<posy>2661.5</posy>
+				<width>890</width>
+				<height>47.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>Then on May 4th, the group behind the modified version sent out another press release, and [CR]once again Engadget appears to have posted an unclear article. The Team has once again tried [CR]to contact Engadget for a correction, but Engadget has remained silent.</label>
+			</control>
+		<control type="label">
+				<posx>192</posx>
+				<posy>2717.5</posy>
+				<width>890</width>
+				<height>61.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>This is a disappointing outcome. We would rather not have had to point this issue out, but we[CR]felt it was necessary to let our users know that this modified version of XBMC is not an [CR]official release from our developers and should not be considered one. Official releases will[CR]always come from xbmc.org and will be clearly laid out on our </label>
+			</control>
+		<control type="button" id="141">
+				<posx>192</posx>
+				<posy>2759.5</posy>
+				<width>555</width>
+				<height>19.0</height>
+				<onleft>140</onleft>
+				<onright>142</onright>
+				<texturefocus border="0"></texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				<textoffsetx>-1</textoffsetx>
+				<textoffsety>0</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<font>WebViewer-font10</font>
+				<label>                                                              Software page</label>
+			</control>
+		<control type="label">
+				<posx>192</posx>
+				<posy>2759.5</posy>
+				<width>890</width>
+				<height>47.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>                                                                           . Any software you[CR]come across that is not in that list should not be considered official XBMC software and [CR]will not receive support in our forums.</label>
+			</control>
+		<control type="label">
+				<posx>192</posx>
+				<posy>2815.5</posy>
+				<width>890</width>
+				<height>33.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>Update: It appears the lack of correction may simply been a case of bad timing. The author [CR]has replied and posted a quick clarification. Thanks to the staff of Engadget for the fix!</label>
+			</control>
+		<control type="button" id="142">
+				<posx>187</posx>
+				<posy>2895.5</posy>
+				<width>266</width>
+				<height>23.5</height>
+				<onleft>141</onleft>
+				<onright>143</onright>
+				<texturefocus border="0"></texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				<textoffsetx>-1</textoffsetx>
+				<textoffsety>0</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<font>Bold-WebViewer-font12</font>
+				<label>XBMC 12.2 - Even More Frodo!</label>
+			</control>
+		<control type="image">
+				<posx>187</posx>
+				<posy>2887.5</posy>
+				<width>696</width>
+				<height>37.5</height>
+				<texture border="5">web-viewer-white-border-bottom.png</texture>
+				<colordiffuse>FFCCCCCC</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>192</posx>
+				<posy>2887.0</posy>
+				<width>118</width>
+				<height>64</height>
+				<texture diffuse="/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/118-16-0--48.png">/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/dc1868aa.png</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
+			</control>
+		<control type="label">
+				<posx>214</posx>
+				<posy>2935.0</posy>
+				<width>296</width>
+				<height>19.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>May 3rd, 2013</label>
+			</control>
+		<control type="image">
+				<posx>310</posx>
+				<posy>2954.0</posy>
+				<width>96</width>
+				<height>16</height>
+				<texture>/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/dc1868aa.png</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
+			</control>
+		<control type="button" id="143">
+				<posx>332</posx>
+				<posy>2954.0</posy>
+				<width>74</width>
+				<height>19.0</height>
+				<onleft>142</onleft>
+				<onright>144</onright>
+				<texturefocus border="0"></texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				<textoffsetx>-1</textoffsetx>
+				<textoffsety>0</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<font>WebViewer-font10</font>
+				<label>natethomas</label>
+			</control>
+		<control type="image">
+				<posx>784</posx>
+				<posy>2834.0</posy>
+				<width>103</width>
+				<height>112</height>
+				<texture diffuse="/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/103-16-0--96.png">/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/dc1868aa.png</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
+			</control>
+		<control type="button" id="144">
+				<posx>806</posx>
+				<posy>2930.0</posy>
+				<width>81</width>
+				<height>19.0</height>
+				<onleft>143</onleft>
+				<onright>145</onright>
+				<texturefocus border="0"></texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				<textoffsetx>-1</textoffsetx>
+				<textoffsety>0</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<font>WebViewer-font10</font>
+				<label>74 comments</label>
+			</control>
+		<control type="image">
+				<posx>192</posx>
+				<posy>2997.0</posy>
+				<width>680</width>
+				<height>417</height>
+				<texture fallback="web-viewer-broken-image.png">http://xbmc.org/wp-content/uploads/2013/03/zappy-frodo-background-680.jpg</texture>
+				<bordertexture border="2">web-viewer-link-border.png</bordertexture>
+				<bordersize>1</bordersize>
+
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="button" id="145">
+				<posx>192</posx>
+				<posy>2997.0</posy>
+				<width>680</width>
+				<height>417</height>
+				<onleft>144</onleft>
+				<onright>146</onright>
+				<texturefocus border="2">web-viewer-red-border.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				
+				<textcolor>00000000</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<font>WebViewer-font10</font>
+				<label></label>
+			</control>
+		<control type="label">
+				<posx>192</posx>
+				<posy>3430.0</posy>
+				<width>890</width>
+				<height>33.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>About a month and a half after the release of XBMC 12.1, we are happy to announce XBMC 12.2 [CR]with substantial fixes  for 12.1 and 12.0 across all platforms. Fixes include:</label>
+			</control>
+		<control type="label">
+				<posx>212</posx>
+				<posy>3465.0</posy>
+				<width>214</width>
+				<height>19.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>• </label>
+			</control>
+		<control type="label">
+				<posx>212</posx>
+				<posy>3465.0</posy>
+				<width>870</width>
+				<height>33.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>  Fixed infinite loop on addon dependencies, resolves crashing problem that arrose [CR]immediately post 12.1 launch</label>
+			</control>
+		<control type="label">
+				<posx>212</posx>
+				<posy>3500.0</posy>
+				<width>214</width>
+				<height>19.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>• </label>
+			</control>
+		<control type="label">
+				<posx>212</posx>
+				<posy>3500.0</posy>
+				<width>355</width>
+				<height>19.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>  Numerous UPnP fixes</label>
+			</control>
+		<control type="label">
+				<posx>212</posx>
+				<posy>3521.0</posy>
+				<width>214</width>
+				<height>19.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>• </label>
+			</control>
+		<control type="label">
+				<posx>212</posx>
+				<posy>3521.0</posy>
+				<width>510</width>
+				<height>19.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>  Memory leak fixed when XBMC is minimized</label>
+			</control>
+		<control type="label">
+				<posx>212</posx>
+				<posy>3542.0</posy>
+				<width>214</width>
+				<height>19.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>• </label>
+			</control>
+		<control type="label">
+				<posx>212</posx>
+				<posy>3542.0</posy>
+				<width>673</width>
+				<height>19.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>  Various Raspberry Pi playback fixes and software codec support</label>
+			</control>
+		<control type="label">
+				<posx>212</posx>
+				<posy>3563.0</posy>
+				<width>214</width>
+				<height>19.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>• </label>
+			</control>
+		<control type="label">
+				<posx>212</posx>
+				<posy>3563.0</posy>
+				<width>377</width>
+				<height>19.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>  Fixed OSX audio mixing</label>
+			</control>
+		<control type="label">
+				<posx>212</posx>
+				<posy>3584.0</posy>
+				<width>214</width>
+				<height>19.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>• </label>
+			</control>
+		<control type="label">
+				<posx>212</posx>
+				<posy>3584.0</posy>
+				<width>570</width>
+				<height>19.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>  Fixed some audio-related crashes in Linux builds</label>
+			</control>
+		<control type="label">
+				<posx>212</posx>
+				<posy>3605.0</posy>
+				<width>214</width>
+				<height>19.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>• </label>
+			</control>
+		<control type="label">
+				<posx>212</posx>
+				<posy>3605.0</posy>
+				<width>311</width>
+				<height>19.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>  AirPlay fixes</label>
+			</control>
+		<control type="label">
+				<posx>212</posx>
+				<posy>3626.0</posy>
+				<width>214</width>
+				<height>19.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>• </label>
+			</control>
+		<control type="label">
+				<posx>212</posx>
+				<posy>3626.0</posy>
+				<width>503</width>
+				<height>19.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>  Bluray folder resume-bookmarks now work</label>
+			</control>
+		<control type="label">
+				<posx>212</posx>
+				<posy>3647.0</posy>
+				<width>214</width>
+				<height>19.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>• </label>
+			</control>
+		<control type="label">
+				<posx>212</posx>
+				<posy>3647.0</posy>
+				<width>732</width>
+				<height>19.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>  Ability to scan for new content on file folders has been reimplemented</label>
+			</control>
+		<control type="label">
+				<posx>212</posx>
+				<posy>3668.0</posy>
+				<width>214</width>
+				<height>19.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>• </label>
+			</control>
+		<control type="label">
+				<posx>212</posx>
+				<posy>3668.0</posy>
+				<width>444</width>
+				<height>19.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>  Language updates from Transifex</label>
+			</control>
+		<control type="label">
+				<posx>192</posx>
+				<posy>3713.0</posy>
+				<width>385</width>
+				<height>19.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>Fixes from 12.1 included:</label>
+			</control>
+		<control type="label">
+				<posx>212</posx>
+				<posy>3734.0</posy>
+				<width>214</width>
+				<height>19.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>• </label>
+			</control>
+		<control type="label">
+				<posx>212</posx>
+				<posy>3734.0</posy>
+				<width>870</width>
+				<height>33.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>  XBMC now supports using OSX’s default output device for audio as well as hardware [CR]decoding with Intel GPUs in OSX</label>
+			</control>
+		<control type="label">
+				<posx>212</posx>
+				<posy>3769.0</posy>
+				<width>214</width>
+				<height>19.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>• </label>
+			</control>
+		<control type="label">
+				<posx>212</posx>
+				<posy>3769.0</posy>
+				<width>851</width>
+				<height>19.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>  XBMC no longer hogs audio for Linux and on resume audio will continue to work in Linux</label>
+			</control>
+		<control type="label">
+				<posx>212</posx>
+				<posy>3790.0</posy>
+				<width>214</width>
+				<height>19.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>• </label>
+			</control>
+		<control type="label">
+				<posx>212</posx>
+				<posy>3790.0</posy>
+				<width>503</width>
+				<height>19.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>  Full iPhone 5 resolution is now enabled</label>
+			</control>
+		<control type="label">
+				<posx>212</posx>
+				<posy>3811.0</posy>
+				<width>214</width>
+				<height>19.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>• </label>
+			</control>
+		<control type="label">
+				<posx>212</posx>
+				<posy>3811.0</posy>
+				<width>843</width>
+				<height>19.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>  Volume buttons on Android devices now control Android volume, rather than XBMC volume</label>
+			</control>
+		<control type="label">
+				<posx>212</posx>
+				<posy>3832.0</posy>
+				<width>214</width>
+				<height>19.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>• </label>
+			</control>
+		<control type="label">
+				<posx>212</posx>
+				<posy>3832.0</posy>
+				<width>836</width>
+				<height>19.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>  Volume buttons on OSX devices once again control OSX volume, rather than XBMC volume</label>
+			</control>
+		<control type="label">
+				<posx>212</posx>
+				<posy>3853.0</posy>
+				<width>214</width>
+				<height>19.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>• </label>
+			</control>
+		<control type="label">
+				<posx>212</posx>
+				<posy>3853.0</posy>
+				<width>870</width>
+				<height>33.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>  Player optimization on the Raspberry Pi, including more efficient playback, better [CR]subtitle support, and many crash fixes</label>
+			</control>
+		<control type="label">
+				<posx>212</posx>
+				<posy>3888.0</posy>
+				<width>214</width>
+				<height>19.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>• </label>
+			</control>
+		<control type="label">
+				<posx>212</posx>
+				<posy>3888.0</posy>
+				<width>444</width>
+				<height>19.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>  iOS 6 support on the AppleTV 2.</label>
+			</control>
+		<control type="label">
+				<posx>212</posx>
+				<posy>3909.0</posy>
+				<width>214</width>
+				<height>19.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>• </label>
+			</control>
+		<control type="label">
+				<posx>212</posx>
+				<posy>3909.0</posy>
+				<width>629</width>
+				<height>19.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>  XBMC does not crash when listed on the AppleTV top shelf</label>
+			</control>
+		<control type="label">
+				<posx>212</posx>
+				<posy>3930.0</posy>
+				<width>214</width>
+				<height>19.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>• </label>
+			</control>
+		<control type="label">
+				<posx>212</posx>
+				<posy>3930.0</posy>
+				<width>614</width>
+				<height>19.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>  Added support for additional Xbox 360 controller types</label>
+			</control>
+		<control type="label">
+				<posx>212</posx>
+				<posy>3951.0</posy>
+				<width>214</width>
+				<height>19.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>• </label>
+			</control>
+		<control type="label">
+				<posx>212</posx>
+				<posy>3951.0</posy>
+				<width>599</width>
+				<height>19.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>  Broader and more intelligent support for CEC devices</label>
+			</control>
+		<control type="label">
+				<posx>212</posx>
+				<posy>3972.0</posy>
+				<width>214</width>
+				<height>19.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>• </label>
+			</control>
+		<control type="label">
+				<posx>212</posx>
+				<posy>3972.0</posy>
+				<width>870</width>
+				<height>33.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>  Fixed problems with several addons due to broken binary read/write in our python [CR]interface</label>
+			</control>
+		<control type="label">
+				<posx>212</posx>
+				<posy>4007.0</posy>
+				<width>214</width>
+				<height>19.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>• </label>
+			</control>
+		<control type="label">
+				<posx>212</posx>
+				<posy>4007.0</posy>
+				<width>870</width>
+				<height>33.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>  Language fixes, including 7 new languages: Albanian, Burmese, Malay, Persian (Iran), [CR]Tamil (India), Uzbek, Vietnamese</label>
+			</control>
+		<control type="label">
+				<posx>212</posx>
+				<posy>4042.0</posy>
+				<width>214</width>
+				<height>19.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>• </label>
+			</control>
+		<control type="label">
+				<posx>212</posx>
+				<posy>4042.0</posy>
+				<width>732</width>
+				<height>19.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>  AirPlay fixes, including making discovery of XBMC more reliable on OSX</label>
+			</control>
+		<control type="label">
+				<posx>212</posx>
+				<posy>4063.0</posy>
+				<width>214</width>
+				<height>19.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>• </label>
+			</control>
+		<control type="label">
+				<posx>212</posx>
+				<posy>4063.0</posy>
+				<width>644</width>
+				<height>19.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>  Numerous crashing and stability fixes across all platforms</label>
+			</control>
+		<control type="label">
+				<posx>192</posx>
+				<posy>4108.0</posy>
+				<width>890</width>
+				<height>33.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>For all users interested in maximum stability, we highly recommend that you update from 12.1 [CR]to 12.2. This is the XBMC you were looking for.</label>
+			</control>
+		<control type="label">
+				<posx>187</posx>
+				<posy>4159.0</posy>
+				<width>276</width>
+				<height>23.5</height>
+				<font>Bold-WebViewer-font12</font>
+				<textcolor>FF555555</textcolor>
+				<label>Updating</label>
+			</control>
+		<control type="label">
+				<posx>192</posx>
+				<posy>4198.5</posy>
+				<width>503</width>
+				<height>19.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>To update to XBMC 12.2, please visit our </label>
+			</control>
+		<control type="button" id="146">
+				<posx>192</posx>
+				<posy>4198.5</posy>
+				<width>399</width>
+				<height>19.0</height>
+				<onleft>145</onleft>
+				<onright>147</onright>
+				<texturefocus border="0"></texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				<textoffsetx>-1</textoffsetx>
+				<textoffsety>0</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<font>WebViewer-font10</font>
+				<label>                                         download page</label>
+			</control>
+		<control type="label">
+				<posx>192</posx>
+				<posy>4198.5</posy>
+				<width>890</width>
+				<height>47.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>                                                      , which includes downloads for Windows,[CR]OSX, and Android, and instructions for Linux, iOS, the Apple TV, and the Raspberry Pi. [CR]XBMCbuntu users can see </label>
+			</control>
+		<control type="button" id="147">
+				<posx>192</posx>
+				<posy>4226.5</posy>
+				<width>310</width>
+				<height>19.0</height>
+				<onleft>146</onleft>
+				<onright>148</onright>
+				<texturefocus border="0"></texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				<textoffsetx>-1</textoffsetx>
+				<textoffsety>0</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<font>WebViewer-font10</font>
+				<label>                        these instructions</label>
+			</control>
+		<control type="label">
+				<posx>192</posx>
+				<posy>4226.5</posy>
+				<width>725</width>
+				<height>19.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>                                           for upgrading to 12.2 using </label>
+			</control>
+		<control type="label">
+				<posx>192</posx>
+				<posy>4226.5</posy>
+				<width>851</width>
+				<height>19.0</height>
+				<font>Bold-WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>                                                                       ppa:team-xbmc/ppa</label>
+			</control>
+		<control type="label">
+				<posx>192</posx>
+				<posy>4226.5</posy>
+				<width>858</width>
+				<height>19.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>                                                                                        .</label>
+			</control>
+		<control type="label">
+				<posx>192</posx>
+				<posy>4254.5</posy>
+				<width>451</width>
+				<height>19.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>If you have any problems read the </label>
+			</control>
+		<control type="button" id="148">
+				<posx>192</posx>
+				<posy>4254.5</posy>
+				<width>318</width>
+				<height>19.0</height>
+				<onleft>147</onleft>
+				<onright>149</onright>
+				<texturefocus border="0"></texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				<textoffsetx>-1</textoffsetx>
+				<textoffsety>0</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<font>WebViewer-font10</font>
+				<label>                                  Frodo FAQ</label>
+			</control>
+		<control type="label">
+				<posx>192</posx>
+				<posy>4254.5</posy>
+				<width>562</width>
+				<height>19.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>                                           , the </label>
+			</control>
+		<control type="button" id="149">
+				<posx>192</posx>
+				<posy>4254.5</posy>
+				<width>481</width>
+				<height>19.0</height>
+				<onleft>148</onleft>
+				<onright>150</onright>
+				<texturefocus border="0"></texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				<textoffsetx>-1</textoffsetx>
+				<textoffsety>0</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<font>WebViewer-font10</font>
+				<label>                                                 Raspberry Pi FAQ</label>
+			</control>
+		<control type="label">
+				<posx>192</posx>
+				<posy>4254.5</posy>
+				<width>747</width>
+				<height>19.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>                                                                 , or the </label>
+			</control>
+		<control type="button" id="150">
+				<posx>192</posx>
+				<posy>4254.5</posy>
+				<width>629</width>
+				<height>19.0</height>
+				<onleft>149</onleft>
+				<onright>151</onright>
+				<texturefocus border="0"></texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				<textoffsetx>-1</textoffsetx>
+				<textoffsety>0</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<font>WebViewer-font10</font>
+				<label>                                                                          Android FAQ</label>
+			</control>
+		<control type="label">
+				<posx>192</posx>
+				<posy>4254.5</posy>
+				<width>890</width>
+				<height>33.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>                                                                                     , [CR]depending on your version.</label>
+			</control>
+		<control type="label">
+				<posx>187</posx>
+				<posy>4305.5</posy>
+				<width>304</width>
+				<height>23.5</height>
+				<font>Bold-WebViewer-font12</font>
+				<textcolor>FF555555</textcolor>
+				<label>How To Help</label>
+			</control>
+		<control type="label">
+				<posx>192</posx>
+				<posy>4345.0</posy>
+				<width>890</width>
+				<height>33.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>If you would like to help with XBMC, we encourage you to submit bugs in Trac, provide support[CR]in our </label>
+			</control>
+		<control type="button" id="151">
+				<posx>192</posx>
+				<posy>4359.0</posy>
+				<width>96</width>
+				<height>19.0</height>
+				<onleft>150</onleft>
+				<onright>152</onright>
+				<texturefocus border="0"></texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				<textoffsetx>-1</textoffsetx>
+				<textoffsety>0</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<font>WebViewer-font10</font>
+				<label>       Forums</label>
+			</control>
+		<control type="label">
+				<posx>192</posx>
+				<posy>4359.0</posy>
+				<width>436</width>
+				<height>19.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>              where you can, or </label>
+			</control>
+		<control type="button" id="152">
+				<posx>192</posx>
+				<posy>4359.0</posy>
+				<width>281</width>
+				<height>19.0</height>
+				<onleft>151</onleft>
+				<onright>153</onright>
+				<texturefocus border="0"></texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				<textoffsetx>-1</textoffsetx>
+				<textoffsety>0</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<font>WebViewer-font10</font>
+				<label>                                donate</label>
+			</control>
+		<control type="label">
+				<posx>192</posx>
+				<posy>4359.0</posy>
+				<width>710</width>
+				<height>19.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>                                       to the Foundation if you like.</label>
+			</control>
+		<control type="label">
+				<posx>192</posx>
+				<posy>4387.0</posy>
+				<width>890</width>
+				<height>75.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>For those of you who are tracking and submitting bugs: You may notice that Github has an [CR]“Issues” section. The Team would very much appreciate it if you did not submit bug reports [CR]through that section, but rather continued to use the forums and Trac. At the moment, the [CR]Team is using Issues as a concise means of grouping and identifying particular bugs that they[CR]gather from the forum and Trac sources. Thanks for your help!</label>
+			</control>
+		<control type="button" id="153">
+				<posx>187</posx>
+				<posy>4509.0</posy>
+				<width>380</width>
+				<height>23.5</height>
+				<onleft>152</onleft>
+				<onright>154</onright>
+				<texturefocus border="0"></texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				<textoffsetx>-1</textoffsetx>
+				<textoffsety>0</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<font>Bold-WebViewer-font12</font>
+				<label>Students Time to start applying for GSoC</label>
+			</control>
+		<control type="image">
+				<posx>187</posx>
+				<posy>4501.0</posy>
+				<width>696</width>
+				<height>37.5</height>
+				<texture border="5">web-viewer-white-border-bottom.png</texture>
+				<colordiffuse>FFCCCCCC</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>192</posx>
+				<posy>4500.5</posy>
+				<width>140</width>
+				<height>64</height>
+				<texture diffuse="/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/140-16-0--48.png">/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/dc1868aa.png</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
+			</control>
+		<control type="label">
+				<posx>214</posx>
+				<posy>4548.5</posy>
+				<width>318</width>
+				<height>19.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>April 22nd, 2013</label>
+			</control>
+		<control type="image">
+				<posx>332</posx>
+				<posy>4567.5</posy>
+				<width>96</width>
+				<height>16</height>
+				<texture>/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/dc1868aa.png</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
+			</control>
+		<control type="button" id="154">
+				<posx>354</posx>
+				<posy>4567.5</posy>
+				<width>74</width>
+				<height>19.0</height>
+				<onleft>153</onleft>
+				<onright>155</onright>
+				<texturefocus border="0"></texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				<textoffsetx>-1</textoffsetx>
+				<textoffsety>0</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<font>WebViewer-font10</font>
+				<label>natethomas</label>
+			</control>
+		<control type="image">
+				<posx>791</posx>
+				<posy>4447.5</posy>
+				<width>96</width>
+				<height>112</height>
+				<texture diffuse="/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/96-16-0--96.png">/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/dc1868aa.png</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
+			</control>
+		<control type="button" id="155">
+				<posx>813</posx>
+				<posy>4543.5</posy>
+				<width>74</width>
+				<height>19.0</height>
+				<onleft>154</onleft>
+				<onright>156</onright>
+				<texturefocus border="0"></texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				<textoffsetx>-1</textoffsetx>
+				<textoffsety>0</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<font>WebViewer-font10</font>
+				<label>6 comments</label>
+			</control>
+		<control type="label">
+				<posx>192</posx>
+				<posy>4612.5</posy>
+				<width>890</width>
+				<height>33.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>Hey all you students, now is the time to beginning applying to work with XBMC on your [CR]favorite project this summer during 2013’s Google Summer of Code. To apply:</label>
+			</control>
+		<control type="label">
+				<posx>212</posx>
+				<posy>4647.5</posy>
+				<width>214</width>
+				<height>19.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>• </label>
+			</control>
+		<control type="label">
+				<posx>212</posx>
+				<posy>4647.5</posy>
+				<width>355</width>
+				<height>19.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>  Take a look at the </label>
+			</control>
+		<control type="button" id="156">
+				<posx>212</posx>
+				<posy>4647.5</posy>
+				<width>266</width>
+				<height>19.0</height>
+				<onleft>155</onleft>
+				<onright>157</onright>
+				<texturefocus border="0"></texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				<textoffsetx>-1</textoffsetx>
+				<textoffsety>0</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<font>WebViewer-font10</font>
+				<label>                     XBMC Ideas page</label>
+			</control>
+		<control type="label">
+				<posx>212</posx>
+				<posy>4668.5</posy>
+				<width>214</width>
+				<height>19.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>• </label>
+			</control>
+		<control type="label">
+				<posx>212</posx>
+				<posy>4668.5</posy>
+				<width>599</width>
+				<height>19.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>  Prepare an outline for your GSoC proposal using our </label>
+			</control>
+		<control type="button" id="157">
+				<posx>212</posx>
+				<posy>4668.5</posy>
+				<width>495</width>
+				<height>19.0</height>
+				<onleft>156</onleft>
+				<onright>158</onright>
+				<texturefocus border="0"></texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				<textoffsetx>-1</textoffsetx>
+				<textoffsety>0</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<font>WebViewer-font10</font>
+				<label>                                                      outline guide</label>
+			</control>
+		<control type="label">
+				<posx>212</posx>
+				<posy>4689.5</posy>
+				<width>214</width>
+				<height>19.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>• </label>
+			</control>
+		<control type="label">
+				<posx>212</posx>
+				<posy>4689.5</posy>
+				<width>288</width>
+				<height>19.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>  Visit the </label>
+			</control>
+		<control type="button" id="158">
+				<posx>212</posx>
+				<posy>4689.5</posy>
+				<width>347</width>
+				<height>19.0</height>
+				<onleft>157</onleft>
+				<onright>159</onright>
+				<texturefocus border="0"></texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				<textoffsetx>-1</textoffsetx>
+				<textoffsety>0</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<font>WebViewer-font10</font>
+				<label>            Google Summer of Code 2013 homepage</label>
+			</control>
+		<control type="label">
+				<posx>212</posx>
+				<posy>4689.5</posy>
+				<width>769</width>
+				<height>19.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>                                                and click Apply for Students.</label>
+			</control>
+		<control type="label">
+				<posx>212</posx>
+				<posy>4710.5</posy>
+				<width>214</width>
+				<height>19.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>• </label>
+			</control>
+		<control type="label">
+				<posx>212</posx>
+				<posy>4710.5</posy>
+				<width>503</width>
+				<height>19.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>  Once you’ve finished, head over to the </label>
+			</control>
+		<control type="button" id="159">
+				<posx>212</posx>
+				<posy>4710.5</posy>
+				<width>436</width>
+				<height>19.0</height>
+				<onleft>158</onleft>
+				<onright>160</onright>
+				<texturefocus border="0"></texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				<textoffsetx>-1</textoffsetx>
+				<textoffsety>0</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<font>WebViewer-font10</font>
+				<label>                                         GSoC XBMC subforum</label>
+			</control>
+		<control type="label">
+				<posx>212</posx>
+				<posy>4710.5</posy>
+				<width>870</width>
+				<height>47.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>                                                            and tell us about your [CR]proposal. Potential mentors will be browsing that sub-forum looking for interesting [CR]projects, so speaking up there will be the best way to get noticed and selected.</label>
+			</control>
+		<control type="label">
+				<posx>192</posx>
+				<posy>4783.5</posy>
+				<width>621</width>
+				<height>19.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>We are excited to read the great proposals, so get on it!</label>
+			</control>
+		<control type="button" id="160">
+				<posx>187</posx>
+				<posy>4849.5</posy>
+				<width>190</width>
+				<height>23.5</height>
+				<onleft>159</onleft>
+				<onright>161</onright>
+				<texturefocus border="0"></texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				<textoffsetx>-1</textoffsetx>
+				<textoffsety>0</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<font>Bold-WebViewer-font12</font>
+				<label>XBMC 12.2pre testing</label>
+			</control>
+		<control type="image">
+				<posx>187</posx>
+				<posy>4841.5</posy>
+				<width>696</width>
+				<height>37.5</height>
+				<texture border="5">web-viewer-white-border-bottom.png</texture>
+				<colordiffuse>FFCCCCCC</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>192</posx>
+				<posy>4841.0</posy>
+				<width>133</width>
+				<height>64</height>
+				<texture diffuse="/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/133-16-0--48.png">/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/dc1868aa.png</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
+			</control>
+		<control type="label">
+				<posx>214</posx>
+				<posy>4889.0</posy>
+				<width>311</width>
+				<height>19.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>April 9th, 2013</label>
+			</control>
+		<control type="image">
+				<posx>325</posx>
+				<posy>4908.0</posy>
+				<width>96</width>
+				<height>16</height>
+				<texture>/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/dc1868aa.png</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
+			</control>
+		<control type="button" id="161">
+				<posx>347</posx>
+				<posy>4908.0</posy>
+				<width>74</width>
+				<height>19.0</height>
+				<onleft>160</onleft>
+				<onright>162</onright>
+				<texturefocus border="0"></texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				<textoffsetx>-1</textoffsetx>
+				<textoffsety>0</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<font>WebViewer-font10</font>
+				<label>natethomas</label>
+			</control>
+		<control type="image">
+				<posx>784</posx>
+				<posy>4788.0</posy>
+				<width>103</width>
+				<height>112</height>
+				<texture diffuse="/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/103-16-0--96.png">/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/dc1868aa.png</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
+			</control>
+		<control type="button" id="162">
+				<posx>806</posx>
+				<posy>4884.0</posy>
+				<width>81</width>
+				<height>19.0</height>
+				<onleft>161</onleft>
+				<onright>163</onright>
+				<texturefocus border="0"></texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				<textoffsetx>-1</textoffsetx>
+				<textoffsety>0</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<font>WebViewer-font10</font>
+				<label>42 comments</label>
+			</control>
+		<control type="label">
+				<posx>192</posx>
+				<posy>4953.0</posy>
+				<width>890</width>
+				<height>47.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>In between coding up exciting new features, we have been hard at work pushing as many fixes [CR]as possible into the next bug fix release of XBMC 12.  With 12.2, we’d like to ask your help [CR]in performing some bug testing, prior to the release.</label>
+			</control>
+		<control type="label">
+				<posx>192</posx>
+				<posy>5009.0</posy>
+				<width>890</width>
+				<height>47.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>Broadly speaking, we are only looking for “crash and burn” reports. If XBMC resets on you or [CR]randomly crashes or something similarly major, we’d like to know about it with a note in the [CR]forum. If you elect to be a tester for 12.2pre, we would very much appreciate a </label>
+			</control>
+		<control type="button" id="163">
+				<posx>192</posx>
+				<posy>5037.0</posy>
+				<width>658</width>
+				<height>19.0</height>
+				<onleft>162</onleft>
+				<onright>164</onright>
+				<texturefocus border="0"></texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				<textoffsetx>-1</textoffsetx>
+				<textoffsety>0</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<font>WebViewer-font10</font>
+				<label>                                                                                debug log</label>
+			</control>
+		<control type="label">
+				<posx>192</posx>
+				<posy>5051.0</posy>
+				<width>890</width>
+				<height>33.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>along with your crash report. Any reports without a log will be ignored. To make your report,[CR]we suggest visiting </label>
+			</control>
+		<control type="button" id="164">
+				<posx>192</posx>
+				<posy>5065.0</posy>
+				<width>229</width>
+				<height>19.0</height>
+				<onleft>163</onleft>
+				<onright>165</onright>
+				<texturefocus border="0"></texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				<textoffsetx>-1</textoffsetx>
+				<textoffsety>0</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<font>WebViewer-font10</font>
+				<label>                    this thread</label>
+			</control>
+		<control type="label">
+				<posx>192</posx>
+				<posy>5065.0</posy>
+				<width>436</width>
+				<height>19.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>                               .</label>
+			</control>
+		<control type="label">
+				<posx>192</posx>
+				<posy>5093.0</posy>
+				<width>481</width>
+				<height>19.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>To get XBMC 12.2pre, simply visit our </label>
+			</control>
+		<control type="button" id="165">
+				<posx>192</posx>
+				<posy>5093.0</posy>
+				<width>399</width>
+				<height>19.0</height>
+				<onleft>164</onleft>
+				<onright>166</onright>
+				<texturefocus border="0"></texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				<textoffsetx>-1</textoffsetx>
+				<textoffsety>0</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<font>WebViewer-font10</font>
+				<label>                                      Test Builds page</label>
+			</control>
+		<control type="label">
+				<posx>192</posx>
+				<posy>5093.0</posy>
+				<width>890</width>
+				<height>33.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>                                                      , and download the most recent test [CR]build for your system with the name “Frodo” at the end of the file.</label>
+			</control>
+		<control type="label">
+				<posx>192</posx>
+				<posy>5135.0</posy>
+				<width>518</width>
+				<height>19.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>For more info and to make reports, see the </label>
+			</control>
+		<control type="button" id="166">
+				<posx>192</posx>
+				<posy>5135.0</posy>
+				<width>525</width>
+				<height>19.0</height>
+				<onleft>165</onleft>
+				<onright>167</onright>
+				<texturefocus border="0"></texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				<textoffsetx>-1</textoffsetx>
+				<textoffsety>0</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<font>WebViewer-font10</font>
+				<label>                                           testing thread on our forums</label>
+			</control>
+		<control type="label">
+				<posx>192</posx>
+				<posy>5135.0</posy>
+				<width>732</width>
+				<height>19.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>                                                                       .</label>
+			</control>
+		<control type="button" id="167">
+				<posx>187</posx>
+				<posy>5201.0</posy>
+				<width>456</width>
+				<height>23.5</height>
+				<onleft>166</onleft>
+				<onright>168</onright>
+				<texturefocus border="0"></texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				<textoffsetx>-1</textoffsetx>
+				<textoffsety>0</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<font>Bold-WebViewer-font12</font>
+				<label>Google Summer of Code 2013: Students, Get Ready!</label>
+			</control>
+		<control type="image">
+				<posx>187</posx>
+				<posy>5193.0</posy>
+				<width>696</width>
+				<height>37.5</height>
+				<texture border="5">web-viewer-white-border-bottom.png</texture>
+				<colordiffuse>FFCCCCCC</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>192</posx>
+				<posy>5192.5</posy>
+				<width>133</width>
+				<height>64</height>
+				<texture diffuse="/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/133-16-0--48.png">/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/dc1868aa.png</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
+			</control>
+		<control type="label">
+				<posx>214</posx>
+				<posy>5240.5</posy>
+				<width>311</width>
+				<height>19.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>April 9th, 2013</label>
+			</control>
+		<control type="image">
+				<posx>325</posx>
+				<posy>5259.5</posy>
+				<width>96</width>
+				<height>16</height>
+				<texture>/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/dc1868aa.png</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
+			</control>
+		<control type="button" id="168">
+				<posx>347</posx>
+				<posy>5259.5</posy>
+				<width>74</width>
+				<height>19.0</height>
+				<onleft>167</onleft>
+				<onright>169</onright>
+				<texturefocus border="0"></texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				<textoffsetx>-1</textoffsetx>
+				<textoffsety>0</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<font>WebViewer-font10</font>
+				<label>natethomas</label>
+			</control>
+		<control type="image">
+				<posx>791</posx>
+				<posy>5139.5</posy>
+				<width>96</width>
+				<height>112</height>
+				<texture diffuse="/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/96-16-0--96.png">/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/dc1868aa.png</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
+			</control>
+		<control type="button" id="169">
+				<posx>813</posx>
+				<posy>5235.5</posy>
+				<width>74</width>
+				<height>19.0</height>
+				<onleft>168</onleft>
+				<onright>170</onright>
+				<texturefocus border="0"></texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				<textoffsetx>-1</textoffsetx>
+				<textoffsety>0</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<font>WebViewer-font10</font>
+				<label>2 comments</label>
+			</control>
+		<control type="label">
+				<posx>192</posx>
+				<posy>5304.5</posy>
+				<width>799</width>
+				<height>19.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>We are excited to announce to everyone that we have been accepted as an official </label>
+			</control>
+		<control type="button" id="170">
+				<posx>192</posx>
+				<posy>5304.5</posy>
+				<width>690</width>
+				<height>33.0</height>
+				<onleft>169</onleft>
+				<onright>171</onright>
+				<texturefocus border="0"></texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				<textoffsetx>-1</textoffsetx>
+				<textoffsety>0</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<font>WebViewer-font10</font>
+				<label>                                                                                 GSOC 2013 [CR]mentor organization this year</label>
+			</control>
+		<control type="label">
+				<posx>192</posx>
+				<posy>5318.5</posy>
+				<width>890</width>
+				<height>61.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>                             . GSoC 2012 was an incredible success for XBMC  and XBMC users, [CR]as our Library, scrapers, and media server services took a massive leap forward, and we got [CR]an awesome test suite as icing on the cake. We have high hopes that students will come up [CR]with yet more brilliant ideas for this summer.</label>
+			</control>
+		<control type="image">
+				<posx>192</posx>
+				<posy>5386.5</posy>
+				<width>300</width>
+				<height>152</height>
+				<texture fallback="web-viewer-broken-image.png">http://xbmc.org/wp-content/uploads/2013/03/GoogleSummerofCode-XBMC_2013-300x152.jpg</texture>
+				<bordertexture border="2">web-viewer-link-border.png</bordertexture>
+				<bordersize>1</bordersize>
+
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="button" id="171">
+				<posx>192</posx>
+				<posy>5386.5</posy>
+				<width>300</width>
+				<height>152</height>
+				<onleft>170</onleft>
+				<onright>172</onright>
+				<texturefocus border="2">web-viewer-red-border.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				
+				<textcolor>00000000</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<font>WebViewer-font10</font>
+				<label></label>
+			</control>
+		<control type="label">
+				<posx>192</posx>
+				<posy>5388.5</posy>
+				<width>890</width>
+				<height>47.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>                                          So, from now until April 22nd, we would like to [CR]                                          encourage all our student users (and other [CR]                                          interested students) to visit our </label>
+			</control>
+		<control type="button" id="172">
+				<posx>192</posx>
+				<posy>5416.5</posy>
+				<width>673</width>
+				<height>19.0</height>
+				<onleft>171</onleft>
+				<onright>173</onright>
+				<texturefocus border="0"></texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				<textoffsetx>-1</textoffsetx>
+				<textoffsety>0</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<font>WebViewer-font10</font>
+				<label>                                                                            GSOC Ideas Page</label>
+			</control>
+		<control type="label">
+				<posx>192</posx>
+				<posy>5416.5</posy>
+				<width>890</width>
+				<height>61.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>                                                                                           , [CR]                                          review some of the ideas we think might be good [CR]                                          ones, and feel free to provide your own ideas in [CR]                                          the </label>
+			</control>
+		<control type="button" id="173">
+				<posx>192</posx>
+				<posy>5458.5</posy>
+				<width>518</width>
+				<height>19.0</height>
+				<onleft>172</onleft>
+				<onright>174</onright>
+				<texturefocus border="0"></texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				<textoffsetx>-1</textoffsetx>
+				<textoffsety>0</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<font>WebViewer-font10</font>
+				<label>                                              Student Project Proposal</label>
+			</control>
+		<control type="label">
+				<posx>192</posx>
+				<posy>5458.5</posy>
+				<width>762</width>
+				<height>19.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>                                                                       area.</label>
+			</control>
+		<control type="label">
+				<posx>192</posx>
+				<posy>5554.5</posy>
+				<width>890</width>
+				<height>33.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>Alternatively, feel free to jump into the #XBMC IRC room on Freenode and chat about any [CR]project you’d love to cover or visit our dedicated </label>
+			</control>
+		<control type="button" id="174">
+				<posx>192</posx>
+				<posy>5568.5</posy>
+				<width>525</width>
+				<height>19.0</height>
+				<onleft>173</onleft>
+				<onright>175</onright>
+				<texturefocus border="0"></texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				<textoffsetx>-1</textoffsetx>
+				<textoffsety>0</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<font>WebViewer-font10</font>
+				<label>                                                   GSoC 2013 forum area</label>
+			</control>
+		<control type="label">
+				<posx>192</posx>
+				<posy>5568.5</posy>
+				<width>890</width>
+				<height>33.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>                                                                       , where other users, [CR]potential mentors, and team members can give you feedback on your idea.</label>
+			</control>
+		<control type="label">
+				<posx>192</posx>
+				<posy>5610.5</posy>
+				<width>799</width>
+				<height>19.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>From April 22nd to May 3rd, we encourage any interested students to apply at the </label>
+			</control>
+		<control type="button" id="175">
+				<posx>192</posx>
+				<posy>5610.5</posy>
+				<width>690</width>
+				<height>33.0</height>
+				<onleft>174</onleft>
+				<onright>176</onright>
+				<texturefocus border="0"></texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				<textoffsetx>-1</textoffsetx>
+				<textoffsety>0</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<font>WebViewer-font10</font>
+				<label>                                                                                 GSOC home [CR]page</label>
+			</control>
+		<control type="label">
+				<posx>192</posx>
+				<posy>5624.5</posy>
+				<width>890</width>
+				<height>33.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>     to work with XBMC. After that, we’ll notify applicants whether we get to work with each [CR]other according to the </label>
+			</control>
+		<control type="button" id="176">
+				<posx>192</posx>
+				<posy>5638.5</posy>
+				<width>266</width>
+				<height>19.0</height>
+				<onleft>175</onleft>
+				<onright>177</onright>
+				<texturefocus border="0"></texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				<textoffsetx>-1</textoffsetx>
+				<textoffsety>0</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<font>WebViewer-font10</font>
+				<label>                       GSOC schedule</label>
+			</control>
+		<control type="label">
+				<posx>192</posx>
+				<posy>5638.5</posy>
+				<width>473</width>
+				<height>19.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>                                    .</label>
+			</control>
+		<control type="label">
+				<posx>192</posx>
+				<posy>5666.5</posy>
+				<width>890</width>
+				<height>33.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>All of us at Team XBMC are looking forward to getting some good work done this summer, and [CR]we’d love for you all to work with us!</label>
+			</control>
+		<control type="button" id="177">
+				<posx>187</posx>
+				<posy>5743.5</posy>
+				<width>111</width>
+				<height>19.0</height>
+				<onleft>176</onleft>
+				<onright>178</onright>
+				<texturefocus border="0"></texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				<textoffsetx>-1</textoffsetx>
+				<textoffsety>0</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<font>WebViewer-font10</font>
+				<label>Older Entries  </label>
+			</control>
+		<control type="image">
+				<posx>187</posx>
+				<posy>5724.5</posy>
+				<width>691</width>
+				<height>38.0</height>
+				<texture border="5">web-viewer-white-border-top.png</texture>
+				<colordiffuse>FFCCCCCC</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>898</posx>
+				<posy>136.0</posy>
+				<width>210</width>
+				<height>1383.0</height>
+				<texture>web-viewer-white.png</texture>
+				<colordiffuse>FFF7F7F7</colordiffuse>
+				<aspectratio scalediffuse="false" align="center" aligny="center">stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>898</posx>
+				<posy>136.0</posy>
+				<width>210</width>
+				<height>9</height>
+				<texture border="0,0,1,0">/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/e60b4357.png</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio scalediffuse="false" align="center" aligny="center">stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>898</posx>
+				<posy>144.0</posy>
+				<width>210</width>
+				<height>346</height>
+				<texture>http://xbmc.org/wp-content/themes/inove/img/widgetsep.png</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio scalediffuse="false" align="left" aligny="bottom">center</aspectratio>
+			</control>
+		<control type="label">
+				<posx>903</posx>
+				<posy>169.0</posy>
+				<width>276</width>
+				<height>23.5</height>
+				<font>Bold-WebViewer-font12</font>
+				<textcolor>FF555555</textcolor>
+				<label>Sponsors</label>
+			</control>
+		<control type="image">
+				<posx>908</posx>
+				<posy>208.5</posy>
+				<width>190</width>
+				<height>266.0</height>
+				<texture>web-viewer-white.png</texture>
+				<colordiffuse>transparent</colordiffuse>
+				<aspectratio scalediffuse="false" align="center" aligny="center">stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>908</posx>
+				<posy>208.5</posy>
+				<width>150</width>
+				<height>45</height>
+				<texture fallback="web-viewer-broken-image.png">http://xbmc.org/wp-content/uploads/2010/11/at-visions-small.png</texture>
+				<bordertexture border="2">web-viewer-link-border.png</bordertexture>
+				<bordersize>1</bordersize>
+
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="button" id="178">
+				<posx>908</posx>
+				<posy>208.5</posy>
+				<width>150</width>
+				<height>45</height>
+				<onleft>177</onleft>
+				<onright>179</onright>
+				<texturefocus border="2">web-viewer-red-border.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				
+				<textcolor>00000000</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<font>WebViewer-font10</font>
+				<label></label>
+			</control>
+		<control type="image">
+				<posx>908</posx>
+				<posy>253.5</posy>
+				<width>150</width>
+				<height>45</height>
+				<texture fallback="web-viewer-broken-image.png">http://xbmc.org/wp-content/uploads/2012/10/ouya_logo_small.png</texture>
+				<bordertexture border="2">web-viewer-link-border.png</bordertexture>
+				<bordersize>1</bordersize>
+
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="button" id="179">
+				<posx>908</posx>
+				<posy>253.5</posy>
+				<width>150</width>
+				<height>45</height>
+				<onleft>178</onleft>
+				<onright>180</onright>
+				<texturefocus border="2">web-viewer-red-border.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				
+				<textcolor>00000000</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<font>WebViewer-font10</font>
+				<label></label>
+			</control>
+		<control type="image">
+				<posx>908</posx>
+				<posy>298.5</posy>
+				<width>150</width>
+				<height>45</height>
+				<texture fallback="web-viewer-broken-image.png">http://xbmc.org/wp-content/uploads/2013/04/pivos_xbmc.png</texture>
+				<bordertexture border="2">web-viewer-link-border.png</bordertexture>
+				<bordersize>1</bordersize>
+
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="button" id="180">
+				<posx>908</posx>
+				<posy>298.5</posy>
+				<width>150</width>
+				<height>45</height>
+				<onleft>179</onleft>
+				<onright>181</onright>
+				<texturefocus border="2">web-viewer-red-border.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				
+				<textcolor>00000000</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<font>WebViewer-font10</font>
+				<label></label>
+			</control>
+		<control type="image">
+				<posx>908</posx>
+				<posy>343.5</posy>
+				<width>150</width>
+				<height>45</height>
+				<texture fallback="web-viewer-broken-image.png">http://xbmc.org/wp-content/uploads/2013/04/vidonme_150x45.png</texture>
+				<bordertexture border="2">web-viewer-link-border.png</bordertexture>
+				<bordersize>1</bordersize>
+
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="button" id="181">
+				<posx>908</posx>
+				<posy>343.5</posy>
+				<width>150</width>
+				<height>45</height>
+				<onleft>180</onleft>
+				<onright>182</onright>
+				<texturefocus border="2">web-viewer-red-border.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				
+				<textcolor>00000000</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<font>WebViewer-font10</font>
+				<label></label>
+			</control>
+		<control type="image">
+				<posx>908</posx>
+				<posy>388.5</posy>
+				<width>151</width>
+				<height>43</height>
+				<texture fallback="web-viewer-broken-image.png">http://xbmc.org/wp-content/uploads/2011/12/wunderground-small.png</texture>
+				<bordertexture border="2">web-viewer-link-border.png</bordertexture>
+				<bordersize>1</bordersize>
+
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="button" id="182">
+				<posx>908</posx>
+				<posy>388.5</posy>
+				<width>151</width>
+				<height>43</height>
+				<onleft>181</onleft>
+				<onright>183</onright>
+				<texturefocus border="2">web-viewer-red-border.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				
+				<textcolor>00000000</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<font>WebViewer-font10</font>
+				<label></label>
+			</control>
+		<control type="image">
+				<posx>908</posx>
+				<posy>431.5</posy>
+				<width>150</width>
+				<height>43</height>
+				<texture fallback="web-viewer-broken-image.png">http://xbmc.org/wp-content/uploads/2013/03/whb_small.png</texture>
+				<bordertexture border="2">web-viewer-link-border.png</bordertexture>
+				<bordersize>1</bordersize>
+
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="button" id="183">
+				<posx>908</posx>
+				<posy>431.5</posy>
+				<width>150</width>
+				<height>43</height>
+				<onleft>182</onleft>
+				<onright>184</onright>
+				<texturefocus border="2">web-viewer-red-border.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				
+				<textcolor>00000000</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<font>WebViewer-font10</font>
+				<label></label>
+			</control>
+		<control type="image">
+				<posx>898</posx>
+				<posy>490.5</posy>
+				<width>210</width>
+				<height>286</height>
+				<texture>http://xbmc.org/wp-content/themes/inove/img/widgetsep.png</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio scalediffuse="false" align="left" aligny="bottom">center</aspectratio>
+			</control>
+		<control type="label">
+				<posx>903</posx>
 				<posy>515.5</posy>
-				<width>874</width>
+				<width>371</width>
 				<height>23.5</height>
-				<font>WebViewer-font12</font>
-				<textcolor>black</textcolor>
-				<label>This is just a page that has multiple videos. Scroll to videos at the bottom and click one. </label>
+				<font>Bold-WebViewer-font12</font>
+				<textcolor>FF555555</textcolor>
+				<label>Random Screenshots</label>
+			</control>
+		<control type="image">
+				<posx>908</posx>
+				<posy>555.0</posy>
+				<width>179</width>
+				<height>101</height>
+				<texture fallback="web-viewer-broken-image.png">http://xbmc.org/wp-content/gallery/pm3-hd/thumbs/thumbs_screenshot002.jpg</texture>
+				<bordertexture border="2">web-viewer-link-border.png</bordertexture>
+				<bordersize>1</bordersize>
+
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="button" id="184">
+				<posx>908</posx>
+				<posy>555.0</posy>
+				<width>179</width>
+				<height>101</height>
+				<onleft>183</onleft>
+				<onright>185</onright>
+				<texturefocus border="2">web-viewer-red-border.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				
+				<textcolor>00000000</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<font>WebViewer-font10</font>
+				<label></label>
+			</control>
+		<control type="image">
+				<posx>908</posx>
+				<posy>658.0</posy>
+				<width>179</width>
+				<height>101</height>
+				<texture fallback="web-viewer-broken-image.png">http://xbmc.org/wp-content/gallery/mediastream/thumbs/thumbs_mediapreviewplain.jpg</texture>
+				<bordertexture border="2">web-viewer-link-border.png</bordertexture>
+				<bordersize>1</bordersize>
+
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="button" id="185">
+				<posx>908</posx>
+				<posy>658.0</posy>
+				<width>179</width>
+				<height>101</height>
+				<onleft>184</onleft>
+				<onright>186</onright>
+				<texturefocus border="2">web-viewer-red-border.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				
+				<textcolor>00000000</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<font>WebViewer-font10</font>
+				<label></label>
+			</control>
+		<control type="image">
+				<posx>898</posx>
+				<posy>777.0</posy>
+				<width>210</width>
+				<height>101</height>
+				<texture>http://xbmc.org/wp-content/themes/inove/img/widgetsep.png</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio scalediffuse="false" align="left" aligny="bottom">center</aspectratio>
+			</control>
+		<control type="label">
+				<posx>903</posx>
+				<posy>802.0</posy>
+				<width>276</width>
+				<height>23.5</height>
+				<font>Bold-WebViewer-font12</font>
+				<textcolor>FF555555</textcolor>
+				<label>Facebook</label>
+			</control>
+		<control type="button" id="186">
+				<posx>908</posx>
+				<posy>843.5</posy>
+				<width>44</width>
+				<height>19.0</height>
+				<onleft>185</onleft>
+				<onright>187</onright>
+				<texturefocus border="0"></texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				<textoffsetx>-1</textoffsetx>
+				<textoffsety>0</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<font>WebViewer-font10</font>
+				<label>IFRAME</label>
+			</control>
+		<control type="image">
+				<posx>898</posx>
+				<posy>878.5</posy>
+				<width>210</width>
+				<height>101</height>
+				<texture>http://xbmc.org/wp-content/themes/inove/img/widgetsep.png</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio scalediffuse="false" align="left" aligny="bottom">center</aspectratio>
+			</control>
+		<control type="label">
+				<posx>903</posx>
+				<posy>903.5</posy>
+				<width>266</width>
+				<height>23.5</height>
+				<font>Bold-WebViewer-font12</font>
+				<textcolor>FF555555</textcolor>
+				<label>Twitter</label>
+			</control>
+		<control type="button" id="187">
+				<posx>908</posx>
+				<posy>945.0</posy>
+				<width>88</width>
+				<height>19.0</height>
+				<onleft>186</onleft>
+				<onright>188</onright>
+				<texturefocus border="0"></texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				<textoffsetx>-1</textoffsetx>
+				<textoffsety>0</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<font>WebViewer-font10</font>
+				<label>Follow @xbmc</label>
+			</control>
+		<control type="image">
+				<posx>898</posx>
+				<posy>980.0</posy>
+				<width>210</width>
+				<height>80</height>
+				<texture>http://xbmc.org/wp-content/themes/inove/img/widgetsep.png</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio scalediffuse="false" align="left" aligny="bottom">center</aspectratio>
+			</control>
+		<control type="label">
+				<posx>903</posx>
+				<posy>1005.0</posy>
+				<width>266</width>
+				<height>23.5</height>
+				<font>Bold-WebViewer-font12</font>
+				<textcolor>FF555555</textcolor>
+				<label>Google+</label>
+			</control>
+		<control type="image">
+				<posx>898</posx>
+				<posy>1060.5</posy>
+				<width>210</width>
+				<height>458</height>
+				<texture>http://xbmc.org/wp-content/themes/inove/img/widgetsep.png</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio scalediffuse="false" align="left" aligny="bottom">center</aspectratio>
+			</control>
+		<control type="label">
+				<posx>903</posx>
+				<posy>1085.5</posy>
+				<width>333</width>
+				<height>23.5</height>
+				<font>Bold-WebViewer-font12</font>
+				<textcolor>FF555555</textcolor>
+				<label>Recent Commits</label>
+			</control>
+		<control type="button" id="188">
+				<posx>910</posx>
+				<posy>1127.0</posy>
+				<width>188</width>
+				<height>33.0</height>
+				<onleft>187</onleft>
+				<onright>189</onright>
+				<texturefocus border="0"></texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				<textoffsetx>-1</textoffsetx>
+				<textoffsety>0</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<font>WebViewer-font10</font>
+				<label>fixed, do not expand the [CR]EXEEXT env var</label>
+			</control>
+		<control type="label">
+				<posx>910</posx>
+				<posy>1162.0</posy>
+				<width>355</width>
+				<height>19.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>June 22nd by davilla </label>
+			</control>
+		<control type="button" id="189">
+				<posx>910</posx>
+				<posy>1197.0</posy>
+				<width>188</width>
+				<height>47.0</height>
+				<onleft>188</onleft>
+				<onright>190</onright>
+				<texturefocus border="0"></texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				<textoffsetx>-1</textoffsetx>
+				<textoffsety>0</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<font>WebViewer-font10</font>
+				<label>[lang] add langinfo.xml [CR]files for new languages [CR]in master</label>
+			</control>
+		<control type="label">
+				<posx>910</posx>
+				<posy>1246.0</posy>
+				<width>362</width>
+				<height>19.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>June 21st by alanwww1 </label>
+			</control>
+		<control type="button" id="190">
+				<posx>910</posx>
+				<posy>1281.0</posy>
+				<width>188</width>
+				<height>47.0</height>
+				<onleft>189</onleft>
+				<onright>191</onright>
+				<texturefocus border="0"></texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				<textoffsetx>-1</textoffsetx>
+				<textoffsety>0</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<font>WebViewer-font10</font>
+				<label>[lang] update of [CR]skin.confluence language [CR]files</label>
+			</control>
+		<control type="label">
+				<posx>910</posx>
+				<posy>1330.0</posy>
+				<width>362</width>
+				<height>19.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>June 21st by alanwww1 </label>
+			</control>
+		<control type="button" id="191">
+				<posx>910</posx>
+				<posy>1365.0</posy>
+				<width>188</width>
+				<height>33.0</height>
+				<onleft>190</onleft>
+				<onright>192</onright>
+				<texturefocus border="0"></texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				<textoffsetx>-1</textoffsetx>
+				<textoffsety>0</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<font>WebViewer-font10</font>
+				<label>[lang] update of core [CR]language files</label>
+			</control>
+		<control type="label">
+				<posx>910</posx>
+				<posy>1400.0</posy>
+				<width>362</width>
+				<height>19.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>June 21st by alanwww1 </label>
+			</control>
+		<control type="button" id="192">
+				<posx>910</posx>
+				<posy>1435.0</posy>
+				<width>188</width>
+				<height>33.0</height>
+				<onleft>191</onleft>
+				<onright>193</onright>
+				<texturefocus border="0"></texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				<textoffsetx>-1</textoffsetx>
+				<textoffsety>0</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<font>WebViewer-font10</font>
+				<label>[lang] update of internal[CR]addon language files</label>
+			</control>
+		<control type="label">
+				<posx>910</posx>
+				<posy>1470.0</posy>
+				<width>362</width>
+				<height>19.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>June 21st by alanwww1 </label>
+			</control>
+		<control type="image">
+				<posx>172</posx>
+				<posy>5777.5</posy>
+				<width>936</width>
+				<height>88.0</height>
+				<texture>web-viewer-white.png</texture>
+				<colordiffuse>0</colordiffuse>
+				<aspectratio scalediffuse="false" align="center" aligny="center">stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>172</posx>
+				<posy>5777.5</posy>
+				<width>936</width>
+				<height>88</height>
+				<texture>http://xbmc.org/wp-content/themes/inove/img/footer.jpg</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
+			</control>
+		<control type="image">
+				<posx>1055</posx>
+				<posy>5782.5</posy>
+				<width>38</width>
+				<height>16.0</height>
+				<texture>web-viewer-white.png</texture>
+				<colordiffuse>0</colordiffuse>
+				<aspectratio scalediffuse="false" align="center" aligny="center">stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>751</posx>
+				<posy>5782.5</posy>
+				<width>342</width>
+				<height>16</height>
+				<texture diffuse="/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/38-16--304-0.png">/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/dc1868aa.png</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
+			</control>
+		<control type="button" id="193">
+				<posx>1071</posx>
+				<posy>5783.5</posy>
+				<width>22</width>
+				<height>19.0</height>
+				<onleft>192</onleft>
+				<onright>194</onright>
+				<texturefocus border="0"></texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				<textoffsetx>-1</textoffsetx>
+				<textoffsety>0</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<font>WebViewer-font10</font>
+				<label>Top</label>
+			</control>
+		<control type="label">
+				<posx>192</posx>
+				<posy>5867.5</posy>
+				<width>399</width>
+				<height>19.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>Copyright © 2003-2013 XBMC </label>
+			</control>
+		<control type="label">
+				<posx>192</posx>
+				<posy>5888.5</posy>
+				<width>244</width>
+				<height>19.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>Valid </label>
+			</control>
+		<control type="button" id="194">
+				<posx>192</posx>
+				<posy>5888.5</posy>
+				<width>111</width>
+				<height>19.0</height>
+				<onleft>193</onleft>
+				<onright>195</onright>
+				<texturefocus border="0"></texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				<textoffsetx>-1</textoffsetx>
+				<textoffsety>0</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<font>WebViewer-font10</font>
+				<label>      XHTML 1.1</label>
+			</control>
+		<control type="label">
+				<posx>192</posx>
+				<posy>5888.5</posy>
+				<width>348</width>
+				<height>19.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>                and </label>
+			</control>
+		<control type="button" id="195">
+				<posx>192</posx>
+				<posy>5888.5</posy>
+				<width>185</width>
+				<height>19.0</height>
+				<onleft>194</onleft>
+				<onright>196</onright>
+				<texturefocus border="0"></texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				<textoffsetx>-1</textoffsetx>
+				<textoffsety>0</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<font>WebViewer-font10</font>
+				<label>                    CSS 3</label>
+			</control>
+		<control type="label">
+				<posx>192</posx>
+				<posy>5888.5</posy>
+				<width>392</width>
+				<height>19.0</height>
+				<font>WebViewer-font10</font>
+				<textcolor>FF555555</textcolor>
+				<label>                         .</label>
+			</control>
+		<control type="image">
+				<posx>422</posx>
+				<posy>5907.5</posy>
+				<width>231</width>
+				<height>30</height>
+				<texture fallback="web-viewer-broken-image.png">http://xbmc.org/wordpress/wp-content/themes/inove/img/whb.png</texture>
+				<bordertexture border="2">web-viewer-link-border.png</bordertexture>
+				<bordersize>1</bordersize>
+
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="button" id="196">
+				<posx>422</posx>
+				<posy>5907.5</posy>
+				<width>231</width>
+				<height>30</height>
+				<onleft>195</onleft>
+				<onright>197</onright>
+				<texturefocus border="2">web-viewer-red-border.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				
+				<textcolor>00000000</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<font>WebViewer-font10</font>
+				<label></label>
+			</control>
+		<control type="button" id="197">
+				<posx>953</posx>
+				<posy>5939.5</posy>
+				<width>214</width>
+				<height>19.0</height>
+				<onleft>196</onleft>
+				<onright>198</onright>
+				<texturefocus border="0"></texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				<textoffsetx>-1</textoffsetx>
+				<textoffsety>0</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<font>WebViewer-font10</font>
+				<label>Web hosting by WebHostingBuzz</label>
+			</control>
+		<control type="image">
+				<posx>172</posx>
+				<posy>5958.5</posy>
+				<width>111</width>
+				<height>15</height>
+				<texture fallback="web-viewer-broken-image.png">http://xbmc.org/wordpress/wp-content/themes/inove/img/bytemark.png</texture>
+				<bordertexture border="2">web-viewer-link-border.png</bordertexture>
+				<bordersize>1</bordersize>
+
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="button" id="198">
+				<posx>172</posx>
+				<posy>5958.5</posy>
+				<width>111</width>
+				<height>15</height>
+				<onleft>197</onleft>
+				<onright>199</onright>
+				<texturefocus border="2">web-viewer-red-border.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				
+				<textcolor>00000000</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<font>WebViewer-font10</font>
+				<label></label>
+			</control>
+		<control type="image">
+				<posx>283</posx>
+				<posy>5973.5</posy>
+				<width>80</width>
+				<height>15</height>
+				<texture fallback="web-viewer-broken-image.png">http://sflogo.sourceforge.net/sflogo.php?group_id=87054&type=9</texture>
+				<bordertexture border="2">web-viewer-link-border.png</bordertexture>
+				<bordersize>1</bordersize>
+
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="button" id="199">
+				<posx>283</posx>
+				<posy>5973.5</posy>
+				<width>80</width>
+				<height>15</height>
+				<onleft>198</onleft>
+				<onright>200</onright>
+				<texturefocus border="2">web-viewer-red-border.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				
+				<textcolor>00000000</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<font>WebViewer-font10</font>
+				<label></label>
+			</control>
+		<control type="image">
+				<posx>172</posx>
+				<posy>5777.5</posy>
+				<width>937</width>
+				<height>88.0</height>
+				<texture border="5">web-viewer-white-border-top.png</texture>
+				<colordiffuse>FFCCCCCC</colordiffuse>
+				<aspectratio>stretch</aspectratio>
 			</control>
 
 		</control>

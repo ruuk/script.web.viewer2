@@ -671,6 +671,10 @@ class RenderElement:
 	
 	def adjustedRight(self):
 		return self.right()
+	
+	def move(self,offset_x,offset_y):
+		self.x += offset_x
+		self.y += offset_y
 		
 class RenderContainer(RenderElement):
 	_background = u'''		<control type="image">
@@ -728,6 +732,15 @@ class RenderContainer(RenderElement):
 		self.maxYindex = 0
 		self.children = []
 	
+	def move(self,offset_x,offset_y):
+		RenderElement.move(self, offset_x, offset_y)
+		self.paddedLeft = self.x + self.padLeft + self.marginLeft
+		self.contentMaxXindex += offset_x
+		self.yindex += offset_y
+		self.xindex += offset_x
+		self.maxYindex += offset_y
+		for c in self.children: c.move(offset_x,offset_y)
+		
 	def updateMaxY(self,yindex=0):
 		self.maxYindex = max(self.maxYindex, self.yindex, yindex)
 		
@@ -765,7 +778,7 @@ class RenderContainer(RenderElement):
 		self.children = []
 		
 	def right(self):
-		return self.x + self.marginLeft + self.usedWidth()
+		return self.x + self.marginLeft + self.usedWidth() + self.marginRight
 	
 	def contentRight(self):
 		return (self.x + self.marginLeft + self.maxWidth) - self.padRight
@@ -780,10 +793,8 @@ class RenderContainer(RenderElement):
 	def adjustedRight(self):
 		right = 0
 		for c in self.children:
-			print c.adjustedRight()
 			right = max(right,c.adjustedRight())
-		print ('-',right)
-		return right + self.padRight
+		return right + self.padRight + self.marginRight
 	
 	def backgroundBottom(self):
 		if self.height: return self.y + self.height
@@ -850,7 +861,7 @@ class RenderContainer(RenderElement):
 				if self.background.repeat and self.background.repeat != 'no-repeat':
 					if self.background.repeat == 'repeat':
 						aspect = 'stretch'
-					elif 'repeat' in self.background.repeat:
+					elif 'repeat' in self.background.repeat and self.background.repeat != 'no-repeat':
 						try:
 							path = xbmcutil.getCachedImagePath(self.background.image,CACHE_PATH)
 							if path:
@@ -877,7 +888,15 @@ class RenderContainer(RenderElement):
 								height = min(h or height,height)
 								mask = ' border="0,0,1,0"' + mask
 						else:
-							width = min(w or width,width)
+							if h == 1:
+								if self.background.posX == 'right':
+									x += (width - w)
+								elif self.background.posX == 'center':
+									x += int((width - w)/2.0)
+								width = min(w or width,width)
+								mask = ' border="0,0,0,1"' + mask
+						
+# 							width = min(w or width,width)
 				
 				if not mask:
 					absX = self.background.absPosX(width)
@@ -961,6 +980,10 @@ class RenderTextbox(RenderElement):
 		self.text = ''
 		self.bold = ''
 		self.textColor =  self._textColorDefault
+		self._font = 'WebViewer-font10'
+		
+	def setFont(self,font):
+		self._font = font
 		
 	def font(self):
 		if self.bold: return 'Bold-' + self._font
@@ -975,7 +998,7 @@ class RenderTextbox(RenderElement):
 	def xml(self):
 		return self._xml.format(	x=self.x,
 									y=self.y,
-									width=self.width,
+									width=self.width + 200,
 									height=self.height,
 									font=self.font(),
 									color=self.color(),
@@ -1124,7 +1147,8 @@ class RenderVideoWindow(RenderElement):
 									visible = self._visible % self.linkedButton	)
 
 class WebPageRenderer(RenderContainer):
-	fonts = {	'WebViewer-font12':{'w':9.5,'h':18.5,'xoff':0,'yoff':-2}
+	fonts = {	'WebViewer-font12':{'w':9.5,'h':18.5,'xoff':0,'yoff':-2},
+				'WebViewer-font10':{'w':7.4,'h':14.0,'xoff':0,'yoff':-1}
 			}
 	
 	def __init__(self,url):
@@ -1164,9 +1188,8 @@ class WebPageRenderer(RenderContainer):
 		self.encodingConfidence = 0
 		self.buttons = {}
 		self.textAttributes = {}
-		self.setFont('WebViewer-font12')
+		self.setFont('WebViewer-font10')
 		self.parser = 'None'
-		RenderElement._font = self.font
 		RenderElement._textColorDefault = self.fgColor
 		self.currentContainer = self
 
@@ -1655,7 +1678,7 @@ class WebPageRenderer(RenderContainer):
 					height = self.fontHeight
 			else:
 				w, h = self.getWidthAndHeight(tag)  # @UnusedVariable
-				val = tag.get('value') or 'Submit'
+				val = tag.get('value') or ''
 				try:
 					width = int(w)
 				except:
@@ -1780,16 +1803,16 @@ class WebPageRenderer(RenderContainer):
 			else:
 				x = self.currentContainer.adjustedRight()
 				y = self.currentContainer.y
-				print self.currentContainer.adjustedRight()
+				#print self.currentContainer.adjustedRight()
 				#if x >= self.currentContainer.contentMaxXindex:
 				#	y = self.currentContainer.y
 					
-		elif False: #float_ == 'left':
+		elif False:#float_ == 'left':
 			if w:
 				if x + w <= self.currentContainer.paddedRight():
 					y = self.currentContainer.y
 			else:
-				if x < self.currentContainer.paddedRight():
+				if x <= self.currentContainer.paddedRight():
 					y = self.currentContainer.y
 					
 		self.currentContainer.updateMaxY()
@@ -1811,6 +1834,10 @@ class WebPageRenderer(RenderContainer):
 		if not inline:
 			if div.children and not isinstance(div.children[-1],RenderContainer):
 				if post_LF: self.currentContainer.LF()
+		if float_ == 'right':
+			offset = state.contentRight() - div.adjustedRight()
+			if offset > 0:
+				if offset: div.move(offset,0)
 		self.restoreCurrentContainer(state,inline)
 		self.currentContainer.updateContentMaxX(div.right())
 		if not inline:
@@ -1994,7 +2021,7 @@ class WebPageRenderer(RenderContainer):
 		self.processContainerElement(tag)
 		self.listStyle = lsState
 		#self.processContents(tag)
-		self.newLine()
+		#self.newLine()
 		
 	def processLI(self,tag):
 		inline = self.tagIsInline(tag)
@@ -2009,7 +2036,9 @@ class WebPageRenderer(RenderContainer):
 	def processHX(self,tag):
 		self.newLine()
 		self.addTextMod('bold')
+		self.setFont('WebViewer-font12')
 		self.processContainerElement(tag)
+		self.setFont('WebViewer-font10')
 		self.delTextMod('bold')
 	
 	def setFontColor(self,tag):
@@ -2240,6 +2269,7 @@ class WebPageRenderer(RenderContainer):
 				but.textOffsetX=-1
 				but.setTextColor(color)
 				but.text=text
+				but.setFont(self.font)
 				self.currentContainer.addChild(but)
 				child = but
 			else:
@@ -2247,6 +2277,7 @@ class WebPageRenderer(RenderContainer):
 				tb.bold=bold
 				tb.setTextColor(color)
 				tb.text=text
+				tb.setFont(self.font)
 				self.currentContainer.addChild(tb)
 				child = tb
 
@@ -2329,6 +2360,7 @@ class WebPageRenderer(RenderContainer):
 			but.textureFocusBorder=2
 			but.setTextColor(textcolor)
 			but.text=text
+			but.setFont(self.font)
 			self.currentContainer.addChild(but)
 			
 		height = height + margin[0] + margin[1]
