@@ -5,6 +5,7 @@ TODO:
 	Finish checkboxes
 	Finish float: right
 	Handle font-weight: bold
+	background image position accounting for image dimensions (ie bottom right positions bottom right corner of image in bottom right of element)
 
 Current Version : 0.0.1
 

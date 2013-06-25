@@ -12,6 +12,8 @@ import os
 import sys
 import logging
 import urlparse, re
+import xbmcutil
+from webimage import imageinfo
 
 cssutils.log.setLevel(logging.FATAL)
 cssutils.log.raiseExceptions = False
@@ -192,7 +194,8 @@ def render2SoupStyle(view):
 			element['style'] = v
 
 class CSSBackground:
-	def __init__(self,style_dict):
+	def __init__(self,style_dict,cache_path):
+		self.cachePath = cache_path
 		self.background = style_dict.get('background','')
 		self.color = style_dict.get('background-color')
 		image = style_dict.get('background-image')
@@ -205,6 +208,9 @@ class CSSBackground:
 		self.inheritPosition = False
 		self.posX = None
 		self.posY = None
+		self.bgImageWidth = None
+		self.bgImageHeight = None
+		self.bgImageType = None
 		pos = style_dict.get('background-position')
 		if pos:
 			if pos == 'inherit':
@@ -218,6 +224,15 @@ class CSSBackground:
 					self.posY = 'center'
 		self._initialized = False
 		
+	def getBGImageInfo(self):
+		if self.bgImageWidth is not None: return
+		info = getImageInfo(self.image,self.cachePath)  #@UnusedVariable
+		if info:
+			self.bgImageType, self.bgImageWidth, self.bgImageHeight = info
+		else:
+			self.bgImageWidth = 0
+			self.bgImageHeight = 0
+		
 	def absPosX(self,width):
 		if not self.posX: return 0
 		posX = self.posX.replace('px','')
@@ -226,7 +241,8 @@ class CSSBackground:
 				pct = int(posX[:-1])
 			except:
 				return None
-			return int((pct/100.0) * width)
+			self.getBGImageInfo()
+			return int((pct/100.0) * (width - self.bgImageWidth))
 		
 		try:
 			return int(posX)
@@ -241,7 +257,8 @@ class CSSBackground:
 				pct = int(posY[:-1])
 			except:
 				return None
-			return int((pct/100.0) * height)
+			self.getBGImageInfo()
+			return int((pct/100.0) * (height - self.bgImageHeight))
 		
 		try:
 			return int(posY)
@@ -277,7 +294,7 @@ class CSSBackground:
 		return self.color.lower()
 
 urlRE = re.compile('url\((?P<url>[^\)]*)\)')
-numPosRE = re.compile('(-[\d]+%?)(?:px)?')
+numPosRE = re.compile('(-?\d+%?)(?:px)?')
 colorRE = re.compile('#\w+')
 colorNameRE = re.compile('\w+')
 attachmentRE = re.compile('scroll|fixed|inherit')
@@ -338,3 +355,15 @@ def processColor(color):
 		if len(color) == 3:
 			color = color[0] + color[0] + color[1] + color[1] + color[2] + color[2]
 		return color
+	
+def getImageInfo(url,cache_path):
+	try:
+		path = xbmcutil.getCachedImagePath(url,cache_path)
+		if path:
+			with open(path,'r') as f:
+				return imageinfo.getImageInfo(f)  # @UnusedVariable
+		else:
+			return imageinfo.getImageURLInfo(url)  # @UnusedVariable
+	except:
+		return None
+	return None

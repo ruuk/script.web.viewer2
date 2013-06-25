@@ -8,6 +8,8 @@
 	</coordinates>
 	<controls>
 		<control type="group" id="100">
+			<animation effect="zoom" end="150" center="0,0"  time="200" condition="StringCompare(Window.Property(zoom_level),ZOOM150)">Conditional</animation>
+			<animation effect="zoom" end="66" center="0,0"  time="200" condition="StringCompare(Window.Property(zoom_level),ZOOM66)">Conditional</animation>
 			<posx>0</posx>
 			<posy>10</posy>
 			<!-- REPLACE -->
