@@ -216,7 +216,7 @@ class CSSBackground:
 			if pos == 'inherit':
 				self.inheritPosition = True
 			else:
-				test = pos.split(' ')
+				test = pos.split(' ',1)
 				if len(test) > 1:
 					self.posX , self.posY = test
 				else:

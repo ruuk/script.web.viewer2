@@ -23,6 +23,19 @@ def isInstalled():
 	currentSkin = os.path.basename(currentSkinPath)
 	test = os.path.join(xbmc.translatePath('special://home'),'addons',currentSkin,'fonts','FontManager','Font.xml')
 	return os.path.exists(test)
+
+def compareFont(source):
+	currentSkinPath = xbmc.translatePath('special://skin')
+	if currentSkinPath.endswith(os.path.sep): currentSkinPath = currentSkinPath[:-1]
+	currentSkin = os.path.basename(currentSkinPath)
+	current = os.path.join(xbmc.translatePath('special://home'),'addons',currentSkin,'fonts','FontManager','mods',os.path.basename(source))
+	if not os.path.exists(current): return False
+	with open(source,'r') as f:
+		first_line_source =  f.readline().strip()
+	with open(current,'r') as f:
+		first_line_current =  f.readline().strip()
+	return first_line_source == first_line_current
+	
 	
 FBMod = '''		<!-- Forum Browser Fonts Mod -->
 	 	<font>

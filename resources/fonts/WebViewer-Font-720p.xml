@@ -1,41 +1,242 @@
-		<!-- Web Viewer Monospace -->
+		<!-- Web Viewer Monospace v0.1 -->
+		<font>
+			<name>WebViewer-font6</name>
+			<filename>WebViewer-DejaVuSansMono.ttf</filename>
+			<size>6</size>
+		</font>
+		<font>
+			<name>WebViewer-font7</name>
+			<filename>WebViewer-DejaVuSansMono.ttf</filename>
+			<size>7</size>
+		</font>
+	 	<font>
+			<name>WebViewer-font8</name>
+			<filename>WebViewer-DejaVuSansMono.ttf</filename>
+			<size>8</size>
+		</font>
+		<font>
+			<name>WebViewer-font9</name>
+			<filename>WebViewer-DejaVuSansMono.ttf</filename>
+			<size>9</size>
+		</font>
 		<font>
 			<name>WebViewer-font10</name>
+			<filename>WebViewer-DejaVuSansMono.ttf</filename>
+			<size>10</size>
+		</font>
+		<font>
+			<name>WebViewer-font11</name>
+			<filename>WebViewer-DejaVuSansMono.ttf</filename>
+			<size>11</size>
+		</font>
+		<font>
+			<name>WebViewer-font12</name>
 			<filename>WebViewer-DejaVuSansMono.ttf</filename>
 			<size>12</size>
 		</font>
 	 	<font>
-			<name>WebViewer-font12</name>
+			<name>WebViewer-font13</name>
+			<filename>WebViewer-DejaVuSansMono.ttf</filename>
+			<size>13</size>
+		</font>
+		<font>
+			<name>WebViewer-font14</name>
+			<filename>WebViewer-DejaVuSansMono.ttf</filename>
+			<size>14</size>
+		</font>
+		<font>
+			<name>WebViewer-font15</name>
+			<filename>WebViewer-DejaVuSansMono.ttf</filename>
+			<size>15</size>
+		</font>
+		<font>
+			<name>WebViewer-font16</name>
 			<filename>WebViewer-DejaVuSansMono.ttf</filename>
 			<size>16</size>
 		</font>
 		<font>
-			<name>WebViewer-font13</name>
+			<name>WebViewer-font17</name>
+			<filename>WebViewer-DejaVuSansMono.ttf</filename>
+			<size>17</size>
+		</font>
+	 	<font>
+			<name>WebViewer-font18</name>
+			<filename>WebViewer-DejaVuSansMono.ttf</filename>
+			<size>18</size>
+		</font>
+		<font>
+			<name>WebViewer-font20</name>
 			<filename>WebViewer-DejaVuSansMono.ttf</filename>
 			<size>20</size>
+		</font>
+		<font>
+			<name>WebViewer-font22</name>
+			<filename>WebViewer-DejaVuSansMono.ttf</filename>
+			<size>22</size>
+		</font>
+		<font>
+			<name>WebViewer-font24</name>
+			<filename>WebViewer-DejaVuSansMono.ttf</filename>
+			<size>24</size>
+		</font>
+	 	<font>
+			<name>WebViewer-font26</name>
+			<filename>WebViewer-DejaVuSansMono.ttf</filename>
+			<size>26</size>
+		</font>
+		<font>
+			<name>WebViewer-font27</name>
+			<filename>WebViewer-DejaVuSansMono.ttf</filename>
+			<size>27</size>
+		</font>
+		<font>
+			<name>WebViewer-font28</name>
+			<filename>WebViewer-DejaVuSansMono.ttf</filename>
+			<size>28</size>
+		</font>
+		<font>
+			<name>WebViewer-font29</name>
+			<filename>WebViewer-DejaVuSansMono.ttf</filename>
+			<size>29</size>
 		</font>
 		<font>
 			<name>WebViewer-font30</name>
 			<filename>WebViewer-DejaVuSansMono.ttf</filename>
 			<size>30</size>
 		</font>
+	 	<font>
+			<name>WebViewer-font32</name>
+			<filename>WebViewer-DejaVuSansMono.ttf</filename>
+			<size>32</size>
+		</font>
+		<font>
+			<name>WebViewer-font34</name>
+			<filename>WebViewer-DejaVuSansMono.ttf</filename>
+			<size>34</size>
+		</font>
+		<font>
+			<name>WebViewer-font36</name>
+			<filename>WebViewer-DejaVuSansMono.ttf</filename>
+			<size>36</size>
+		</font>
+		
+		<font>
+			<name>Bold-WebViewer-font6</name>
+			<filename>WebViewer-DejaVuSansMono-Bold.ttf</filename>
+			<size>6</size>
+		</font>
+		<font>
+			<name>Bold-WebViewer-font7</name>
+			<filename>WebViewer-DejaVuSansMono-Bold.ttf</filename>
+			<size>7</size>
+		</font>
+	 	<font>
+			<name>Bold-WebViewer-font8</name>
+			<filename>WebViewer-DejaVuSansMono-Bold.ttf</filename>
+			<size>8</size>
+		</font>
+		<font>
+			<name>Bold-WebViewer-font9</name>
+			<filename>WebViewer-DejaVuSansMono-Bold.ttf</filename>
+			<size>9</size>
+		</font>
 		<font>
 			<name>Bold-WebViewer-font10</name>
+			<filename>WebViewer-DejaVuSansMono-Bold.ttf</filename>
+			<size>10</size>
+		</font>
+		<font>
+			<name>Bold-WebViewer-font11</name>
+			<filename>WebViewer-DejaVuSansMono-Bold.ttf</filename>
+			<size>11</size>
+		</font>
+		<font>
+			<name>Bold-WebViewer-font12</name>
 			<filename>WebViewer-DejaVuSansMono-Bold.ttf</filename>
 			<size>12</size>
 		</font>
 	 	<font>
-			<name>Bold-WebViewer-font12</name>
+			<name>Bold-WebViewer-font13</name>
+			<filename>WebViewer-DejaVuSansMono-Bold.ttf</filename>
+			<size>13</size>
+		</font>
+		<font>
+			<name>Bold-WebViewer-font14</name>
+			<filename>WebViewer-DejaVuSansMono-Bold.ttf</filename>
+			<size>14</size>
+		</font>
+		<font>
+			<name>Bold-WebViewer-font15</name>
+			<filename>WebViewer-DejaVuSansMono-Bold.ttf</filename>
+			<size>15</size>
+		</font>
+		<font>
+			<name>Bold-WebViewer-font16</name>
 			<filename>WebViewer-DejaVuSansMono-Bold.ttf</filename>
 			<size>16</size>
 		</font>
 		<font>
-			<name>Bold-WebViewer-font13</name>
+			<name>Bold-WebViewer-font17</name>
+			<filename>WebViewer-DejaVuSansMono-Bold.ttf</filename>
+			<size>17</size>
+		</font>
+	 	<font>
+			<name>Bold-WebViewer-font18</name>
+			<filename>WebViewer-DejaVuSansMono-Bold.ttf</filename>
+			<size>18</size>
+		</font>
+		<font>
+			<name>Bold-WebViewer-font20</name>
 			<filename>WebViewer-DejaVuSansMono-Bold.ttf</filename>
 			<size>20</size>
+		</font>
+		<font>
+			<name>Bold-WebViewer-font22</name>
+			<filename>WebViewer-DejaVuSansMono-Bold.ttf</filename>
+			<size>22</size>
+		</font>
+		<font>
+			<name>Bold-WebViewer-font24</name>
+			<filename>WebViewer-DejaVuSansMono-Bold.ttf</filename>
+			<size>24</size>
+		</font>
+	 	<font>
+			<name>Bold-WebViewer-font26</name>
+			<filename>WebViewer-DejaVuSansMono-Bold.ttf</filename>
+			<size>26</size>
+		</font>
+		<font>
+			<name>Bold-WebViewer-font27</name>
+			<filename>WebViewer-DejaVuSansMono-Bold.ttf</filename>
+			<size>27</size>
+		</font>
+		<font>
+			<name>Bold-WebViewer-font28</name>
+			<filename>WebViewer-DejaVuSansMono-Bold.ttf</filename>
+			<size>28</size>
+		</font>
+		<font>
+			<name>Bold-WebViewer-font29</name>
+			<filename>WebViewer-DejaVuSansMono-Bold.ttf</filename>
+			<size>29</size>
 		</font>
 		<font>
 			<name>Bold-WebViewer-font30</name>
 			<filename>WebViewer-DejaVuSansMono-Bold.ttf</filename>
 			<size>30</size>
+		</font>
+	 	<font>
+			<name>Bold-WebViewer-font32</name>
+			<filename>WebViewer-DejaVuSansMono-Bold.ttf</filename>
+			<size>32</size>
+		</font>
+		<font>
+			<name>Bold-WebViewer-font34</name>
+			<filename>WebViewer-DejaVuSansMono-Bold.ttf</filename>
+			<size>34</size>
+		</font>
+		<font>
+			<name>Bold-WebViewer-font36</name>
+			<filename>WebViewer-DejaVuSansMono-Bold.ttf</filename>
+			<size>36</size>
 		</font>
