@@ -1,6 +1,6 @@
 <window>
 	<defaultcontrol>100</defaultcontrol>
-	<backgroundcolor>0xffffffff</backgroundcolor>
+	<backgroundcolor>0xfff4f5ff</backgroundcolor>
 	<coordinates>
 		<system>1</system>
 		<posx>0</posx>
@@ -18,7 +18,7 @@
 				<width>1280</width>
 				<height>700</height>
 				<texture>web-viewer-white.png</texture>
-				<colordiffuse>FFffffff</colordiffuse>
+				<colordiffuse>FFF4F5FF</colordiffuse>
 				<aspectratio scalediffuse="false" align="center" aligny="center">stretch</aspectratio>
 			</control>
 		<control type="image">
@@ -26,34 +26,25 @@
 				<posy>0</posy>
 				<width>1280</width>
 				<height>700</height>
-				<texture>http://playerones.geekandsundry.com/assets/img/light_wool.png</texture>
+				<texture>http://xbmc.org/wp-content/themes/paradise/Paradise/images/bg.jpg</texture>
 				<colordiffuse>FFFFFFFF</colordiffuse>
 				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
 			</control>
 		<control type="image">
-				<posx>10</posx>
-				<posy>0</posy>
+				<posx>0</posx>
+				<posy>-110</posy>
 				<width>1260</width>
-				<height>160</height>
-				<texture>web-viewer-white.png</texture>
-				<colordiffuse>FFffffff</colordiffuse>
-				<aspectratio scalediffuse="false" align="center" aligny="center">stretch</aspectratio>
-			</control>
-		<control type="image">
-				<posx>304</posx>
-				<posy>0</posy>
-				<width>1000</width>
-				<height>160</height>
-				<texture>http://playerones.geekandsundry.com/assets/img/headerbanner.jpg</texture>
+				<height>1790</height>
+				<texture diffuse="/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/1260-1680-0--110.png">http://xbmc.org/wp-content/themes/paradise/Paradise/images/colors/dark/bg_head.jpg</texture>
 				<colordiffuse>FFFFFFFF</colordiffuse>
 				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
 			</control>
 		<control type="image">
-				<posx>140</posx>
-				<posy>0</posy>
-				<width>195</width>
-				<height>160</height>
-				<texture fallback="web-viewer-broken-image.png">http://playerones.geekandsundry.com/assets/img/gslogo.png</texture>
+				<posx>170</posx>
+				<posy>12</posy>
+				<width>202</width>
+				<height>60</height>
+				<texture fallback="web-viewer-broken-image.png">http://xbmc.org/wp-content/themes/paradise/Paradise/images/logo.png</texture>
 				<bordertexture border="2">web-viewer-link-border.png</bordertexture>
 				<bordersize>1</bordersize>
 
@@ -61,10 +52,10 @@
 				<aspectratio>stretch</aspectratio>
 			</control>
 		<control type="button" id="101">
-				<posx>140</posx>
-				<posy>0</posy>
-				<width>195</width>
-				<height>160</height>
+				<posx>170</posx>
+				<posy>12</posy>
+				<width>202</width>
+				<height>60</height>
 				<onleft>101</onleft>
 				<onright>102</onright>
 				<texturefocus border="2">web-viewer-red-border.png</texturefocus>
@@ -77,121 +68,129 @@
 				<font>WebViewer-font12</font>
 				<label></label>
 			</control>
+		<control type="image">
+				<posx>992</posx>
+				<posy>22</posy>
+				<width>158</width>
+				<height>24</height>
+				<texture fallback="web-viewer-broken-image.png" border="5">web-viewer-form-text.png</texture>
+				
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
 		<control type="button" id="102">
-				<posx>1000</posx>
-				<posy>19</posy>
-				<width>140</width>
-				<height>28</height>
+				<posx>992</posx>
+				<posy>22</posy>
+				<width>158</width>
+				<height>24</height>
 				<onleft>101</onleft>
 				<onright>103</onright>
-				<texturefocus border="0"></texturefocus>
+				<texturefocus border="2">web-viewer-red-border.png</texturefocus>
 				<texturenofocus>-</texturenofocus>
 				<align>left</align>
-				<aligny>top</aligny>
-				<textoffsetx>-1</textoffsetx>
-				<textoffsety>0</textoffsety>
-
-				<textcolor>FF00AAAA</textcolor>
+				<aligny>center</aligny>
+				
+				<textcolor>black</textcolor>
 				<focusedcolor>FFFF0000</focusedcolor>
 				<font>WebViewer-font12</font>
-				<label>Follow [CR]@geekandsundry</label>
+				<label></label>
 			</control>
 		<control type="image">
-				<posx>1000</posx>
-				<posy>111</posy>
-				<width>30</width>
-				<height>30</height>
-				<texture>http://playerones.geekandsundry.com/assets/img/header-social.png</texture>
+				<posx>992</posx>
+				<posy>36</posy>
+				<width>14</width>
+				<height>17</height>
+				<texture fallback="web-viewer-broken-image.png" border="5">web-viewer-form-submit.png</texture>
+				
 				<colordiffuse>FFFFFFFF</colordiffuse>
-				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
-			</control>
-		<control type="image">
-				<posx>970</posx>
-				<posy>111</posy>
-				<width>65</width>
-				<height>30</height>
-				<texture diffuse="/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/30-30--35-0.png">http://playerones.geekandsundry.com/assets/img/header-social.png</texture>
-				<colordiffuse>FFFFFFFF</colordiffuse>
-				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
-			</control>
-		<control type="image">
-				<posx>940</posx>
-				<posy>111</posy>
-				<width>100</width>
-				<height>30</height>
-				<texture diffuse="/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/30-30--70-0.png">http://playerones.geekandsundry.com/assets/img/header-social.png</texture>
-				<colordiffuse>FFFFFFFF</colordiffuse>
-				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
-			</control>
-		<control type="image">
-				<posx>910</posx>
-				<posy>111</posy>
-				<width>135</width>
-				<height>30</height>
-				<texture diffuse="/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/30-30--105-0.png">http://playerones.geekandsundry.com/assets/img/header-social.png</texture>
-				<colordiffuse>FFFFFFFF</colordiffuse>
-				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
-			</control>
-		<control type="image">
-				<posx>10</posx>
-				<posy>160</posy>
-				<width>1260</width>
-				<height>60</height>
-				<texture>web-viewer-white.png</texture>
-				<colordiffuse>FF000000</colordiffuse>
-				<aspectratio scalediffuse="false" align="center" aligny="center">stretch</aspectratio>
+				<aspectratio>stretch</aspectratio>
 			</control>
 		<control type="button" id="103">
-				<posx>160</posx>
-				<posy>159</posy>
-				<width>29</width>
-				<height>14</height>
+				<posx>992</posx>
+				<posy>36</posy>
+				<width>14</width>
+				<height>17</height>
 				<onleft>102</onleft>
 				<onright>104</onright>
-				<texturefocus border="0"></texturefocus>
+				<texturefocus border="2">web-viewer-red-border.png</texturefocus>
 				<texturenofocus>-</texturenofocus>
-				<align>left</align>
-				<aligny>top</aligny>
-				<textoffsetx>-1</textoffsetx>
-				<textoffsety>0</textoffsety>
-
-				<textcolor>FF00AAAA</textcolor>
+				<align>center</align>
+				<aligny>center</aligny>
+				
+				<textcolor>black</textcolor>
 				<focusedcolor>FFFF0000</focusedcolor>
 				<font>WebViewer-font12</font>
-				<label>Home</label>
+				<label>Search</label>
 			</control>
-		<control type="label">
-				<posx>189</posx>
-				<posy>172</posy>
-				<width>64</width>
+		<control type="image">
+				<posx>147</posx>
+				<posy>79</posy>
+				<width>980</width>
+				<height>50</height>
+				<texture>web-viewer-white.png</texture>
+				<colordiffuse>FFe7e7e7</colordiffuse>
+				<aspectratio scalediffuse="false" align="center" aligny="center">stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>147</posx>
+				<posy>79</posy>
+				<width>980</width>
+				<height>48</height>
+				<texture border="0,0,1,0">/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/880bf895.png</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio scalediffuse="false" align="center" aligny="center">stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>147</posx>
+				<posy>79</posy>
+				<width>53</width>
+				<height>50</height>
+				<texture>web-viewer-white.png</texture>
+				<colordiffuse>FF363A3E</colordiffuse>
+				<aspectratio scalediffuse="false" align="center" aligny="center">stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>147</posx>
+				<posy>79</posy>
+				<width>53</width>
+				<height>50</height>
+				<texture border="0,0,1,0">/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/61fe5f93.png</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio scalediffuse="false" align="center" aligny="center">stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>165</posx>
+				<posy>94</posy>
+				<width>17</width>
 				<height>19</height>
-				<font>WebViewer-font12</font>
-				<textcolor>FFFFFFFF</textcolor>
-				<label>Shows </label>
+				<texture fallback="web-viewer-broken-image.png">/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/f014c408.png</texture>
+				<bordertexture border="2">web-viewer-link-border.png</bordertexture>
+				<bordersize>1</bordersize>
+
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio>stretch</aspectratio>
 			</control>
 		<control type="button" id="104">
-				<posx>160</posx>
-				<posy>159</posy>
-				<width>103</width>
-				<height>14</height>
+				<posx>165</posx>
+				<posy>94</posy>
+				<width>17</width>
+				<height>19</height>
 				<onleft>103</onleft>
 				<onright>105</onright>
-				<texturefocus border="0"></texturefocus>
+				<texturefocus border="2">web-viewer-red-border.png</texturefocus>
 				<texturenofocus>-</texturenofocus>
 				<align>left</align>
 				<aligny>top</aligny>
-				<textoffsetx>-1</textoffsetx>
-				<textoffsety>0</textoffsety>
-
-				<textcolor>FF00AAAA</textcolor>
+				
+				<textcolor>00000000</textcolor>
 				<focusedcolor>FFFF0000</focusedcolor>
 				<font>WebViewer-font12</font>
-				<label>          News</label>
+				<label></label>
 			</control>
 		<control type="button" id="105">
-				<posx>160</posx>
-				<posy>159</posy>
-				<width>140</width>
+				<posx>212</posx>
+				<posy>99</posy>
+				<width>66</width>
 				<height>14</height>
 				<onleft>104</onleft>
 				<onright>106</onright>
@@ -205,12 +204,12 @@
 				<textcolor>FF00AAAA</textcolor>
 				<focusedcolor>FFFF0000</focusedcolor>
 				<font>WebViewer-font12</font>
-				<label>              About</label>
+				<label>  About  </label>
 			</control>
 		<control type="button" id="106">
-				<posx>160</posx>
-				<posy>159</posy>
-				<width>177</width>
+				<posx>283</posx>
+				<posy>99</posy>
+				<width>88</width>
 				<height>14</height>
 				<onleft>105</onleft>
 				<onright>107</onright>
@@ -224,12 +223,12 @@
 				<textcolor>FF00AAAA</textcolor>
 				<focusedcolor>FFFF0000</focusedcolor>
 				<font>WebViewer-font12</font>
-				<label>                   Store</label>
+				<label>  Download  </label>
 			</control>
 		<control type="button" id="107">
-				<posx>160</posx>
-				<posy>159</posy>
-				<width>244</width>
+				<posx>376</posx>
+				<posy>99</posy>
+				<width>59</width>
 				<height>14</height>
 				<onleft>106</onleft>
 				<onright>108</onright>
@@ -243,12 +242,12 @@
 				<textcolor>FF00AAAA</textcolor>
 				<focusedcolor>FFFF0000</focusedcolor>
 				<font>WebViewer-font12</font>
-				<label>                        Community</label>
+				<label>  Wiki  </label>
 			</control>
 		<control type="button" id="108">
-				<posx>404</posx>
-				<posy>172</posy>
-				<width>37</width>
+				<posx>440</posx>
+				<posy>99</posy>
+				<width>66</width>
 				<height>14</height>
 				<onleft>107</onleft>
 				<onright>109</onright>
@@ -262,30 +261,12 @@
 				<textcolor>FF00AAAA</textcolor>
 				<focusedcolor>FFFF0000</focusedcolor>
 				<font>WebViewer-font12</font>
-				<label>Vlogs</label>
-			</control>
-		<control type="image">
-				<posx>10</posx>
-				<posy>220</posy>
-				<width>1260</width>
-				<height>120</height>
-				<texture>web-viewer-white.png</texture>
-				<colordiffuse>FF404040</colordiffuse>
-				<aspectratio scalediffuse="false" align="center" aligny="center">stretch</aspectratio>
-			</control>
-		<control type="image">
-				<posx>160</posx>
-				<posy>220</posy>
-				<width>960</width>
-				<height>120</height>
-				<texture>'/assets/images/show_logos/banner_PlayerOnes.gif'</texture>
-				<colordiffuse>FFFFFFFF</colordiffuse>
-				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
+				<label>  Forum  </label>
 			</control>
 		<control type="button" id="109">
-				<posx>430</posx>
-				<posy>263</posy>
-				<width>37</width>
+				<posx>511</posx>
+				<posy>99</posy>
+				<width>74</width>
 				<height>14</height>
 				<onleft>108</onleft>
 				<onright>110</onright>
@@ -299,39 +280,12 @@
 				<textcolor>FF00AAAA</textcolor>
 				<focusedcolor>FFFF0000</focusedcolor>
 				<font>WebViewer-font12</font>
-				<label>Tweet</label>
-			</control>
-		<control type="image">
-				<posx>580</posx>
-				<posy>245</posy>
-				<width>170</width>
-				<height>20</height>
-				<texture>web-viewer-white.png</texture>
-				<colordiffuse>FF000000</colordiffuse>
-				<aspectratio scalediffuse="false" align="center" aligny="center">stretch</aspectratio>
-			</control>
-		<control type="label">
-				<posx>595</posx>
-				<posy>248</posy>
-				<width>94</width>
-				<height>19</height>
-				<font>WebViewer-font12</font>
-				<textcolor>FFFFFFFF</textcolor>
-				<label>on-hiatus </label>
-			</control>
-		<control type="image">
-				<posx>580</posx>
-				<posy>245</posy>
-				<width>171</width>
-				<height>20</height>
-				<texture border="5">web-viewer-white-border-top.png</texture>
-				<colordiffuse>FF003300</colordiffuse>
-				<aspectratio>stretch</aspectratio>
+				<label>  Donate  </label>
 			</control>
 		<control type="button" id="110">
-				<posx>580</posx>
-				<posy>253</posy>
-				<width>118</width>
+				<posx>590</posx>
+				<posy>99</posy>
+				<width>103</width>
 				<height>14</height>
 				<onleft>109</onleft>
 				<onright>111</onright>
@@ -345,131 +299,113 @@
 				<textcolor>FF00AAAA</textcolor>
 				<focusedcolor>FFFF0000</focusedcolor>
 				<font>WebViewer-font12</font>
-				<label>DISCUSS IN FORUM</label>
-			</control>
-		<control type="label">
-				<posx>718</posx>
-				<posy>232</posy>
-				<width>101</width>
-				<height>19</height>
-				<font>Bold-WebViewer-font12</font>
-				<textcolor>FF000000</textcolor>
-				<label>Player Ones</label>
-			</control>
-		<control type="label">
-				<posx>718</posx>
-				<posy>232</posy>
-				<width>108</width>
-				<height>19</height>
-				<font>WebViewer-font12</font>
-				<textcolor>FF000000</textcolor>
-				<label>           T</label>
-			</control>
-		<control type="label">
-				<posx>718</posx>
-				<posy>232</posy>
-				<width>300</width>
-				<height>61</height>
-				<font>WebViewer-font12</font>
-				<textcolor>FF000000</textcolor>
-				<label>             he hilarious comedy [CR]styling of our sketch team finds the [CR]humor in any video game from casual [CR]to Triple A.</label>
-			</control>
-		<control type="image">
-				<posx>10</posx>
-				<posy>340</posy>
-				<width>1260</width>
-				<height>626</height>
-				<texture>web-viewer-white.png</texture>
-				<colordiffuse>FF000000</colordiffuse>
-				<aspectratio scalediffuse="false" align="center" aligny="center">stretch</aspectratio>
-			</control>
-		<control type="image">
-				<posx>160</posx>
-				<posy>340</posy>
-				<width>640</width>
-				<height>390</height>
-				<texture>web-viewer-white.png</texture>
-				<colordiffuse>FFcccccc</colordiffuse>
-				<aspectratio scalediffuse="false" align="center" aligny="center">stretch</aspectratio>
-			</control>
-		<control type="image">
-				<posx>160</posx>
-				<posy>340</posy>
-				<width>640</width>
-				<height>390</height>
-				<texture fallback="web-viewer-broken-image.png">http://i1.ytimg.com/vi/R6qqIOBJRC8/hqdefault.jpg</texture>
-				
-				<colordiffuse>FFFFFFFF</colordiffuse>
-				<aspectratio>stretch</aspectratio>
-			</control>
-			<control type="image">
-				<posx>160</posx>
-				<posy>340</posy>
-				<width>640</width>
-				<height>390</height>
-				<texture>web-viewer-play-overlay.png</texture>
-				<aspectratio>scale</aspectratio>
-				<visible>true</visible>
-			</control>
-			<control type="group">
-				<posx>160</posx>
-				<posy>340</posy>
-				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>640</width>
-					<height>390</height>
-					<texture>web-viewer-white.png</texture>
-					<colordiffuse>FF000000</colordiffuse>
-				</control>
-				<control type="videowindow">
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>640</width>
-					<height>390</height>
-				</control>
-				<visible>Player.Playing + Player.HasVideo + StringCompare(Window.Property(current_video),111)</visible>
+				<label>  Contribute  </label>
 			</control>
 		<control type="button" id="111">
-				<posx>160</posx>
-				<posy>340</posy>
-				<width>640</width>
-				<height>390</height>
+				<posx>698</posx>
+				<posy>99</posy>
+				<width>81</width>
+				<height>14</height>
 				<onleft>110</onleft>
 				<onright>112</onright>
-				<texturefocus border="2">web-viewer-red-border.png</texturefocus>
+				<texturefocus border="0"></texturefocus>
 				<texturenofocus>-</texturenofocus>
 				<align>left</align>
 				<aligny>top</aligny>
-				
-				<textcolor>00000000</textcolor>
+				<textoffsetx>-1</textoffsetx>
+				<textoffsety>0</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
 				<focusedcolor>FFFF0000</focusedcolor>
 				<font>WebViewer-font12</font>
-				<label></label>
+				<label>  Contact  </label>
 			</control>
 		<control type="image">
-				<posx>800</posx>
-				<posy>340</posy>
-				<width>320</width>
-				<height>390</height>
+				<posx>1101</posx>
+				<posy>88</posy>
+				<width>32</width>
+				<height>33</height>
+				<texture>http://xbmc.org/wp-content/themes/paradise/Paradise/images/social/donate.png</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
+			</control>
+		<control type="image">
+				<posx>1104</posx>
+				<posy>88</posy>
+				<width>32</width>
+				<height>33</height>
+				<texture>http://xbmc.org/wp-content/themes/paradise/Paradise/images/social/facebook.png</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
+			</control>
+		<control type="image">
+				<posx>1107</posx>
+				<posy>88</posy>
+				<width>32</width>
+				<height>33</height>
+				<texture>http://xbmc.org/wp-content/themes/paradise/Paradise/images/social/twitter.png</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
+			</control>
+		<control type="image">
+				<posx>1110</posx>
+				<posy>88</posy>
+				<width>32</width>
+				<height>33</height>
+				<texture>http://xbmc.org/wp-content/themes/paradise/Paradise/images/social/youtube.png</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
+			</control>
+		<control type="image">
+				<posx>140</posx>
+				<posy>149</posy>
+				<width>650</width>
+				<height>1502</height>
 				<texture>web-viewer-white.png</texture>
 				<colordiffuse>FFffffff</colordiffuse>
 				<aspectratio scalediffuse="false" align="center" aligny="center">stretch</aspectratio>
 			</control>
 		<control type="image">
-				<posx>800</posx>
-				<posy>340</posy>
-				<width>320</width>
-				<height>528</height>
+				<posx>160</posx>
+				<posy>169</posy>
+				<width>45</width>
+				<height>36</height>
 				<texture>web-viewer-white.png</texture>
-				<colordiffuse>FFffffff</colordiffuse>
+				<colordiffuse>FF363a3e</colordiffuse>
 				<aspectratio scalediffuse="false" align="center" aligny="center">stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>160</posx>
+				<posy>169</posy>
+				<width>45</width>
+				<height>36</height>
+				<texture border="0,0,1,0">/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/2158e7aa.png</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio scalediffuse="false" align="center" aligny="center">stretch</aspectratio>
+			</control>
+		<control type="label">
+				<posx>165</posx>
+				<posy>173</posy>
+				<width>34</width>
+				<height>19</height>
+				<font>WebViewer-font12</font>
+				<textcolor>FFFFFFFF</textcolor>
+				<label>[B][/B]11</label>
+			</control>
+		<control type="label">
+				<posx>165</posx>
+				<posy>186</posy>
+				<width>42</width>
+				<height>19</height>
+				<font>WebViewer-font12</font>
+				<textcolor>FF666666</textcolor>
+				<label>Oct</label>
 			</control>
 		<control type="button" id="112">
-				<posx>820</posx>
-				<posy>716</posy>
-				<width>280</width>
-				<height>28</height>
+				<posx>220</posx>
+				<posy>181</posy>
+				<width>237</width>
+				<height>18</height>
 				<onleft>111</onleft>
 				<onright>113</onright>
 				<texturefocus border="0"></texturefocus>
@@ -481,22 +417,13 @@
 
 				<textcolor>FF00AAAA</textcolor>
 				<focusedcolor>FFFF0000</focusedcolor>
-				<font>WebViewer-font12</font>
-				<label>The Super Mario Letters - Player Ones[CR]Ep. 4</label>
-			</control>
-		<control type="label">
-				<posx>820</posx>
-				<posy>745</posy>
-				<width>300</width>
-				<height>47</height>
-				<font>WebViewer-font12</font>
-				<textcolor>FF000000</textcolor>
-				<label>Never before seen correspondence [CR]reveals the Mushroom Kingdom's [CR]darkest secret. </label>
+				<font>Bold-WebViewer-font16</font>
+				<label>XBMC DevCon 2013 LiveBlog</label>
 			</control>
 		<control type="button" id="113">
-				<posx>825</posx>
-				<posy>808</posy>
-				<width>37</width>
+				<posx>674</posx>
+				<posy>208</posy>
+				<width>96</width>
 				<height>14</height>
 				<onleft>112</onleft>
 				<onright>114</onright>
@@ -510,12 +437,21 @@
 				<textcolor>FF00AAAA</textcolor>
 				<focusedcolor>FFFF0000</focusedcolor>
 				<font>WebViewer-font12</font>
-				<label>Tweet</label>
+				<label>46 Comments »</label>
+			</control>
+		<control type="label">
+				<posx>220</posx>
+				<posy>208</posy>
+				<width>570</width>
+				<height>33</height>
+				<font>WebViewer-font12</font>
+				<textcolor>FF666666</textcolor>
+				<label>                                                            [CR]Posted By: </label>
 			</control>
 		<control type="button" id="114">
-				<posx>820</posx>
-				<posy>875</posy>
-				<width>14</width>
+				<posx>220</posx>
+				<posy>222</posy>
+				<width>177</width>
 				<height>14</height>
 				<onleft>113</onleft>
 				<onright>115</onright>
@@ -529,12 +465,21 @@
 				<textcolor>FF00AAAA</textcolor>
 				<focusedcolor>FFFF0000</focusedcolor>
 				<font>WebViewer-font12</font>
-				<label>← </label>
+				<label>           Nathan Betzen</label>
+			</control>
+		<control type="label">
+				<posx>220</posx>
+				<posy>222</posy>
+				<width>345</width>
+				<height>19</height>
+				<font>WebViewer-font12</font>
+				<textcolor>FF666666</textcolor>
+				<label>                         on Oct 11, 2013 in </label>
 			</control>
 		<control type="button" id="115">
-				<posx>820</posx>
-				<posy>875</posy>
-				<width>103</width>
+				<posx>220</posx>
+				<posy>222</posy>
+				<width>392</width>
 				<height>14</height>
 				<onleft>114</onleft>
 				<onright>116</onright>
@@ -548,40 +493,77 @@
 				<textcolor>FF00AAAA</textcolor>
 				<focusedcolor>FFFF0000</focusedcolor>
 				<font>WebViewer-font12</font>
-				<label>  Prev Episode</label>
+				<label>                                            Site News</label>
+			</control>
+		<control type="image">
+				<posx>220</posx>
+				<posy>206</posy>
+				<width>551</width>
+				<height>33</height>
+				<texture border="5">web-viewer-white-border-top.png</texture>
+				<colordiffuse>FFD9D9D9</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>160</posx>
+				<posy>260</posy>
+				<width>600</width>
+				<height>336</height>
+				<texture fallback="web-viewer-broken-image.png">http://xbmc.org/wp-content/uploads/photo-600x336.jpg</texture>
+				<bordertexture border="2">web-viewer-link-border.png</bordertexture>
+				<bordersize>1</bordersize>
+
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio>stretch</aspectratio>
 			</control>
 		<control type="button" id="116">
-				<posx>820</posx>
-				<posy>890</posy>
-				<width>140</width>
-				<height>42</height>
+				<posx>160</posx>
+				<posy>260</posy>
+				<width>600</width>
+				<height>336</height>
 				<onleft>115</onleft>
 				<onright>117</onright>
-				<texturefocus border="0"></texturefocus>
+				<texturefocus border="2">web-viewer-red-border.png</texturefocus>
 				<texturenofocus>-</texturenofocus>
 				<align>left</align>
 				<aligny>top</aligny>
-				<textoffsetx>-1</textoffsetx>
-				<textoffsety>0</textoffsety>
-
-				<textcolor>FF00AAAA</textcolor>
+				
+				<textcolor>00000000</textcolor>
 				<focusedcolor>FFFF0000</focusedcolor>
 				<font>WebViewer-font12</font>
-				<label>A.I. : Artificial [CR]Idiot - Player [CR]Ones ep. 3</label>
+				<label></label>
+			</control>
+		<control type="label">
+				<posx>160</posx>
+				<posy>604</posy>
+				<width>630</width>
+				<height>61</height>
+				<font>WebViewer-font12</font>
+				<textcolor>FF666666</textcolor>
+				<label>Good morning, Germany! This live blog is intended to keep users up to date with [CR]DevCon conversations. I’ll likely update roughly once at the change of each hour, [CR]so there’s no real reason to constantly hit refresh. If you don’t see an update on[CR]the hour, I’ll hold back up updating until the next hour. …</label>
 			</control>
 		<control type="image">
-				<posx>800</posx>
-				<posy>928</posy>
-				<width>320</width>
-				<height>38</height>
+				<posx>160</posx>
+				<posy>682</posy>
+				<width>610</width>
+				<height>27</height>
 				<texture>web-viewer-white.png</texture>
-				<colordiffuse>FFf4f4f4</colordiffuse>
+				<colordiffuse>FF363a3e</colordiffuse>
+				<aspectratio scalediffuse="false" align="center" aligny="center">stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>160</posx>
+				<posy>682</posy>
+				<width>610</width>
+				<height>27</height>
+				<texture border="0,0,1,0">/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/2158e7aa.png</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
 				<aspectratio scalediffuse="false" align="center" aligny="center">stretch</aspectratio>
 			</control>
 		<control type="button" id="117">
-				<posx>800</posx>
-				<posy>927</posy>
-				<width>236</width>
+				<posx>172</posx>
+				<posy>688</posy>
+				<width>66</width>
 				<height>14</height>
 				<onleft>116</onleft>
 				<onright>118</onright>
@@ -595,22 +577,58 @@
 				<textcolor>FF00AAAA</textcolor>
 				<focusedcolor>FFFF0000</focusedcolor>
 				<font>WebViewer-font12</font>
-				<label>Join This Episode's Discussion →</label>
+				<label>Read more</label>
 			</control>
 		<control type="image">
-				<posx>10</posx>
-				<posy>966</posy>
-				<width>1260</width>
-				<height>299</height>
+				<posx>160</posx>
+				<posy>169</posy>
+				<width>611</width>
+				<height>568</height>
+				<texture border="5">web-viewer-white-border-bottom.png</texture>
+				<colordiffuse>FFE5E5E5</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>160</posx>
+				<posy>772</posy>
+				<width>45</width>
+				<height>36</height>
 				<texture>web-viewer-white.png</texture>
-				<colordiffuse>FFffffff</colordiffuse>
+				<colordiffuse>FF363a3e</colordiffuse>
 				<aspectratio scalediffuse="false" align="center" aligny="center">stretch</aspectratio>
 			</control>
-		<control type="button" id="118">
+		<control type="image">
 				<posx>160</posx>
-				<posy>985</posy>
-				<width>59</width>
-				<height>14</height>
+				<posy>772</posy>
+				<width>45</width>
+				<height>36</height>
+				<texture border="0,0,1,0">/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/2158e7aa.png</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio scalediffuse="false" align="center" aligny="center">stretch</aspectratio>
+			</control>
+		<control type="label">
+				<posx>165</posx>
+				<posy>776</posy>
+				<width>34</width>
+				<height>19</height>
+				<font>WebViewer-font12</font>
+				<textcolor>FFFFFFFF</textcolor>
+				<label>[B][/B]09</label>
+			</control>
+		<control type="label">
+				<posx>165</posx>
+				<posy>788</posy>
+				<width>42</width>
+				<height>19</height>
+				<font>WebViewer-font12</font>
+				<textcolor>FF666666</textcolor>
+				<label>Oct</label>
+			</control>
+		<control type="button" id="118">
+				<posx>220</posx>
+				<posy>784</posy>
+				<width>266</width>
+				<height>18</height>
 				<onleft>117</onleft>
 				<onright>119</onright>
 				<texturefocus border="0"></texturefocus>
@@ -622,105 +640,41 @@
 
 				<textcolor>FF00AAAA</textcolor>
 				<focusedcolor>FFFF0000</focusedcolor>
-				<font>WebViewer-font12</font>
-				<label>EPISODES</label>
-			</control>
-		<control type="image">
-				<posx>1014</posx>
-				<posy>986</posy>
-				<width>106</width>
-				<height>33</height>
-				<texture>web-viewer-white.png</texture>
-				<colordiffuse>FFffffff</colordiffuse>
-				<aspectratio scalediffuse="false" align="center" aligny="center">stretch</aspectratio>
-			</control>
-		<control type="label">
-				<posx>1034</posx>
-				<posy>995</posy>
-				<width>86</width>
-				<height>19</height>
-				<font>WebViewer-font12</font>
-				<textcolor>FF000000</textcolor>
-				<label>List View</label>
-			</control>
-		<control type="label">
-				<posx>160</posx>
-				<posy>1028</posy>
-				<width>79</width>
-				<height>19</height>
-				<font>WebViewer-font12</font>
-				<textcolor>FFCCCCCC</textcolor>
-				<label>Season 1</label>
-			</control>
-		<control type="image">
-				<posx>160</posx>
-				<posy>1069</posy>
-				<width>25</width>
-				<height>120</height>
-				<texture>web-viewer-white.png</texture>
-				<colordiffuse>FFffffff</colordiffuse>
-				<aspectratio scalediffuse="false" align="center" aligny="center">stretch</aspectratio>
-			</control>
-		<control type="image">
-				<posx>160</posx>
-				<posy>1069</posy>
-				<width>25</width>
-				<height>120</height>
-				<texture>http://playerones.geekandsundry.com/assets/img/arrow-right.png</texture>
-				<colordiffuse>FFFFFFFF</colordiffuse>
-				<aspectratio scalediffuse="false" align="center" aligny="center">center</aspectratio>
-			</control>
-		<control type="image">
-				<posx>160</posx>
-				<posy>1069</posy>
-				<width>25</width>
-				<height>120</height>
-				<texture>web-viewer-white.png</texture>
-				<colordiffuse>FFffffff</colordiffuse>
-				<aspectratio scalediffuse="false" align="center" aligny="center">stretch</aspectratio>
-			</control>
-		<control type="image">
-				<posx>160</posx>
-				<posy>1069</posy>
-				<width>25</width>
-				<height>120</height>
-				<texture>http://playerones.geekandsundry.com/assets/img/arrow-left.png</texture>
-				<colordiffuse>FFFFFFFF</colordiffuse>
-				<aspectratio scalediffuse="false" align="center" aligny="center">center</aspectratio>
-			</control>
-		<control type="image">
-				<posx>160</posx>
-				<posy>120</posy>
-				<width>225</width>
-				<height>126</height>
-				<texture fallback="web-viewer-broken-image.png">http://www.geekandsundry.com/assets/images/episodes/Player-Ones-104.jpg</texture>
-				<bordertexture border="2">web-viewer-link-border.png</bordertexture>
-				<bordersize>1</bordersize>
-
-				<colordiffuse>FFFFFFFF</colordiffuse>
-				<aspectratio>stretch</aspectratio>
+				<font>Bold-WebViewer-font16</font>
+				<label>Beers, Users, and Devs Night</label>
 			</control>
 		<control type="button" id="119">
-				<posx>160</posx>
-				<posy>120</posy>
-				<width>225</width>
-				<height>126</height>
+				<posx>682</posx>
+				<posy>811</posy>
+				<width>88</width>
+				<height>14</height>
 				<onleft>118</onleft>
 				<onright>120</onright>
-				<texturefocus border="2">web-viewer-red-border.png</texturefocus>
+				<texturefocus border="0"></texturefocus>
 				<texturenofocus>-</texturenofocus>
 				<align>left</align>
 				<aligny>top</aligny>
-				
-				<textcolor>00000000</textcolor>
+				<textoffsetx>-1</textoffsetx>
+				<textoffsety>0</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
 				<focusedcolor>FFFF0000</focusedcolor>
 				<font>WebViewer-font12</font>
-				<label></label>
+				<label>9 Comments »</label>
+			</control>
+		<control type="label">
+				<posx>220</posx>
+				<posy>811</posy>
+				<width>570</width>
+				<height>33</height>
+				<font>WebViewer-font12</font>
+				<textcolor>FF666666</textcolor>
+				<label>                                                             [CR]Posted By: </label>
 			</control>
 		<control type="button" id="120">
-				<posx>160</posx>
-				<posy>232</posy>
-				<width>547</width>
+				<posx>220</posx>
+				<posy>825</posy>
+				<width>177</width>
 				<height>14</height>
 				<onleft>119</onleft>
 				<onright>121</onright>
@@ -734,41 +688,76 @@
 				<textcolor>FF00AAAA</textcolor>
 				<focusedcolor>FFFF0000</focusedcolor>
 				<font>WebViewer-font12</font>
-				<label>                               The Super Mario Letters - Player Ones Ep. 4</label>
+				<label>           Nathan Betzen</label>
 			</control>
-		<control type="image">
-				<posx>160</posx>
-				<posy>980</posy>
-				<width>225</width>
-				<height>126</height>
-				<texture fallback="web-viewer-broken-image.png">http://www.geekandsundry.com/assets/images/episodes/Player-Ones-103_2.jpg</texture>
-				<bordertexture border="2">web-viewer-link-border.png</bordertexture>
-				<bordersize>1</bordersize>
-
-				<colordiffuse>FFFFFFFF</colordiffuse>
-				<aspectratio>stretch</aspectratio>
+		<control type="label">
+				<posx>220</posx>
+				<posy>825</posy>
+				<width>345</width>
+				<height>19</height>
+				<font>WebViewer-font12</font>
+				<textcolor>FF666666</textcolor>
+				<label>                         on Oct 09, 2013 in </label>
 			</control>
 		<control type="button" id="121">
-				<posx>160</posx>
-				<posy>980</posy>
-				<width>225</width>
-				<height>126</height>
+				<posx>220</posx>
+				<posy>825</posy>
+				<width>392</width>
+				<height>14</height>
 				<onleft>120</onleft>
 				<onright>122</onright>
-				<texturefocus border="2">web-viewer-red-border.png</texturefocus>
+				<texturefocus border="0"></texturefocus>
 				<texturenofocus>-</texturenofocus>
 				<align>left</align>
 				<aligny>top</aligny>
-				
-				<textcolor>00000000</textcolor>
+				<textoffsetx>-1</textoffsetx>
+				<textoffsety>0</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
 				<focusedcolor>FFFF0000</focusedcolor>
 				<font>WebViewer-font12</font>
-				<label></label>
+				<label>                                            Site News</label>
+			</control>
+		<control type="image">
+				<posx>220</posx>
+				<posy>809</posy>
+				<width>551</width>
+				<height>33</height>
+				<texture border="5">web-viewer-white-border-top.png</texture>
+				<colordiffuse>FFD9D9D9</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="label">
+				<posx>160</posx>
+				<posy>861</posy>
+				<width>630</width>
+				<height>61</height>
+				<font>WebViewer-font12</font>
+				<textcolor>FF666666</textcolor>
+				<label>We apologize for the late notice, but for those of you in the Munich area we [CR]finally have a date and time for our Devs and Users Meet-up. We’ll be meeting at [CR]the NH München Dornach, Einsteinring 20. D-85609 Dornach. Munich at 19.30 (that’s[CR]7:30PM for Americans) on this Friday. Just head over to the hotel …</label>
+			</control>
+		<control type="image">
+				<posx>160</posx>
+				<posy>938</posy>
+				<width>610</width>
+				<height>27</height>
+				<texture>web-viewer-white.png</texture>
+				<colordiffuse>FF363a3e</colordiffuse>
+				<aspectratio scalediffuse="false" align="center" aligny="center">stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>160</posx>
+				<posy>938</posy>
+				<width>610</width>
+				<height>27</height>
+				<texture border="0,0,1,0">/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/2158e7aa.png</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio scalediffuse="false" align="center" aligny="center">stretch</aspectratio>
 			</control>
 		<control type="button" id="122">
-				<posx>160</posx>
-				<posy>1092</posy>
-				<width>547</width>
+				<posx>172</posx>
+				<posy>944</posy>
+				<width>66</width>
 				<height>14</height>
 				<onleft>121</onleft>
 				<onright>123</onright>
@@ -782,41 +771,76 @@
 				<textcolor>FF00AAAA</textcolor>
 				<focusedcolor>FFFF0000</focusedcolor>
 				<font>WebViewer-font12</font>
-				<label>                               A.I. : Artificial Idiot - Player Ones ep. 3</label>
+				<label>Read more</label>
 			</control>
 		<control type="image">
 				<posx>160</posx>
-				<posy>1106</posy>
-				<width>225</width>
-				<height>126</height>
-				<texture fallback="web-viewer-broken-image.png">http://www.geekandsundry.com/assets/images/episodes/Player-Ones-102.jpg</texture>
-				<bordertexture border="2">web-viewer-link-border.png</bordertexture>
-				<bordersize>1</bordersize>
-
-				<colordiffuse>FFFFFFFF</colordiffuse>
+				<posy>772</posy>
+				<width>611</width>
+				<height>222</height>
+				<texture border="5">web-viewer-white-border-bottom.png</texture>
+				<colordiffuse>FFE5E5E5</colordiffuse>
 				<aspectratio>stretch</aspectratio>
 			</control>
-		<control type="button" id="123">
+		<control type="image">
 				<posx>160</posx>
-				<posy>1106</posy>
-				<width>225</width>
-				<height>126</height>
+				<posy>1028</posy>
+				<width>45</width>
+				<height>36</height>
+				<texture>web-viewer-white.png</texture>
+				<colordiffuse>FF363a3e</colordiffuse>
+				<aspectratio scalediffuse="false" align="center" aligny="center">stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>160</posx>
+				<posy>1028</posy>
+				<width>45</width>
+				<height>36</height>
+				<texture border="0,0,1,0">/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/2158e7aa.png</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio scalediffuse="false" align="center" aligny="center">stretch</aspectratio>
+			</control>
+		<control type="label">
+				<posx>165</posx>
+				<posy>1032</posy>
+				<width>34</width>
+				<height>19</height>
+				<font>WebViewer-font12</font>
+				<textcolor>FFFFFFFF</textcolor>
+				<label>[B][/B]03</label>
+			</control>
+		<control type="label">
+				<posx>165</posx>
+				<posy>1045</posy>
+				<width>42</width>
+				<height>19</height>
+				<font>WebViewer-font12</font>
+				<textcolor>FF666666</textcolor>
+				<label>Oct</label>
+			</control>
+		<control type="button" id="123">
+				<posx>220</posx>
+				<posy>1040</posy>
+				<width>152</width>
+				<height>18</height>
 				<onleft>122</onleft>
 				<onright>124</onright>
-				<texturefocus border="2">web-viewer-red-border.png</texturefocus>
+				<texturefocus border="0"></texturefocus>
 				<texturenofocus>-</texturenofocus>
 				<align>left</align>
 				<aligny>top</aligny>
-				
-				<textcolor>00000000</textcolor>
+				<textoffsetx>-1</textoffsetx>
+				<textoffsety>0</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
 				<focusedcolor>FFFF0000</focusedcolor>
-				<font>WebViewer-font12</font>
-				<label></label>
+				<font>Bold-WebViewer-font16</font>
+				<label>XBMC DevCon 2013</label>
 			</control>
 		<control type="button" id="124">
-				<posx>160</posx>
-				<posy>1218</posy>
-				<width>347</width>
+				<posx>674</posx>
+				<posy>1068</posy>
+				<width>96</width>
 				<height>14</height>
 				<onleft>123</onleft>
 				<onright>125</onright>
@@ -830,12 +854,21 @@
 				<textcolor>FF00AAAA</textcolor>
 				<focusedcolor>FFFF0000</focusedcolor>
 				<font>WebViewer-font12</font>
-				<label>                               You Complete Me?</label>
+				<label>56 Comments »</label>
+			</control>
+		<control type="label">
+				<posx>220</posx>
+				<posy>1068</posy>
+				<width>570</width>
+				<height>33</height>
+				<font>WebViewer-font12</font>
+				<textcolor>FF666666</textcolor>
+				<label>                                                            [CR]Posted By: </label>
 			</control>
 		<control type="button" id="125">
-				<posx>160</posx>
-				<posy>1231</posy>
-				<width>466</width>
+				<posx>220</posx>
+				<posy>1082</posy>
+				<width>177</width>
 				<height>14</height>
 				<onleft>124</onleft>
 				<onright>126</onright>
@@ -849,116 +882,62 @@
 				<textcolor>FF00AAAA</textcolor>
 				<focusedcolor>FFFF0000</focusedcolor>
 				<font>WebViewer-font12</font>
-				<label>Low Elf Esteem (or Don’t Know What You Got Until It’s Gauntlet)</label>
+				<label>           Nathan Betzen</label>
+			</control>
+		<control type="label">
+				<posx>220</posx>
+				<posy>1082</posy>
+				<width>345</width>
+				<height>19</height>
+				<font>WebViewer-font12</font>
+				<textcolor>FF666666</textcolor>
+				<label>                         on Oct 03, 2013 in </label>
+			</control>
+		<control type="button" id="126">
+				<posx>220</posx>
+				<posy>1082</posy>
+				<width>392</width>
+				<height>14</height>
+				<onleft>125</onleft>
+				<onright>127</onright>
+				<texturefocus border="0"></texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				<textoffsetx>-1</textoffsetx>
+				<textoffsety>0</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<font>WebViewer-font12</font>
+				<label>                                            Site News</label>
 			</control>
 		<control type="image">
-				<posx>10</posx>
-				<posy>966</posy>
-				<width>1261</width>
-				<height>299</height>
-				<texture border="5">web-viewer-white-border-bottom.png</texture>
-				<colordiffuse>FF000000</colordiffuse>
+				<posx>220</posx>
+				<posy>1066</posy>
+				<width>551</width>
+				<height>33</height>
+				<texture border="5">web-viewer-white-border-top.png</texture>
+				<colordiffuse>FFD9D9D9</colordiffuse>
 				<aspectratio>stretch</aspectratio>
 			</control>
 		<control type="image">
-				<posx>10</posx>
-				<posy>1265</posy>
-				<width>728</width>
-				<height>90</height>
-				<texture fallback="web-viewer-broken-image.png">http://playerones.geekandsundry.com/assets/images/banners/leaderboard_gns_130918.jpg</texture>
+				<posx>160</posx>
+				<posy>1118</posy>
+				<width>600</width>
+				<height>336</height>
+				<texture fallback="web-viewer-broken-image.png">http://xbmc.org/wp-content/uploads/IMG_0796-600x336.jpg</texture>
 				<bordertexture border="2">web-viewer-link-border.png</bordertexture>
 				<bordersize>1</bordersize>
 
 				<colordiffuse>FFFFFFFF</colordiffuse>
 				<aspectratio>stretch</aspectratio>
 			</control>
-		<control type="button" id="126">
-				<posx>10</posx>
-				<posy>1265</posy>
-				<width>728</width>
-				<height>90</height>
-				<onleft>125</onleft>
-				<onright>127</onright>
-				<texturefocus border="2">web-viewer-red-border.png</texturefocus>
-				<texturenofocus>-</texturenofocus>
-				<align>left</align>
-				<aligny>top</aligny>
-				
-				<textcolor>00000000</textcolor>
-				<focusedcolor>FFFF0000</focusedcolor>
-				<font>WebViewer-font12</font>
-				<label></label>
-			</control>
-		<control type="image">
-				<posx>152</posx>
-				<posy>1396</posy>
-				<width>310</width>
-				<height>388</height>
-				<texture>web-viewer-white.png</texture>
-				<colordiffuse>FFffffff</colordiffuse>
-				<aspectratio scalediffuse="false" align="center" aligny="center">stretch</aspectratio>
-			</control>
-		<control type="label">
-				<posx>152</posx>
-				<posy>1395</posy>
-				<width>123</width>
-				<height>19</height>
-				<font>WebViewer-font12</font>
-				<textcolor>FF000000</textcolor>
-				<label>April 26, 2013</label>
-			</control>
-		<control type="label">
-				<posx>152</posx>
-				<posy>1395</posy>
-				<width>205</width>
-				<height>19</height>
-				<font>WebViewer-font12</font>
-				<textcolor>FF000000</textcolor>
-				<label>               0 comments</label>
-			</control>
-		<control type="image">
-				<posx>152</posx>
-				<posy>1409</posy>
-				<width>310</width>
-				<height>189</height>
-				<texture fallback="web-viewer-broken-image.png">http://i1.ytimg.com/vi/R6qqIOBJRC8/hqdefault.jpg</texture>
-				
-				<colordiffuse>FFFFFFFF</colordiffuse>
-				<aspectratio>stretch</aspectratio>
-			</control>
-			<control type="image">
-				<posx>152</posx>
-				<posy>1409</posy>
-				<width>310</width>
-				<height>189</height>
-				<texture>web-viewer-play-overlay.png</texture>
-				<aspectratio>scale</aspectratio>
-				<visible>true</visible>
-			</control>
-			<control type="group">
-				<posx>152.0</posx>
-				<posy>1409.0</posy>
-				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>310</width>
-					<height>189</height>
-					<texture>web-viewer-white.png</texture>
-					<colordiffuse>FF000000</colordiffuse>
-				</control>
-				<control type="videowindow">
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>310</width>
-					<height>189</height>
-				</control>
-				<visible>Player.Playing + Player.HasVideo + StringCompare(Window.Property(current_video),127)</visible>
-			</control>
 		<control type="button" id="127">
-				<posx>152</posx>
-				<posy>1409</posy>
-				<width>310</width>
-				<height>189</height>
+				<posx>160</posx>
+				<posy>1118</posy>
+				<width>600</width>
+				<height>336</height>
 				<onleft>126</onleft>
 				<onright>128</onright>
 				<texturefocus border="2">web-viewer-red-border.png</texturefocus>
@@ -971,20 +950,38 @@
 				<font>WebViewer-font12</font>
 				<label></label>
 			</control>
+		<control type="label">
+				<posx>160</posx>
+				<posy>1464</posy>
+				<width>630</width>
+				<height>61</height>
+				<font>WebViewer-font12</font>
+				<textcolor>FF666666</textcolor>
+				<label>It’s been a busy year since XBMC’s 2012 Developers’ Conference. In that time, XBMC[CR]12.2 was released. The Raspberry Pi became one of the most used (if not the [CR]single most used) pieces of hardware to run XBMC. Hardware decoding in Android has[CR]become a real thing if only in alpha builds. PVR was added …</label>
+			</control>
 		<control type="image">
-				<posx>152</posx>
-				<posy>1409</posy>
-				<width>311</width>
-				<height>189</height>
-				<texture border="5">web-viewer-white-border-bottom.png</texture>
-				<colordiffuse>FF404040</colordiffuse>
-				<aspectratio>stretch</aspectratio>
+				<posx>160</posx>
+				<posy>1540</posy>
+				<width>610</width>
+				<height>27</height>
+				<texture>web-viewer-white.png</texture>
+				<colordiffuse>FF363a3e</colordiffuse>
+				<aspectratio scalediffuse="false" align="center" aligny="center">stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>160</posx>
+				<posy>1540</posy>
+				<width>610</width>
+				<height>27</height>
+				<texture border="0,0,1,0">/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/2158e7aa.png</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio scalediffuse="false" align="center" aligny="center">stretch</aspectratio>
 			</control>
 		<control type="button" id="128">
-				<posx>167</posx>
-				<posy>1617</posy>
-				<width>280</width>
-				<height>28</height>
+				<posx>172</posx>
+				<posy>1546</posy>
+				<width>66</width>
+				<height>14</height>
 				<onleft>127</onleft>
 				<onright>129</onright>
 				<texturefocus border="0"></texturefocus>
@@ -997,30 +994,39 @@
 				<textcolor>FF00AAAA</textcolor>
 				<focusedcolor>FFFF0000</focusedcolor>
 				<font>WebViewer-font12</font>
-				<label>The Super Mario Letters - Player Ones[CR]Ep. 4</label>
-			</control>
-		<control type="label">
-				<posx>167</posx>
-				<posy>1646</posy>
-				<width>300</width>
-				<height>47</height>
-				<font>WebViewer-font12</font>
-				<textcolor>FF000000</textcolor>
-				<label>Never before seen correspondence [CR]reveals the Mushroom Kingdom's [CR]darkest secret.</label>
+				<label>Read more</label>
 			</control>
 		<control type="image">
-				<posx>152</posx>
-				<posy>1776</posy>
-				<width>310</width>
-				<height>40</height>
+				<posx>160</posx>
+				<posy>1028</posy>
+				<width>611</width>
+				<height>568</height>
+				<texture border="5">web-viewer-white-border-bottom.png</texture>
+				<colordiffuse>FFE5E5E5</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>160</posx>
+				<posy>1646</posy>
+				<width>121</width>
+				<height>25</height>
 				<texture>web-viewer-white.png</texture>
-				<colordiffuse>FFf4f4f4</colordiffuse>
+				<colordiffuse>FFE9E9E9</colordiffuse>
+				<aspectratio scalediffuse="false" align="center" aligny="center">stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>160</posx>
+				<posy>1646</posy>
+				<width>121</width>
+				<height>25</height>
+				<texture border="0,0,1,0">/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/d3acc543.png</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
 				<aspectratio scalediffuse="false" align="center" aligny="center">stretch</aspectratio>
 			</control>
 		<control type="button" id="129">
-				<posx>152</posx>
-				<posy>1790</posy>
-				<width>66</width>
+				<posx>169</posx>
+				<posy>1650</posy>
+				<width>7</width>
 				<height>14</height>
 				<onleft>128</onleft>
 				<onright>130</onright>
@@ -1034,79 +1040,96 @@
 				<textcolor>FF00AAAA</textcolor>
 				<focusedcolor>FFFF0000</focusedcolor>
 				<font>WebViewer-font12</font>
-				<label>Read More</label>
-			</control>
-		<control type="image">
-				<posx>152</posx>
-				<posy>1776</posy>
-				<width>115</width>
-				<height>40</height>
-				<texture border="5">web-viewer-white-border-right.png</texture>
-				<colordiffuse>FFDEDEDE</colordiffuse>
-				<aspectratio>stretch</aspectratio>
-			</control>
-		<control type="label">
-				<posx>266</posx>
-				<posy>1790</posy>
-				<width>94</width>
-				<height>19</height>
-				<font>WebViewer-font12</font>
-				<textcolor>FF000000</textcolor>
-				<label>Discussion</label>
-			</control>
-		<control type="image">
-				<posx>266</posx>
-				<posy>1776</posy>
-				<width>115</width>
-				<height>40</height>
-				<texture border="5">web-viewer-white-border-right.png</texture>
-				<colordiffuse>FFDEDEDE</colordiffuse>
-				<aspectratio>stretch</aspectratio>
-			</control>
-		<control type="image">
-				<posx>380</posx>
-				<posy>1787</posy>
-				<width>12</width>
-				<height>16</height>
-				<texture fallback="web-viewer-broken-image.png">http://playerones.geekandsundry.com/assets/img/teasers/teaser-twitter.png</texture>
-				<bordertexture border="2">web-viewer-link-border.png</bordertexture>
-				<bordersize>1</bordersize>
-
-				<colordiffuse>FFFFFFFF</colordiffuse>
-				<aspectratio>stretch</aspectratio>
+				<label>←</label>
 			</control>
 		<control type="button" id="130">
-				<posx>380</posx>
-				<posy>1787</posy>
-				<width>12</width>
-				<height>16</height>
+				<posx>169</posx>
+				<posy>1650</posy>
+				<width>103</width>
+				<height>14</height>
 				<onleft>129</onleft>
 				<onright>131</onright>
-				<texturefocus border="2">web-viewer-red-border.png</texturefocus>
+				<texturefocus border="0"></texturefocus>
 				<texturenofocus>-</texturenofocus>
 				<align>left</align>
 				<aligny>top</aligny>
-				
-				<textcolor>00000000</textcolor>
+				<textoffsetx>-1</textoffsetx>
+				<textoffsety>0</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
 				<focusedcolor>FFFF0000</focusedcolor>
 				<font>WebViewer-font12</font>
-				<label></label>
+				<label>   Older posts</label>
 			</control>
 		<control type="image">
-				<posx>380</posx>
-				<posy>1776</posy>
-				<width>40</width>
-				<height>40</height>
-				<texture border="5">web-viewer-white-border-right.png</texture>
-				<colordiffuse>FFDEDEDE</colordiffuse>
+				<posx>160</posx>
+				<posy>1646</posy>
+				<width>121</width>
+				<height>25</height>
+				<texture border="5">web-viewer-white-border.png</texture>
+				<colordiffuse>FFDCDCDC</colordiffuse>
 				<aspectratio>stretch</aspectratio>
 			</control>
 		<control type="image">
-				<posx>419</posx>
-				<posy>1786</posy>
-				<width>8</width>
-				<height>18</height>
-				<texture fallback="web-viewer-broken-image.png">http://playerones.geekandsundry.com/assets/img/teasers/teaser-facebook.png</texture>
+				<posx>814</posx>
+				<posy>149</posy>
+				<width>310</width>
+				<height>175</height>
+				<texture>web-viewer-white.png</texture>
+				<colordiffuse>FFffffff</colordiffuse>
+				<aspectratio scalediffuse="false" align="center" aligny="center">stretch</aspectratio>
+			</control>
+		<control type="label">
+				<posx>834</posx>
+				<posy>181</posy>
+				<width>198</width>
+				<height>21</height>
+				<font>Bold-WebViewer-font14</font>
+				<textcolor>FF232323</textcolor>
+				<label>Latest Stable Release</label>
+			</control>
+		<control type="label">
+				<posx>834</posx>
+				<posy>208</posy>
+				<width>131</width>
+				<height>19</height>
+				<font>Bold-WebViewer-font12</font>
+				<textcolor>FF666666</textcolor>
+				<label>Latest Stable :</label>
+			</control>
+		<control type="label">
+				<posx>834</posx>
+				<posy>208</posy>
+				<width>264</width>
+				<height>19</height>
+				<font>WebViewer-font12</font>
+				<textcolor>FF666666</textcolor>
+				<label>                XBMC 12.2 "Frodo"</label>
+			</control>
+		<control type="label">
+				<posx>834</posx>
+				<posy>222</posy>
+				<width>116</width>
+				<height>19</height>
+				<font>Bold-WebViewer-font12</font>
+				<textcolor>FF666666</textcolor>
+				<label>Release Date:</label>
+			</control>
+		<control type="label">
+				<posx>834</posx>
+				<posy>222</posy>
+				<width>212</width>
+				<height>19</height>
+				<font>WebViewer-font12</font>
+				<textcolor>FF666666</textcolor>
+				<label>              3rd May 2013</label>
+			</control>
+		<control type="image">
+				<posx>889</posx>
+				<posy>251</posy>
+				<width>160</width>
+				<height>53</height>
+				<texture fallback="web-viewer-broken-image.png">http://xbmc.org/wp-content/uploads/download-button.png</texture>
 				<bordertexture border="2">web-viewer-link-border.png</bordertexture>
 				<bordersize>1</bordersize>
 
@@ -1114,10 +1137,10 @@
 				<aspectratio>stretch</aspectratio>
 			</control>
 		<control type="button" id="131">
-				<posx>419</posx>
-				<posy>1786</posy>
-				<width>8</width>
-				<height>18</height>
+				<posx>889</posx>
+				<posy>251</posy>
+				<width>160</width>
+				<height>53</height>
 				<onleft>130</onleft>
 				<onright>132</onright>
 				<texturefocus border="2">web-viewer-red-border.png</texturefocus>
@@ -1131,101 +1154,152 @@
 				<label></label>
 			</control>
 		<control type="image">
-				<posx>482</posx>
-				<posy>1396</posy>
+				<posx>814</posx>
+				<posy>344</posy>
 				<width>310</width>
-				<height>388</height>
+				<height>165</height>
 				<texture>web-viewer-white.png</texture>
 				<colordiffuse>FFffffff</colordiffuse>
 				<aspectratio scalediffuse="false" align="center" aligny="center">stretch</aspectratio>
 			</control>
 		<control type="label">
-				<posx>482</posx>
-				<posy>1395</posy>
-				<width>123</width>
-				<height>19</height>
-				<font>WebViewer-font12</font>
-				<textcolor>FF000000</textcolor>
-				<label>April 19, 2013</label>
-			</control>
-		<control type="label">
-				<posx>482</posx>
-				<posy>1395</posy>
-				<width>212</width>
-				<height>19</height>
-				<font>WebViewer-font12</font>
-				<textcolor>FF000000</textcolor>
-				<label>               25 comments</label>
+				<posx>834</posx>
+				<posy>376</posy>
+				<width>88</width>
+				<height>21</height>
+				<font>Bold-WebViewer-font14</font>
+				<textcolor>FF232323</textcolor>
+				<label>Sponsors</label>
 			</control>
 		<control type="image">
-				<posx>482</posx>
-				<posy>1409</posy>
-				<width>310</width>
-				<height>189</height>
-				<texture fallback="web-viewer-broken-image.png">http://i1.ytimg.com/vi/8sEKEx7NCno/hqdefault.jpg</texture>
+				<posx>834</posx>
+				<posy>405</posy>
+				<width>120</width>
+				<height>36</height>
+				<texture fallback="web-viewer-broken-image.png">http://xbmc.org/wp-content/uploads/sponsor-pivos.png</texture>
 				
 				<colordiffuse>FFFFFFFF</colordiffuse>
 				<aspectratio>stretch</aspectratio>
 			</control>
-			<control type="image">
-				<posx>482</posx>
-				<posy>1409</posy>
-				<width>310</width>
-				<height>189</height>
-				<texture>web-viewer-play-overlay.png</texture>
-				<aspectratio>scale</aspectratio>
-				<visible>true</visible>
+		<control type="image">
+				<posx>954</posx>
+				<posy>405</posy>
+				<width>100</width>
+				<height>30</height>
+				<texture fallback="web-viewer-broken-image.png">http://xbmc.org/wp-content/uploads/sponsor-at-visions.png</texture>
+				
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio>stretch</aspectratio>
 			</control>
-			<control type="group">
-				<posx>482.0</posx>
-				<posy>1409.0</posy>
-				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>310</width>
-					<height>189</height>
-					<texture>web-viewer-white.png</texture>
-					<colordiffuse>FF000000</colordiffuse>
-				</control>
-				<control type="videowindow">
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>310</width>
-					<height>189</height>
-				</control>
-				<visible>Player.Playing + Player.HasVideo + StringCompare(Window.Property(current_video),132)</visible>
+		<control type="image">
+				<posx>919</posx>
+				<posy>419</posy>
+				<width>100</width>
+				<height>30</height>
+				<texture fallback="web-viewer-broken-image.png">http://xbmc.org/wp-content/uploads/sponsor-ouya.png</texture>
+				
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>919</posx>
+				<posy>433</posy>
+				<width>100</width>
+				<height>28</height>
+				<texture fallback="web-viewer-broken-image.png">http://xbmc.org/wp-content/uploads/sponsor-vidonme.png</texture>
+				
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>907</posx>
+				<posy>447</posy>
+				<width>124</width>
+				<height>34</height>
+				<texture fallback="web-viewer-broken-image.png">http://xbmc.org/wp-content/uploads/sponsor-wunderground.png</texture>
+				
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>919</posx>
+				<posy>461</posy>
+				<width>100</width>
+				<height>29</height>
+				<texture fallback="web-viewer-broken-image.png">http://xbmc.org/wp-content/uploads/sponsor-webhostingbuzz.png</texture>
+				
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		<control type="image">
+				<posx>814</posx>
+				<posy>530</posy>
+				<width>310</width>
+				<height>106</height>
+				<texture>web-viewer-white.png</texture>
+				<colordiffuse>FFffffff</colordiffuse>
+				<aspectratio scalediffuse="false" align="center" aligny="center">stretch</aspectratio>
+			</control>
+		<control type="label">
+				<posx>834</posx>
+				<posy>562</posy>
+				<width>71</width>
+				<height>21</height>
+				<font>Bold-WebViewer-font14</font>
+				<textcolor>FF232323</textcolor>
+				<label>Social</label>
+			</control>
+		<control type="label">
+				<posx>834</posx>
+				<posy>589</posy>
+				<width>94</width>
+				<height>19</height>
+				<font>WebViewer-font12</font>
+				<textcolor>FF666666</textcolor>
+				<label>Facebook: </label>
 			</control>
 		<control type="button" id="132">
-				<posx>482</posx>
-				<posy>1409</posy>
-				<width>310</width>
-				<height>189</height>
+				<posx>834</posx>
+				<posy>589</posy>
+				<width>118</width>
+				<height>14</height>
 				<onleft>131</onleft>
 				<onright>133</onright>
-				<texturefocus border="2">web-viewer-red-border.png</texturefocus>
+				<texturefocus border="0"></texturefocus>
 				<texturenofocus>-</texturenofocus>
 				<align>left</align>
 				<aligny>top</aligny>
-				
-				<textcolor>00000000</textcolor>
+				<textoffsetx>-1</textoffsetx>
+				<textoffsety>0</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
 				<focusedcolor>FFFF0000</focusedcolor>
 				<font>WebViewer-font12</font>
-				<label></label>
+				<label>          IFRAME</label>
 			</control>
-		<control type="image">
-				<posx>482</posx>
-				<posy>1409</posy>
-				<width>311</width>
-				<height>189</height>
-				<texture border="5">web-viewer-white-border-bottom.png</texture>
-				<colordiffuse>FF404040</colordiffuse>
-				<aspectratio>stretch</aspectratio>
+		<control type="label">
+				<posx>834</posx>
+				<posy>589</posy>
+				<width>212</width>
+				<height>19</height>
+				<font>WebViewer-font12</font>
+				<textcolor>FF666666</textcolor>
+				<label>                 Google+: </label>
+			</control>
+		<control type="label">
+				<posx>834</posx>
+				<posy>602</posy>
+				<width>86</width>
+				<height>19</height>
+				<font>WebViewer-font12</font>
+				<textcolor>FF666666</textcolor>
+				<label>Twitter: </label>
 			</control>
 		<control type="button" id="133">
-				<posx>497</posx>
-				<posy>1617</posy>
-				<width>280</width>
-				<height>28</height>
+				<posx>834</posx>
+				<posy>602</posy>
+				<width>155</width>
+				<height>14</height>
 				<onleft>132</onleft>
 				<onright>134</onright>
 				<texturefocus border="0"></texturefocus>
@@ -1238,30 +1312,30 @@
 				<textcolor>FF00AAAA</textcolor>
 				<focusedcolor>FFFF0000</focusedcolor>
 				<font>WebViewer-font12</font>
-				<label>A.I. : Artificial Idiot - Player Ones[CR]ep. 3</label>
-			</control>
-		<control type="label">
-				<posx>497</posx>
-				<posy>1646</posy>
-				<width>300</width>
-				<height>47</height>
-				<font>WebViewer-font12</font>
-				<textcolor>FF000000</textcolor>
-				<label>Stay Alert! Solid Snake has to get [CR]past the guards -- it might be easier[CR]than he thinks...</label>
+				<label>         Follow @xbmc</label>
 			</control>
 		<control type="image">
-				<posx>482</posx>
-				<posy>1776</posy>
+				<posx>814</posx>
+				<posy>656</posy>
 				<width>310</width>
-				<height>40</height>
+				<height>121</height>
 				<texture>web-viewer-white.png</texture>
-				<colordiffuse>FFf4f4f4</colordiffuse>
+				<colordiffuse>FFffffff</colordiffuse>
 				<aspectratio scalediffuse="false" align="center" aligny="center">stretch</aspectratio>
 			</control>
+		<control type="label">
+				<posx>834</posx>
+				<posy>688</posy>
+				<width>54</width>
+				<height>21</height>
+				<font>Bold-WebViewer-font14</font>
+				<textcolor>FF232323</textcolor>
+				<label>Tags</label>
+			</control>
 		<control type="button" id="134">
-				<posx>482</posx>
-				<posy>1790</posy>
-				<width>66</width>
+				<posx>834</posx>
+				<posy>715</posy>
+				<width>37</width>
 				<height>14</height>
 				<onleft>133</onleft>
 				<onright>135</onright>
@@ -1275,197 +1349,69 @@
 				<textcolor>FF00AAAA</textcolor>
 				<focusedcolor>FFFF0000</focusedcolor>
 				<font>WebViewer-font12</font>
-				<label>Read More</label>
-			</control>
-		<control type="image">
-				<posx>482</posx>
-				<posy>1776</posy>
-				<width>115</width>
-				<height>40</height>
-				<texture border="5">web-viewer-white-border-right.png</texture>
-				<colordiffuse>FFDEDEDE</colordiffuse>
-				<aspectratio>stretch</aspectratio>
-			</control>
-		<control type="label">
-				<posx>596</posx>
-				<posy>1790</posy>
-				<width>94</width>
-				<height>19</height>
-				<font>WebViewer-font12</font>
-				<textcolor>FF000000</textcolor>
-				<label>Discussion</label>
-			</control>
-		<control type="image">
-				<posx>596</posx>
-				<posy>1776</posy>
-				<width>115</width>
-				<height>40</height>
-				<texture border="5">web-viewer-white-border-right.png</texture>
-				<colordiffuse>FFDEDEDE</colordiffuse>
-				<aspectratio>stretch</aspectratio>
-			</control>
-		<control type="image">
-				<posx>710</posx>
-				<posy>1787</posy>
-				<width>12</width>
-				<height>16</height>
-				<texture fallback="web-viewer-broken-image.png">http://playerones.geekandsundry.com/assets/img/teasers/teaser-twitter.png</texture>
-				<bordertexture border="2">web-viewer-link-border.png</bordertexture>
-				<bordersize>1</bordersize>
-
-				<colordiffuse>FFFFFFFF</colordiffuse>
-				<aspectratio>stretch</aspectratio>
+				<label>Alpha</label>
 			</control>
 		<control type="button" id="135">
-				<posx>710</posx>
-				<posy>1787</posy>
-				<width>12</width>
-				<height>16</height>
+				<posx>834</posx>
+				<posy>715</posy>
+				<width>88</width>
+				<height>14</height>
 				<onleft>134</onleft>
 				<onright>136</onright>
-				<texturefocus border="2">web-viewer-red-border.png</texturefocus>
+				<texturefocus border="0"></texturefocus>
 				<texturenofocus>-</texturenofocus>
 				<align>left</align>
 				<aligny>top</aligny>
-				
-				<textcolor>00000000</textcolor>
+				<textoffsetx>-1</textoffsetx>
+				<textoffsety>0</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
 				<focusedcolor>FFFF0000</focusedcolor>
 				<font>WebViewer-font12</font>
-				<label></label>
-			</control>
-		<control type="image">
-				<posx>710</posx>
-				<posy>1776</posy>
-				<width>40</width>
-				<height>40</height>
-				<texture border="5">web-viewer-white-border-right.png</texture>
-				<colordiffuse>FFDEDEDE</colordiffuse>
-				<aspectratio>stretch</aspectratio>
-			</control>
-		<control type="image">
-				<posx>749</posx>
-				<posy>1786</posy>
-				<width>8</width>
-				<height>18</height>
-				<texture fallback="web-viewer-broken-image.png">http://playerones.geekandsundry.com/assets/img/teasers/teaser-facebook.png</texture>
-				<bordertexture border="2">web-viewer-link-border.png</bordertexture>
-				<bordersize>1</bordersize>
-
-				<colordiffuse>FFFFFFFF</colordiffuse>
-				<aspectratio>stretch</aspectratio>
+				<label>     android</label>
 			</control>
 		<control type="button" id="136">
-				<posx>749</posx>
-				<posy>1786</posy>
-				<width>8</width>
-				<height>18</height>
+				<posx>834</posx>
+				<posy>715</posy>
+				<width>125</width>
+				<height>14</height>
 				<onleft>135</onleft>
 				<onright>137</onright>
-				<texturefocus border="2">web-viewer-red-border.png</texturefocus>
+				<texturefocus border="0"></texturefocus>
 				<texturenofocus>-</texturenofocus>
 				<align>left</align>
 				<aligny>top</aligny>
-				
-				<textcolor>00000000</textcolor>
+				<textoffsetx>-1</textoffsetx>
+				<textoffsety>0</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
 				<focusedcolor>FFFF0000</focusedcolor>
 				<font>WebViewer-font12</font>
-				<label></label>
-			</control>
-		<control type="image">
-				<posx>152</posx>
-				<posy>1</posy>
-				<width>310</width>
-				<height>388</height>
-				<texture>web-viewer-white.png</texture>
-				<colordiffuse>FFffffff</colordiffuse>
-				<aspectratio scalediffuse="false" align="center" aligny="center">stretch</aspectratio>
-			</control>
-		<control type="label">
-				<posx>152</posx>
-				<posy>0</posy>
-				<width>123</width>
-				<height>19</height>
-				<font>WebViewer-font12</font>
-				<textcolor>FF000000</textcolor>
-				<label>April 12, 2013</label>
-			</control>
-		<control type="label">
-				<posx>152</posx>
-				<posy>0</posy>
-				<width>212</width>
-				<height>19</height>
-				<font>WebViewer-font12</font>
-				<textcolor>FF000000</textcolor>
-				<label>               13 comments</label>
-			</control>
-		<control type="image">
-				<posx>152</posx>
-				<posy>14</posy>
-				<width>310</width>
-				<height>189</height>
-				<texture fallback="web-viewer-broken-image.png">http://i1.ytimg.com/vi/3hs_Hxdacsw/hqdefault.jpg</texture>
-				
-				<colordiffuse>FFFFFFFF</colordiffuse>
-				<aspectratio>stretch</aspectratio>
-			</control>
-			<control type="image">
-				<posx>152</posx>
-				<posy>14</posy>
-				<width>310</width>
-				<height>189</height>
-				<texture>web-viewer-play-overlay.png</texture>
-				<aspectratio>scale</aspectratio>
-				<visible>true</visible>
-			</control>
-			<control type="group">
-				<posx>152.0</posx>
-				<posy>14.0</posy>
-				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>310</width>
-					<height>189</height>
-					<texture>web-viewer-white.png</texture>
-					<colordiffuse>FF000000</colordiffuse>
-				</control>
-				<control type="videowindow">
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>310</width>
-					<height>189</height>
-				</control>
-				<visible>Player.Playing + Player.HasVideo + StringCompare(Window.Property(current_video),137)</visible>
+				<label>            audio</label>
 			</control>
 		<control type="button" id="137">
-				<posx>152</posx>
-				<posy>14</posy>
-				<width>310</width>
-				<height>189</height>
+				<posx>834</posx>
+				<posy>715</posy>
+				<width>185</width>
+				<height>14</height>
 				<onleft>136</onleft>
 				<onright>138</onright>
-				<texturefocus border="2">web-viewer-red-border.png</texturefocus>
+				<texturefocus border="0"></texturefocus>
 				<texturenofocus>-</texturenofocus>
 				<align>left</align>
 				<aligny>top</aligny>
-				
-				<textcolor>00000000</textcolor>
+				<textoffsetx>-1</textoffsetx>
+				<textoffsety>0</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
 				<focusedcolor>FFFF0000</focusedcolor>
 				<font>WebViewer-font12</font>
-				<label></label>
-			</control>
-		<control type="image">
-				<posx>152</posx>
-				<posy>14</posy>
-				<width>311</width>
-				<height>189</height>
-				<texture border="5">web-viewer-white-border-bottom.png</texture>
-				<colordiffuse>FF404040</colordiffuse>
-				<aspectratio>stretch</aspectratio>
+				<label>                 Database</label>
 			</control>
 		<control type="button" id="138">
-				<posx>167</posx>
-				<posy>222</posy>
-				<width>118</width>
+				<posx>834</posx>
+				<posy>715</posy>
+				<width>266</width>
 				<height>14</height>
 				<onleft>137</onleft>
 				<onright>139</onright>
@@ -1479,30 +1425,12 @@
 				<textcolor>FF00AAAA</textcolor>
 				<focusedcolor>FFFF0000</focusedcolor>
 				<font>WebViewer-font12</font>
-				<label>You Complete Me?</label>
-			</control>
-		<control type="label">
-				<posx>167</posx>
-				<posy>237</posy>
-				<width>300</width>
-				<height>47</height>
-				<font>WebViewer-font12</font>
-				<textcolor>FF000000</textcolor>
-				<label>This week's Player Ones takes on the [CR]annoying side of gaming with Robin [CR]Thorsen: Finishing but not BEATING.</label>
-			</control>
-		<control type="image">
-				<posx>152</posx>
-				<posy>381</posy>
-				<width>310</width>
-				<height>40</height>
-				<texture>web-viewer-white.png</texture>
-				<colordiffuse>FFf4f4f4</colordiffuse>
-				<aspectratio scalediffuse="false" align="center" aligny="center">stretch</aspectratio>
+				<label>                         development</label>
 			</control>
 		<control type="button" id="139">
-				<posx>152</posx>
-				<posy>395</posy>
-				<width>66</width>
+				<posx>834</posx>
+				<posy>729</posy>
+				<width>29</width>
 				<height>14</height>
 				<onleft>138</onleft>
 				<onright>140</onright>
@@ -1516,198 +1444,70 @@
 				<textcolor>FF00AAAA</textcolor>
 				<focusedcolor>FFFF0000</focusedcolor>
 				<font>WebViewer-font12</font>
-				<label>Read More</label>
-			</control>
-		<control type="image">
-				<posx>152</posx>
-				<posy>381</posy>
-				<width>115</width>
-				<height>40</height>
-				<texture border="5">web-viewer-white-border-right.png</texture>
-				<colordiffuse>FFDEDEDE</colordiffuse>
-				<aspectratio>stretch</aspectratio>
-			</control>
-		<control type="label">
-				<posx>266</posx>
-				<posy>395</posy>
-				<width>94</width>
-				<height>19</height>
-				<font>WebViewer-font12</font>
-				<textcolor>FF000000</textcolor>
-				<label>Discussion</label>
-			</control>
-		<control type="image">
-				<posx>266</posx>
-				<posy>381</posy>
-				<width>115</width>
-				<height>40</height>
-				<texture border="5">web-viewer-white-border-right.png</texture>
-				<colordiffuse>FFDEDEDE</colordiffuse>
-				<aspectratio>stretch</aspectratio>
-			</control>
-		<control type="image">
-				<posx>380</posx>
-				<posy>392</posy>
-				<width>12</width>
-				<height>16</height>
-				<texture fallback="web-viewer-broken-image.png">http://playerones.geekandsundry.com/assets/img/teasers/teaser-twitter.png</texture>
-				<bordertexture border="2">web-viewer-link-border.png</bordertexture>
-				<bordersize>1</bordersize>
-
-				<colordiffuse>FFFFFFFF</colordiffuse>
-				<aspectratio>stretch</aspectratio>
+				<label>GSOC</label>
 			</control>
 		<control type="button" id="140">
-				<posx>380</posx>
-				<posy>392</posy>
-				<width>12</width>
-				<height>16</height>
+				<posx>834</posx>
+				<posy>729</posy>
+				<width>81</width>
+				<height>14</height>
 				<onleft>139</onleft>
 				<onright>141</onright>
-				<texturefocus border="2">web-viewer-red-border.png</texturefocus>
+				<texturefocus border="0"></texturefocus>
 				<texturenofocus>-</texturenofocus>
 				<align>left</align>
 				<aligny>top</aligny>
-				
-				<textcolor>00000000</textcolor>
+				<textoffsetx>-1</textoffsetx>
+				<textoffsety>0</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
 				<focusedcolor>FFFF0000</focusedcolor>
 				<font>WebViewer-font12</font>
-				<label></label>
-			</control>
-		<control type="image">
-				<posx>380</posx>
-				<posy>381</posy>
-				<width>40</width>
-				<height>40</height>
-				<texture border="5">web-viewer-white-border-right.png</texture>
-				<colordiffuse>FFDEDEDE</colordiffuse>
-				<aspectratio>stretch</aspectratio>
-			</control>
-		<control type="image">
-				<posx>419</posx>
-				<posy>391</posy>
-				<width>8</width>
-				<height>18</height>
-				<texture fallback="web-viewer-broken-image.png">http://playerones.geekandsundry.com/assets/img/teasers/teaser-facebook.png</texture>
-				<bordertexture border="2">web-viewer-link-border.png</bordertexture>
-				<bordersize>1</bordersize>
-
-				<colordiffuse>FFFFFFFF</colordiffuse>
-				<aspectratio>stretch</aspectratio>
+				<label>    History</label>
 			</control>
 		<control type="button" id="141">
-				<posx>419</posx>
-				<posy>391</posy>
-				<width>8</width>
-				<height>18</height>
+				<posx>834</posx>
+				<posy>729</posy>
+				<width>140</width>
+				<height>14</height>
 				<onleft>140</onleft>
 				<onright>142</onright>
-				<texturefocus border="2">web-viewer-red-border.png</texturefocus>
+				<texturefocus border="0"></texturefocus>
 				<texturenofocus>-</texturenofocus>
 				<align>left</align>
 				<aligny>top</aligny>
-				
-				<textcolor>00000000</textcolor>
+				<textoffsetx>-1</textoffsetx>
+				<textoffsety>0</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
 				<focusedcolor>FFFF0000</focusedcolor>
 				<font>WebViewer-font12</font>
-				<label></label>
-			</control>
-		<control type="image">
-				<posx>482</posx>
-				<posy>1396</posy>
-				<width>310</width>
-				<height>388</height>
-				<texture>web-viewer-white.png</texture>
-				<colordiffuse>FFffffff</colordiffuse>
-				<aspectratio scalediffuse="false" align="center" aligny="center">stretch</aspectratio>
-			</control>
-		<control type="label">
-				<posx>482</posx>
-				<posy>1395</posy>
-				<width>116</width>
-				<height>19</height>
-				<font>WebViewer-font12</font>
-				<textcolor>FF000000</textcolor>
-				<label>April 5, 2013</label>
-			</control>
-		<control type="label">
-				<posx>482</posx>
-				<posy>1395</posy>
-				<width>205</width>
-				<height>19</height>
-				<font>WebViewer-font12</font>
-				<textcolor>FF000000</textcolor>
-				<label>              12 comments</label>
-			</control>
-		<control type="image">
-				<posx>482</posx>
-				<posy>1409</posy>
-				<width>310</width>
-				<height>189</height>
-				<texture fallback="web-viewer-broken-image.png">http://i1.ytimg.com/vi/05O1JMQ74Ao/hqdefault.jpg</texture>
-				
-				<colordiffuse>FFFFFFFF</colordiffuse>
-				<aspectratio>stretch</aspectratio>
-			</control>
-			<control type="image">
-				<posx>482</posx>
-				<posy>1409</posy>
-				<width>310</width>
-				<height>189</height>
-				<texture>web-viewer-play-overlay.png</texture>
-				<aspectratio>scale</aspectratio>
-				<visible>true</visible>
-			</control>
-			<control type="group">
-				<posx>482.0</posx>
-				<posy>1409.0</posy>
-				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>310</width>
-					<height>189</height>
-					<texture>web-viewer-white.png</texture>
-					<colordiffuse>FF000000</colordiffuse>
-				</control>
-				<control type="videowindow">
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>310</width>
-					<height>189</height>
-				</control>
-				<visible>Player.Playing + Player.HasVideo + StringCompare(Window.Property(current_video),142)</visible>
+				<label>           openelec</label>
 			</control>
 		<control type="button" id="142">
-				<posx>482</posx>
-				<posy>1409</posy>
-				<width>310</width>
-				<height>189</height>
+				<posx>834</posx>
+				<posy>729</posy>
+				<width>170</width>
+				<height>14</height>
 				<onleft>141</onleft>
 				<onright>143</onright>
-				<texturefocus border="2">web-viewer-red-border.png</texturefocus>
+				<texturefocus border="0"></texturefocus>
 				<texturenofocus>-</texturenofocus>
 				<align>left</align>
 				<aligny>top</aligny>
-				
-				<textcolor>00000000</textcolor>
+				<textoffsetx>-1</textoffsetx>
+				<textoffsety>0</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
 				<focusedcolor>FFFF0000</focusedcolor>
 				<font>WebViewer-font12</font>
-				<label></label>
-			</control>
-		<control type="image">
-				<posx>482</posx>
-				<posy>1409</posy>
-				<width>311</width>
-				<height>189</height>
-				<texture border="5">web-viewer-white-border-bottom.png</texture>
-				<colordiffuse>FF404040</colordiffuse>
-				<aspectratio>stretch</aspectratio>
+				<label>                   ouya</label>
 			</control>
 		<control type="button" id="143">
-				<posx>497</posx>
-				<posy>1617</posy>
-				<width>280</width>
-				<height>28</height>
+				<posx>834</posx>
+				<posy>729</posy>
+				<width>251</width>
+				<height>14</height>
 				<onleft>142</onleft>
 				<onright>144</onright>
 				<texturefocus border="0"></texturefocus>
@@ -1720,30 +1520,12 @@
 				<textcolor>FF00AAAA</textcolor>
 				<focusedcolor>FFFF0000</focusedcolor>
 				<font>WebViewer-font12</font>
-				<label>Low Elf Esteem (or Don’t Know What [CR]You Got Until It’s Gauntlet)</label>
-			</control>
-		<control type="label">
-				<posx>497</posx>
-				<posy>1646</posy>
-				<width>300</width>
-				<height>61</height>
-				<font>WebViewer-font12</font>
-				<textcolor>FF000000</textcolor>
-				<label>A lone elf hopes to rejoin his old [CR]party, but quickly learns that [CR]Warrior, Wizard and Valkyrie have [CR]moved on...</label>
-			</control>
-		<control type="image">
-				<posx>482</posx>
-				<posy>1776</posy>
-				<width>310</width>
-				<height>40</height>
-				<texture>web-viewer-white.png</texture>
-				<colordiffuse>FFf4f4f4</colordiffuse>
-				<aspectratio scalediffuse="false" align="center" aligny="center">stretch</aspectratio>
+				<label>                       Performance</label>
 			</control>
 		<control type="button" id="144">
-				<posx>482</posx>
-				<posy>1790</posy>
-				<width>66</width>
+				<posx>834</posx>
+				<posy>743</posy>
+				<width>51</width>
 				<height>14</height>
 				<onleft>143</onleft>
 				<onright>145</onright>
@@ -1757,171 +1539,141 @@
 				<textcolor>FF00AAAA</textcolor>
 				<focusedcolor>FFFF0000</focusedcolor>
 				<font>WebViewer-font12</font>
-				<label>Read More</label>
-			</control>
-		<control type="image">
-				<posx>482</posx>
-				<posy>1776</posy>
-				<width>115</width>
-				<height>40</height>
-				<texture border="5">web-viewer-white-border-right.png</texture>
-				<colordiffuse>FFDEDEDE</colordiffuse>
-				<aspectratio>stretch</aspectratio>
-			</control>
-		<control type="label">
-				<posx>596</posx>
-				<posy>1790</posy>
-				<width>94</width>
-				<height>19</height>
-				<font>WebViewer-font12</font>
-				<textcolor>FF000000</textcolor>
-				<label>Discussion</label>
-			</control>
-		<control type="image">
-				<posx>596</posx>
-				<posy>1776</posy>
-				<width>115</width>
-				<height>40</height>
-				<texture border="5">web-viewer-white-border-right.png</texture>
-				<colordiffuse>FFDEDEDE</colordiffuse>
-				<aspectratio>stretch</aspectratio>
-			</control>
-		<control type="image">
-				<posx>710</posx>
-				<posy>1787</posy>
-				<width>12</width>
-				<height>16</height>
-				<texture fallback="web-viewer-broken-image.png">http://playerones.geekandsundry.com/assets/img/teasers/teaser-twitter.png</texture>
-				<bordertexture border="2">web-viewer-link-border.png</bordertexture>
-				<bordersize>1</bordersize>
-
-				<colordiffuse>FFFFFFFF</colordiffuse>
-				<aspectratio>stretch</aspectratio>
+				<label>Release</label>
 			</control>
 		<control type="button" id="145">
-				<posx>710</posx>
-				<posy>1787</posy>
-				<width>12</width>
-				<height>16</height>
+				<posx>834</posx>
+				<posy>743</posy>
+				<width>148</width>
+				<height>14</height>
 				<onleft>144</onleft>
 				<onright>146</onright>
-				<texturefocus border="2">web-viewer-red-border.png</texturefocus>
+				<texturefocus border="0"></texturefocus>
 				<texturenofocus>-</texturenofocus>
 				<align>left</align>
 				<aligny>top</aligny>
-				
-				<textcolor>00000000</textcolor>
-				<focusedcolor>FFFF0000</focusedcolor>
-				<font>WebViewer-font12</font>
-				<label></label>
-			</control>
-		<control type="image">
-				<posx>710</posx>
-				<posy>1776</posy>
-				<width>40</width>
-				<height>40</height>
-				<texture border="5">web-viewer-white-border-right.png</texture>
-				<colordiffuse>FFDEDEDE</colordiffuse>
-				<aspectratio>stretch</aspectratio>
-			</control>
-		<control type="image">
-				<posx>749</posx>
-				<posy>1786</posy>
-				<width>8</width>
-				<height>18</height>
-				<texture fallback="web-viewer-broken-image.png">http://playerones.geekandsundry.com/assets/img/teasers/teaser-facebook.png</texture>
-				<bordertexture border="2">web-viewer-link-border.png</bordertexture>
-				<bordersize>1</bordersize>
+				<textoffsetx>-1</textoffsetx>
+				<textoffsety>0</textoffsety>
 
-				<colordiffuse>FFFFFFFF</colordiffuse>
-				<aspectratio>stretch</aspectratio>
-			</control>
-		<control type="button" id="146">
-				<posx>749</posx>
-				<posy>1786</posy>
-				<width>8</width>
-				<height>18</height>
-				<onleft>145</onleft>
-				<onright>147</onright>
-				<texturefocus border="2">web-viewer-red-border.png</texturefocus>
-				<texturenofocus>-</texturenofocus>
-				<align>left</align>
-				<aligny>top</aligny>
-				
-				<textcolor>00000000</textcolor>
+				<textcolor>FF00AAAA</textcolor>
 				<focusedcolor>FFFF0000</focusedcolor>
 				<font>WebViewer-font12</font>
-				<label></label>
+				<label>       release cycle</label>
 			</control>
 		<control type="image">
-				<posx>152</posx>
-				<posy>1</posy>
-				<width>310</width>
-				<height>388</height>
+				<posx>10</posx>
+				<posy>1680</posy>
+				<width>1260</width>
+				<height>90</height>
 				<texture>web-viewer-white.png</texture>
-				<colordiffuse>FFffffff</colordiffuse>
+				<colordiffuse>FF272c32</colordiffuse>
 				<aspectratio scalediffuse="false" align="center" aligny="center">stretch</aspectratio>
 			</control>
-		<control type="label">
-				<posx>152</posx>
-				<posy>0</posy>
-				<width>116</width>
-				<height>19</height>
-				<font>WebViewer-font12</font>
-				<textcolor>FF000000</textcolor>
-				<label>April 2, 2013</label>
+		<control type="image">
+				<posx>10</posx>
+				<posy>1680</posy>
+				<width>1260</width>
+				<height>90</height>
+				<texture>http://xbmc.org/wp-content/themes/paradise/Paradise/images/colors/dark/bg_foot.jpg</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio scalediffuse="false" align="center" aligny="top">center</aspectratio>
 			</control>
 		<control type="label">
-				<posx>152</posx>
-				<posy>0</posy>
-				<width>197</width>
-				<height>19</height>
+				<posx>170</posx>
+				<posy>1722</posy>
+				<width>105</width>
+				<height>21</height>
+				<font>Bold-WebViewer-font14</font>
+				<textcolor>FFFFFFFF</textcolor>
+				<label>About XBMC</label>
+			</control>
+		<control type="label">
+				<posx>170</posx>
+				<posy>1750</posy>
+				<width>290</width>
+				<height>187</height>
 				<font>WebViewer-font12</font>
-				<textcolor>FF000000</textcolor>
-				<label>              0 comments</label>
+				<textcolor>FFFFFFFF</textcolor>
+				<label>XBMC is a free and open source media[CR]player application developed by the[CR]XBMC Foundation, a non-profit [CR]technology consortium. XBMC is [CR]available for multiple operating-[CR]systems and hardware platforms, [CR]featuring a 10-foot user interface [CR]for use with televisions and remote [CR]controls. It allows users to play [CR]and view most videos, music, [CR]podcasts, and other digital media [CR]files from local and network storage[CR]media and the internet.</label>
+			</control>
+		<control type="label">
+				<posx>440</posx>
+				<posy>1722</posy>
+				<width>139</width>
+				<height>21</height>
+				<font>Bold-WebViewer-font14</font>
+				<textcolor>FFFFFFFF</textcolor>
+				<label>Internal Links</label>
 			</control>
 		<control type="image">
-				<posx>152</posx>
-				<posy>14</posy>
-				<width>310</width>
-				<height>189</height>
-				<texture fallback="web-viewer-broken-image.png">http://www.geekandsundry.com/assets/images/episodes/PLayerOnes.jpg</texture>
-				<bordertexture border="2">web-viewer-link-border.png</bordertexture>
-				<bordersize>1</bordersize>
-
+				<posx>445</posx>
+				<posy>1751</posy>
+				<width>120</width>
+				<height>13</height>
+				<texture>/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/eb4d39e0.png</texture>
 				<colordiffuse>FFFFFFFF</colordiffuse>
-				<aspectratio>stretch</aspectratio>
+				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
 			</control>
-		<control type="button" id="147">
-				<posx>152</posx>
-				<posy>14</posy>
-				<width>310</width>
-				<height>189</height>
-				<onleft>146</onleft>
-				<onright>148</onright>
-				<texturefocus border="2">web-viewer-red-border.png</texturefocus>
+		<control type="button" id="146">
+				<posx>448</posx>
+				<posy>1750</posy>
+				<width>74</width>
+				<height>14</height>
+				<onleft>145</onleft>
+				<onright>147</onright>
+				<texturefocus border="0"></texturefocus>
 				<texturenofocus>-</texturenofocus>
 				<align>left</align>
 				<aligny>top</aligny>
-				
-				<textcolor>00000000</textcolor>
+				<textoffsetx>-1</textoffsetx>
+				<textoffsety>0</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
 				<focusedcolor>FFFF0000</focusedcolor>
 				<font>WebViewer-font12</font>
-				<label></label>
+				<label>Contribute</label>
 			</control>
 		<control type="image">
-				<posx>152</posx>
-				<posy>14</posy>
-				<width>311</width>
-				<height>189</height>
-				<texture border="5">web-viewer-white-border-bottom.png</texture>
-				<colordiffuse>FF404040</colordiffuse>
-				<aspectratio>stretch</aspectratio>
+				<posx>445</posx>
+				<posy>1774</posy>
+				<width>120</width>
+				<height>13</height>
+				<texture>/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/eb4d39e0.png</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
+			</control>
+		<control type="button" id="147">
+				<posx>448</posx>
+				<posy>1773</posy>
+				<width>66</width>
+				<height>14</height>
+				<onleft>146</onleft>
+				<onright>148</onright>
+				<texturefocus border="0"></texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				<textoffsetx>-1</textoffsetx>
+				<textoffsety>0</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<font>WebViewer-font12</font>
+				<label>Corporate</label>
+			</control>
+		<control type="image">
+				<posx>445</posx>
+				<posy>1797</posy>
+				<width>120</width>
+				<height>13</height>
+				<texture>/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/eb4d39e0.png</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
 			</control>
 		<control type="button" id="148">
-				<posx>167</posx>
-				<posy>222</posy>
-				<width>266</width>
+				<posx>448</posx>
+				<posy>1796</posy>
+				<width>96</width>
 				<height>14</height>
 				<onleft>147</onleft>
 				<onright>149</onright>
@@ -1935,30 +1687,21 @@
 				<textcolor>FF00AAAA</textcolor>
 				<focusedcolor>FFFF0000</focusedcolor>
 				<font>WebViewer-font12</font>
-				<label>Games and Sketch Comedy Merge On G&amp;S</label>
-			</control>
-		<control type="label">
-				<posx>167</posx>
-				<posy>237</posy>
-				<width>300</width>
-				<height>61</height>
-				<font>WebViewer-font12</font>
-				<textcolor>FF000000</textcolor>
-				<label>Coming this Friday ... Video Gaming [CR]gets a great big dose of irreverence [CR]courtesy of the comedic stylings of [CR]Player Ones.</label>
+				<label>GPL Violators</label>
 			</control>
 		<control type="image">
-				<posx>152</posx>
-				<posy>381</posy>
-				<width>310</width>
-				<height>40</height>
-				<texture>web-viewer-white.png</texture>
-				<colordiffuse>FFf4f4f4</colordiffuse>
-				<aspectratio scalediffuse="false" align="center" aligny="center">stretch</aspectratio>
+				<posx>445</posx>
+				<posy>1820</posy>
+				<width>120</width>
+				<height>13</height>
+				<texture>/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/eb4d39e0.png</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
 			</control>
 		<control type="button" id="149">
-				<posx>152</posx>
-				<posy>395</posy>
-				<width>66</width>
+				<posx>448</posx>
+				<posy>1819</posy>
+				<width>111</width>
 				<height>14</height>
 				<onleft>148</onleft>
 				<onright>150</onright>
@@ -1972,169 +1715,142 @@
 				<textcolor>FF00AAAA</textcolor>
 				<focusedcolor>FFFF0000</focusedcolor>
 				<font>WebViewer-font12</font>
-				<label>Read More</label>
+				<label>XBMC Foundation</label>
 			</control>
 		<control type="image">
-				<posx>152</posx>
-				<posy>381</posy>
-				<width>115</width>
-				<height>40</height>
-				<texture border="5">web-viewer-white-border-right.png</texture>
-				<colordiffuse>FFDEDEDE</colordiffuse>
-				<aspectratio>stretch</aspectratio>
-			</control>
-		<control type="label">
-				<posx>266</posx>
-				<posy>395</posy>
-				<width>94</width>
-				<height>19</height>
-				<font>WebViewer-font12</font>
-				<textcolor>FF000000</textcolor>
-				<label>Discussion</label>
-			</control>
-		<control type="image">
-				<posx>266</posx>
-				<posy>381</posy>
-				<width>115</width>
-				<height>40</height>
-				<texture border="5">web-viewer-white-border-right.png</texture>
-				<colordiffuse>FFDEDEDE</colordiffuse>
-				<aspectratio>stretch</aspectratio>
-			</control>
-		<control type="image">
-				<posx>380</posx>
-				<posy>392</posy>
-				<width>12</width>
-				<height>16</height>
-				<texture fallback="web-viewer-broken-image.png">http://playerones.geekandsundry.com/assets/img/teasers/teaser-twitter.png</texture>
-				<bordertexture border="2">web-viewer-link-border.png</bordertexture>
-				<bordersize>1</bordersize>
-
+				<posx>445</posx>
+				<posy>1843</posy>
+				<width>120</width>
+				<height>13</height>
+				<texture>/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/eb4d39e0.png</texture>
 				<colordiffuse>FFFFFFFF</colordiffuse>
-				<aspectratio>stretch</aspectratio>
+				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
 			</control>
 		<control type="button" id="150">
-				<posx>380</posx>
-				<posy>392</posy>
-				<width>12</width>
-				<height>16</height>
+				<posx>448</posx>
+				<posy>1842</posy>
+				<width>96</width>
+				<height>14</height>
 				<onleft>149</onleft>
 				<onright>151</onright>
-				<texturefocus border="2">web-viewer-red-border.png</texturefocus>
+				<texturefocus border="0"></texturefocus>
 				<texturenofocus>-</texturenofocus>
 				<align>left</align>
 				<aligny>top</aligny>
-				
-				<textcolor>00000000</textcolor>
+				<textoffsetx>-1</textoffsetx>
+				<textoffsety>0</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
 				<focusedcolor>FFFF0000</focusedcolor>
 				<font>WebViewer-font12</font>
-				<label></label>
+				<label>XBMC Software</label>
 			</control>
 		<control type="image">
-				<posx>380</posx>
-				<posy>381</posy>
-				<width>40</width>
-				<height>40</height>
-				<texture border="5">web-viewer-white-border-right.png</texture>
-				<colordiffuse>FFDEDEDE</colordiffuse>
-				<aspectratio>stretch</aspectratio>
-			</control>
-		<control type="image">
-				<posx>419</posx>
-				<posy>391</posy>
-				<width>8</width>
-				<height>18</height>
-				<texture fallback="web-viewer-broken-image.png">http://playerones.geekandsundry.com/assets/img/teasers/teaser-facebook.png</texture>
-				<bordertexture border="2">web-viewer-link-border.png</bordertexture>
-				<bordersize>1</bordersize>
-
+				<posx>445</posx>
+				<posy>1866</posy>
+				<width>120</width>
+				<height>13</height>
+				<texture>/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/eb4d39e0.png</texture>
 				<colordiffuse>FFFFFFFF</colordiffuse>
-				<aspectratio>stretch</aspectratio>
+				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
 			</control>
 		<control type="button" id="151">
-				<posx>419</posx>
-				<posy>391</posy>
-				<width>8</width>
-				<height>18</height>
+				<posx>448</posx>
+				<posy>1865</posy>
+				<width>66</width>
+				<height>14</height>
 				<onleft>150</onleft>
 				<onright>152</onright>
-				<texturefocus border="2">web-viewer-red-border.png</texturefocus>
+				<texturefocus border="0"></texturefocus>
 				<texturenofocus>-</texturenofocus>
 				<align>left</align>
 				<aligny>top</aligny>
-				
-				<textcolor>00000000</textcolor>
+				<textoffsetx>-1</textoffsetx>
+				<textoffsety>0</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
 				<focusedcolor>FFFF0000</focusedcolor>
 				<font>WebViewer-font12</font>
-				<label></label>
+				<label>XBMC Team</label>
 			</control>
 		<control type="label">
-				<posx>810</posx>
-				<posy>1394</posy>
-				<width>64</width>
-				<height>19</height>
-				<font>WebViewer-font12</font>
-				<textcolor>FF000000</textcolor>
-				<label>Search</label>
+				<posx>559</posx>
+				<posy>1722</posy>
+				<width>96</width>
+				<height>21</height>
+				<font>Bold-WebViewer-font14</font>
+				<textcolor>FFFFFFFF</textcolor>
+				<label>RSS Feeds</label>
 			</control>
 		<control type="image">
-				<posx>810</posx>
-				<posy>1409</posy>
-				<width>260</width>
-				<height>40</height>
-				<texture fallback="web-viewer-broken-image.png" border="5">web-viewer-form-text.png</texture>
-				
+				<posx>564</posx>
+				<posy>1751</posy>
+				<width>120</width>
+				<height>13</height>
+				<texture>/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/eb4d39e0.png</texture>
 				<colordiffuse>FFFFFFFF</colordiffuse>
-				<aspectratio>stretch</aspectratio>
+				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
 			</control>
 		<control type="button" id="152">
-				<posx>810</posx>
-				<posy>1409</posy>
-				<width>260</width>
-				<height>40</height>
+				<posx>567</posx>
+				<posy>1750</posy>
+				<width>111</width>
+				<height>14</height>
 				<onleft>151</onleft>
 				<onright>153</onright>
-				<texturefocus border="2">web-viewer-red-border.png</texturefocus>
+				<texturefocus border="0"></texturefocus>
 				<texturenofocus>-</texturenofocus>
 				<align>left</align>
-				<aligny>center</aligny>
-				
-				<textcolor>black</textcolor>
+				<aligny>top</aligny>
+				<textoffsetx>-1</textoffsetx>
+				<textoffsety>0</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
 				<focusedcolor>FFFF0000</focusedcolor>
 				<font>WebViewer-font12</font>
-				<label></label>
+				<label>Latest Comments</label>
 			</control>
 		<control type="image">
-				<posx>1070</posx>
-				<posy>1409</posy>
-				<width>20</width>
-				<height>40</height>
-				<texture fallback="web-viewer-broken-image.png" border="5">web-viewer-form-submit.png</texture>
-				
+				<posx>564</posx>
+				<posy>1774</posy>
+				<width>120</width>
+				<height>13</height>
+				<texture>/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/eb4d39e0.png</texture>
 				<colordiffuse>FFFFFFFF</colordiffuse>
-				<aspectratio>stretch</aspectratio>
+				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
 			</control>
 		<control type="button" id="153">
-				<posx>1070</posx>
-				<posy>1409</posy>
-				<width>20</width>
-				<height>40</height>
+				<posx>567</posx>
+				<posy>1773</posy>
+				<width>103</width>
+				<height>14</height>
 				<onleft>152</onleft>
 				<onright>154</onright>
-				<texturefocus border="2">web-viewer-red-border.png</texturefocus>
+				<texturefocus border="0"></texturefocus>
 				<texturenofocus>-</texturenofocus>
-				<align>center</align>
-				<aligny>center</aligny>
-				
-				<textcolor>black</textcolor>
+				<align>left</align>
+				<aligny>top</aligny>
+				<textoffsetx>-1</textoffsetx>
+				<textoffsety>0</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
 				<focusedcolor>FFFF0000</focusedcolor>
 				<font>WebViewer-font12</font>
-				<label></label>
+				<label>Latest Commits</label>
+			</control>
+		<control type="image">
+				<posx>564</posx>
+				<posy>1797</posy>
+				<width>120</width>
+				<height>13</height>
+				<texture>/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/eb4d39e0.png</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
 			</control>
 		<control type="button" id="154">
-				<posx>809</posx>
-				<posy>1474</posy>
-				<width>88</width>
+				<posx>567</posx>
+				<posy>1796</posy>
+				<width>81</width>
 				<height>14</height>
 				<onleft>153</onleft>
 				<onright>155</onright>
@@ -2148,21 +1864,30 @@
 				<textcolor>FF00AAAA</textcolor>
 				<focusedcolor>FFFF0000</focusedcolor>
 				<font>WebViewer-font12</font>
-				<label>  Comments  </label>
+				<label>Latest News</label>
+			</control>
+		<control type="label">
+				<posx>678</posx>
+				<posy>1722</posy>
+				<width>88</width>
+				<height>21</height>
+				<font>Bold-WebViewer-font14</font>
+				<textcolor>FFFFFFFF</textcolor>
+				<label>Sponsors</label>
 			</control>
 		<control type="image">
-				<posx>809</posx>
-				<posy>1475</posy>
-				<width>100</width>
+				<posx>683</posx>
+				<posy>1751</posy>
+				<width>120</width>
 				<height>13</height>
-				<texture border="5">web-viewer-white-border-top.png</texture>
-				<colordiffuse>FFDEDEDE</colordiffuse>
-				<aspectratio>stretch</aspectratio>
+				<texture>/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/eb4d39e0.png</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
 			</control>
 		<control type="button" id="155">
-				<posx>809</posx>
-				<posy>1487</posy>
-				<width>81</width>
+				<posx>686</posx>
+				<posy>1750</posy>
+				<width>88</width>
 				<height>14</height>
 				<onleft>154</onleft>
 				<onright>156</onright>
@@ -2176,21 +1901,21 @@
 				<textcolor>FF00AAAA</textcolor>
 				<focusedcolor>FFFF0000</focusedcolor>
 				<font>WebViewer-font12</font>
-				<label>  Threads  </label>
+				<label>…Sponsorship</label>
 			</control>
 		<control type="image">
-				<posx>809</posx>
-				<posy>1488</posy>
-				<width>100</width>
+				<posx>683</posx>
+				<posy>1774</posy>
+				<width>120</width>
 				<height>13</height>
-				<texture border="5">web-viewer-white-border-top.png</texture>
-				<colordiffuse>FFDEDEDE</colordiffuse>
-				<aspectratio>stretch</aspectratio>
+				<texture>/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/eb4d39e0.png</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
 			</control>
 		<control type="button" id="156">
-				<posx>809</posx>
-				<posy>1500</posy>
-				<width>88</width>
+				<posx>686</posx>
+				<posy>1773</posy>
+				<width>74</width>
 				<height>14</height>
 				<onleft>155</onleft>
 				<onright>157</onright>
@@ -2204,431 +1929,21 @@
 				<textcolor>FF00AAAA</textcolor>
 				<focusedcolor>FFFF0000</focusedcolor>
 				<font>WebViewer-font12</font>
-				<label>  Hashtags  </label>
+				<label>at-visions</label>
 			</control>
 		<control type="image">
-				<posx>809</posx>
-				<posy>1501</posy>
-				<width>101</width>
+				<posx>683</posx>
+				<posy>1797</posy>
+				<width>120</width>
 				<height>13</height>
-				<texture border="5">web-viewer-white-border-top.png</texture>
-				<colordiffuse>FFDEDEDE</colordiffuse>
-				<aspectratio>stretch</aspectratio>
-			</control>
-		<control type="image">
-				<posx>810</posx>
-				<posy>1514</posy>
-				<width>300</width>
-				<height>364</height>
-				<texture>web-viewer-white.png</texture>
+				<texture>/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/eb4d39e0.png</texture>
 				<colordiffuse>FFFFFFFF</colordiffuse>
-				<aspectratio scalediffuse="false" align="center" aligny="center">stretch</aspectratio>
-			</control>
-		<control type="image">
-				<posx>810</posx>
-				<posy>1524</posy>
-				<width>48</width>
-				<height>48</height>
-				<texture fallback="web-viewer-broken-image.png">http://playerones.geekandsundry.com/forums/uploads/userpics/712/nZZP2B2GAZVPZ.jpg</texture>
-				
-				<colordiffuse>FFFFFFFF</colordiffuse>
-				<aspectratio>stretch</aspectratio>
-			</control>
-		<control type="label">
-				<posx>860</posx>
-				<posy>1524</posy>
-				<width>86</width>
-				<height>19</height>
-				<font>Bold-WebViewer-font12</font>
-				<textcolor>FF000000</textcolor>
-				<label>GadgetDon</label>
-			</control>
-		<control type="label">
-				<posx>860</posx>
-				<posy>1538</posy>
-				<width>270</width>
-				<height>33</height>
-				<font>WebViewer-font12</font>
-				<textcolor>FF000000</textcolor>
-				<label>I just bought Betrayal at House [CR]  on the Hill. ... </label>
-			</control>
-		<control type="image">
-				<posx>810</posx>
-				<posy>1514</posy>
-				<width>301</width>
-				<height>68</height>
-				<texture border="5">web-viewer-white-border-bottom.png</texture>
-				<colordiffuse>FFDEDEDE</colordiffuse>
-				<aspectratio>stretch</aspectratio>
-			</control>
-		<control type="image">
-				<posx>810</posx>
-				<posy>1592</posy>
-				<width>48</width>
-				<height>48</height>
-				<texture fallback="web-viewer-broken-image.png">http://playerones.geekandsundry.com/forums/uploads/userpics/659/nHRU54RBF1C8H.png</texture>
-				
-				<colordiffuse>FFFFFFFF</colordiffuse>
-				<aspectratio>stretch</aspectratio>
-			</control>
-		<control type="label">
-				<posx>860</posx>
-				<posy>1592</posy>
-				<width>86</width>
-				<height>19</height>
-				<font>Bold-WebViewer-font12</font>
-				<textcolor>FF000000</textcolor>
-				<label>Don_Diego</label>
-			</control>
-		<control type="label">
-				<posx>860</posx>
-				<posy>1606</posy>
-				<width>270</width>
-				<height>47</height>
-				<font>WebViewer-font12</font>
-				<textcolor>FF000000</textcolor>
-				<label>The linkhttp://www.youtube.com/wa[CR]  tch?v=p_2tIR564EY&amp;feature=youtu[CR]  . ... </label>
-			</control>
-		<control type="image">
-				<posx>810</posx>
-				<posy>1582</posy>
-				<width>301</width>
-				<height>76</height>
-				<texture border="5">web-viewer-white-border-bottom.png</texture>
-				<colordiffuse>FFDEDEDE</colordiffuse>
-				<aspectratio>stretch</aspectratio>
-			</control>
-		<control type="image">
-				<posx>810</posx>
-				<posy>1668</posy>
-				<width>48</width>
-				<height>48</height>
-				<texture fallback="web-viewer-broken-image.png">http://playerones.geekandsundry.com/forums/uploads/userpics/427/nMMFC8UQ7A680.jpg</texture>
-				
-				<colordiffuse>FFFFFFFF</colordiffuse>
-				<aspectratio>stretch</aspectratio>
-			</control>
-		<control type="label">
-				<posx>860</posx>
-				<posy>1668</posy>
-				<width>71</width>
-				<height>19</height>
-				<font>Bold-WebViewer-font12</font>
-				<textcolor>FF000000</textcolor>
-				<label>Restryn</label>
-			</control>
-		<control type="label">
-				<posx>860</posx>
-				<posy>1682</posy>
-				<width>94</width>
-				<height>19</height>
-				<font>WebViewer-font12</font>
-				<textcolor>FF000000</textcolor>
-				<label>this= ... </label>
-			</control>
-		<control type="image">
-				<posx>810</posx>
-				<posy>1658</posy>
-				<width>301</width>
-				<height>68</height>
-				<texture border="5">web-viewer-white-border-bottom.png</texture>
-				<colordiffuse>FFDEDEDE</colordiffuse>
-				<aspectratio>stretch</aspectratio>
-			</control>
-		<control type="image">
-				<posx>810</posx>
-				<posy>1736</posy>
-				<width>48</width>
-				<height>48</height>
-				<texture fallback="web-viewer-broken-image.png">/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/826eb2dd.png</texture>
-				
-				<colordiffuse>FFFFFFFF</colordiffuse>
-				<aspectratio>stretch</aspectratio>
-			</control>
-		<control type="label">
-				<posx>860</posx>
-				<posy>1736</posy>
-				<width>64</width>
-				<height>19</height>
-				<font>Bold-WebViewer-font12</font>
-				<textcolor>FF000000</textcolor>
-				<label>Wilian</label>
-			</control>
-		<control type="label">
-				<posx>860</posx>
-				<posy>1750</posy>
-				<width>270</width>
-				<height>47</height>
-				<font>WebViewer-font12</font>
-				<textcolor>FF000000</textcolor>
-				<label>Yours is a very moving story, [CR]  @jgr. I think it's clever to, [CR]  on the ... </label>
-			</control>
-		<control type="image">
-				<posx>810</posx>
-				<posy>1726</posy>
-				<width>301</width>
-				<height>76</height>
-				<texture border="5">web-viewer-white-border-bottom.png</texture>
-				<colordiffuse>FFDEDEDE</colordiffuse>
-				<aspectratio>stretch</aspectratio>
-			</control>
-		<control type="image">
-				<posx>810</posx>
-				<posy>1812</posy>
-				<width>48</width>
-				<height>48</height>
-				<texture fallback="web-viewer-broken-image.png">/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/826eb2dd.png</texture>
-				
-				<colordiffuse>FFFFFFFF</colordiffuse>
-				<aspectratio>stretch</aspectratio>
-			</control>
-		<control type="label">
-				<posx>860</posx>
-				<posy>1812</posy>
-				<width>64</width>
-				<height>19</height>
-				<font>Bold-WebViewer-font12</font>
-				<textcolor>FF000000</textcolor>
-				<label>Wilian</label>
-			</control>
-		<control type="label">
-				<posx>860</posx>
-				<posy>1826</posy>
-				<width>270</width>
-				<height>47</height>
-				<font>WebViewer-font12</font>
-				<textcolor>FF000000</textcolor>
-				<label>Gripping story, @TOModera. I like[CR]  your writing style, the [CR]  stinging ... </label>
-			</control>
-		<control type="image">
-				<posx>810</posx>
-				<posy>1802</posy>
-				<width>301</width>
-				<height>76</height>
-				<texture border="5">web-viewer-white-border-bottom.png</texture>
-				<colordiffuse>FFDEDEDE</colordiffuse>
-				<aspectratio>stretch</aspectratio>
-			</control>
-		<control type="image">
-				<posx>810</posx>
-				<posy>1878</posy>
-				<width>300</width>
-				<height>254</height>
-				<texture>web-viewer-white.png</texture>
-				<colordiffuse>FFFFFFFF</colordiffuse>
-				<aspectratio scalediffuse="false" align="center" aligny="center">stretch</aspectratio>
-			</control>
-		<control type="label">
-				<posx>810</posx>
-				<posy>1888</posy>
-				<width>153</width>
-				<height>19</height>
-				<font>Bold-WebViewer-font12</font>
-				<textcolor>FF000000</textcolor>
-				<label>Wordplay #11 Death</label>
-			</control>
-		<control type="label">
-				<posx>810</posx>
-				<posy>1902</posy>
-				<width>123</width>
-				<height>19</height>
-				<font>WebViewer-font12</font>
-				<textcolor>FF000000</textcolor>
-				<label>Nika Harper - </label>
-			</control>
-		<control type="label">
-				<posx>810</posx>
-				<posy>1902</posy>
-				<width>234</width>
-				<height>19</height>
-				<font>Bold-WebViewer-font12</font>
-				<textcolor>FF000000</textcolor>
-				<label>              Oct 19th 5:20PM</label>
-			</control>
-		<control type="image">
-				<posx>810</posx>
-				<posy>1878</posy>
-				<width>301</width>
-				<height>48</height>
-				<texture border="5">web-viewer-white-border-bottom.png</texture>
-				<colordiffuse>FFDEDEDE</colordiffuse>
-				<aspectratio>stretch</aspectratio>
-			</control>
-		<control type="label">
-				<posx>810</posx>
-				<posy>1936</posy>
-				<width>320</width>
-				<height>33</height>
-				<font>Bold-WebViewer-font12</font>
-				<textcolor>FF000000</textcolor>
-				<label>Series that should play well here at G &amp;[CR]S</label>
-			</control>
-		<control type="label">
-				<posx>810</posx>
-				<posy>1964</posy>
-				<width>182</width>
-				<height>19</height>
-				<font>WebViewer-font12</font>
-				<textcolor>FF000000</textcolor>
-				<label>Community Creations - </label>
-			</control>
-		<control type="label">
-				<posx>810</posx>
-				<posy>1964</posy>
-				<width>293</width>
-				<height>19</height>
-				<font>Bold-WebViewer-font12</font>
-				<textcolor>FF000000</textcolor>
-				<label>                      Oct 19th 4:30PM</label>
-			</control>
-		<control type="image">
-				<posx>810</posx>
-				<posy>1926</posy>
-				<width>301</width>
-				<height>62</height>
-				<texture border="5">web-viewer-white-border-bottom.png</texture>
-				<colordiffuse>FFDEDEDE</colordiffuse>
-				<aspectratio>stretch</aspectratio>
-			</control>
-		<control type="label">
-				<posx>810</posx>
-				<posy>1998</posy>
-				<width>264</width>
-				<height>19</height>
-				<font>Bold-WebViewer-font12</font>
-				<textcolor>FF000000</textcolor>
-				<label>Vlogger Verdict: Scott Tumilty!!!</label>
-			</control>
-		<control type="label">
-				<posx>810</posx>
-				<posy>2012</posy>
-				<width>182</width>
-				<height>19</height>
-				<font>WebViewer-font12</font>
-				<textcolor>FF000000</textcolor>
-				<label>Community Creations - </label>
-			</control>
-		<control type="label">
-				<posx>810</posx>
-				<posy>2012</posy>
-				<width>293</width>
-				<height>19</height>
-				<font>Bold-WebViewer-font12</font>
-				<textcolor>FF000000</textcolor>
-				<label>                      Oct 19th 1:53PM</label>
-			</control>
-		<control type="image">
-				<posx>810</posx>
-				<posy>1988</posy>
-				<width>301</width>
-				<height>48</height>
-				<texture border="5">web-viewer-white-border-bottom.png</texture>
-				<colordiffuse>FFDEDEDE</colordiffuse>
-				<aspectratio>stretch</aspectratio>
-			</control>
-		<control type="label">
-				<posx>810</posx>
-				<posy>2046</posy>
-				<width>212</width>
-				<height>19</height>
-				<font>Bold-WebViewer-font12</font>
-				<textcolor>FF000000</textcolor>
-				<label>Film VS. TV: Sleepy Hollow</label>
-			</control>
-		<control type="label">
-				<posx>810</posx>
-				<posy>2060</posy>
-				<width>145</width>
-				<height>19</height>
-				<font>WebViewer-font12</font>
-				<textcolor>FF000000</textcolor>
-				<label>Holland Farkas - </label>
-			</control>
-		<control type="label">
-				<posx>810</posx>
-				<posy>2060</posy>
-				<width>256</width>
-				<height>19</height>
-				<font>Bold-WebViewer-font12</font>
-				<textcolor>FF000000</textcolor>
-				<label>                 Oct 18th 6:52PM</label>
-			</control>
-		<control type="image">
-				<posx>810</posx>
-				<posy>2036</posy>
-				<width>301</width>
-				<height>48</height>
-				<texture border="5">web-viewer-white-border-bottom.png</texture>
-				<colordiffuse>FFDEDEDE</colordiffuse>
-				<aspectratio>stretch</aspectratio>
-			</control>
-		<control type="label">
-				<posx>810</posx>
-				<posy>2094</posy>
-				<width>264</width>
-				<height>19</height>
-				<font>Bold-WebViewer-font12</font>
-				<textcolor>FF000000</textcolor>
-				<label>Geeking Out talks LGBT Book Recs!</label>
-			</control>
-		<control type="label">
-				<posx>810</posx>
-				<posy>2108</posy>
-				<width>145</width>
-				<height>19</height>
-				<font>WebViewer-font12</font>
-				<textcolor>FF000000</textcolor>
-				<label>Neil and Becca - </label>
-			</control>
-		<control type="label">
-				<posx>810</posx>
-				<posy>2108</posy>
-				<width>256</width>
-				<height>19</height>
-				<font>Bold-WebViewer-font12</font>
-				<textcolor>FF000000</textcolor>
-				<label>                 Oct 18th 6:50PM</label>
-			</control>
-		<control type="image">
-				<posx>810</posx>
-				<posy>2084</posy>
-				<width>301</width>
-				<height>48</height>
-				<texture border="5">web-viewer-white-border-bottom.png</texture>
-				<colordiffuse>FFDEDEDE</colordiffuse>
-				<aspectratio>stretch</aspectratio>
-			</control>
-		<control type="image">
-				<posx>810</posx>
-				<posy>2132</posy>
-				<width>300</width>
-				<height>-2132</height>
-				<texture>web-viewer-white.png</texture>
-				<colordiffuse>FFFFFFFF</colordiffuse>
-				<aspectratio scalediffuse="false" align="center" aligny="center">stretch</aspectratio>
-			</control>
-		<control type="image">
-				<posx>810</posx>
-				<posy>2152</posy>
-				<width>300</width>
-				<height>-2092</height>
-				<texture>web-viewer-white.png</texture>
-				<colordiffuse>FFffffff</colordiffuse>
-				<aspectratio scalediffuse="false" align="center" aligny="center">stretch</aspectratio>
-			</control>
-		<control type="image">
-				<posx>850</posx>
-				<posy>2152</posy>
-				<width>300</width>
-				<height>80</height>
-				<texture>web-viewer-white.png</texture>
-				<colordiffuse>FFffffff</colordiffuse>
-				<aspectratio scalediffuse="false" align="center" aligny="center">stretch</aspectratio>
+				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
 			</control>
 		<control type="button" id="157">
-				<posx>870</posx>
-				<posy>2171</posy>
-				<width>44</width>
+				<posx>686</posx>
+				<posy>1796</posy>
+				<width>96</width>
 				<height>14</height>
 				<onleft>156</onleft>
 				<onright>158</onright>
@@ -2642,117 +1957,361 @@
 				<textcolor>FF00AAAA</textcolor>
 				<focusedcolor>FFFF0000</focusedcolor>
 				<font>WebViewer-font12</font>
-				<label>IFRAME</label>
+				<label>Mythic Beasts</label>
 			</control>
 		<control type="image">
-				<posx>810</posx>
-				<posy>2492</posy>
-				<width>300</width>
-				<height>360</height>
-				<texture>web-viewer-white.png</texture>
-				<colordiffuse>FFffffff</colordiffuse>
-				<aspectratio scalediffuse="false" align="center" aligny="center">stretch</aspectratio>
-			</control>
-		<control type="image">
-				<posx>810</posx>
-				<posy>2492</posy>
-				<width>260</width>
-				<height>86</height>
-				<texture fallback="web-viewer-broken-image.png">http://playerones.geekandsundry.com/assets/img/ad_community.jpg</texture>
-				<bordertexture border="2">web-viewer-link-border.png</bordertexture>
-				<bordersize>1</bordersize>
-
-				<colordiffuse>FFFFFFFF</colordiffuse>
-				<aspectratio>stretch</aspectratio>
-			</control>
-		<control type="button" id="158">
-				<posx>810</posx>
-				<posy>2492</posy>
-				<width>260</width>
-				<height>86</height>
-				<onleft>157</onleft>
-				<onright>159</onright>
-				<texturefocus border="2">web-viewer-red-border.png</texturefocus>
-				<texturenofocus>-</texturenofocus>
-				<align>left</align>
-				<aligny>top</aligny>
-				
-				<textcolor>00000000</textcolor>
-				<focusedcolor>FFFF0000</focusedcolor>
-				<font>WebViewer-font12</font>
-				<label></label>
-			</control>
-		<control type="image">
-				<posx>810</posx>
-				<posy>2832</posy>
-				<width>300</width>
-				<height>120</height>
-				<texture>web-viewer-white.png</texture>
-				<colordiffuse>FFffffff</colordiffuse>
-				<aspectratio scalediffuse="false" align="center" aligny="center">stretch</aspectratio>
-			</control>
-		<control type="image">
-				<posx>810</posx>
-				<posy>2832</posy>
-				<width>300</width>
-				<height>120</height>
-				<texture>http://playerones.geekandsundry.com/assets/img/newsletter.jpg</texture>
+				<posx>683</posx>
+				<posy>1820</posy>
+				<width>120</width>
+				<height>13</height>
+				<texture>/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/eb4d39e0.png</texture>
 				<colordiffuse>FFFFFFFF</colordiffuse>
 				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
 			</control>
-		<control type="image">
-				<posx>830</posx>
-				<posy>2852</posy>
-				<width>260</width>
-				<height>40</height>
-				<texture fallback="web-viewer-broken-image.png" border="5">web-viewer-form-text.png</texture>
-				
-				<colordiffuse>FFFFFFFF</colordiffuse>
-				<aspectratio>stretch</aspectratio>
-			</control>
-		<control type="button" id="159">
-				<posx>830</posx>
-				<posy>2852</posy>
-				<width>260</width>
-				<height>40</height>
-				<onleft>158</onleft>
-				<onright>160</onright>
-				<texturefocus border="2">web-viewer-red-border.png</texturefocus>
+		<control type="button" id="158">
+				<posx>686</posx>
+				<posy>1819</posy>
+				<width>29</width>
+				<height>14</height>
+				<onleft>157</onleft>
+				<onright>159</onright>
+				<texturefocus border="0"></texturefocus>
 				<texturenofocus>-</texturenofocus>
 				<align>left</align>
-				<aligny>center</aligny>
-				
-				<textcolor>black</textcolor>
+				<aligny>top</aligny>
+				<textoffsetx>-1</textoffsetx>
+				<textoffsety>0</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
 				<focusedcolor>FFFF0000</focusedcolor>
 				<font>WebViewer-font12</font>
-				<label></label>
+				<label>Ouya</label>
 			</control>
 		<control type="image">
-				<posx>830</posx>
-				<posy>2892</posy>
-				<width>260</width>
-				<height>40</height>
-				<texture fallback="web-viewer-broken-image.png" border="5">web-viewer-form-submit.png</texture>
-				
+				<posx>683</posx>
+				<posy>1843</posy>
+				<width>120</width>
+				<height>13</height>
+				<texture>/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/eb4d39e0.png</texture>
 				<colordiffuse>FFFFFFFF</colordiffuse>
-				<aspectratio>stretch</aspectratio>
+				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
 			</control>
-		<control type="button" id="160">
-				<posx>830</posx>
-				<posy>2892</posy>
-				<width>260</width>
-				<height>40</height>
-				<onleft>159</onleft>
-				<onright>161</onright>
-				<texturefocus border="2">web-viewer-red-border.png</texturefocus>
+		<control type="button" id="159">
+				<posx>686</posx>
+				<posy>1842</posy>
+				<width>37</width>
+				<height>14</height>
+				<onleft>158</onleft>
+				<onright>160</onright>
+				<texturefocus border="0"></texturefocus>
 				<texturenofocus>-</texturenofocus>
-				<align>center</align>
-				<aligny>center</aligny>
-				
-				<textcolor>black</textcolor>
+				<align>left</align>
+				<aligny>top</aligny>
+				<textoffsetx>-1</textoffsetx>
+				<textoffsety>0</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
 				<focusedcolor>FFFF0000</focusedcolor>
 				<font>WebViewer-font12</font>
-				<label>Stay Updated With Geek &amp; Sundry!</label>
+				<label>Pivos</label>
+			</control>
+		<control type="image">
+				<posx>683</posx>
+				<posy>1866</posy>
+				<width>120</width>
+				<height>13</height>
+				<texture>/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/eb4d39e0.png</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
+			</control>
+		<control type="button" id="160">
+				<posx>686</posx>
+				<posy>1865</posy>
+				<width>59</width>
+				<height>14</height>
+				<onleft>159</onleft>
+				<onright>161</onright>
+				<texturefocus border="0"></texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				<textoffsetx>-1</textoffsetx>
+				<textoffsety>0</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<font>WebViewer-font12</font>
+				<label>VidOn.Me</label>
+			</control>
+		<control type="image">
+				<posx>683</posx>
+				<posy>1889</posy>
+				<width>120</width>
+				<height>13</height>
+				<texture>/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/eb4d39e0.png</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
+			</control>
+		<control type="button" id="161">
+				<posx>686</posx>
+				<posy>1888</posy>
+				<width>103</width>
+				<height>14</height>
+				<onleft>160</onleft>
+				<onright>162</onright>
+				<texturefocus border="0"></texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				<textoffsetx>-1</textoffsetx>
+				<textoffsety>0</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<font>WebViewer-font12</font>
+				<label>WebHostingBuzz</label>
+			</control>
+		<control type="image">
+				<posx>683</posx>
+				<posy>1912</posy>
+				<width>120</width>
+				<height>13</height>
+				<texture>/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/eb4d39e0.png</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
+			</control>
+		<control type="button" id="162">
+				<posx>686</posx>
+				<posy>1911</posy>
+				<width>88</width>
+				<height>14</height>
+				<onleft>161</onleft>
+				<onright>163</onright>
+				<texturefocus border="0"></texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				<textoffsetx>-1</textoffsetx>
+				<textoffsety>0</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<font>WebViewer-font12</font>
+				<label>wunderground</label>
+			</control>
+		<control type="label">
+				<posx>789</posx>
+				<posy>1722</posy>
+				<width>79</width>
+				<height>21</height>
+				<font>Bold-WebViewer-font14</font>
+				<textcolor>FFFFFFFF</textcolor>
+				<label>Friends</label>
+			</control>
+		<control type="image">
+				<posx>794</posx>
+				<posy>1751</posy>
+				<width>120</width>
+				<height>13</height>
+				<texture>/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/eb4d39e0.png</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
+			</control>
+		<control type="button" id="163">
+				<posx>797</posx>
+				<posy>1750</posy>
+				<width>66</width>
+				<height>14</height>
+				<onleft>162</onleft>
+				<onright>164</onright>
+				<texturefocus border="0"></texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				<textoffsetx>-1</textoffsetx>
+				<textoffsety>0</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<font>WebViewer-font12</font>
+				<label>Fanart.TV</label>
+			</control>
+		<control type="image">
+				<posx>794</posx>
+				<posy>1774</posy>
+				<width>120</width>
+				<height>13</height>
+				<texture>/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/eb4d39e0.png</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
+			</control>
+		<control type="button" id="164">
+				<posx>797</posx>
+				<posy>1773</posy>
+				<width>59</width>
+				<height>14</height>
+				<onleft>163</onleft>
+				<onright>165</onright>
+				<texturefocus border="0"></texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				<textoffsetx>-1</textoffsetx>
+				<textoffsety>0</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<font>WebViewer-font12</font>
+				<label>OpenELEC</label>
+			</control>
+		<control type="image">
+				<posx>794</posx>
+				<posy>1797</posy>
+				<width>120</width>
+				<height>13</height>
+				<texture>/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/eb4d39e0.png</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
+			</control>
+		<control type="button" id="165">
+				<posx>797</posx>
+				<posy>1796</posy>
+				<width>103</width>
+				<height>14</height>
+				<onleft>164</onleft>
+				<onright>166</onright>
+				<texturefocus border="0"></texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				<textoffsetx>-1</textoffsetx>
+				<textoffsety>0</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<font>WebViewer-font12</font>
+				<label>TheAudioDB.com</label>
+			</control>
+		<control type="image">
+				<posx>794</posx>
+				<posy>1820</posy>
+				<width>120</width>
+				<height>13</height>
+				<texture>/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/eb4d39e0.png</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
+			</control>
+		<control type="button" id="166">
+				<posx>797</posx>
+				<posy>1819</posy>
+				<width>103</width>
+				<height>14</height>
+				<onleft>165</onleft>
+				<onright>167</onright>
+				<texturefocus border="0"></texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				<textoffsetx>-1</textoffsetx>
+				<textoffsety>0</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<font>WebViewer-font12</font>
+				<label>TheGamesDB.net</label>
+			</control>
+		<control type="image">
+				<posx>794</posx>
+				<posy>1843</posy>
+				<width>120</width>
+				<height>13</height>
+				<texture>/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/eb4d39e0.png</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
+			</control>
+		<control type="button" id="167">
+				<posx>797</posx>
+				<posy>1842</posy>
+				<width>103</width>
+				<height>14</height>
+				<onleft>166</onleft>
+				<onright>168</onright>
+				<texturefocus border="0"></texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				<textoffsetx>-1</textoffsetx>
+				<textoffsety>0</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<font>WebViewer-font12</font>
+				<label>TheMovieDB.org</label>
+			</control>
+		<control type="image">
+				<posx>794</posx>
+				<posy>1866</posy>
+				<width>120</width>
+				<height>13</height>
+				<texture>/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/eb4d39e0.png</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
+			</control>
+		<control type="button" id="168">
+				<posx>797</posx>
+				<posy>1865</posy>
+				<width>81</width>
+				<height>14</height>
+				<onleft>167</onleft>
+				<onright>169</onright>
+				<texturefocus border="0"></texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				<textoffsetx>-1</textoffsetx>
+				<textoffsety>0</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<font>WebViewer-font12</font>
+				<label>TheTVDB.com</label>
+			</control>
+		<control type="image">
+				<posx>794</posx>
+				<posy>1889</posy>
+				<width>120</width>
+				<height>13</height>
+				<texture>/home/ruuk/.xbmc/userdata/addon_data/script.web.viewer2/cache/eb4d39e0.png</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio scalediffuse="false" align="left" aligny="top">center</aspectratio>
+			</control>
+		<control type="button" id="169">
+				<posx>797</posx>
+				<posy>1888</posy>
+				<width>88</width>
+				<height>14</height>
+				<onleft>168</onleft>
+				<onright>170</onright>
+				<texturefocus border="0"></texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				<textoffsetx>-1</textoffsetx>
+				<textoffsety>0</textoffsety>
+
+				<textcolor>FF00AAAA</textcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<font>WebViewer-font12</font>
+				<label>XBMCLogs.com</label>
+			</control>
+		<control type="image">
+				<posx>10</posx>
+				<posy>1680</posy>
+				<width>1261</width>
+				<height>90</height>
+				<texture border="5">web-viewer-white-border-bottom.png</texture>
+				<colordiffuse>FF004893</colordiffuse>
+				<aspectratio>stretch</aspectratio>
 			</control>
 
 		</control>
